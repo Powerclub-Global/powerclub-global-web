@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram, FaXTwitter } from "react-icons/fa6";
 
@@ -85,18 +86,18 @@ const Footer: React.FC = () => {
               reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6">
-              <a
-                href="#"
+              <Link
+                href="/privacy"
                 className="hover:text-amber-400 transition-colors duration-300"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/terms"
                 className="hover:text-amber-400 transition-colors duration-300"
               >
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
