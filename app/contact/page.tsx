@@ -121,8 +121,10 @@ function ContactPageContent() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
+    sms_consent: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<{
@@ -185,6 +187,10 @@ function ContactPageContent() {
     }));
   };
 
+  const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => ({ ...prev, sms_consent: e.target.checked }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -200,8 +206,10 @@ function ContactPageContent() {
       setFormData({
         name: "",
         email: "",
+        phone: "",
         subject: "",
         message: "",
+        sms_consent: false,
       });
     } catch (error) {
       console.error("Failed to submit form:", error);
@@ -362,18 +370,31 @@ function ContactPageContent() {
                             focus:bg-black/40"
                         />
                       </div>
-                      <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="w-full p-4 rounded-lg bg-black/40 border border-[#ae904c]/50 
-                          text-white/90 placeholder:text-white/40 focus:outline-none focus:border-[#ae904c]/40
-                          focus:ring-1 focus:ring-[#ae904c]/40 transition-all duration-300
-                          focus:bg-black/40"
-                      />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          required
+                          className="p-4 rounded-lg bg-black/40 border border-[#ae904c]/50
+                            text-white/90 placeholder:text-white/40 focus:outline-none focus:border-[#ae904c]/40
+                            focus:ring-1 focus:ring-[#ae904c]/40 transition-all duration-300
+                            focus:bg-black/40"
+                        />
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone Number (optional)"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="p-4 rounded-lg bg-black/40 border border-[#ae904c]/50
+                            text-white/90 placeholder:text-white/40 focus:outline-none focus:border-[#ae904c]/40
+                            focus:ring-1 focus:ring-[#ae904c]/40 transition-all duration-300
+                            focus:bg-black/40"
+                        />
+                      </div>
                       <textarea
                         name="message"
                         placeholder="Your Message"
@@ -386,6 +407,35 @@ function ContactPageContent() {
                           focus:ring-1 focus:ring-[#ae904c]/40 transition-all duration-300 resize-none
                           focus:bg-black/40"
                       />
+                      {/* SMS Consent — optional, required by SignalWire carrier compliance */}
+                      <label className="flex items-start gap-3 cursor-pointer group">
+                        <input
+                          type="checkbox"
+                          name="sms_consent"
+                          checked={formData.sms_consent}
+                          onChange={handleCheckbox}
+                          className="mt-1 h-4 w-4 flex-shrink-0 rounded border border-[#ae904c]/50 bg-black/40 accent-[#ae904c] cursor-pointer"
+                        />
+                        <span className="text-xs text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">
+                          I agree to receive SMS messages from Powerclub Global
+                          regarding my project, account updates, and relevant
+                          communications. Message frequency varies. Msg &amp; Data
+                          rates may apply. Reply <strong className="text-white/70">STOP</strong> to
+                          unsubscribe at any time. Reply <strong className="text-white/70">HELP</strong> for
+                          support. See our{" "}
+                          <a
+                            href="/privacy"
+                            className="text-[#ae904c] hover:underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Privacy Policy
+                          </a>
+                          .{" "}
+                          <span className="text-white/30">(Optional)</span>
+                        </span>
+                      </label>
+
                       <button
                         type="submit"
                         disabled={isSubmitting}
