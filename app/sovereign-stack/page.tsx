@@ -207,7 +207,7 @@ export default function SovereignStackPage() {
       {/* ── PILLARS ── */}
       <section className="relative px-6 py-14">
         <div className="max-w-5xl mx-auto">
-          <FadeIn><p className="text-xs font-semibold tracking-widest uppercase mb-10 text-center" style={{ color: gold }}>What You'll Hear</p></FadeIn>
+          <FadeIn><p className="text-xs font-semibold tracking-widest uppercase mb-10 text-center" style={{ color: gold }}>What You&rsquo;ll Hear</p></FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {PILLARS.map((p, i) => (
               <FadeIn key={p.num} delay={i * 0.1}>
@@ -282,7 +282,7 @@ export default function SovereignStackPage() {
                 className="text-center py-12 px-6 rounded-2xl"
                 style={{ background: "rgba(174,144,76,0.06)", border: "1px solid rgba(174,144,76,0.25)" }}>
                 <div className="text-5xl mb-4">✓</div>
-                <h3 className="text-xl font-bold mb-2">You're in.</h3>
+                <h3 className="text-xl font-bold mb-2">You&rsquo;re in.</h3>
                 <p className="text-sm" style={{ color: "rgba(232,234,240,0.5)" }}>{result.message}</p>
               </motion.div>
             ) : selectedSlot ? (
@@ -291,7 +291,7 @@ export default function SovereignStackPage() {
                 className="rounded-2xl p-8"
                 style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="font-semibold mb-1">Register for {selectedSlot.slot.label}</h3>
-                <p className="text-xs mb-6" style={{ color: "rgba(232,234,240,0.35)" }}>You'll receive a confirmation and calendar invite.</p>
+                <p className="text-xs mb-6" style={{ color: "rgba(232,234,240,0.35)" }}>You&rsquo;ll receive a confirmation and calendar invite.</p>
 
                 {result && !result.success && (
                   <div className="mb-4 px-4 py-3 rounded-lg text-sm" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.25)", color: "#f87171" }}>
@@ -328,7 +328,7 @@ export default function SovereignStackPage() {
                   </div>
 
                   <div className="mb-4">
-                    <label className="block text-xs font-medium mb-2 uppercase tracking-wide" style={{ color: "rgba(232,234,240,0.45)" }}>I'm joining as</label>
+                    <label className="block text-xs font-medium mb-2 uppercase tracking-wide" style={{ color: "rgba(232,234,240,0.45)" }}>I&rsquo;m joining as</label>
                     <div className="grid grid-cols-3 gap-2">
                       {TRACKS.map((t) => (
                         <button key={t.id} type="button" onClick={() => setTrack(t.id)}
@@ -383,7 +383,7 @@ export default function SovereignStackPage() {
               <div className="absolute bottom-0 right-0 w-24 h-24 pointer-events-none" style={{ background: "linear-gradient(315deg, rgba(174,144,76,0.07) 0%, transparent 60%)" }} />
               <p className="text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: gold }}>The Thesis</p>
               <blockquote className="text-lg leading-relaxed mb-5" style={{ color: "rgba(232,234,240,0.72)", lineHeight: 1.8 }}>
-                "I am giving you capital to invest in myself and this thesis. LPs back the Office — not a committee. No drag-along. No forced exit. No board seats."
+                &ldquo;I am giving you capital to invest in myself and this thesis. LPs back the Office — not a committee. No drag-along. No forced exit. No board seats.&rdquo;
               </blockquote>
               <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(232,234,240,0.42)" }}>
                 Returns from operating distributions, token appreciation, and secondary LP market. Oklahoma Generational Trust holds permanent Class B supervoting at the apex across all entities.{" "}

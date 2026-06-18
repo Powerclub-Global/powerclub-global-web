@@ -9,7 +9,7 @@ export async function GET() {
     if (!res.ok) throw new Error(`upstream ${res.status}`);
     const data = await res.json();
     return NextResponse.json(data);
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Failed to load slots" }, { status: 502 });
   }
 }
