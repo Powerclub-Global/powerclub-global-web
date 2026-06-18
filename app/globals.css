@@ -59,3 +59,116 @@ body {
   line-height: 1.5em;
   max-height: 4.5em; /* 3 lines * 1.5em line height */
 }
+
+/* ============================================================
+   AGENCY FUNNEL — premium layer (scoped under .fnl)
+   ============================================================ */
+.fnl {
+  font-family: var(--font-bricolage), var(--font-geist-sans), system-ui, sans-serif;
+}
+.fnl h1,
+.fnl h2,
+.fnl h3 {
+  font-family: var(--font-bricolage), system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+.fnl .serif {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+.fnl .mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+/* shimmering gold gradient text */
+.fnl .gold-text {
+  background: linear-gradient(100deg, #ae904c 0%, #d8b15f 35%, #fff2cf 50%, #d8b15f 65%, #ae904c 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fnl-shine 6s linear infinite;
+}
+@keyframes fnl-shine { to { background-position: 200% center; } }
+
+/* glass surface */
+.fnl .glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.1rem;
+  transition: transform 0.45s cubic-bezier(0.16,1,0.3,1), border-color 0.4s ease, box-shadow 0.45s ease;
+}
+.fnl .glass:hover {
+  transform: translateY(-5px);
+  border-color: rgba(174,144,76,0.45);
+  box-shadow: 0 22px 50px -24px rgba(0,0,0,0.8), 0 0 44px -20px rgba(174,144,76,0.35);
+}
+.fnl .glass-gold {
+  background: rgba(174,144,76,0.06);
+  border: 1px solid rgba(174,144,76,0.4);
+  box-shadow: 0 0 36px rgba(174,144,76,0.12);
+}
+
+/* premium pill button */
+.fnl .btn-gold {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.95rem 1.8rem; border-radius: 999px;
+  font-weight: 600; font-size: 0.98rem; color: #08090c;
+  background: linear-gradient(180deg, #d8b15f, #ae904c);
+  box-shadow: 0 10px 30px -10px rgba(174,144,76,0.6), inset 0 1px 0 rgba(255,255,255,0.4);
+  transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease;
+  cursor: pointer; border: none;
+}
+.fnl .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 16px 44px -10px rgba(174,144,76,0.8), inset 0 1px 0 rgba(255,255,255,0.5); }
+.fnl .btn-gold .arrow { transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); }
+.fnl .btn-gold:hover .arrow { transform: translateX(4px); }
+
+.fnl .btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.95rem 1.8rem; border-radius: 999px;
+  font-weight: 500; font-size: 0.98rem; color: #e8eaf0;
+  border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s ease, background 0.3s ease; cursor: pointer;
+}
+.fnl .btn-ghost:hover { border-color: rgba(174,144,76,0.6); background: rgba(174,144,76,0.08); }
+
+/* eyebrow label */
+.fnl .eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: #c9a95e;
+}
+
+/* drifting aurora */
+.fnl .aurora { position: absolute; inset: -20% -10% auto -10%; height: 130%; pointer-events: none; filter: blur(70px); opacity: 0.5; z-index: 0; }
+.fnl .aurora::before, .fnl .aurora::after { content: ""; position: absolute; border-radius: 50%; }
+.fnl .aurora::before { width: 50vw; height: 50vw; left: -8vw; top: -8vw; background: radial-gradient(circle, rgba(174,144,76,0.32) 0%, transparent 60%); animation: fnl-d1 24s ease-in-out infinite alternate; }
+.fnl .aurora::after { width: 42vw; height: 42vw; right: -6vw; top: 4vw; background: radial-gradient(circle, rgba(201,168,106,0.26) 0%, transparent 60%); animation: fnl-d2 30s ease-in-out infinite alternate; }
+@keyframes fnl-d1 { to { transform: translate(10vw,7vh) scale(1.2); } }
+@keyframes fnl-d2 { to { transform: translate(-9vw,5vh) scale(0.9); } }
+
+/* Theodore concierge widget */
+@keyframes theo-pop { from { opacity: 0; transform: translateY(16px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes theo-dot { 0%,80%,100% { opacity: 0.3; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+.theo-panel { animation: theo-pop 0.3s cubic-bezier(0.16,1,0.3,1); }
+.theo-typing span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #c9a95e; margin: 0 2px; animation: theo-dot 1.2s infinite; }
+.theo-typing span:nth-child(2) { animation-delay: 0.15s; }
+.theo-typing span:nth-child(3) { animation-delay: 0.3s; }
+.fnl input:focus, .fnl textarea:focus, .theo-panel input:focus { border-color: rgba(174,144,76,0.5) !important; outline: none; }
+
+/* events marquee */
+.fnl .marquee-track { display: flex; width: max-content; animation: fnl-marquee 48s linear infinite; }
+.fnl .marquee-track:hover { animation-play-state: paused; }
+.fnl .marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+@keyframes fnl-marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fnl .gold-text, .fnl .aurora::before, .fnl .aurora::after, .fnl .marquee-track { animation: none !important; }
+  .fnl * { transition: none !important; }
+}
