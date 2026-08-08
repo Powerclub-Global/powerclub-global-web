@@ -1,0 +1,25 @@
+# Powerclub Global
+
+> Powerclub Global (PCG) is a conference impact agency for technology startups — primarily in blockchain, AI, and decentralized infrastructure. PCG manages high-impact conference engagements (presence, production, afterparties) and builds the post-event "momentum engine" (lead capture, content pipelines, email and social follow-through) that turns a one-time conference investment into a year-round pipeline. Founded 2018. Based in Miami, FL, operating internationally.
+
+## What PCG does
+
+- **Conference Impact Engagements**: end-to-end management of a startup's conference presence — activation strategy, production, media capture, and the signature invite-only afterparties where founders, sponsors, and investors actually meet.
+- **Momentum Engine (retainer)**: post-conference infrastructure — landing pages and lead capture, email follow-up on event contacts, content cut from event footage, social distribution, and market research — so conference momentum converts instead of evaporating.
+- **Sovereign Stack**: private AI and compute infrastructure for organizations whose data is too valuable to feed into platforms they don't control.
+
+## Flagship
+
+- **Intelligence Disrupt**: PCG's decentralized-AI conference (Dallas, TX) — produced by PCG.
+
+## Key pages
+
+- [Services](https://powerclubglobal.com/services): full service catalog
+- [Events](https://powerclubglobal.com/events): the conference circuit PCG covers
+- [About](https://powerclubglobal.com/about): agency history, since 2018
+- [Sovereign Stack](https://powerclubglobal.com/sovereign-stack): private infrastructure offering
+- [Contact](https://powerclubglobal.com/contact): inquiries — innovate@powerclubglobal.com
+
+## Further detail
+
+- [llms-full.txt](https://powerclubglobal.com/llms-full.txt): expanded offer descriptions

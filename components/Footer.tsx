@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram, FaXTwitter } from "react-icons/fa6";
+import NewsletterSignup from "./NewsletterSignup";
 
 const Footer: React.FC = () => {
   return (
@@ -16,6 +17,17 @@ const Footer: React.FC = () => {
       {/* Footer Content */}
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
+          {/* Newsletter */}
+          <div className="mb-12 max-w-xl">
+            <h3 className="text-[#ae904c] text-sm uppercase tracking-widest mb-2">
+              The Powerclub Dispatch
+            </h3>
+            <p className="text-white/50 text-sm mb-4">
+              Conference intel, momentum plays, and network invites — straight
+              from the circuit.
+            </p>
+            <NewsletterSignup />
+          </div>
           {/* Logo and Social Links */}
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <img
@@ -58,7 +70,7 @@ const Footer: React.FC = () => {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="https://t.me/powerclubglobal"
+                href="https://t.me/powerclubglboal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
