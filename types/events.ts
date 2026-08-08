@@ -31,7 +31,7 @@ export interface Event {
   image: string;
   description: string;
   venue: string;
-  ticketPrice: TicketPrice;
+  ticketPrice?: TicketPrice;
   organizer: string;
   speakers?: Speaker[];
   schedule?: EventDay[];
