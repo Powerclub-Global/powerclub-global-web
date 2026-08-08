@@ -429,12 +429,12 @@ function AboutPageContent() {
                 <span className="text-sm text-[#ae904c]">South Beach, Miami</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                PCG's first curation of the Versace Mansion — an invite-only
-                afterparty during The North American Bitcoin Conference, and one
-                of our most tightly curated rooms ever assembled.
+                Twice-curated by PCG — invite-only afterparties at the Versace
+                Mansion during TNABC, among the most tightly curated rooms
+                we've ever assembled.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>North American Bitcoin Conference</span>
+                <span>TNABC · 2020 &amp; 2022</span>
                 <span className="text-white/30">•</span>
                 <span>Invite Only</span>
               </div>
