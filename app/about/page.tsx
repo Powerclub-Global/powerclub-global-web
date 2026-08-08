@@ -64,7 +64,7 @@ const stats: Stat[] = [
     desc: "Connected brands with over 85,000 engaged participants through our immersive events.",
   },
   {
-    value: 35,
+    value: 25,
     label: "Countries",
     suffix: "+",
     desc: "Expanded our global footprint to deliver impactful experiences across five continents.",
@@ -77,50 +77,6 @@ const stats: Stat[] = [
   },
 ];
 
-// const people = [
-//   {
-//     id: 1,
-//     name: "Sarah Mitchell",
-//     designation: "Founder & CEO",
-//     image:
-//       "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-//   },
-//   {
-//     id: 2,
-//     name: "Michael Chen",
-//     designation: "Chief Strategy Officer",
-//     image:
-//       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-//   },
-//   {
-//     id: 3,
-//     name: "Olivia Rodriguez",
-//     designation: "Creative Director",
-//     image:
-//       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-//   },
-//   {
-//     id: 4,
-//     name: "James Washington",
-//     designation: "Head of Events",
-//     image:
-//       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-//   },
-//   {
-//     id: 5,
-//     name: "Daniel Park",
-//     designation: "Technology Director",
-//     image:
-//       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-//   },
-//   {
-//     id: 6,
-//     name: "Aisha Patel",
-//     designation: "Global Partnerships",
-//     image:
-//       "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
-//   },
-// ];
 
 const VideoGrid = () => {
   const videos = [
@@ -400,9 +356,9 @@ function AboutPageContent() {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold text-white">
-                  Permissionless 2023
+                  Permissionless 2022
                 </h3>
-                <span className="text-sm text-[#ae904c]">Austin, TX</span>
+                <span className="text-sm text-[#ae904c]">West Palm Beach, FL</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
                 A landmark conference bringing together industry pioneers,
@@ -410,9 +366,9 @@ function AboutPageContent() {
                 decentralized technology and its real-world applications.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>May 15-17, 2023</span>
+                <span>May 17–19, 2022</span>
                 <span className="text-white/30">•</span>
-                <span>7,500+ Attendees</span>
+                <span>7,000+ Attendees</span>
               </div>
             </div>
           </div>
@@ -434,19 +390,19 @@ function AboutPageContent() {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold text-white">
-                  Global Tech Summit
+                  Conference Circuit Coverage
                 </h3>
-                <span className="text-sm text-[#ae904c]">Singapore</span>
+                <span className="text-sm text-[#ae904c]">On Location</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                An immersive multi-day event showcasing breakthrough innovations
-                across AI, blockchain, and emerging technologies, featuring
-                hands-on workshops and thought leadership panels.
+                Ground-level production from the blockchain conference circuit —
+                capturing the energy, the people, and the moments that turn an
+                event into lasting content.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>October 10-14, 2023</span>
+                <span>2022 Season</span>
                 <span className="text-white/30">•</span>
-                <span>12,000+ Attendees</span>
+                <span>Event Media Production</span>
               </div>
             </div>
           </div>
@@ -468,19 +424,19 @@ function AboutPageContent() {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold text-white">
-                  Luxury Innovation Forum
+                  Private Afterparty Production
                 </h3>
-                <span className="text-sm text-[#ae904c]">Paris, France</span>
+                <span className="text-sm text-[#ae904c]">Invite Only</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                An exclusive gathering of luxury brands and technology
-                innovators exploring the future of high-end retail, digital
-                fashion, and immersive consumer experiences.
+                Curated rooms where founders, sponsors, and investors actually
+                meet — the signature PCG afterparty experience that turns a
+                conference badge into a network.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>September 22-23, 2023</span>
+                <span>2022 Season</span>
                 <span className="text-white/30">•</span>
-                <span>1,500+ Industry Leaders</span>
+                <span>Experience Design</span>
               </div>
             </div>
           </div>

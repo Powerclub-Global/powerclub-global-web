@@ -19,72 +19,10 @@
         "vip": 2499
       },
       "organizer": "Consumer Technology Association",
-      "speakers": [
-        {
-          "name": "Lisa Su",
-          "title": "CEO, AMD",
-          "image": "/speakers/lisa-su.jpg"
-        },
-        {
-          "name": "Jensen Huang",
-          "title": "CEO, NVIDIA",
-          "image": "/speakers/jensen-huang.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 7, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Opening Keynote",
-              "speaker": "Lisa Su",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "The Future of AI",
-              "speaker": "Jensen Huang",
-              "location": "West Hall"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Next Generation Computing",
-              "speaker": "Pat Gelsinger",
-              "location": "Central Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Samsung", "Intel", "Google", "AMD", "NVIDIA"],
-      "tags": ["technology", "innovation", "consumer electronics"],
-      "capacity": 180000,
-      "registrationDeadline": "2025-01-05",
-      "eventList": [
-        {
-          "name": "AI Innovation Workshop",
-          "description": "Hands-on workshop exploring latest AI developments",
-          "date": "2025-01-08",
-          "time": "10:00 AM",
-          "image": "/events/ai-workshop.png",
-          "applyLink": "https://ces.tech/workshops/ai-innovation"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "12:00 PM",
-          "image": "/events/startup-competition.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "2:00 PM",
-          "image": "/events/startup-pitch.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        }
+      "tags": [
+        "technology",
+        "innovation",
+        "consumer electronics"
       ]
     },
     {
@@ -106,67 +44,11 @@
         "vip": 1999
       },
       "organizer": "WAGMI Events LLC",
-      "speakers": [
-        {
-          "name": "Vitalik Buterin",
-          "title": "Co-founder, Ethereum",
-          "image": "/speakers/vitalik.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 21, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "The Future of Web3",
-              "speaker": "Vitalik Buterin",
-              "location": "Main Stage"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "DeFi Innovation Panel",
-              "speaker": "Industry Leaders Panel",
-              "location": "DeFi Stage"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "NFT Market Evolution",
-              "speaker": "Digital Art Panel",
-              "location": "NFT Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Binance", "Coinbase", "FTX"],
-      "tags": ["blockchain", "crypto", "web3", "defi"],
-      "capacity": 15000,
-      "registrationDeadline": "2025-01-19",
-      "eventList": [
-        {
-          "name": "AI Innovation Workshop",
-          "description": "Hands-on workshop exploring latest AI developments",
-          "date": "2025-01-08",
-          "time": "10:00 AM",
-          "image": "/events/ai-workshop.png",
-          "applyLink": "https://ces.tech/workshops/ai-innovation"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "12:00 PM",
-          "image": "/events/startup-competition.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "2:00 PM",
-          "image": "/events/startup-pitch.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        }
+      "tags": [
+        "blockchain",
+        "crypto",
+        "web3",
+        "defi"
       ]
     },
     {
@@ -188,42 +70,11 @@
         "vip": 1899
       },
       "organizer": "Crypto Gathering DAO",
-      "speakers": [
-        {
-          "name": "Brian Armstrong",
-          "title": "CEO, Coinbase",
-          "image": "/speakers/brian-armstrong.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 30, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "State of Crypto Markets",
-              "speaker": "Brian Armstrong",
-              "location": "Grand Ballroom"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Landscape",
-              "speaker": "Legal Panel",
-              "location": "Conference Room A"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Institutional Adoption",
-              "speaker": "Investment Panel",
-              "location": "Main Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Coinbase", "Gemini", "Kraken"],
-      "tags": ["crypto", "blockchain", "investment"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-01-28"
+      "tags": [
+        "crypto",
+        "blockchain",
+        "investment"
+      ]
     },
     {
       "id": "digital-assets-forum",
@@ -244,42 +95,11 @@
         "vip": 2499
       },
       "organizer": "Digital Asset Council",
-      "speakers": [
-        {
-          "name": "Michael Saylor",
-          "title": "Executive Chairman, MicroStrategy",
-          "image": "/speakers/saylor.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 3, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Bitcoin for Institutions",
-              "speaker": "Michael Saylor",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Framework in Europe",
-              "speaker": "EU Regulatory Panel",
-              "location": "Policy Room"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Digital Asset Custody Solutions",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["JPMorgan", "Goldman Sachs", "Fidelity"],
-      "tags": ["institutional", "digital assets", "finance"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-02-01"
+      "tags": [
+        "institutional",
+        "digital assets",
+        "finance"
+      ]
     },
     {
       "id": "consensus-hongkong",
@@ -300,42 +120,11 @@
         "vip": 2299
       },
       "organizer": "CoinDesk",
-      "speakers": [
-        {
-          "name": "Justin Sun",
-          "title": "Founder, TRON",
-          "image": "/speakers/justin-sun.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 18, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Asian Markets Overview",
-              "speaker": "Justin Sun",
-              "location": "Grand Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "CBDCs in Asia",
-              "speaker": "Central Bank Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Web3 Gaming Future",
-              "speaker": "Gaming Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["OKX", "Huobi", "BitMEX"],
-      "tags": ["asia", "blockchain", "finance"],
-      "capacity": 10000,
-      "registrationDeadline": "2025-02-15"
+      "tags": [
+        "asia",
+        "blockchain",
+        "finance"
+      ]
     },
     {
       "id": "digital-assets-week-hongkong",
@@ -356,42 +145,11 @@
         "vip": 1899
       },
       "organizer": "Digital Assets Council Asia",
-      "speakers": [
-        {
-          "name": "Sam Bankman-Fried",
-          "title": "Founder, FTX",
-          "image": "/speakers/sbf.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 27, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Digital Asset Trading",
-              "speaker": "Trading Panel",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "DeFi in Asia",
-              "speaker": "DeFi Panel",
-              "location": "DeFi Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "NFT Market Trends",
-              "speaker": "NFT Panel",
-              "location": "Digital Art Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Binance", "Gate.io", "KuCoin"],
-      "tags": ["digital assets", "asia", "defi"],
-      "capacity": 7000,
-      "registrationDeadline": "2025-02-25"
+      "tags": [
+        "digital assets",
+        "asia",
+        "defi"
+      ]
     },
     {
       "id": "crypto-expo-europe",
@@ -412,42 +170,11 @@
         "vip": 1499
       },
       "organizer": "Crypto Expo Events",
-      "speakers": [
-        {
-          "name": "Gavin Wood",
-          "title": "Founder, Polkadot",
-          "image": "/speakers/gavin-wood.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 2, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Web3 Infrastructure",
-              "speaker": "Gavin Wood",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Eastern European Blockchain Scene",
-              "speaker": "Regional Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Cross-chain Interoperability",
-              "speaker": "Tech Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Elrond", "OMG Network", "Bitdegree"],
-      "tags": ["crypto", "eastern europe", "blockchain"],
-      "capacity": 6000,
-      "registrationDeadline": "2025-02-28"
+      "tags": [
+        "crypto",
+        "eastern europe",
+        "blockchain"
+      ]
     },
     {
       "id": "web3-amsterdam",
@@ -468,42 +195,11 @@
         "vip": 1799
       },
       "organizer": "Web3 Foundation",
-      "speakers": [
-        {
-          "name": "Charles Hoskinson",
-          "title": "Founder, Cardano",
-          "image": "/speakers/charles-hoskinson.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 13, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Smart Contracts",
-              "speaker": "Charles Hoskinson",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "DAOs & Governance",
-              "speaker": "Governance Panel",
-              "location": "DAO Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Web3 Social Platforms",
-              "speaker": "Social Media Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Polkadot", "Cardano", "Web3 Foundation"],
-      "tags": ["web3", "blockchain", "europe"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-03-10"
+      "tags": [
+        "web3",
+        "blockchain",
+        "europe"
+      ]
     },
     {
       "id": "next-block-expo",
@@ -524,42 +220,11 @@
         "vip": 1499
       },
       "organizer": "Next Block Events",
-      "speakers": [
-        {
-          "name": "Joseph Lubin",
-          "title": "Co-founder, Ethereum & CEO, ConsenSys",
-          "image": "/speakers/joseph-lubin.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 19, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Ethereum Enterprise Solutions",
-              "speaker": "Joseph Lubin",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Central European Blockchain Scene",
-              "speaker": "Regional Leaders Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "DeFi Security Best Practices",
-              "speaker": "Security Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["ConsenSys", "Ethereum Foundation", "Protocol Labs"],
-      "tags": ["blockchain", "central europe", "ethereum"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-03-17"
+      "tags": [
+        "blockchain",
+        "central europe",
+        "ethereum"
+      ]
     },
     {
       "id": "dc-blockchain-summit",
@@ -580,42 +245,11 @@
         "vip": 2499
       },
       "organizer": "Chamber of Digital Commerce",
-      "speakers": [
-        {
-          "name": "Gary Gensler",
-          "title": "Chairman, SEC",
-          "image": "/speakers/gary-gensler.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 26, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Regulatory Framework for Digital Assets",
-              "speaker": "Gary Gensler",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Policy Innovation in Blockchain",
-              "speaker": "Policy Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "National Security & Blockchain",
-              "speaker": "Security Panel",
-              "location": "Security Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ripple", "Circle", "Coinbase"],
-      "tags": ["policy", "regulation", "government"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-03-24"
+      "tags": [
+        "policy",
+        "regulation",
+        "government"
+      ]
     },
     {
       "id": "paris-blockchain-week",
@@ -636,42 +270,11 @@
         "vip": 1999
       },
       "organizer": "Paris Blockchain Week SA",
-      "speakers": [
-        {
-          "name": "Changpeng Zhao",
-          "title": "CEO, Binance",
-          "image": "/speakers/cz.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "April 8, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Crypto Exchanges",
-              "speaker": "Changpeng Zhao",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "European DeFi Ecosystem",
-              "speaker": "DeFi Panel",
-              "location": "DeFi Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "NFTs & Digital Culture",
-              "speaker": "Culture Panel",
-              "location": "NFT Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ledger", "Binance", "Crypto.com"],
-      "tags": ["blockchain", "europe", "web3"],
-      "capacity": 12000,
-      "registrationDeadline": "2025-04-06"
+      "tags": [
+        "blockchain",
+        "europe",
+        "web3"
+      ]
     },
     {
       "id": "canada-crypto-week",
@@ -692,42 +295,11 @@
         "vip": 1799
       },
       "organizer": "Canadian Blockchain Association",
-      "speakers": [
-        {
-          "name": "Anthony Di Iorio",
-          "title": "Co-founder, Ethereum",
-          "image": "/speakers/anthony-di-iorio.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 11, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Canadian Crypto Ecosystem",
-              "speaker": "Anthony Di Iorio",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Mining in Canada",
-              "speaker": "Mining Panel",
-              "location": "Mining Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Regulatory Framework",
-              "speaker": "Policy Panel",
-              "location": "Policy Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["3iQ", "Wealthsimple", "Bitbuy"],
-      "tags": ["canada", "crypto", "blockchain"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-05-09"
+      "tags": [
+        "canada",
+        "crypto",
+        "blockchain"
+      ]
     },
     {
       "id": "blockchain-futurist-toronto",
@@ -748,42 +320,11 @@
         "vip": 1499
       },
       "organizer": "Untraceable Events",
-      "speakers": [
-        {
-          "name": "Erik Voorhees",
-          "title": "CEO, ShapeShift",
-          "image": "/speakers/erik-voorhees.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 13, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Future of DeFi",
-              "speaker": "Erik Voorhees",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "AI & Blockchain Convergence",
-              "speaker": "Tech Panel",
-              "location": "Innovation Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Smart City Solutions",
-              "speaker": "Infrastructure Panel",
-              "location": "Future Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ethereum Foundation", "Decentral", "Blockgeeks"],
-      "tags": ["blockchain", "innovation", "technology"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-05-11"
+      "tags": [
+        "blockchain",
+        "innovation",
+        "technology"
+      ]
     },
     {
       "id": "ethwomen",
@@ -804,42 +345,11 @@
         "vip": 999
       },
       "organizer": "ETHWomen DAO",
-      "speakers": [
-        {
-          "name": "Elizabeth Stark",
-          "title": "CEO, Lightning Labs",
-          "image": "/speakers/elizabeth-stark.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 13, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Women in Blockchain Leadership",
-              "speaker": "Elizabeth Stark",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Diversity in Tech",
-              "speaker": "DEI Panel",
-              "location": "Community Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Building Inclusive Web3",
-              "speaker": "Community Panel",
-              "location": "Workshop Room"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Lightning Labs", "ETHGlobal", "She256"],
-      "tags": ["ethereum", "women", "diversity"],
-      "capacity": 1000,
-      "registrationDeadline": "2025-05-11"
+      "tags": [
+        "ethereum",
+        "women",
+        "diversity"
+      ]
     },
     {
       "id": "consensus-toronto",
@@ -860,42 +370,11 @@
         "vip": 2299
       },
       "organizer": "CoinDesk",
-      "speakers": [
-        {
-          "name": "Sam Altman",
-          "title": "CEO, OpenAI",
-          "image": "/speakers/sam-altman.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 14, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "AI and Blockchain Convergence",
-              "speaker": "Sam Altman",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Zero Knowledge Proofs",
-              "speaker": "Technical Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Future of Digital Identity",
-              "speaker": "Identity Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["BMO", "RBC", "TD Bank"],
-      "tags": ["blockchain", "canada", "technology"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-05-12"
+      "tags": [
+        "blockchain",
+        "canada",
+        "technology"
+      ]
     },
     {
       "id": "digital-assets-week-ny",
@@ -916,42 +395,11 @@
         "vip": 2799
       },
       "organizer": "Digital Assets Council NY",
-      "speakers": [
-        {
-          "name": "Mike Novogratz",
-          "title": "CEO, Galaxy Digital",
-          "image": "/speakers/novogratz.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 20, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Institutional Crypto Strategy",
-              "speaker": "Mike Novogratz",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Wall Street & Crypto",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Digital Asset Securities",
-              "speaker": "Legal Panel",
-              "location": "Regulatory Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Galaxy Digital", "Grayscale", "NYDIG"],
-      "tags": ["digital assets", "institutional", "finance"],
-      "capacity": 6000,
-      "registrationDeadline": "2025-05-18"
+      "tags": [
+        "digital assets",
+        "institutional",
+        "finance"
+      ]
     },
     {
       "id": "bitcoin-2025",
@@ -972,42 +420,11 @@
         "vip": 1999
       },
       "organizer": "Bitcoin Magazine",
-      "speakers": [
-        {
-          "name": "Jack Dorsey",
-          "title": "CEO, Block",
-          "image": "/speakers/jack-dorsey.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 27, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Bitcoin's Next Decade",
-              "speaker": "Jack Dorsey",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Lightning Network Innovation",
-              "speaker": "Lightning Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Mining Sustainability",
-              "speaker": "Mining Panel",
-              "location": "Mining Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Block", "BitFury", "Marathon"],
-      "tags": ["bitcoin", "mining", "lightning"],
-      "capacity": 12000,
-      "registrationDeadline": "2025-05-25"
+      "tags": [
+        "bitcoin",
+        "mining",
+        "lightning"
+      ]
     },
     {
       "id": "icma-conference",
@@ -1028,42 +445,11 @@
         "vip": 2999
       },
       "organizer": "ICMA",
-      "speakers": [
-        {
-          "name": "Christine Lagarde",
-          "title": "President, ECB",
-          "image": "/speakers/lagarde.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 4, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Future of European Markets",
-              "speaker": "Christine Lagarde",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Digital Euro Implementation",
-              "speaker": "CBDC Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Capital Markets Innovation",
-              "speaker": "Banking Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Deutsche Bank", "Commerzbank", "BNP Paribas"],
-      "tags": ["finance", "capital markets", "banking"],
-      "capacity": 4000,
-      "registrationDeadline": "2025-06-02"
+      "tags": [
+        "finance",
+        "capital markets",
+        "banking"
+      ]
     },
     {
       "id": "crypto-valley-conference",
@@ -1084,42 +470,11 @@
         "vip": 1799
       },
       "organizer": "Crypto Valley Association",
-      "speakers": [
-        {
-          "name": "Niklas Nikolajsen",
-          "title": "Founder, Bitcoin Suisse",
-          "image": "/speakers/niklas.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 5, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Swiss Crypto Ecosystem",
-              "speaker": "Niklas Nikolajsen",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Excellence",
-              "speaker": "FINMA Panel",
-              "location": "Regulatory Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Banking & Crypto",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Bitcoin Suisse", "SwissBorg", "Sygnum"],
-      "tags": ["switzerland", "regulation", "banking"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-06-03"
+      "tags": [
+        "switzerland",
+        "regulation",
+        "banking"
+      ]
     },
     {
       "id": "permissionless-iv",
@@ -1140,42 +495,11 @@
         "vip": 2299
       },
       "organizer": "Blockworks",
-      "speakers": [
-        {
-          "name": "Andre Cronje",
-          "title": "DeFi Architect",
-          "image": "/speakers/andre-cronje.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 24, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of DeFi",
-              "speaker": "Andre Cronje",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "DeFi Security",
-              "speaker": "Security Panel",
-              "location": "Security Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "Institutional DeFi",
-              "speaker": "Finance Panel",
-              "location": "Finance Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Aave", "Compound", "MakerDAO"],
-      "tags": ["defi", "web3", "finance"],
-      "capacity": 7000,
-      "registrationDeadline": "2025-06-22"
+      "tags": [
+        "defi",
+        "web3",
+        "finance"
+      ]
     },
     {
       "id": "ethereum-community-conference",
@@ -1196,42 +520,11 @@
         "vip": 1899
       },
       "organizer": "Ethereum France",
-      "speakers": [
-        {
-          "name": "Juan Benet",
-          "title": "Founder, Protocol Labs",
-          "image": "/speakers/juan-benet.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 30, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Future of Web3 Storage",
-              "speaker": "Juan Benet",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Layer 2 Innovations",
-              "speaker": "Scaling Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Smart Contract Security",
-              "speaker": "Security Panel",
-              "location": "Developer Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Protocol Labs", "Ethereum Foundation", "ConsenSys"],
-      "tags": ["ethereum", "developers", "web3"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-06-28"
+      "tags": [
+        "ethereum",
+        "developers",
+        "web3"
+      ]
     },
     {
       "id": "rare-evo-2025",
@@ -1252,42 +545,11 @@
         "vip": 1799
       },
       "organizer": "Rare Events DAO",
-      "speakers": [
-        {
-          "name": "Yat Siu",
-          "title": "Co-founder, Animoca Brands",
-          "image": "/speakers/yat-siu.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "August 6, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Digital Ownership",
-              "speaker": "Yat Siu",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "NFTs in Gaming",
-              "speaker": "Gaming Panel",
-              "location": "Gaming Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Digital Art Revolution",
-              "speaker": "Art Panel",
-              "location": "Creative Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Animoca Brands", "OpenSea", "Rarible"],
-      "tags": ["nft", "digital art", "gaming"],
-      "capacity": 4000,
-      "registrationDeadline": "2025-08-04"
+      "tags": [
+        "nft",
+        "digital art",
+        "gaming"
+      ]
     },
     {
       "id": "cbdc-conference",
@@ -1308,42 +570,11 @@
         "vip": 2799
       },
       "organizer": "Central Bank of Bahamas",
-      "speakers": [
-        {
-          "name": "Agustín Carstens",
-          "title": "General Manager, BIS",
-          "image": "/speakers/carstens.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 9, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Future of Money",
-              "speaker": "Agustín Carstens",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "CBDC Implementation",
-              "speaker": "Central Bank Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Digital Currency Privacy",
-              "speaker": "Privacy Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["IBM", "R3", "Accenture"],
-      "tags": ["cbdc", "central banks", "digital currency"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-09-07"
+      "tags": [
+        "cbdc",
+        "central banks",
+        "digital currency"
+      ]
     },
     {
       "id": "korea-blockchain-week",
@@ -1364,42 +595,11 @@
         "vip": 1899
       },
       "organizer": "FactBlock",
-      "speakers": [
-        {
-          "name": "Do Kwon",
-          "title": "CEO, Terraform Labs",
-          "image": "/speakers/do-kwon.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 22, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Asian Crypto Markets",
-              "speaker": "Market Panel",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "Korean Web3 Innovation",
-              "speaker": "Innovation Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "Gaming & Blockchain",
-              "speaker": "Gaming Panel",
-              "location": "Gaming Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Kakao", "Line", "Samsung"],
-      "tags": ["korea", "asia", "blockchain"],
-      "capacity": 10000,
-      "registrationDeadline": "2025-09-20"
+      "tags": [
+        "korea",
+        "asia",
+        "blockchain"
+      ]
     },
     {
       "id": "mainnet-2025",
@@ -1420,42 +620,11 @@
         "vip": 2799
       },
       "organizer": "Messari",
-      "speakers": [
-        {
-          "name": "Ryan Selkis",
-          "title": "CEO, Messari",
-          "image": "/speakers/ryan-selkis.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 22, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "State of Crypto",
-              "speaker": "Ryan Selkis",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Institutional Adoption",
-              "speaker": "Investment Panel",
-              "location": "Finance Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Crypto Regulation",
-              "speaker": "Policy Panel",
-              "location": "Policy Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Messari", "Fireblocks", "Cumberland"],
-      "tags": ["institutional", "finance", "data"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-09-20"
+      "tags": [
+        "institutional",
+        "finance",
+        "data"
+      ]
     },
     {
       "id": "blockchain-life-2025",
@@ -1476,42 +645,11 @@
         "vip": 2899
       },
       "organizer": "Blockchain Life Events",
-      "speakers": [
-        {
-          "name": "Tim Draper",
-          "title": "Founder, Draper Associates",
-          "image": "/speakers/tim-draper.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "October 28, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Digital Investments",
-              "speaker": "Tim Draper",
-              "location": "Sheikh Rashid Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Middle East Crypto Hub",
-              "speaker": "Regional Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Islamic Finance & Crypto",
-              "speaker": "Finance Panel",
-              "location": "Finance Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Emirates NBD", "Dubai Future Foundation", "Bybit"],
-      "tags": ["middle east", "blockchain", "finance"],
-      "capacity": 15000,
-      "registrationDeadline": "2025-10-25"
+      "tags": [
+        "middle east",
+        "blockchain",
+        "finance"
+      ]
     }
   ]
 }

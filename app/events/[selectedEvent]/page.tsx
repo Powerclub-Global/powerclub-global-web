@@ -364,25 +364,29 @@ export default function EventDetailPage({ params }: PageProps) {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex items-center text-white/70">
-                    <Users className="w-5 h-5 mr-3" />
-                    <span>
-                      Capacity: {event.capacity.toLocaleString()} attendees
-                    </span>
-                  </div>
+                  {event.capacity && (
+                    <div className="flex items-center text-white/70">
+                      <Users className="w-5 h-5 mr-3" />
+                      <span>
+                        Capacity: {event.capacity.toLocaleString()} attendees
+                      </span>
+                    </div>
+                  )}
                   <div className="flex items-center text-white/70">
                     <Ticket className="w-5 h-5 mr-3" />
                     <span>From ${event.ticketPrice.early}</span>
                   </div>
-                  <div className="flex items-center text-white/70">
-                    <Clock className="w-5 h-5 mr-3" />
-                    <span>
-                      Registration closes:{" "}
-                      {new Date(
-                        event.registrationDeadline
-                      ).toLocaleDateString()}
-                    </span>
-                  </div>
+                  {event.registrationDeadline && (
+                    <div className="flex items-center text-white/70">
+                      <Clock className="w-5 h-5 mr-3" />
+                      <span>
+                        Registration closes:{" "}
+                        {new Date(
+                          event.registrationDeadline
+                        ).toLocaleDateString()}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -437,7 +441,7 @@ export default function EventDetailPage({ params }: PageProps) {
                   <h2 className="text-xl font-semibold text-[#ae904c] mb-6">
                     Event Schedule
                   </h2>
-                  {event.schedule.map((day, index) => (
+                  {(event.schedule || []).map((day, index) => (
                     <div key={index} className="mb-6 last:mb-0">
                       <h3 className="text-white/90 font-medium mb-4">
                         {day.date}
@@ -479,7 +483,7 @@ export default function EventDetailPage({ params }: PageProps) {
                     Speakers
                   </h2>
                   <div className="space-y-4">
-                    {event.speakers.map((speaker, index) => (
+                    {(event.speakers || []).map((speaker, index) => (
                       <div key={index} className="flex items-center gap-4">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden">
                           <Image
@@ -514,7 +518,7 @@ export default function EventDetailPage({ params }: PageProps) {
                     Sponsors
                   </h2>
                   <div className="flex flex-wrap gap-2">
-                    {event.sponsors.map((sponsor, index) => (
+                    {(event.sponsors || []).map((sponsor, index) => (
                       <span
                         key={index}
                         className="px-3 py-1 rounded-full bg-[#ae904c]/10 text-[#ae904c] text-sm"
@@ -537,7 +541,7 @@ export default function EventDetailPage({ params }: PageProps) {
                     Tags
                   </h2>
                   <div className="flex flex-wrap gap-2">
-                    {event.tags.map((tag, index) => (
+                    {(event.tags || []).map((tag, index) => (
                       <span
                         key={index}
                         className="px-3 py-1 rounded-full bg-[#ae904c]/10 text-[#ae904c] text-sm"

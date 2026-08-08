@@ -115,7 +115,7 @@ export default function SovereignStackPage() {
           <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase"
             style={{ background: "rgba(174,144,76,0.1)", border: "1px solid rgba(174,144,76,0.3)", color: gold }}>
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: gold, animation: "pulse-dot 2s ease-in-out infinite" }} />
-            Founder Calls · Friday June 19, 2026
+            Founder Calls · Limited Sessions
           </div>
 
           <h1 className="font-bold leading-none mb-6" style={{ fontSize: "clamp(3.2rem, 9vw, 8rem)", letterSpacing: "-0.03em" }}>
@@ -232,7 +232,7 @@ export default function SovereignStackPage() {
                 One hour. Live.<br /><span style={{ color: "rgba(232,234,240,0.35)" }}>Pick your time.</span>
               </h2>
               <p className="text-sm mt-3" style={{ color: "rgba(232,234,240,0.38)" }}>
-                Hosted by the Office of the Oklahoma Billionaire · Friday, June 19, 2026
+                Hosted by the Office of the Oklahoma Billionaire · Sessions announced to the list
               </p>
             </div>
           </FadeIn>
@@ -243,11 +243,7 @@ export default function SovereignStackPage() {
               ? [0, 1, 2].map((i) => (
                   <div key={i} className="h-28 rounded-xl animate-pulse" style={{ background: "rgba(255,255,255,0.04)" }} />
                 ))
-              : (slots.length > 0 ? slots : [
-                  { slot: { id: "", label: "9:00 AM CT", start_at: "", capacity: 20 }, booking_count: 0 },
-                  { slot: { id: "", label: "2:00 PM CT", start_at: "", capacity: 20 }, booking_count: 0 },
-                  { slot: { id: "", label: "7:00 PM CT", start_at: "", capacity: 20 }, booking_count: 0 },
-                ]).map((sw) => {
+              : slots.map((sw) => {
                 const isFull = sw.booking_count >= sw.slot.capacity;
                 const isSelected = selectedSlot?.slot.id === sw.slot.id;
                 const spots = sw.slot.capacity - sw.booking_count;
@@ -262,7 +258,7 @@ export default function SovereignStackPage() {
                       boxShadow: isSelected ? "0 0 20px rgba(174,144,76,0.12)" : "none",
                     }}>
                     <div className="text-xl font-bold mb-1" style={{ letterSpacing: "-0.02em" }}>{sw.slot.label}</div>
-                    <div className="text-xs mb-3" style={{ color: "rgba(232,234,240,0.35)" }}>1 hour · Friday June 19</div>
+                    <div className="text-xs mb-3" style={{ color: "rgba(232,234,240,0.35)" }}>1 hour · live with the founder</div>
                     <div className="text-xs font-semibold" style={{ color: isFull ? "rgba(239,68,68,0.7)" : isSelected ? gold : "rgba(232,234,240,0.35)" }}>
                       {isFull ? "Full" : isSelected ? "✓ Selected" : `${spots} spots left`}
                     </div>
@@ -407,7 +403,7 @@ export default function SovereignStackPage() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(174,144,76,0.07) 0%, transparent 70%)" }} />
         <div className="relative z-10 max-w-xl mx-auto">
           <FadeIn>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "rgba(174,144,76,0.55)" }}>Friday · June 19 · Three Sessions</p>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "rgba(174,144,76,0.55)" }}>Live Founder Sessions · Limited Seats</p>
             <h2 className="font-bold mb-8" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
               Reserve Your<br />
               <span style={{ background: "linear-gradient(135deg, #c9a95e 0%, #ae904c 50%, #8a6e38 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Spot</span>

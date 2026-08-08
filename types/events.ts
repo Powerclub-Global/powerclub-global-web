@@ -33,12 +33,12 @@ export interface Event {
   venue: string;
   ticketPrice: TicketPrice;
   organizer: string;
-  speakers: Speaker[];
-  schedule: EventDay[];
-  sponsors: string[];
-  tags: string[];
-  capacity: number;
-  registrationDeadline: string;
+  speakers?: Speaker[];
+  schedule?: EventDay[];
+  sponsors?: string[];
+  tags?: string[];
+  capacity?: number;
+  registrationDeadline?: string;
   dateRange?: {
     start: string;
     end: string;

@@ -9,10 +9,8 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PressReleaseSection from "@/components/PressReleaseSection";
 import ServicesSection from "@/components/ServicesSection";
-import { Sparkles } from "lucide-react";
 import EventSection from "@/components/EventSection";
 import DarkGridBackground3 from "@/components/DarkGridBackground3";
-import CountdownBanner from "@/components/CountdownBanner";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -36,17 +34,6 @@ export default function Home() {
               src="/logo-transparent.png"
               alt="Logo"
             />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-block px-2 md:px-4"
-            >
-              <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#ae904c]/10 text-[#ae904c] text-xs md:text-sm mb-6 md:mb-8">
-                <Sparkles className="inline-block w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" />
-                Welcome to the future
-              </span>
-            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +74,6 @@ export default function Home() {
 
       <VideoSection />
 
-      <CountdownBanner />
       <DarkGridBackground3>
         <EventSection />
       </DarkGridBackground3>

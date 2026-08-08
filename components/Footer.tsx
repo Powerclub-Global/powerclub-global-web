@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="t.me/powerclubglboal"
+                href="https://t.me/powerclubglobal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
