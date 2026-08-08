@@ -52,28 +52,28 @@ const features: FeatureCard[] = [
 
 const stats: Stat[] = [
   {
-    value: 750,
-    label: "Events Organized",
+    value: 8,
+    label: "Years in the Arena",
+    suffix: "",
+    desc: "Producing conference moments and curated rooms since 2018 — through two full market cycles.",
+  },
+  {
+    value: 4,
+    label: "Countries Produced In",
+    suffix: "",
+    desc: "Productions delivered in the United States, Monaco, Dubai, and London.",
+  },
+  {
+    value: 5,
+    label: "Iconic Venues Curated",
     suffix: "+",
-    desc: "Successfully delivered exceptional experiences across a diverse range of industries and formats.",
+    desc: "Versace Mansion, Hôtel Hermitage Monte-Carlo, the Harvard Club, $100M+ LA estates, and more.",
   },
   {
-    value: 85,
-    label: "Attendees",
-    suffix: "K+",
-    desc: "Connected brands with over 85,000 engaged participants through our immersive events.",
-  },
-  {
-    value: 25,
-    label: "Countries",
+    value: 100,
+    label: "Powerclub Members",
     suffix: "+",
-    desc: "Expanded our global footprint to deliver impactful experiences across five continents.",
-  },
-  {
-    value: 99,
-    label: "Client Satisfaction",
-    suffix: "%",
-    desc: "Consistently exceeding expectations with our attention to detail and commitment to excellence.",
+    desc: "A private network of founders, sponsors, and investors who do business through PCG's rooms.",
   },
 ];
 
