@@ -429,9 +429,9 @@ function AboutPageContent() {
                 <span className="text-sm text-[#ae904c]">South Beach, Miami</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                Twice-curated by PCG — invite-only afterparties at the Versace
-                Mansion during TNABC, among the most tightly curated rooms
-                we've ever assembled.
+                Invite-only afterparties at the Versace Mansion during TNABC,
+                curated twice by the team behind PCG — among the most tightly
+                curated rooms we've ever assembled.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
                 <span>TNABC · 2020 &amp; 2022</span>
