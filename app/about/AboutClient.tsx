@@ -441,6 +441,39 @@ function AboutPageContent() {
             </div>
           </div>
         </div>
+
+        {/* Rooms Curated — founder track record */}
+        <div className="mt-20 max-w-4xl mx-auto text-center">
+          <h3 className="text-sm uppercase tracking-widest text-[#ae904c] mb-6">
+            Rooms We&apos;ve Curated
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5 text-left">
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">Versace Mansion</div>
+              <div className="text-white/50 text-sm">South Beach · TNABC, twice</div>
+            </div>
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">Hôtel Hermitage</div>
+              <div className="text-white/50 text-sm">Monte-Carlo · Meta Entertainment World, Grand Prix</div>
+            </div>
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">The Harvard Club</div>
+              <div className="text-white/50 text-sm">New York City · NFT.NYC</div>
+            </div>
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">$100M+ Private Estates</div>
+              <div className="text-white/50 text-sm">Los Angeles · multiple curations</div>
+            </div>
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">Market Hackers Penthouse</div>
+              <div className="text-white/50 text-sm">Miami · conference week takeover</div>
+            </div>
+            <div className="border-l border-[#ae904c]/30 pl-4">
+              <div className="text-white/90 font-medium">Your Venue Next</div>
+              <div className="text-white/50 text-sm">Curated by the team behind PCG</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Additional Content Sections */}
