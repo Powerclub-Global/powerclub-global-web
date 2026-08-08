@@ -390,19 +390,19 @@ function AboutPageContent() {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold text-white">
-                  Conference Circuit Coverage
+                  Market Hackers Penthouse Party
                 </h3>
-                <span className="text-sm text-[#ae904c]">On Location</span>
+                <span className="text-sm text-[#ae904c]">Miami, FL</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                Ground-level production from the blockchain conference circuit —
-                capturing the energy, the people, and the moments that turn an
-                event into lasting content.
+                A penthouse takeover during conference week — the room where
+                traders, founders, and capital actually mix. Produced and
+                curated end-to-end by PCG.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>2022 Season</span>
+                <span>2022</span>
                 <span className="text-white/30">•</span>
-                <span>Event Media Production</span>
+                <span>Full Production &amp; Curation</span>
               </div>
             </div>
           </div>
@@ -424,19 +424,19 @@ function AboutPageContent() {
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold text-white">
-                  Private Afterparty Production
+                  Versace Mansion Afterparty
                 </h3>
-                <span className="text-sm text-[#ae904c]">Invite Only</span>
+                <span className="text-sm text-[#ae904c]">South Beach, Miami</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                Curated rooms where founders, sponsors, and investors actually
-                meet — the signature PCG afterparty experience that turns a
-                conference badge into a network.
+                PCG's first curation of the Versace Mansion — an invite-only
+                afterparty during The North American Bitcoin Conference, and one
+                of our most tightly curated rooms ever assembled.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
-                <span>2022 Season</span>
+                <span>North American Bitcoin Conference</span>
                 <span className="text-white/30">•</span>
-                <span>Experience Design</span>
+                <span>Invite Only</span>
               </div>
             </div>
           </div>
