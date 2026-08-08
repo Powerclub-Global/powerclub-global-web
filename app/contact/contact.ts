@@ -14,9 +14,30 @@ export interface ContactFormData {
   sms_consent?: boolean;
 }
 
+// Relay the lead to the PCG dashboard CRM. Best-effort: a CRM outage must
+// never block the user's submission, which still lands in Appwrite.
+const relayToCrm = async (formData: ContactFormData): Promise<boolean> => {
+  try {
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...formData, sourcePage: "/contact" }),
+    });
+    return res.ok;
+  } catch (error) {
+    console.error("CRM relay failed:", error);
+    return false;
+  }
+};
+
 export const submitContactForm = async (formData: ContactFormData) => {
   if (!databases) {
-    throw new Error("Appwrite client not initialized");
+    // Appwrite unavailable — the CRM relay becomes the primary write.
+    const captured = await relayToCrm(formData);
+    if (!captured) {
+      throw new Error("Could not submit your message. Please try again.");
+    }
+    return null;
   }
 
   try {
@@ -30,9 +51,15 @@ export const submitContactForm = async (formData: ContactFormData) => {
       }
     );
 
+    await relayToCrm(formData);
     return response;
   } catch (error) {
     console.error("Error submitting contact form:", error);
-    throw error;
+    // Appwrite write failed — the lead still counts if the CRM captured it.
+    const captured = await relayToCrm(formData);
+    if (!captured) {
+      throw error;
+    }
+    return null;
   }
 };
