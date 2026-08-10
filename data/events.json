@@ -1579,26 +1579,6 @@
       ]
     },
     {
-      "id": "intelligence-disrupt-2027",
-      "name": "Intelligence Disrupt 2027",
-      "dates": "April 13–15, 2027",
-      "dateRange": {
-        "start": "2027-04-13",
-        "end": "2027-04-15"
-      },
-      "location": "Dallas, USA",
-      "url": "https://intelligencedisrupt.com/",
-      "image": "/events/fetched/intelligence-disrupt-2027.jpg",
-      "description": "The decentralized-AI conference: a live GPU 'Cluster Floor' expo, the Node Zero hackathon, and dedicated infrastructure, builders, and mainstage tracks.",
-      "venue": "Kay Bailey Hutchison Convention Center",
-      "organizer": "Intelligence Disrupt",
-      "tags": [
-        "ai",
-        "blockchain",
-        "web3"
-      ]
-    },
-    {
       "id": "token2049-dubai-2027",
       "name": "TOKEN2049 Dubai 2027",
       "dates": "April 21–22, 2027",
@@ -1634,6 +1614,26 @@
       "tags": [
         "blockchain",
         "bitcoin",
+        "web3"
+      ]
+    },
+    {
+      "id": "intelligence-disrupt-2027",
+      "name": "Intelligence Disrupt 2027",
+      "dates": "May 11–13, 2027",
+      "dateRange": {
+        "start": "2027-05-11",
+        "end": "2027-05-13"
+      },
+      "location": "Dallas, USA",
+      "url": "https://intelligencedisrupt.com/",
+      "image": "/events/fetched/intelligence-disrupt-2027.jpg",
+      "description": "The decentralized-AI conference: a live GPU 'Cluster Floor' expo, the Node Zero hackathon, and dedicated infrastructure, builders, and mainstage tracks.",
+      "venue": "Kay Bailey Hutchison Convention Center",
+      "organizer": "Intelligence Disrupt",
+      "tags": [
+        "ai",
+        "blockchain",
         "web3"
       ]
     },
