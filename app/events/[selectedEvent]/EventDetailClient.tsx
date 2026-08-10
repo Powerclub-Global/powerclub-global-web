@@ -442,27 +442,105 @@ export default function EventDetailClient({
                          backdrop-blur-sm rounded-xl p-8"
                 >
                   <h2 className="text-xl font-semibold text-[#ae904c] mb-4">
-                    Make {event.name} Count
+                    Attend or Sponsor {event.name} with PCG
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-4">
-                    A conference is a moment — the return comes from what you do
-                    with it. PCG manages high-impact presence at {event.name}:
-                    activation strategy, media capture, curated afterparties,
-                    and the follow-through that turns badge scans into pipeline.
+                    PCG covers the conference circuit as a media partner and
+                    books sponsorships directly for the shows we work. Whether
+                    you&apos;re buying a ticket, taking a booth, or building a
+                    full activation — start here and we&apos;ll handle the rest.
                   </p>
                   <ul className="text-white/70 text-sm space-y-2 mb-6">
-                    <li>— On-site production &amp; content capture</li>
-                    <li>— Invite-only afterparty curation</li>
-                    <li>— Post-event momentum: follow-up, content, distribution</li>
+                    <li>— Sponsorship packages &amp; booth placement, brokered by PCG</li>
+                    <li>— Tickets{event.promoCode ? ` — use code ${event.promoCode}` : ""}</li>
+                    <li>— Activations, afterparties &amp; post-event momentum</li>
                   </ul>
-                  <Link
-                    href={`/contact?event=${event.id}`}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
-                           hover:bg-[#ae904c]/90 transition-colors duration-300"
-                  >
-                    Plan Your Presence <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={`/contact?event=${event.id}&interest=sponsor`}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
+                             hover:bg-[#ae904c]/90 transition-colors duration-300"
+                    >
+                      Book a Sponsorship <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <a
+                      href={event.ticketUrl || event.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
+                             text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
+                    >
+                      Get Tickets <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
                 </motion.div>
+
+                {/* PCG Coverage — articles */}
+                {event.articles && event.articles.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-gradient-to-br from-[#ae904c]/10 to-black/40 border border-[#ae904c]/30
+                         backdrop-blur-sm rounded-xl p-8"
+                >
+                  <h2 className="text-xl font-semibold text-[#ae904c] mb-6">
+                    PCG Coverage
+                  </h2>
+                  <div className="space-y-4">
+                    {event.articles.map((a, i) => (
+                      <a
+                        key={i}
+                        href={a.url}
+                        className="block p-4 rounded-lg bg-black/20 border border-[#ae904c]/10
+                               hover:border-[#ae904c]/40 transition-colors duration-300"
+                      >
+                        <div className="text-white/90 font-medium">{a.title}</div>
+                        {a.summary && (
+                          <div className="text-white/60 text-sm mt-1">{a.summary}</div>
+                        )}
+                        {a.date && (
+                          <div className="text-[#ae904c] text-xs mt-2">{a.date}</div>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+                )}
+
+                {/* From the Stage — clips */}
+                {event.clips && event.clips.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35 }}
+                  className="bg-gradient-to-br from-[#ae904c]/10 to-black/40 border border-[#ae904c]/30
+                         backdrop-blur-sm rounded-xl p-8"
+                >
+                  <h2 className="text-xl font-semibold text-[#ae904c] mb-6">
+                    From the Stage
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {event.clips.map((c, i) => (
+                      <div key={i} className="rounded-lg overflow-hidden bg-black/20 border border-[#ae904c]/10">
+                        <video
+                          controls
+                          preload="none"
+                          poster={c.thumbnail}
+                          className="w-full aspect-video object-cover"
+                          src={c.videoUrl}
+                        />
+                        <div className="p-3">
+                          <div className="text-white/90 text-sm font-medium">{c.title}</div>
+                          {c.speaker && (
+                            <div className="text-white/50 text-xs mt-0.5">{c.speaker}</div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+                )}
 
                 {/* Schedule */}
                 {event.schedule && event.schedule.length > 0 && (
