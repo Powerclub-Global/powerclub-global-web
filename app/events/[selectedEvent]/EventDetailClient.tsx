@@ -433,7 +433,39 @@ export default function EventDetailClient({
                   </p>
                 </motion.div>
 
+                {/* PCG at this event */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  className="bg-gradient-to-br from-[#ae904c]/15 to-black/40 border border-[#ae904c]/40
+                         backdrop-blur-sm rounded-xl p-8"
+                >
+                  <h2 className="text-xl font-semibold text-[#ae904c] mb-4">
+                    Make {event.name} Count
+                  </h2>
+                  <p className="text-white/70 leading-relaxed mb-4">
+                    A conference is a moment — the return comes from what you do
+                    with it. PCG manages high-impact presence at {event.name}:
+                    activation strategy, media capture, curated afterparties,
+                    and the follow-through that turns badge scans into pipeline.
+                  </p>
+                  <ul className="text-white/70 text-sm space-y-2 mb-6">
+                    <li>— On-site production &amp; content capture</li>
+                    <li>— Invite-only afterparty curation</li>
+                    <li>— Post-event momentum: follow-up, content, distribution</li>
+                  </ul>
+                  <Link
+                    href={`/contact?event=${event.id}`}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
+                           hover:bg-[#ae904c]/90 transition-colors duration-300"
+                  >
+                    Plan Your Presence <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+
                 {/* Schedule */}
+                {event.schedule && event.schedule.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -470,11 +502,13 @@ export default function EventDetailClient({
                     </div>
                   ))}
                 </motion.div>
+                )}
               </div>
 
               {/* Sidebar */}
               <div className="space-y-8">
                 {/* Speakers */}
+                {event.speakers && event.speakers.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -508,8 +542,10 @@ export default function EventDetailClient({
                     ))}
                   </div>
                 </motion.div>
+                )}
 
                 {/* Sponsors */}
+                {event.sponsors && event.sponsors.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -531,8 +567,10 @@ export default function EventDetailClient({
                     ))}
                   </div>
                 </motion.div>
+                )}
 
                 {/* Tags */}
+                {event.tags && event.tags.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -554,6 +592,7 @@ export default function EventDetailClient({
                     ))}
                   </div>
                 </motion.div>
+                )}
               </div>
             </div>
 
