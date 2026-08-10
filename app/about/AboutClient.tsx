@@ -431,7 +431,7 @@ function AboutPageContent() {
               <p className="text-white/70 text-sm leading-relaxed mb-4">
                 Invite-only afterparties at the Versace Mansion during TNABC,
                 curated twice by the team behind PCG — among the most tightly
-                curated rooms we've ever assembled.
+                curated rooms we&apos;ve ever assembled.
               </p>
               <div className="flex items-center gap-2 text-[#ae904c] text-sm">
                 <span>TNABC · 2020 &amp; 2022</span>
