@@ -1259,9 +1259,27 @@
       ]
     },
     {
+      "id": "agntcon-mcpcon-na-2026",
+      "name": "AGNTCon + MCPCon North America 2026",
+      "dates": "October 22–23, 2026",
+      "dateRange": {
+        "start": "2026-10-22",
+        "end": "2026-10-23"
+      },
+      "location": "San Jose, USA",
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "image": "/events/fetched/agntcon-mcpcon-na-2026.jpg",
+      "description": "Flagship conference of the Linux Foundation's Agentic AI Foundation — the first major industry event for the open agentic-AI and MCP ecosystem, combining technical deep dives with enterprise strategy and governance.",
+      "venue": "San Jose, CA",
+      "organizer": "Agentic AI Foundation (Linux Foundation)",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
       "id": "smartcon-2026",
       "name": "Chainlink SmartCon 2026",
-      "dates": "November 1–2, 2026",
+      "dates": "2026 — dates TBA",
       "dateRange": {
         "start": "2026-11-01",
         "end": "2026-11-02"
@@ -1269,7 +1287,7 @@
       "location": "New York, USA",
       "url": "https://smartcon.chain.link/",
       "image": "/events/fetched/smartcon-2026.jpg",
-      "description": "Chainlink's annual conference on oracles, tokenization, and onchain finance, bringing together banks, capital markets institutions, and Web3 builders.",
+      "description": "Chainlink's annual conference on oracles, tokenization, and onchain finance, bringing together banks, capital markets institutions, and Web3 builders. 2026 dates not yet announced — the 2025 edition ran Nov 4–5 in New York.",
       "venue": "New York City",
       "organizer": "Chainlink Labs",
       "tags": [
@@ -1657,6 +1675,24 @@
       ]
     },
     {
+      "id": "agent-conference-2027",
+      "name": "Agent Conference 2027",
+      "dates": "May 17–18, 2027",
+      "dateRange": {
+        "start": "2027-05-17",
+        "end": "2027-05-18"
+      },
+      "location": "New York, USA",
+      "url": "https://www.agentconference.com/",
+      "image": "/events/fetched/agent-conference-2027.jpg",
+      "description": "Enterprise AI-agent conference bringing 4,000+ executives, founders, and builders to Midtown Manhattan — squarely aimed at the agentic-AI wave.",
+      "venue": "Hilton Midtown, New York",
+      "organizer": "Agent Conference",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
       "id": "ai-summit-london-2027",
       "name": "The AI Summit London 2027",
       "dates": "June 9–10, 2027",
@@ -1713,6 +1749,25 @@
       ]
     },
     {
+      "id": "webx-tokyo-2027",
+      "name": "WebX Tokyo 2027",
+      "dates": "August 25–26, 2027",
+      "dateRange": {
+        "start": "2027-08-25",
+        "end": "2027-08-26"
+      },
+      "location": "Tokyo, Japan",
+      "url": "https://webx-asia.com/",
+      "image": "/events/fetched/webx-tokyo-2027.jpg",
+      "description": "Asia's largest Web3 conference returns in 2027 at a significantly larger venue, announced at the close of WebX 2026.",
+      "venue": "Tokyo Big Sight",
+      "organizer": "CoinPost",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
       "id": "superai-singapore-2027",
       "name": "SuperAI Singapore 2027",
       "dates": "September 8–9, 2027",
@@ -1727,6 +1782,25 @@
       "venue": "Marina Bay Sands",
       "organizer": "SuperAI",
       "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "money2020-usa-2027",
+      "name": "Money20/20 USA 2027",
+      "dates": "October 19–21, 2027",
+      "dateRange": {
+        "start": "2027-10-19",
+        "end": "2027-10-21"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://us.money2020.com/",
+      "image": "/events/fetched/money2020-usa-2027.jpg",
+      "description": "The world's premier fintech show opens its next chapter — moving to the Las Vegas Convention Center and Resorts World for 2027.",
+      "venue": "Las Vegas Convention Center + Resorts World",
+      "organizer": "Money20/20 (Ascential)",
+      "tags": [
+        "fintech",
         "ai"
       ]
     }
