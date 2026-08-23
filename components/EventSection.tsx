@@ -99,7 +99,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
                        rounded-md sm:rounded-lg bg-[#ae904c] text-white text-xs sm:text-base 
                        w-full sm:w-auto transition-colors duration-300 hover:bg-[#ae904c]/90"
             >
-              From ${event.ticketPrice.early}{" "}
+              {event.ticketPrice ? `From $${event.ticketPrice.early} ` : "Event Site "}
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </Link>
             <Link

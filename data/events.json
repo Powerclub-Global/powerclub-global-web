@@ -19,72 +19,10 @@
         "vip": 2499
       },
       "organizer": "Consumer Technology Association",
-      "speakers": [
-        {
-          "name": "Lisa Su",
-          "title": "CEO, AMD",
-          "image": "/speakers/lisa-su.jpg"
-        },
-        {
-          "name": "Jensen Huang",
-          "title": "CEO, NVIDIA",
-          "image": "/speakers/jensen-huang.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 7, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Opening Keynote",
-              "speaker": "Lisa Su",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "The Future of AI",
-              "speaker": "Jensen Huang",
-              "location": "West Hall"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Next Generation Computing",
-              "speaker": "Pat Gelsinger",
-              "location": "Central Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Samsung", "Intel", "Google", "AMD", "NVIDIA"],
-      "tags": ["technology", "innovation", "consumer electronics"],
-      "capacity": 180000,
-      "registrationDeadline": "2025-01-05",
-      "eventList": [
-        {
-          "name": "AI Innovation Workshop",
-          "description": "Hands-on workshop exploring latest AI developments",
-          "date": "2025-01-08",
-          "time": "10:00 AM",
-          "image": "/events/ai-workshop.png",
-          "applyLink": "https://ces.tech/workshops/ai-innovation"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "12:00 PM",
-          "image": "/events/startup-competition.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "2:00 PM",
-          "image": "/events/startup-pitch.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        }
+      "tags": [
+        "technology",
+        "innovation",
+        "consumer electronics"
       ]
     },
     {
@@ -106,67 +44,11 @@
         "vip": 1999
       },
       "organizer": "WAGMI Events LLC",
-      "speakers": [
-        {
-          "name": "Vitalik Buterin",
-          "title": "Co-founder, Ethereum",
-          "image": "/speakers/vitalik.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 21, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "The Future of Web3",
-              "speaker": "Vitalik Buterin",
-              "location": "Main Stage"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "DeFi Innovation Panel",
-              "speaker": "Industry Leaders Panel",
-              "location": "DeFi Stage"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "NFT Market Evolution",
-              "speaker": "Digital Art Panel",
-              "location": "NFT Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Binance", "Coinbase", "FTX"],
-      "tags": ["blockchain", "crypto", "web3", "defi"],
-      "capacity": 15000,
-      "registrationDeadline": "2025-01-19",
-      "eventList": [
-        {
-          "name": "AI Innovation Workshop",
-          "description": "Hands-on workshop exploring latest AI developments",
-          "date": "2025-01-08",
-          "time": "10:00 AM",
-          "image": "/events/ai-workshop.png",
-          "applyLink": "https://ces.tech/workshops/ai-innovation"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "12:00 PM",
-          "image": "/events/startup-competition.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        },
-        {
-          "name": "Startup Pitch Competition",
-          "description": "Tech startups compete for investment opportunities",
-          "date": "2025-01-09",
-          "time": "2:00 PM",
-          "image": "/events/startup-pitch.png",
-          "applyLink": "https://ces.tech/startup-pitch"
-        }
+      "tags": [
+        "blockchain",
+        "crypto",
+        "web3",
+        "defi"
       ]
     },
     {
@@ -188,42 +70,11 @@
         "vip": 1899
       },
       "organizer": "Crypto Gathering DAO",
-      "speakers": [
-        {
-          "name": "Brian Armstrong",
-          "title": "CEO, Coinbase",
-          "image": "/speakers/brian-armstrong.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "January 30, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "State of Crypto Markets",
-              "speaker": "Brian Armstrong",
-              "location": "Grand Ballroom"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Landscape",
-              "speaker": "Legal Panel",
-              "location": "Conference Room A"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Institutional Adoption",
-              "speaker": "Investment Panel",
-              "location": "Main Hall"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Coinbase", "Gemini", "Kraken"],
-      "tags": ["crypto", "blockchain", "investment"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-01-28"
+      "tags": [
+        "crypto",
+        "blockchain",
+        "investment"
+      ]
     },
     {
       "id": "digital-assets-forum",
@@ -244,42 +95,11 @@
         "vip": 2499
       },
       "organizer": "Digital Asset Council",
-      "speakers": [
-        {
-          "name": "Michael Saylor",
-          "title": "Executive Chairman, MicroStrategy",
-          "image": "/speakers/saylor.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 3, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Bitcoin for Institutions",
-              "speaker": "Michael Saylor",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Framework in Europe",
-              "speaker": "EU Regulatory Panel",
-              "location": "Policy Room"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Digital Asset Custody Solutions",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["JPMorgan", "Goldman Sachs", "Fidelity"],
-      "tags": ["institutional", "digital assets", "finance"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-02-01"
+      "tags": [
+        "institutional",
+        "digital assets",
+        "finance"
+      ]
     },
     {
       "id": "consensus-hongkong",
@@ -300,42 +120,11 @@
         "vip": 2299
       },
       "organizer": "CoinDesk",
-      "speakers": [
-        {
-          "name": "Justin Sun",
-          "title": "Founder, TRON",
-          "image": "/speakers/justin-sun.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 18, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Asian Markets Overview",
-              "speaker": "Justin Sun",
-              "location": "Grand Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "CBDCs in Asia",
-              "speaker": "Central Bank Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Web3 Gaming Future",
-              "speaker": "Gaming Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["OKX", "Huobi", "BitMEX"],
-      "tags": ["asia", "blockchain", "finance"],
-      "capacity": 10000,
-      "registrationDeadline": "2025-02-15"
+      "tags": [
+        "asia",
+        "blockchain",
+        "finance"
+      ]
     },
     {
       "id": "digital-assets-week-hongkong",
@@ -356,42 +145,11 @@
         "vip": 1899
       },
       "organizer": "Digital Assets Council Asia",
-      "speakers": [
-        {
-          "name": "Sam Bankman-Fried",
-          "title": "Founder, FTX",
-          "image": "/speakers/sbf.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "February 27, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Digital Asset Trading",
-              "speaker": "Trading Panel",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "DeFi in Asia",
-              "speaker": "DeFi Panel",
-              "location": "DeFi Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "NFT Market Trends",
-              "speaker": "NFT Panel",
-              "location": "Digital Art Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Binance", "Gate.io", "KuCoin"],
-      "tags": ["digital assets", "asia", "defi"],
-      "capacity": 7000,
-      "registrationDeadline": "2025-02-25"
+      "tags": [
+        "digital assets",
+        "asia",
+        "defi"
+      ]
     },
     {
       "id": "crypto-expo-europe",
@@ -412,42 +170,11 @@
         "vip": 1499
       },
       "organizer": "Crypto Expo Events",
-      "speakers": [
-        {
-          "name": "Gavin Wood",
-          "title": "Founder, Polkadot",
-          "image": "/speakers/gavin-wood.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 2, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Web3 Infrastructure",
-              "speaker": "Gavin Wood",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Eastern European Blockchain Scene",
-              "speaker": "Regional Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Cross-chain Interoperability",
-              "speaker": "Tech Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Elrond", "OMG Network", "Bitdegree"],
-      "tags": ["crypto", "eastern europe", "blockchain"],
-      "capacity": 6000,
-      "registrationDeadline": "2025-02-28"
+      "tags": [
+        "crypto",
+        "eastern europe",
+        "blockchain"
+      ]
     },
     {
       "id": "web3-amsterdam",
@@ -468,42 +195,11 @@
         "vip": 1799
       },
       "organizer": "Web3 Foundation",
-      "speakers": [
-        {
-          "name": "Charles Hoskinson",
-          "title": "Founder, Cardano",
-          "image": "/speakers/charles-hoskinson.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 13, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Smart Contracts",
-              "speaker": "Charles Hoskinson",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "DAOs & Governance",
-              "speaker": "Governance Panel",
-              "location": "DAO Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Web3 Social Platforms",
-              "speaker": "Social Media Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Polkadot", "Cardano", "Web3 Foundation"],
-      "tags": ["web3", "blockchain", "europe"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-03-10"
+      "tags": [
+        "web3",
+        "blockchain",
+        "europe"
+      ]
     },
     {
       "id": "next-block-expo",
@@ -524,42 +220,11 @@
         "vip": 1499
       },
       "organizer": "Next Block Events",
-      "speakers": [
-        {
-          "name": "Joseph Lubin",
-          "title": "Co-founder, Ethereum & CEO, ConsenSys",
-          "image": "/speakers/joseph-lubin.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 19, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Ethereum Enterprise Solutions",
-              "speaker": "Joseph Lubin",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Central European Blockchain Scene",
-              "speaker": "Regional Leaders Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "DeFi Security Best Practices",
-              "speaker": "Security Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["ConsenSys", "Ethereum Foundation", "Protocol Labs"],
-      "tags": ["blockchain", "central europe", "ethereum"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-03-17"
+      "tags": [
+        "blockchain",
+        "central europe",
+        "ethereum"
+      ]
     },
     {
       "id": "dc-blockchain-summit",
@@ -580,42 +245,11 @@
         "vip": 2499
       },
       "organizer": "Chamber of Digital Commerce",
-      "speakers": [
-        {
-          "name": "Gary Gensler",
-          "title": "Chairman, SEC",
-          "image": "/speakers/gary-gensler.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "March 26, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Regulatory Framework for Digital Assets",
-              "speaker": "Gary Gensler",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Policy Innovation in Blockchain",
-              "speaker": "Policy Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "National Security & Blockchain",
-              "speaker": "Security Panel",
-              "location": "Security Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ripple", "Circle", "Coinbase"],
-      "tags": ["policy", "regulation", "government"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-03-24"
+      "tags": [
+        "policy",
+        "regulation",
+        "government"
+      ]
     },
     {
       "id": "paris-blockchain-week",
@@ -636,42 +270,11 @@
         "vip": 1999
       },
       "organizer": "Paris Blockchain Week SA",
-      "speakers": [
-        {
-          "name": "Changpeng Zhao",
-          "title": "CEO, Binance",
-          "image": "/speakers/cz.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "April 8, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Crypto Exchanges",
-              "speaker": "Changpeng Zhao",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "European DeFi Ecosystem",
-              "speaker": "DeFi Panel",
-              "location": "DeFi Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "NFTs & Digital Culture",
-              "speaker": "Culture Panel",
-              "location": "NFT Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ledger", "Binance", "Crypto.com"],
-      "tags": ["blockchain", "europe", "web3"],
-      "capacity": 12000,
-      "registrationDeadline": "2025-04-06"
+      "tags": [
+        "blockchain",
+        "europe",
+        "web3"
+      ]
     },
     {
       "id": "canada-crypto-week",
@@ -692,42 +295,11 @@
         "vip": 1799
       },
       "organizer": "Canadian Blockchain Association",
-      "speakers": [
-        {
-          "name": "Anthony Di Iorio",
-          "title": "Co-founder, Ethereum",
-          "image": "/speakers/anthony-di-iorio.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 11, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Canadian Crypto Ecosystem",
-              "speaker": "Anthony Di Iorio",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Mining in Canada",
-              "speaker": "Mining Panel",
-              "location": "Mining Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Regulatory Framework",
-              "speaker": "Policy Panel",
-              "location": "Policy Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["3iQ", "Wealthsimple", "Bitbuy"],
-      "tags": ["canada", "crypto", "blockchain"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-05-09"
+      "tags": [
+        "canada",
+        "crypto",
+        "blockchain"
+      ]
     },
     {
       "id": "blockchain-futurist-toronto",
@@ -748,42 +320,11 @@
         "vip": 1499
       },
       "organizer": "Untraceable Events",
-      "speakers": [
-        {
-          "name": "Erik Voorhees",
-          "title": "CEO, ShapeShift",
-          "image": "/speakers/erik-voorhees.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 13, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Future of DeFi",
-              "speaker": "Erik Voorhees",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "AI & Blockchain Convergence",
-              "speaker": "Tech Panel",
-              "location": "Innovation Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Smart City Solutions",
-              "speaker": "Infrastructure Panel",
-              "location": "Future Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Ethereum Foundation", "Decentral", "Blockgeeks"],
-      "tags": ["blockchain", "innovation", "technology"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-05-11"
+      "tags": [
+        "blockchain",
+        "innovation",
+        "technology"
+      ]
     },
     {
       "id": "ethwomen",
@@ -804,42 +345,11 @@
         "vip": 999
       },
       "organizer": "ETHWomen DAO",
-      "speakers": [
-        {
-          "name": "Elizabeth Stark",
-          "title": "CEO, Lightning Labs",
-          "image": "/speakers/elizabeth-stark.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 13, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Women in Blockchain Leadership",
-              "speaker": "Elizabeth Stark",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Diversity in Tech",
-              "speaker": "DEI Panel",
-              "location": "Community Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Building Inclusive Web3",
-              "speaker": "Community Panel",
-              "location": "Workshop Room"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Lightning Labs", "ETHGlobal", "She256"],
-      "tags": ["ethereum", "women", "diversity"],
-      "capacity": 1000,
-      "registrationDeadline": "2025-05-11"
+      "tags": [
+        "ethereum",
+        "women",
+        "diversity"
+      ]
     },
     {
       "id": "consensus-toronto",
@@ -860,42 +370,11 @@
         "vip": 2299
       },
       "organizer": "CoinDesk",
-      "speakers": [
-        {
-          "name": "Sam Altman",
-          "title": "CEO, OpenAI",
-          "image": "/speakers/sam-altman.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 14, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "AI and Blockchain Convergence",
-              "speaker": "Sam Altman",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Zero Knowledge Proofs",
-              "speaker": "Technical Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Future of Digital Identity",
-              "speaker": "Identity Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["BMO", "RBC", "TD Bank"],
-      "tags": ["blockchain", "canada", "technology"],
-      "capacity": 8000,
-      "registrationDeadline": "2025-05-12"
+      "tags": [
+        "blockchain",
+        "canada",
+        "technology"
+      ]
     },
     {
       "id": "digital-assets-week-ny",
@@ -916,42 +395,11 @@
         "vip": 2799
       },
       "organizer": "Digital Assets Council NY",
-      "speakers": [
-        {
-          "name": "Mike Novogratz",
-          "title": "CEO, Galaxy Digital",
-          "image": "/speakers/novogratz.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 20, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Institutional Crypto Strategy",
-              "speaker": "Mike Novogratz",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Wall Street & Crypto",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Digital Asset Securities",
-              "speaker": "Legal Panel",
-              "location": "Regulatory Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Galaxy Digital", "Grayscale", "NYDIG"],
-      "tags": ["digital assets", "institutional", "finance"],
-      "capacity": 6000,
-      "registrationDeadline": "2025-05-18"
+      "tags": [
+        "digital assets",
+        "institutional",
+        "finance"
+      ]
     },
     {
       "id": "bitcoin-2025",
@@ -972,42 +420,11 @@
         "vip": 1999
       },
       "organizer": "Bitcoin Magazine",
-      "speakers": [
-        {
-          "name": "Jack Dorsey",
-          "title": "CEO, Block",
-          "image": "/speakers/jack-dorsey.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "May 27, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Bitcoin's Next Decade",
-              "speaker": "Jack Dorsey",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Lightning Network Innovation",
-              "speaker": "Lightning Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Mining Sustainability",
-              "speaker": "Mining Panel",
-              "location": "Mining Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Block", "BitFury", "Marathon"],
-      "tags": ["bitcoin", "mining", "lightning"],
-      "capacity": 12000,
-      "registrationDeadline": "2025-05-25"
+      "tags": [
+        "bitcoin",
+        "mining",
+        "lightning"
+      ]
     },
     {
       "id": "icma-conference",
@@ -1028,42 +445,11 @@
         "vip": 2999
       },
       "organizer": "ICMA",
-      "speakers": [
-        {
-          "name": "Christine Lagarde",
-          "title": "President, ECB",
-          "image": "/speakers/lagarde.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 4, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Future of European Markets",
-              "speaker": "Christine Lagarde",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Digital Euro Implementation",
-              "speaker": "CBDC Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Capital Markets Innovation",
-              "speaker": "Banking Panel",
-              "location": "Innovation Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Deutsche Bank", "Commerzbank", "BNP Paribas"],
-      "tags": ["finance", "capital markets", "banking"],
-      "capacity": 4000,
-      "registrationDeadline": "2025-06-02"
+      "tags": [
+        "finance",
+        "capital markets",
+        "banking"
+      ]
     },
     {
       "id": "crypto-valley-conference",
@@ -1084,42 +470,11 @@
         "vip": 1799
       },
       "organizer": "Crypto Valley Association",
-      "speakers": [
-        {
-          "name": "Niklas Nikolajsen",
-          "title": "Founder, Bitcoin Suisse",
-          "image": "/speakers/niklas.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 5, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Swiss Crypto Ecosystem",
-              "speaker": "Niklas Nikolajsen",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:00 AM",
-              "title": "Regulatory Excellence",
-              "speaker": "FINMA Panel",
-              "location": "Regulatory Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Banking & Crypto",
-              "speaker": "Banking Panel",
-              "location": "Finance Track"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Bitcoin Suisse", "SwissBorg", "Sygnum"],
-      "tags": ["switzerland", "regulation", "banking"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-06-03"
+      "tags": [
+        "switzerland",
+        "regulation",
+        "banking"
+      ]
     },
     {
       "id": "permissionless-iv",
@@ -1140,42 +495,11 @@
         "vip": 2299
       },
       "organizer": "Blockworks",
-      "speakers": [
-        {
-          "name": "Andre Cronje",
-          "title": "DeFi Architect",
-          "image": "/speakers/andre-cronje.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 24, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of DeFi",
-              "speaker": "Andre Cronje",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "DeFi Security",
-              "speaker": "Security Panel",
-              "location": "Security Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "Institutional DeFi",
-              "speaker": "Finance Panel",
-              "location": "Finance Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Aave", "Compound", "MakerDAO"],
-      "tags": ["defi", "web3", "finance"],
-      "capacity": 7000,
-      "registrationDeadline": "2025-06-22"
+      "tags": [
+        "defi",
+        "web3",
+        "finance"
+      ]
     },
     {
       "id": "ethereum-community-conference",
@@ -1196,42 +520,11 @@
         "vip": 1899
       },
       "organizer": "Ethereum France",
-      "speakers": [
-        {
-          "name": "Juan Benet",
-          "title": "Founder, Protocol Labs",
-          "image": "/speakers/juan-benet.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "June 30, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "Future of Web3 Storage",
-              "speaker": "Juan Benet",
-              "location": "Main Stage"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Layer 2 Innovations",
-              "speaker": "Scaling Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Smart Contract Security",
-              "speaker": "Security Panel",
-              "location": "Developer Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Protocol Labs", "Ethereum Foundation", "ConsenSys"],
-      "tags": ["ethereum", "developers", "web3"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-06-28"
+      "tags": [
+        "ethereum",
+        "developers",
+        "web3"
+      ]
     },
     {
       "id": "rare-evo-2025",
@@ -1252,42 +545,11 @@
         "vip": 1799
       },
       "organizer": "Rare Events DAO",
-      "speakers": [
-        {
-          "name": "Yat Siu",
-          "title": "Co-founder, Animoca Brands",
-          "image": "/speakers/yat-siu.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "August 6, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Digital Ownership",
-              "speaker": "Yat Siu",
-              "location": "Main Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "NFTs in Gaming",
-              "speaker": "Gaming Panel",
-              "location": "Gaming Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Digital Art Revolution",
-              "speaker": "Art Panel",
-              "location": "Creative Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Animoca Brands", "OpenSea", "Rarible"],
-      "tags": ["nft", "digital art", "gaming"],
-      "capacity": 4000,
-      "registrationDeadline": "2025-08-04"
+      "tags": [
+        "nft",
+        "digital art",
+        "gaming"
+      ]
     },
     {
       "id": "cbdc-conference",
@@ -1308,42 +570,11 @@
         "vip": 2799
       },
       "organizer": "Central Bank of Bahamas",
-      "speakers": [
-        {
-          "name": "Agustín Carstens",
-          "title": "General Manager, BIS",
-          "image": "/speakers/carstens.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 9, 2025",
-          "events": [
-            {
-              "time": "09:00 AM",
-              "title": "Future of Money",
-              "speaker": "Agustín Carstens",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "CBDC Implementation",
-              "speaker": "Central Bank Panel",
-              "location": "Policy Track"
-            },
-            {
-              "time": "02:00 PM",
-              "title": "Digital Currency Privacy",
-              "speaker": "Privacy Panel",
-              "location": "Tech Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["IBM", "R3", "Accenture"],
-      "tags": ["cbdc", "central banks", "digital currency"],
-      "capacity": 3000,
-      "registrationDeadline": "2025-09-07"
+      "tags": [
+        "cbdc",
+        "central banks",
+        "digital currency"
+      ]
     },
     {
       "id": "korea-blockchain-week",
@@ -1364,42 +595,11 @@
         "vip": 1899
       },
       "organizer": "FactBlock",
-      "speakers": [
-        {
-          "name": "Do Kwon",
-          "title": "CEO, Terraform Labs",
-          "image": "/speakers/do-kwon.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 22, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Asian Crypto Markets",
-              "speaker": "Market Panel",
-              "location": "Main Stage"
-            },
-            {
-              "time": "01:30 PM",
-              "title": "Korean Web3 Innovation",
-              "speaker": "Innovation Panel",
-              "location": "Tech Track"
-            },
-            {
-              "time": "04:00 PM",
-              "title": "Gaming & Blockchain",
-              "speaker": "Gaming Panel",
-              "location": "Gaming Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Kakao", "Line", "Samsung"],
-      "tags": ["korea", "asia", "blockchain"],
-      "capacity": 10000,
-      "registrationDeadline": "2025-09-20"
+      "tags": [
+        "korea",
+        "asia",
+        "blockchain"
+      ]
     },
     {
       "id": "mainnet-2025",
@@ -1420,42 +620,11 @@
         "vip": 2799
       },
       "organizer": "Messari",
-      "speakers": [
-        {
-          "name": "Ryan Selkis",
-          "title": "CEO, Messari",
-          "image": "/speakers/ryan-selkis.jpg"
-        }
-      ],
-      "schedule": [
-        {
-          "date": "September 22, 2025",
-          "events": [
-            {
-              "time": "09:30 AM",
-              "title": "State of Crypto",
-              "speaker": "Ryan Selkis",
-              "location": "Main Hall"
-            },
-            {
-              "time": "11:30 AM",
-              "title": "Institutional Adoption",
-              "speaker": "Investment Panel",
-              "location": "Finance Track"
-            },
-            {
-              "time": "02:30 PM",
-              "title": "Crypto Regulation",
-              "speaker": "Policy Panel",
-              "location": "Policy Stage"
-            }
-          ]
-        }
-      ],
-      "sponsors": ["Messari", "Fireblocks", "Cumberland"],
-      "tags": ["institutional", "finance", "data"],
-      "capacity": 5000,
-      "registrationDeadline": "2025-09-20"
+      "tags": [
+        "institutional",
+        "finance",
+        "data"
+      ]
     },
     {
       "id": "blockchain-life-2025",
@@ -1476,42 +645,1090 @@
         "vip": 2899
       },
       "organizer": "Blockchain Life Events",
-      "speakers": [
-        {
-          "name": "Tim Draper",
-          "title": "Founder, Draper Associates",
-          "image": "/speakers/tim-draper.jpg"
-        }
+      "tags": [
+        "middle east",
+        "blockchain",
+        "finance"
+      ]
+    },
+    {
+      "id": "devconnect-buenos-aires-2025",
+      "name": "Devconnect ARG 2025",
+      "dates": "November 17–22, 2025",
+      "dateRange": {
+        "start": "2025-11-17",
+        "end": "2025-11-22"
+      },
+      "location": "Buenos Aires, Argentina",
+      "url": "https://devconnect.org/",
+      "image": "/events/fetched/devconnect-buenos-aires-2025.jpg",
+      "description": "The Ethereum Foundation's first 'Ethereum World's Fair,' gathering 15,000+ attendees for 100+ ecosystem events, technical conferences, and community gatherings across Buenos Aires.",
+      "venue": "La Rural",
+      "organizer": "Ethereum Foundation",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
       ],
-      "schedule": [
-        {
-          "date": "October 28, 2025",
-          "events": [
-            {
-              "time": "10:00 AM",
-              "title": "Future of Digital Investments",
-              "speaker": "Tim Draper",
-              "location": "Sheikh Rashid Hall"
-            },
-            {
-              "time": "01:00 PM",
-              "title": "Middle East Crypto Hub",
-              "speaker": "Regional Panel",
-              "location": "Regional Track"
-            },
-            {
-              "time": "03:30 PM",
-              "title": "Islamic Finance & Crypto",
-              "speaker": "Finance Panel",
-              "location": "Finance Stage"
-            }
-          ]
-        }
+      "attended": false
+    },
+    {
+      "id": "bitcoin-mena-2025",
+      "name": "Bitcoin MENA 2025",
+      "dates": "December 8–9, 2025",
+      "dateRange": {
+        "start": "2025-12-08",
+        "end": "2025-12-09"
+      },
+      "location": "Abu Dhabi, UAE",
+      "url": "https://mena.b.tc/",
+      "image": "/events/fetched/bitcoin-mena-2025.jpg",
+      "description": "Second edition of BTC Inc's Middle East flagship Bitcoin conference, expecting 12,000+ attendees and 190+ speakers the week after the Abu Dhabi Formula One Grand Prix.",
+      "venue": "Marina Hall, ADNEC Centre Abu Dhabi",
+      "organizer": "BTC Inc & ADNEC Group",
+      "tags": [
+        "bitcoin",
+        "blockchain"
       ],
-      "sponsors": ["Emirates NBD", "Dubai Future Foundation", "Bybit"],
-      "tags": ["middle east", "blockchain", "finance"],
-      "capacity": 15000,
-      "registrationDeadline": "2025-10-25"
+      "attended": false
+    },
+    {
+      "id": "solana-breakpoint-2025",
+      "name": "Solana Breakpoint 2025",
+      "dates": "December 11–13, 2025",
+      "dateRange": {
+        "start": "2025-12-11",
+        "end": "2025-12-13"
+      },
+      "location": "Abu Dhabi, UAE",
+      "url": "https://solana.com/breakpoint",
+      "image": "/events/fetched/solana-breakpoint-2025.jpg",
+      "description": "The Solana ecosystem's flagship annual conference, themed around 'Revenue and Returns,' bringing developers, creators, and institutions together on Yas Island.",
+      "venue": "Etihad Arena, Yas Island",
+      "organizer": "Solana Foundation",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "ces-2026",
+      "name": "CES 2026",
+      "dates": "January 6–9, 2026",
+      "dateRange": {
+        "start": "2026-01-06",
+        "end": "2026-01-09"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://www.ces.tech/",
+      "image": "/events/ces.png",
+      "description": "The world's largest consumer technology trade show, with AI dominating the 2026 exhibition floor and keynotes across the Las Vegas Convention Center and Strip venues.",
+      "venue": "Las Vegas Convention Center",
+      "organizer": "Consumer Technology Association",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "wef-davos-2026",
+      "name": "World Economic Forum Annual Meeting 2026",
+      "dates": "January 19–23, 2026",
+      "dateRange": {
+        "start": "2026-01-19",
+        "end": "2026-01-23"
+      },
+      "location": "Davos-Klosters, Switzerland",
+      "url": "https://www.weforum.org/meetings/world-economic-forum-annual-meeting-2026/",
+      "image": "/events/switzerland.png",
+      "description": "The 56th WEF Annual Meeting under the theme 'A Spirit of Dialogue,' where AI governance and digital-asset policy feature heavily alongside global business and government leadership.",
+      "venue": "Davos Congress Centre",
+      "organizer": "World Economic Forum",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "web-summit-qatar-2026",
+      "name": "Web Summit Qatar 2026",
+      "dates": "February 1–4, 2026",
+      "dateRange": {
+        "start": "2026-02-01",
+        "end": "2026-02-04"
+      },
+      "location": "Doha, Qatar",
+      "url": "https://qatar.websummit.com/",
+      "image": "/events/fetched/web-summit-qatar-2026.jpg",
+      "description": "Web Summit's Middle East edition, gathering tens of thousands of startups, investors, and tech leaders with strong AI and fintech tracks including a Government Summit.",
+      "venue": "Doha Convention Centre",
+      "organizer": "Web Summit",
+      "tags": [
+        "ai",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "consensus-hong-kong-2026",
+      "name": "Consensus Hong Kong 2026",
+      "dates": "February 10–12, 2026",
+      "dateRange": {
+        "start": "2026-02-10",
+        "end": "2026-02-12"
+      },
+      "location": "Hong Kong",
+      "url": "https://consensus-hongkong.coindesk.com/",
+      "image": "/events/fetched/consensus-hong-kong-2026.jpg",
+      "description": "CoinDesk's flagship Asia conference, projecting 15,000 decision-makers and 100+ speakers across six stages, opening with an Institutional Summit at the Grand Hyatt on February 10.",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "organizer": "CoinDesk",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "waicf-cannes-2026",
+      "name": "World AI Cannes Festival 2026",
+      "dates": "February 12–13, 2026",
+      "dateRange": {
+        "start": "2026-02-12",
+        "end": "2026-02-13"
+      },
+      "location": "Cannes, France",
+      "url": "https://www.worldaicannes.com/",
+      "image": "/events/fetched/waicf-cannes-2026.jpg",
+      "description": "Major international AI festival under the patronage of the French President, expecting 10,000 attendees, 320 speakers, and 220 exhibitors across business, governance, and health AI themes.",
+      "venue": "Palais des Festivals",
+      "organizer": "World AI Cannes Festival",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "ethdenver-2026",
+      "name": "ETHDenver 2026",
+      "dates": "February 17–21, 2026",
+      "dateRange": {
+        "start": "2026-02-17",
+        "end": "2026-02-21"
+      },
+      "location": "Denver, USA",
+      "url": "https://ethdenver.com/",
+      "image": "/events/fetched/ethdenver-2026.jpg",
+      "description": "The world's largest Ethereum community BUIDLathon and conference, themed 'New #BUIDL City,' welcoming developers, founders, and creatives across open finance and decentralized governance.",
+      "venue": "National Western Center",
+      "organizer": "ETHDenver / SporkDAO",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "mwc-barcelona-2026",
+      "name": "MWC Barcelona 2026",
+      "dates": "March 2–5, 2026",
+      "dateRange": {
+        "start": "2026-03-02",
+        "end": "2026-03-05"
+      },
+      "location": "Barcelona, Spain",
+      "url": "https://www.mwcbarcelona.com/",
+      "image": "/events/fetched/mwc-barcelona-2026.jpg",
+      "description": "The world's largest connectivity and mobile industry event, with AI infrastructure, edge compute, and telco AI as headline 2026 themes.",
+      "venue": "Fira de Barcelona, Gran Via",
+      "organizer": "GSMA",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "nvidia-gtc-2026",
+      "name": "NVIDIA GTC 2026",
+      "dates": "March 16–19, 2026",
+      "dateRange": {
+        "start": "2026-03-16",
+        "end": "2026-03-19"
+      },
+      "location": "San Jose, USA",
+      "url": "https://www.nvidia.com/gtc/",
+      "image": "/events/fetched/nvidia-gtc-2026.jpg",
+      "description": "NVIDIA's premier global AI conference with Jensen Huang's keynote outlining the next era of AI infrastructure; workshops begin March 15.",
+      "venue": "San Jose McEnery Convention Center",
+      "organizer": "NVIDIA",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "digital-asset-summit-2026",
+      "name": "Digital Asset Summit 2026",
+      "dates": "March 24–26, 2026",
+      "dateRange": {
+        "start": "2026-03-24",
+        "end": "2026-03-26"
+      },
+      "location": "New York, USA",
+      "url": "https://blockworks.com/event/digital-asset-summit-nyc-2026",
+      "image": "/events/fetched/digital-asset-summit-2026.jpg",
+      "description": "Blockworks' institutional crypto conference connecting builders, allocators, and legislators shaping the digital asset ecosystem.",
+      "venue": "Javits Center North",
+      "organizer": "Blockworks",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "ethcc-9-cannes-2026",
+      "name": "EthCC[9] 2026",
+      "dates": "March 30 – April 2, 2026",
+      "dateRange": {
+        "start": "2026-03-30",
+        "end": "2026-04-02"
+      },
+      "location": "Cannes, France",
+      "url": "https://ethcc.io/",
+      "image": "/events/fetched/ethcc-9-cannes-2026.jpg",
+      "description": "The Ethereum Community Conference, Europe's largest annual Ethereum event, held at the Cannes Film Festival's Palais des Festivals — EthCC's permanent home through 2028.",
+      "venue": "Palais des Festivals et des Congrès",
+      "organizer": "Ethereum France",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "humanx-2026",
+      "name": "HumanX 2026",
+      "dates": "April 7–9, 2026",
+      "dateRange": {
+        "start": "2026-04-07",
+        "end": "2026-04-09"
+      },
+      "location": "San Francisco, USA",
+      "url": "https://www.humanx.co/",
+      "image": "/events/fetched/humanx-2026.jpg",
+      "description": "High-impact AI business conference uniting 6,500+ leaders, builders, and investors with 350+ speakers, moving to San Francisco's Moscone Center for 2026.",
+      "venue": "Moscone Center",
+      "organizer": "HumanX",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "paris-blockchain-week-2026",
+      "name": "Paris Blockchain Week 2026",
+      "dates": "April 15–16, 2026",
+      "dateRange": {
+        "start": "2026-04-15",
+        "end": "2026-04-16"
+      },
+      "location": "Paris, France",
+      "url": "https://www.parisblockchainweek.com/",
+      "image": "/events/paris.png",
+      "description": "Europe's flagship blockchain event bridging institutions and digital assets, held beneath the Louvre with a VIP opening dinner at the Château de Versailles on April 14.",
+      "venue": "Carrousel du Louvre",
+      "organizer": "Paris Blockchain Week",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "hong-kong-web3-festival-2026",
+      "name": "Hong Kong Web3 Festival 2026",
+      "dates": "April 20–23, 2026",
+      "dateRange": {
+        "start": "2026-04-20",
+        "end": "2026-04-23"
+      },
+      "location": "Hong Kong",
+      "url": "https://www.web3festival.org/hongkong2026/",
+      "image": "/events/hongkong.png",
+      "description": "Asia's largest crypto gathering, co-hosted by Wanxiang Blockchain Labs and HashKey Group, with 200+ speakers including Vitalik Buterin across crypto finance, AI + Web3, and RWA tracks.",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "organizer": "Wanxiang Blockchain Labs & HashKey Group",
+      "tags": [
+        "blockchain",
+        "web3",
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "bitcoin-2026-las-vegas",
+      "name": "Bitcoin 2026",
+      "dates": "April 27–29, 2026",
+      "dateRange": {
+        "start": "2026-04-27",
+        "end": "2026-04-29"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://b.tc/conference/2026",
+      "image": "/events/fetched/bitcoin-2026-las-vegas.jpg",
+      "description": "The world's largest Bitcoin conference returns to Las Vegas with 40,000+ expected attendees, headline speakers, and the industry's biggest expo floor.",
+      "venue": "The Venetian Convention and Expo Center",
+      "organizer": "BTC Inc",
+      "tags": [
+        "bitcoin",
+        "blockchain"
+      ],
+      "attended": true
+    },
+    {
+      "id": "token2049-dubai-2026",
+      "name": "TOKEN2049 Dubai 2026",
+      "dates": "April 29–30, 2026",
+      "dateRange": {
+        "start": "2026-04-29",
+        "end": "2026-04-30"
+      },
+      "location": "Dubai, UAE",
+      "url": "https://www.token2049.com/dubai",
+      "image": "/events/fetched/token2049-dubai-2026.jpg",
+      "description": "The world's premier crypto event with 15,000+ attendees and 200+ speakers including Pavel Durov, anchoring TOKEN2049 Week (April 27 – May 3) across Dubai.",
+      "venue": "Madinat Jumeirah",
+      "organizer": "TOKEN2049",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "consensus-miami-2026",
+      "name": "Consensus Miami 2026",
+      "dates": "May 5–7, 2026",
+      "dateRange": {
+        "start": "2026-05-05",
+        "end": "2026-05-07"
+      },
+      "location": "Miami, USA",
+      "url": "https://consensus2026.coindesk.com/",
+      "image": "/events/fetched/consensus-miami-2026.jpg",
+      "description": "CoinDesk's flagship U.S. conference moves to Miami for 2026, expecting up to 15,000 attendees across crypto, Web3, and digital asset policy.",
+      "venue": "Miami Beach Convention Center",
+      "organizer": "CoinDesk",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "attended": false
+    },
+    {
+      "id": "superai-singapore-2026",
+      "name": "SuperAI Singapore 2026",
+      "dates": "June 10–11, 2026",
+      "dateRange": {
+        "start": "2026-06-10",
+        "end": "2026-06-11"
+      },
+      "location": "Singapore",
+      "url": "https://www.superai.com/",
+      "image": "/events/fetched/superai-singapore-2026.jpg",
+      "description": "Asia's largest AI event — sold out with 10,000 attendees from 150+ countries — anchoring Singapore AI Week (June 8–14) with 100+ satellite events.",
+      "venue": "Marina Bay Sands",
+      "organizer": "SuperAI",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "vivatech-2026",
+      "name": "VivaTech 2026",
+      "dates": "June 17–20, 2026",
+      "dateRange": {
+        "start": "2026-06-17",
+        "end": "2026-06-20"
+      },
+      "location": "Paris, France",
+      "url": "https://vivatechnology.com/",
+      "image": "/events/fetched/vivatech-2026.jpg",
+      "description": "Europe's largest startup and tech event celebrates its 10th anniversary with 180,000+ attendees, 15,000 startups, and a free open-air tech experience on the Champs-Élysées June 14.",
+      "venue": "Paris Expo Porte de Versailles",
+      "organizer": "Publicis Groupe & Les Echos",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "ai-engineer-worlds-fair-2026",
+      "name": "AI Engineer World's Fair 2026",
+      "dates": "June 29 – July 2, 2026",
+      "dateRange": {
+        "start": "2026-06-29",
+        "end": "2026-07-02"
+      },
+      "location": "San Francisco, USA",
+      "url": "https://www.ai.engineer/worldsfair/2026",
+      "image": "/events/fetched/ai-engineer-worlds-fair-2026.jpg",
+      "description": "The leading technical conference for AI engineers, with 29 tracks, 300 speakers, 100 expo partners, and 6,000+ builders; pre-fair hackathons begin June 28.",
+      "venue": "Moscone West",
+      "organizer": "AI Engineer",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "mining-disrupt-2026",
+      "name": "Mining Disrupt 2026",
+      "dates": "July 21–23, 2026",
+      "dateRange": {
+        "start": "2026-07-21",
+        "end": "2026-07-23"
+      },
+      "location": "Miami, USA",
+      "url": "https://miningdisrupt.com/",
+      "image": "/events/fetched/mining-disrupt-2026.jpg",
+      "description": "The world's largest Bitcoin mining expo, in its eighth year, gathering miners, hardware innovators, energy providers, and AI compute leaders.",
+      "venue": "Miami Airport Convention Center",
+      "organizer": "Mining Disrupt",
+      "tags": [
+        "bitcoin",
+        "blockchain",
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "ai4-2026",
+      "name": "Ai4 2026",
+      "dates": "August 4–6, 2026",
+      "dateRange": {
+        "start": "2026-08-04",
+        "end": "2026-08-06"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://ai4.io/",
+      "image": "/events/las-vegas.png",
+      "description": "North America's largest AI industry conference, projecting 12,000+ attendees, 1,000+ speakers, and 400+ exhibitors at The Venetian; pre-conference workshops on August 3.",
+      "venue": "The Venetian",
+      "organizer": "Ai4",
+      "tags": [
+        "ai"
+      ],
+      "attended": false
+    },
+    {
+      "id": "nft-nyc-2026",
+      "name": "NFT.NYC 2026",
+      "dates": "September 1–3, 2026",
+      "dateRange": {
+        "start": "2026-09-01",
+        "end": "2026-09-03"
+      },
+      "location": "New York, USA",
+      "url": "https://www.nft.nyc/",
+      "image": "/events/fetched/nft-nyc-2026.jpg",
+      "description": "The annual NFT and Web3 conference held in the heart of Times Square, gathering creators, brands, and builders across the NFT ecosystem.",
+      "venue": "Times Square, New York",
+      "organizer": "NFT.NYC",
+      "tags": [
+        "web3",
+        "blockchain"
+      ]
+    },
+    {
+      "id": "mainnet-2026",
+      "name": "Mainnet 2026",
+      "dates": "September 15–17, 2026",
+      "dateRange": {
+        "start": "2026-09-15",
+        "end": "2026-09-17"
+      },
+      "location": "New York, USA",
+      "url": "https://messari.io/mainnet",
+      "image": "/events/ny-mainnet.png",
+      "description": "Messari's flagship crypto summit in New York City, convening founders, investors, and policymakers across the digital asset industry.",
+      "venue": "New York City",
+      "organizer": "Messari",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "european-blockchain-convention-2026",
+      "name": "European Blockchain Convention 12",
+      "dates": "September 16–17, 2026",
+      "dateRange": {
+        "start": "2026-09-16",
+        "end": "2026-09-17"
+      },
+      "location": "Barcelona, Spain",
+      "url": "https://eblockchainconvention.com/",
+      "image": "/events/fetched/european-blockchain-convention-2026.jpg",
+      "description": "Europe's leading blockchain event, expecting 5,000+ attendees from 90+ countries for Europe's first major post-MiCA institutional gathering.",
+      "venue": "Palau de Congressos de Catalunya",
+      "organizer": "European Blockchain Convention",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "korea-blockchain-week-2026",
+      "name": "Korea Blockchain Week 2026",
+      "dates": "September 29 – October 1, 2026",
+      "dateRange": {
+        "start": "2026-09-29",
+        "end": "2026-10-01"
+      },
+      "location": "Seoul, South Korea",
+      "url": "https://koreablockchainweek.com/",
+      "image": "/events/fetched/korea-blockchain-week-2026.jpg",
+      "description": "Asia's premier blockchain week with an invite-only Upbit Institutional Summit followed by a two-day main conference on digital assets, institutional finance, and AI integration.",
+      "venue": "Walkerhill Hotels & Resorts",
+      "organizer": "FactBlock",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "token2049-singapore-2026",
+      "name": "TOKEN2049 Singapore 2026",
+      "dates": "October 7–8, 2026",
+      "dateRange": {
+        "start": "2026-10-07",
+        "end": "2026-10-08"
+      },
+      "location": "Singapore",
+      "url": "https://www.token2049.com/singapore",
+      "image": "/events/fetched/token2049-singapore-2026.jpg",
+      "description": "The world's largest crypto conference, expecting 25,000 attendees from 160 countries with 500 booths and 300 speakers, anchoring TOKEN2049 Week (Oct 5–11).",
+      "venue": "Marina Bay Sands",
+      "organizer": "TOKEN2049",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "world-summit-ai-2026",
+      "name": "World Summit AI Amsterdam 2026",
+      "dates": "October 7–8, 2026",
+      "dateRange": {
+        "start": "2026-10-07",
+        "end": "2026-10-08"
+      },
+      "location": "Amsterdam, Netherlands",
+      "url": "https://worldsummit.ai/",
+      "image": "/events/fetched/world-summit-ai-2026.jpg",
+      "description": "10th-anniversary edition of the global AI summit covering Frontier AI, Physical AI, and AI governance; part of World AI Week (Oct 5–9).",
+      "venue": "Taets Art & Event Park",
+      "organizer": "Inspired Minds",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "money2020-usa-2026",
+      "name": "Money20/20 USA 2026",
+      "dates": "October 18–21, 2026",
+      "dateRange": {
+        "start": "2026-10-18",
+        "end": "2026-10-21"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://us.money2020.com/",
+      "image": "/events/fetched/money2020-usa-2026.jpg",
+      "description": "The world's largest fintech and payments conference, with 11,000+ senior professionals and 630+ speakers spanning payments, banking, crypto, and AI in finance.",
+      "venue": "The Venetian Expo",
+      "organizer": "Money20/20 (Ascential)",
+      "tags": [
+        "blockchain",
+        "ai"
+      ]
+    },
+    {
+      "id": "smartcon-2026",
+      "name": "Chainlink SmartCon 2026",
+      "dates": "November 1–2, 2026",
+      "dateRange": {
+        "start": "2026-11-01",
+        "end": "2026-11-02"
+      },
+      "location": "New York, USA",
+      "url": "https://smartcon.chain.link/",
+      "image": "/events/fetched/smartcon-2026.jpg",
+      "description": "Chainlink's annual conference on oracles, tokenization, and onchain finance, bringing together banks, capital markets institutions, and Web3 builders.",
+      "venue": "New York City",
+      "organizer": "Chainlink Labs",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "hong-kong-fintech-week-2026",
+      "name": "Hong Kong FinTech Week 2026",
+      "dates": "November 2–6, 2026",
+      "dateRange": {
+        "start": "2026-11-02",
+        "end": "2026-11-06"
+      },
+      "location": "Hong Kong",
+      "url": "https://www.fintechweek.hk/",
+      "image": "/events/fetched/hong-kong-fintech-week-2026.jpg",
+      "description": "Asia's leading finance festival; main conference Nov 2–3 at HKCEC with a week of community events across the city and Greater Bay Area.",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "organizer": "InvestHK / HKMA",
+      "tags": [
+        "blockchain",
+        "ai"
+      ]
+    },
+    {
+      "id": "devcon-8-mumbai-2026",
+      "name": "Devcon 8 (Mumbai)",
+      "dates": "November 3–6, 2026",
+      "dateRange": {
+        "start": "2026-11-03",
+        "end": "2026-11-06"
+      },
+      "location": "Mumbai, India",
+      "url": "https://devcon.org/",
+      "image": "/events/fetched/devcon-8-mumbai-2026.jpg",
+      "description": "The Ethereum Foundation's premier developer conference comes to India for the first time, chosen for the scale and growth of India's developer ecosystem.",
+      "venue": "Jio World Centre",
+      "organizer": "Ethereum Foundation",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "web-summit-2026",
+      "name": "Web Summit 2026",
+      "dates": "November 9–12, 2026",
+      "dateRange": {
+        "start": "2026-11-09",
+        "end": "2026-11-12"
+      },
+      "location": "Lisbon, Portugal",
+      "url": "https://websummit.com/",
+      "image": "/events/fetched/web-summit-2026.jpg",
+      "description": "Europe's largest tech conference, with 70,000+ attendees spanning AI, startups, and emerging technology.",
+      "venue": "MEO Arena",
+      "organizer": "Web Summit",
+      "tags": [
+        "ai",
+        "web3"
+      ]
+    },
+    {
+      "id": "digital-asset-summit-london-2026",
+      "name": "Digital Asset Summit London 2026",
+      "dates": "November 10–11, 2026",
+      "dateRange": {
+        "start": "2026-11-10",
+        "end": "2026-11-11"
+      },
+      "location": "London, UK",
+      "url": "https://blockworks.com/event/digital-asset-summit-london",
+      "image": "/events/fetched/digital-asset-summit-london-2026.jpg",
+      "description": "Blockworks' institutional digital assets summit connecting asset managers, banks, and allocators with the crypto industry.",
+      "venue": "London Hilton on Park Lane",
+      "organizer": "Blockworks",
+      "tags": [
+        "blockchain"
+      ]
+    },
+    {
+      "id": "solana-breakpoint-2026",
+      "name": "Solana Breakpoint 2026",
+      "dates": "November 15–17, 2026",
+      "dateRange": {
+        "start": "2026-11-15",
+        "end": "2026-11-17"
+      },
+      "location": "London, UK",
+      "url": "https://solana.com/breakpoint",
+      "image": "/events/fetched/solana-breakpoint-2026.jpg",
+      "description": "Solana's flagship annual conference, held in the UK for the first time as a push into European institutional finance.",
+      "venue": "Olympia London",
+      "organizer": "Solana Foundation",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "singapore-fintech-festival-2026",
+      "name": "Singapore FinTech Festival 2026",
+      "dates": "November 18–20, 2026",
+      "dateRange": {
+        "start": "2026-11-18",
+        "end": "2026-11-20"
+      },
+      "location": "Singapore",
+      "url": "https://www.fintechfestival.sg/",
+      "image": "/events/fetched/singapore-fintech-festival-2026.jpg",
+      "description": "The world's largest fintech gathering — 11th edition with 70,000+ decision-makers from 140+ countries covering payments, digital assets, and AI in finance.",
+      "venue": "Singapore Expo",
+      "organizer": "MAS / GFTN / Constellar",
+      "tags": [
+        "blockchain",
+        "ai"
+      ]
+    },
+    {
+      "id": "blockchain-life-2026",
+      "name": "Blockchain Life 2026",
+      "dates": "December 1–2, 2026",
+      "dateRange": {
+        "start": "2026-12-01",
+        "end": "2026-12-02"
+      },
+      "location": "Dubai, UAE",
+      "url": "https://blockchain-life.com/",
+      "image": "/events/fetched/blockchain-life-2026.jpg",
+      "description": "15,000+ attendees from 130+ countries with 200+ speakers across three stages, debuting a new 'AI Future' track alongside its core Web3 and trading program.",
+      "venue": "Festival Arena, Dubai Festival City",
+      "organizer": "Blockchain Life",
+      "tags": [
+        "blockchain",
+        "web3",
+        "ai"
+      ]
+    },
+    {
+      "id": "neurips-2026",
+      "name": "NeurIPS 2026",
+      "dates": "December 6–12, 2026",
+      "dateRange": {
+        "start": "2026-12-06",
+        "end": "2026-12-12"
+      },
+      "location": "Sydney, Australia",
+      "url": "https://neurips.cc/",
+      "image": "/events/ai-workshop.png",
+      "description": "The premier academic conference in machine learning and AI research, with official satellite events in Atlanta and Paris.",
+      "venue": "Sydney",
+      "organizer": "NeurIPS Foundation",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "bitcoin-mena-2026",
+      "name": "Bitcoin MENA 2026",
+      "dates": "December 7–8, 2026",
+      "dateRange": {
+        "start": "2026-12-07",
+        "end": "2026-12-08"
+      },
+      "location": "Abu Dhabi, UAE",
+      "url": "https://mena.b.tc/",
+      "image": "/events/fetched/bitcoin-mena-2026.jpg",
+      "description": "The leading Bitcoin conference in the Middle East, BTC Inc.'s regional aggregator of business leaders, entrepreneurs, and builders.",
+      "venue": "ADNEC Centre Abu Dhabi",
+      "organizer": "BTC Inc",
+      "tags": [
+        "bitcoin",
+        "blockchain"
+      ]
+    },
+    {
+      "id": "gitex-global-2026",
+      "name": "GITEX Global 2026",
+      "dates": "December 7–11, 2026",
+      "dateRange": {
+        "start": "2026-12-07",
+        "end": "2026-12-11"
+      },
+      "location": "Dubai, UAE",
+      "url": "https://www.gitex.com/",
+      "image": "/events/fetched/gitex-global-2026.jpg",
+      "description": "One of the world's largest tech expos — 200,000+ attendees and 6,800 exhibitors — opening with the GITEX Scale Summit on AI economies and policy.",
+      "venue": "Dubai Exhibition Centre, Expo City",
+      "organizer": "Dubai World Trade Centre",
+      "tags": [
+        "ai",
+        "blockchain"
+      ]
+    },
+    {
+      "id": "ai-summit-new-york-2026",
+      "name": "The AI Summit New York 2026",
+      "dates": "December 9–10, 2026",
+      "dateRange": {
+        "start": "2026-12-09",
+        "end": "2026-12-10"
+      },
+      "location": "New York, USA",
+      "url": "https://newyork.theaisummit.com/",
+      "image": "/events/fetched/ai-summit-new-york-2026.jpg",
+      "description": "Commercial AI deployment conference with 5,000+ attendees, 539 speakers across 9 stages, and a startup showcase.",
+      "venue": "Jacob K. Javits Convention Center",
+      "organizer": "Informa Tech",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "ces-2027",
+      "name": "CES 2027",
+      "dates": "January 6–9, 2027",
+      "dateRange": {
+        "start": "2027-01-06",
+        "end": "2027-01-09"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://www.ces.tech/",
+      "image": "/events/ces.png",
+      "description": "The world's largest consumer technology show, spanning the Las Vegas Convention Center, Venetian Expo, and ARIA, with AI as a dominant theme.",
+      "venue": "Las Vegas Convention Center + citywide",
+      "organizer": "Consumer Technology Association",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "web-summit-qatar-2027",
+      "name": "Web Summit Qatar 2027",
+      "dates": "January 31 – February 3, 2027",
+      "dateRange": {
+        "start": "2027-01-31",
+        "end": "2027-02-03"
+      },
+      "location": "Doha, Qatar",
+      "url": "https://qatar.websummit.com/",
+      "image": "/events/fetched/web-summit-qatar-2027.jpg",
+      "description": "30,000+ founders, investors, and media in Doha, focused on AI, startups, and venture capital in the Middle East.",
+      "venue": "Doha Exhibition and Convention Center",
+      "organizer": "Web Summit",
+      "tags": [
+        "ai",
+        "web3"
+      ]
+    },
+    {
+      "id": "humanx-2027",
+      "name": "HumanX 2027",
+      "dates": "March 7–10, 2027",
+      "dateRange": {
+        "start": "2027-03-07",
+        "end": "2027-03-10"
+      },
+      "location": "Las Vegas, USA",
+      "url": "https://www.humanx.co/",
+      "image": "/events/fetched/humanx-2027.jpg",
+      "description": "Premier enterprise AI conference returning to Las Vegas, connecting AI decision-makers, investors, and vendors across the AI ecosystem.",
+      "venue": "Mandalay Bay",
+      "organizer": "HumanX",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "nvidia-gtc-2027",
+      "name": "NVIDIA GTC 2027",
+      "dates": "March 15–18, 2027",
+      "dateRange": {
+        "start": "2027-03-15",
+        "end": "2027-03-18"
+      },
+      "location": "San Jose, USA",
+      "url": "https://www.nvidia.com/gtc/",
+      "image": "/events/fetched/nvidia-gtc-2027.jpg",
+      "description": "NVIDIA's flagship AI conference and expo, returning to San Jose with keynotes, developer training, and the full AI hardware/software ecosystem.",
+      "venue": "San Jose McEnery Convention Center",
+      "organizer": "NVIDIA",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "ethcc-10-2027",
+      "name": "EthCC[10] 2027",
+      "dates": "April 12–15, 2027",
+      "dateRange": {
+        "start": "2027-04-12",
+        "end": "2027-04-15"
+      },
+      "location": "Cannes, France",
+      "url": "https://ethcc.io/",
+      "image": "/events/fetched/ethcc-10-2027.jpg",
+      "description": "The 10th-anniversary edition of the Ethereum Community Conference, Europe's largest Ethereum event, held at the Palais des Festivals through 2028.",
+      "venue": "Palais des Festivals",
+      "organizer": "Ethereum France",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "token2049-dubai-2027",
+      "name": "TOKEN2049 Dubai 2027",
+      "dates": "April 21–22, 2027",
+      "dateRange": {
+        "start": "2027-04-21",
+        "end": "2027-04-22"
+      },
+      "location": "Dubai, UAE",
+      "url": "https://www.token2049.com/dubai",
+      "image": "/events/fetched/token2049-dubai-2027.jpg",
+      "description": "TOKEN2049's Middle East edition, expecting 15,000 attendees from 4,000+ companies; rescheduled from 2026 to April 2027.",
+      "venue": "Madinat Jumeirah",
+      "organizer": "TOKEN2049",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "consensus-miami-2027",
+      "name": "Consensus Miami 2027",
+      "dates": "May 4–6, 2027",
+      "dateRange": {
+        "start": "2027-05-04",
+        "end": "2027-05-06"
+      },
+      "location": "Miami, USA",
+      "url": "https://consensus.coindesk.com/",
+      "image": "/events/fetched/consensus-miami-2027.jpg",
+      "description": "CoinDesk's flagship digital assets, finance, and technology event, returning to Miami after a 15,000-attendee debut in 2026.",
+      "venue": "Miami Beach Convention Center",
+      "organizer": "CoinDesk",
+      "tags": [
+        "blockchain",
+        "bitcoin",
+        "web3"
+      ]
+    },
+    {
+      "id": "intelligence-disrupt-2027",
+      "name": "Intelligence Disrupt 2027",
+      "dates": "May 11–13, 2027",
+      "dateRange": {
+        "start": "2027-05-11",
+        "end": "2027-05-13"
+      },
+      "location": "Dallas, USA",
+      "url": "https://intelligencedisrupt.com/",
+      "image": "/events/fetched/intelligence-disrupt-2027.jpg",
+      "description": "The decentralized-AI conference: a live GPU 'Cluster Floor' expo, the Node Zero hackathon, and dedicated infrastructure, builders, and mainstage tracks.",
+      "venue": "Kay Bailey Hutchison Convention Center",
+      "organizer": "Intelligence Disrupt",
+      "tags": [
+        "ai",
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "mining-disrupt-2027",
+      "name": "Mining Disrupt 2027",
+      "dates": "May 11–13, 2027",
+      "dateRange": {
+        "start": "2027-05-11",
+        "end": "2027-05-13"
+      },
+      "location": "Dallas, USA",
+      "url": "https://miningdisrupt.com/",
+      "image": "/events/fetched/mining-disrupt-2027.jpg",
+      "description": "The world's largest Bitcoin mining expo, the central hub for education, collaboration, and commerce in the global mining industry since 2019.",
+      "venue": "Dallas, TX",
+      "organizer": "Mining Disrupt",
+      "tags": [
+        "bitcoin",
+        "blockchain"
+      ]
+    },
+    {
+      "id": "ai-summit-london-2027",
+      "name": "The AI Summit London 2027",
+      "dates": "June 9–10, 2027",
+      "dateRange": {
+        "start": "2027-06-09",
+        "end": "2027-06-10"
+      },
+      "location": "London, UK",
+      "url": "https://london.theaisummit.com/",
+      "image": "/events/fetched/ai-summit-london-2027.jpg",
+      "description": "The commercial AI conference at the heart of London Tech Week, focused on real-world enterprise AI deployment.",
+      "venue": "Tobacco Dock",
+      "organizer": "Informa Tech",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "signal-week-paris-2027",
+      "name": "Signal Week 2027 (Paris Blockchain Week)",
+      "dates": "July 6–7, 2027",
+      "dateRange": {
+        "start": "2027-07-06",
+        "end": "2027-07-07"
+      },
+      "location": "Paris, France",
+      "url": "https://www.parisblockchainweek.com/",
+      "image": "/events/paris.png",
+      "description": "Paris Blockchain Week's next edition under its new identity as Signal Week, Europe's institutional digital assets summit.",
+      "venue": "Palais des Congrès",
+      "organizer": "Paris Blockchain Week / Signal",
+      "tags": [
+        "blockchain",
+        "web3"
+      ]
+    },
+    {
+      "id": "bitcoin-2027",
+      "name": "Bitcoin 2027",
+      "dates": "July 15–17, 2027",
+      "dateRange": {
+        "start": "2027-07-15",
+        "end": "2027-07-17"
+      },
+      "location": "Nashville, USA",
+      "url": "https://conference.b.tc/",
+      "image": "/events/fetched/bitcoin-2027.jpg",
+      "description": "The world's largest Bitcoin conference returns to Nashville after two years at The Venetian in Las Vegas.",
+      "venue": "Music City Center",
+      "organizer": "BTC Inc",
+      "tags": [
+        "bitcoin",
+        "blockchain"
+      ]
+    },
+    {
+      "id": "superai-singapore-2027",
+      "name": "SuperAI Singapore 2027",
+      "dates": "September 8–9, 2027",
+      "dateRange": {
+        "start": "2027-09-08",
+        "end": "2027-09-09"
+      },
+      "location": "Singapore",
+      "url": "https://www.superai.com/",
+      "image": "/events/fetched/superai-singapore-2027.jpg",
+      "description": "Billed as the world's largest AI event, with keynotes, workshops, the Genesis startup competition, and the NEXT hackathon.",
+      "venue": "Marina Bay Sands",
+      "organizer": "SuperAI",
+      "tags": [
+        "ai"
+      ]
     }
   ]
 }
