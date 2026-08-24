@@ -129,7 +129,35 @@ export interface BlogPost {
   tags: string[];
 }
 
+/**
+ * True only when both Notion credentials are present. The self-hosted
+ * deployment may run without them (they lived only in the old Vercel project),
+ * in which case the press section degrades to an empty list rather than
+ * throwing and 500-ing the route.
+ */
+export function isNotionConfigured(): boolean {
+  return Boolean(process.env.NOTION_API_KEY && process.env.NOTION_DATABASE_ID);
+}
+
 export async function getBlogPosts(): Promise<BlogPost[]> {
+  if (!isNotionConfigured()) {
+    console.warn(
+      "[notion] NOTION_API_KEY / NOTION_DATABASE_ID not set — press content disabled."
+    );
+    return [];
+  }
+
+  try {
+    return await fetchBlogPosts();
+  } catch (error) {
+    // Never let a Notion outage or a revoked token take the page down; the rest
+    // of the site is unrelated to it.
+    console.error("[notion] failed to load press posts:", error);
+    return [];
+  }
+}
+
+async function fetchBlogPosts(): Promise<BlogPost[]> {
   const databaseId = process.env.NOTION_DATABASE_ID!;
 
   const response = await notionClient.queryDatabase(databaseId, {

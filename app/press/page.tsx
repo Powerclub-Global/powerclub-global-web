@@ -12,6 +12,25 @@ import NotionImage from "@/components/NotionImage";
 async function PressReleases() {
   const posts = await getBlogPosts();
 
+  if (posts.length === 0) {
+    return (
+      <div className="max-w-2xl mx-auto text-center py-20">
+        <div className="rounded-md border border-[#ae904c]/20 bg-[#ae904c]/5 px-8 py-12">
+          <h2 className="text-xl text-[#ae904c] mb-3">
+            No press releases to show right now
+          </h2>
+          <p className="text-white/60">
+            Our newsroom is being updated. Please check back shortly, or{" "}
+            <Link href="/contact" className="text-[#ae904c] underline">
+              get in touch
+            </Link>{" "}
+            for media enquiries.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
       {posts.map((post) => (
