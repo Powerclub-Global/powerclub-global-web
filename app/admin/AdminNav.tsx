@@ -21,8 +21,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Leads", href: "/admin/leads", ready: false },
   { label: "Discovery Calls", href: "/admin/discovery-calls", ready: false },
   { label: "Conference Leads", href: "/admin/conference-leads", ready: false },
-  { label: "Socials", href: "/admin/socials", ready: false },
-  { label: "Content Calendar", href: "/admin/content-calendar", ready: false },
+  { label: "Socials", href: "/admin/socials", ready: true },
+  { label: "Content Calendar", href: "/admin/content-calendar", ready: true },
 ];
 
 export default function AdminNav({ userLabel }: { userLabel: string }) {
