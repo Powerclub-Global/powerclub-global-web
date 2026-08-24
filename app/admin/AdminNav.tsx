@@ -18,9 +18,9 @@ export interface NavItem {
  */
 export const NAV_ITEMS: NavItem[] = [
   { label: "Overview", href: "/admin", ready: true },
-  { label: "Leads", href: "/admin/leads", ready: false },
-  { label: "Discovery Calls", href: "/admin/discovery-calls", ready: false },
-  { label: "Conference Leads", href: "/admin/conference-leads", ready: false },
+  { label: "Leads", href: "/admin/leads", ready: true },
+  { label: "Discovery Calls", href: "/admin/discovery-calls", ready: true },
+  { label: "Conference Leads", href: "/admin/conference-leads", ready: true },
   { label: "Socials", href: "/admin/socials", ready: false },
   { label: "Content Calendar", href: "/admin/content-calendar", ready: false },
 ];
