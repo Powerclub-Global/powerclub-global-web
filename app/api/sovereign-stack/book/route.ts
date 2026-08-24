@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { slot_id, name, email, phone, track, message } = await req.json();
+  const { slot_id, name, email, phone, track, message, attribution } =
+    await req.json();
 
   const fullMessage = phone
     ? `Phone: ${phone}${message ? "\n\n" + message : ""}`
@@ -12,7 +13,14 @@ export async function POST(req: NextRequest) {
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slot_id, name, email, track, message: fullMessage }),
+      body: JSON.stringify({
+        slot_id,
+        name,
+        email,
+        track,
+        message: fullMessage,
+        attribution: attribution ?? undefined,
+      }),
     }
   );
 

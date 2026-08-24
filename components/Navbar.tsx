@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Menu, X, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import { trackCtaClick } from "@/lib/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,13 @@ const NavItem: React.FC<NavItemProps> = ({
         : `px-4 py-2 ${isMobile ? "w-full text-center" : ""}`
     }`}
     onClick={(e) => {
+      if (isContact) {
+        trackCtaClick({
+          cta: "nav_contact",
+          location: isMobile ? "navbar_mobile" : "navbar",
+          destination: href,
+        });
+      }
       if (onClick) {
         e.preventDefault();
         onClick();

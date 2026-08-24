@@ -21,6 +21,9 @@ export async function POST(req: Request) {
         funnel: body.funnel || "pcg",
         sourcePage: body.sourcePage || "/contact",
         smsConsent: body.sms_consent ?? undefined,
+        // First/last-touch UTM + referrer captured client-side. Optional —
+        // the backend merges it into the contact's custom_fields when present.
+        attribution: body.attribution ?? undefined,
         orgSlug: "powerclub-global",
       }),
       // Lead capture must not hang the user's submit.

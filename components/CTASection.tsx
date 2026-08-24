@@ -2,6 +2,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { trackCtaClick } from "@/lib/analytics";
+
+const CALENDLY_URL = "https://calendly.com/powerclub-global/business-interaction";
 
 interface CTASectionProps {
   title?: string;
@@ -27,17 +30,24 @@ const CTASection: React.FC<CTASectionProps> = ({
   const router = useRouter();
 
   const handlePrimaryClick = () => {
+    trackCtaClick({
+      cta: "cta_section_primary",
+      location: "cta_section",
+      destination: onPrimaryClick ? "custom" : CALENDLY_URL,
+    });
     if (onPrimaryClick) {
       onPrimaryClick();
     } else {
-      window.open(
-        "https://calendly.com/powerclub-global/business-interaction",
-        "_blank"
-      );
+      window.open(CALENDLY_URL, "_blank");
     }
   };
 
   const handleSecondaryClick = () => {
+    trackCtaClick({
+      cta: "cta_section_secondary",
+      location: "cta_section",
+      destination: onSecondaryClick ? "custom" : "/contact",
+    });
     if (onSecondaryClick) {
       onSecondaryClick();
     } else {

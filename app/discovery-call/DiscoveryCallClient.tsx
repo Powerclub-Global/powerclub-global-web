@@ -12,6 +12,14 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {
+  identifyLead,
+  trackBookingConfirmed,
+  trackFormFailed,
+  trackFormStart,
+  trackStepCompleted,
+} from "@/lib/analytics";
+import { getAttribution } from "@/lib/attribution";
 
 interface Slot {
   startAt: string;
@@ -105,6 +113,13 @@ export default function DiscoveryCallClient() {
 
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // `form_started` fires once, on the first interaction anywhere in the flow.
+  const startedRef = React.useRef(false);
+  const markStarted = () => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackFormStart("discovery_call");
+  };
   const [successMeta, setSuccessMeta] = useState<{
     message: string;
     meetUrl: string | null;
@@ -163,14 +178,33 @@ export default function DiscoveryCallClient() {
           relatedConferenceName: q.relatedConferenceName.trim() || undefined,
           goalsForConference: q.goalsForConference.trim() || undefined,
           websiteUrl: honeypot || undefined,
+          attribution: getAttribution(),
         }),
       });
       const data = await res.json();
       if (!res.ok || data.success === false) {
+        trackFormFailed("discovery_call", `http_${res.status}`, {
+          scheduling_available: Boolean(availability?.schedulingAvailable),
+          slot_selected: Boolean(selectedSlot),
+        });
         setError(data.message || "Something went wrong. Please try again.");
         setSubmitting(false);
         return;
       }
+      identifyLead(email, { name, company: company.trim() || undefined });
+      trackStepCompleted("discovery_call", "details", { step_index: 3 });
+      trackBookingConfirmed({
+        kind: "discovery_call",
+        schedulingAvailable: Boolean(availability?.schedulingAvailable),
+        slotSelected: Boolean(selectedSlot),
+        status: data.status ?? "confirmed",
+        source_page: "/discovery-call",
+        has_company: Boolean(company.trim()),
+        has_linkedin: Boolean(linkedin.trim()),
+        has_phone: Boolean(phone.trim()),
+        timeline_urgency: q.timelineUrgency || undefined,
+        related_conference_name: q.relatedConferenceName.trim() || undefined,
+      });
       setSuccessMeta({
         message: data.message,
         meetUrl: data.meetUrl ?? null,
@@ -178,6 +212,10 @@ export default function DiscoveryCallClient() {
       });
       setStep("success");
     } catch {
+      trackFormFailed("discovery_call", "network_error", {
+        scheduling_available: Boolean(availability?.schedulingAvailable),
+        slot_selected: Boolean(selectedSlot),
+      });
       setError("Network error. Please try again.");
     } finally {
       setSubmitting(false);
@@ -230,7 +268,11 @@ export default function DiscoveryCallClient() {
             </div>
           )}
 
-          <div className="rounded-2xl border border-[#ae904c]/20 bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-sm p-6 md:p-8">
+          <div
+            onFocusCapture={markStarted}
+            onPointerDownCapture={markStarted}
+            className="rounded-2xl border border-[#ae904c]/20 bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-sm p-6 md:p-8"
+          >
             {step === "questions" && (
               <div className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -326,7 +368,14 @@ export default function DiscoveryCallClient() {
                 </div>
 
                 <button
-                  onClick={() => setStep("slot")}
+                  onClick={() => {
+                    trackStepCompleted("discovery_call", "questionnaire", {
+                      step_index: 1,
+                      answered_count: Object.values(q).filter((v) => v.trim())
+                        .length,
+                    });
+                    setStep("slot");
+                  }}
                   disabled={!canProceedFromQuestions}
                   className="w-full flex items-center justify-center gap-2 rounded-lg bg-[#ae904c] text-black font-semibold py-3.5 hover:bg-[#c4a55c] transition-colors"
                 >
@@ -403,7 +452,16 @@ export default function DiscoveryCallClient() {
                     <ArrowLeft className="w-4 h-4" /> Back
                   </button>
                   <button
-                    onClick={() => setStep("details")}
+                    onClick={() => {
+                      trackStepCompleted("discovery_call", "slot", {
+                        step_index: 2,
+                        scheduling_available: Boolean(
+                          availability?.schedulingAvailable,
+                        ),
+                        slot_selected: Boolean(selectedSlot),
+                      });
+                      setStep("details");
+                    }}
                     disabled={!canProceedFromSlot}
                     className="flex-1 flex items-center justify-center gap-2 rounded-lg bg-[#ae904c] text-black font-semibold py-3 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#c4a55c] transition-colors"
                   >

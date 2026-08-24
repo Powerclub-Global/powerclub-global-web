@@ -11,6 +11,13 @@ import {
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { submitContactForm, ContactFormData } from "@/app/contact/contact";
+import {
+  identifyLead,
+  trackCtaClick,
+  trackFormFailed,
+  trackFormStart,
+  trackFormSubmit,
+} from "@/lib/analytics";
 
 interface ContactCardProps {
   icon: LucideIcon;
@@ -147,6 +154,14 @@ const ContactSection: React.FC = () => {
     }));
   };
 
+  // `form_started` fires once, on the first interaction with any field.
+  const formStarted = useRef(false);
+  const handleFormFocus = () => {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    trackFormStart("contact_inline");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -154,6 +169,11 @@ const ContactSection: React.FC = () => {
 
     try {
       await submitContactForm(formData);
+      identifyLead(formData.email, { name: formData.name });
+      trackFormSubmit("contact_inline", {
+        source_page: typeof window !== "undefined" ? window.location.pathname : "/",
+        subject: formData.subject,
+      });
       setFormStatus({
         success: true,
         message: "Thank you! Your message has been sent successfully.",
@@ -167,6 +187,7 @@ const ContactSection: React.FC = () => {
       });
     } catch (error) {
       console.error("Failed to submit form:", error);
+      trackFormFailed("contact_inline", "submit_error");
       setFormStatus({
         success: false,
         message: "Failed to send your message. Please try again later.",
@@ -256,7 +277,11 @@ const ContactSection: React.FC = () => {
                     </div>
                   )}
 
-                  <form className="space-y-6" onSubmit={handleSubmit}>
+                  <form
+                    className="space-y-6"
+                    onSubmit={handleSubmit}
+                    onFocusCapture={handleFormFocus}
+                  >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <input
                         type="text"
@@ -338,9 +363,13 @@ const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
+const CALENDLY_URL = "https://calendly.com/powerclub-global/business-interaction";
+
 const onScheduleCall = () => {
-  window.open(
-    "https://calendly.com/powerclub-global/business-interaction",
-    "_blank"
-  );
+  trackCtaClick({
+    cta: "schedule_call",
+    location: "home_contact_highlight_card",
+    destination: CALENDLY_URL,
+  });
+  window.open(CALENDLY_URL, "_blank");
 };

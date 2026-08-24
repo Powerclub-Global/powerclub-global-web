@@ -15,6 +15,13 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { submitContactForm, ContactFormData } from "@/app/contact/contact";
+import {
+  identifyLead,
+  trackCtaClick,
+  trackFormFailed,
+  trackFormStart,
+  trackFormSubmit,
+} from "@/lib/analytics";
 
 interface ContactCardProps {
   icon: LucideIcon;
@@ -191,6 +198,14 @@ function ContactPageContent() {
     setFormData((prev) => ({ ...prev, sms_consent: e.target.checked }));
   };
 
+  // `form_started` fires once, on the first interaction with any field.
+  const formStarted = React.useRef(false);
+  const handleFormFocus = () => {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    trackFormStart("contact");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -198,6 +213,13 @@ function ContactPageContent() {
 
     try {
       await submitContactForm(formData);
+      identifyLead(formData.email, { name: formData.name });
+      trackFormSubmit("contact", {
+        source_page: "/contact",
+        subject: formData.subject,
+        has_phone: Boolean(formData.phone?.trim()),
+        sms_consent: Boolean(formData.sms_consent),
+      });
       setFormStatus({
         success: true,
         message: "Thank you! Your message has been sent successfully.",
@@ -213,6 +235,7 @@ function ContactPageContent() {
       });
     } catch (error) {
       console.error("Failed to submit form:", error);
+      trackFormFailed("contact", "submit_error", { source_page: "/contact" });
       setFormStatus({
         success: false,
         message: "Failed to send your message. Please try again later.",
@@ -343,7 +366,11 @@ function ContactPageContent() {
                       </div>
                     )}
 
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                    <form
+                      className="space-y-6"
+                      onSubmit={handleSubmit}
+                      onFocusCapture={handleFormFocus}
+                    >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input
                           type="text"
@@ -476,9 +503,13 @@ export default function ContactPage() {
   );
 }
 
+const CALENDLY_URL = "https://calendly.com/powerclub-global/business-interaction";
+
 const onScheduleCall = () => {
-  window.open(
-    "https://calendly.com/powerclub-global/business-interaction",
-    "_blank"
-  );
+  trackCtaClick({
+    cta: "schedule_call",
+    location: "contact_highlight_card",
+    destination: CALENDLY_URL,
+  });
+  window.open(CALENDLY_URL, "_blank");
 };

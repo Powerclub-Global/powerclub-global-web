@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { trackCtaClick } from "@/lib/analytics";
 import {
   Calendar,
   MapPin,
@@ -458,6 +459,13 @@ export default function EventDetailClient({
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={`/contact?event=${event.id}&interest=sponsor`}
+                      onClick={() =>
+                        trackCtaClick({
+                          cta: "book_sponsorship",
+                          location: "event_detail",
+                          destination: `/contact?event=${event.id}&interest=sponsor`,
+                        })
+                      }
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
                              hover:bg-[#ae904c]/90 transition-colors duration-300"
                     >

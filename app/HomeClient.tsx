@@ -12,10 +12,16 @@ import ServicesSection from "@/components/ServicesSection";
 import EventSection from "@/components/EventSection";
 import DarkGridBackground3 from "@/components/DarkGridBackground3";
 import { useRouter } from "next/navigation";
+import { trackCtaClick } from "@/lib/analytics";
 
 export default function Home() {
   const router = useRouter();
   const handleGetStarted = () => {
+    trackCtaClick({
+      cta: "get_started",
+      location: "home_hero",
+      destination: "/contact",
+    });
     // navigate to contact page
     router.push("/contact");
   };
