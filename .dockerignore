@@ -1,0 +1,18 @@
+node_modules
+.next
+.git
+.github
+.vercel
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+*.tsbuildinfo
+
+# Secrets never belong in the build context — runtime env comes from env_file.
+.env
+.env.*
+!.env.example
+
+# Docs / local-only
+SELF_HOSTING.md
+README.md

@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Self-hosted deployment: emit a self-contained server bundle under
+  // .next/standalone so the Docker runtime image does not need node_modules.
+  output: "standalone",
   images: {
     domains: [
       "prod-files-secure.s3.us-west-2.amazonaws.com",
