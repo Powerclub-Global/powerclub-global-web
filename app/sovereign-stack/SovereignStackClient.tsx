@@ -4,6 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import {
+  identifyLead,
+  trackBookingConfirmed,
+  trackFormFailed,
+  trackFormStart,
+  trackStepCompleted,
+} from "@/lib/analytics";
+import { getAttribution } from "@/lib/attribution";
 
 const LAYERS = [
   { id: "spectrum", label: "SPECTRUM GALACTIC", desc: "Satellite mesh · global unification", tag: "Year 4+", accent: "#ae904c", glow: false, live: false },
@@ -57,6 +65,13 @@ export default function SovereignStackPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
+  // `form_started` fires once, on the first interaction with the booking form.
+  const startedRef = useRef(false);
+  const markStarted = () => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackFormStart("sovereign_stack");
+  };
 
   useEffect(() => {
     fetch("/api/sovereign-stack/slots")
@@ -72,6 +87,11 @@ export default function SovereignStackPage() {
 
   function selectSlot(slot: Slot) {
     if (slot.booking_count >= slot.slot.capacity) return;
+    trackStepCompleted("sovereign_stack", "slot", {
+      step_index: 1,
+      scheduling_available: slots.length > 0,
+      slot_selected: true,
+    });
     setSelectedSlot(slot);
     setResult(null);
     setTimeout(() => {
@@ -87,12 +107,35 @@ export default function SovereignStackPage() {
       const res = await fetch("/api/sovereign-stack/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slot_id: selectedSlot.slot.id, name: form.name, email: form.email, phone: form.phone || undefined, track, message: form.message || undefined }),
+        body: JSON.stringify({ slot_id: selectedSlot.slot.id, name: form.name, email: form.email, phone: form.phone || undefined, track, message: form.message || undefined, attribution: getAttribution() }),
       });
       const data = await res.json();
       setResult(data);
-      if (data.success) setSelectedSlot(null);
+      if (data.success) {
+        identifyLead(form.email, { name: form.name });
+        trackStepCompleted("sovereign_stack", "details", { step_index: 2 });
+        trackBookingConfirmed({
+          kind: "sovereign_stack",
+          schedulingAvailable: slots.length > 0,
+          slotSelected: true,
+          status: "confirmed",
+          source_page: "/sovereign-stack",
+          track,
+          has_phone: Boolean(form.phone.trim()),
+          has_message: Boolean(form.message.trim()),
+        });
+        setSelectedSlot(null);
+      } else {
+        trackFormFailed("sovereign_stack", "rejected", {
+          source_page: "/sovereign-stack",
+          track,
+        });
+      }
     } catch {
+      trackFormFailed("sovereign_stack", "network_error", {
+        source_page: "/sovereign-stack",
+        track,
+      });
       setResult({ success: false, message: "Network error — please try again." });
     } finally {
       setSubmitting(false);
@@ -295,7 +338,7 @@ export default function SovereignStackPage() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} onFocusCapture={markStarted}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     <div>
                       <label className="block text-xs font-medium mb-1.5 uppercase tracking-wide" style={{ color: "rgba(232,234,240,0.45)" }}>Name</label>

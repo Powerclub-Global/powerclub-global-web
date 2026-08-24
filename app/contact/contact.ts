@@ -4,6 +4,7 @@ import {
   APPWRITE_DATABASE_ID,
   APPWRITE_COLLECTION_ID,
 } from "@/utils/appwrite";
+import { getAttribution } from "@/lib/attribution";
 
 export interface ContactFormData {
   name: string;
@@ -21,7 +22,12 @@ const relayToCrm = async (formData: ContactFormData): Promise<boolean> => {
     const res = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...formData, sourcePage: "/contact" }),
+      body: JSON.stringify({
+        ...formData,
+        sourcePage:
+          typeof window !== "undefined" ? window.location.pathname : "/contact",
+        attribution: getAttribution(),
+      }),
     });
     return res.ok;
   } catch (error) {

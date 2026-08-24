@@ -1,4 +1,8 @@
-export const GA_TRACKING_ID = "G-V7HY5PZW79";
+// GA4 measurement id. Env-driven so it can be swapped per environment; the
+// literal is the historical production value and stays as the fallback so
+// nothing breaks before the Vercel env var is set.
+export const GA_TRACKING_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-V7HY5PZW79";
 
 // Tracking page views
 export const pageview = (url: string) => {

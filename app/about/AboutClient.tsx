@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import { useRouter } from "next/navigation";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface FeatureCard {
   title: string;
@@ -178,6 +179,11 @@ function AboutPageContent() {
   const router = useRouter();
 
   const handleGetStarted = () => {
+    trackCtaClick({
+      cta: "get_started",
+      location: "about_hero",
+      destination: "/contact",
+    });
     router.push("/contact");
   };
 

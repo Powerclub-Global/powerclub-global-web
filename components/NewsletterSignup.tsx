@@ -1,11 +1,19 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { getAttribution } from "@/lib/attribution";
+import {
+  identifyLead,
+  trackFormFailed,
+  trackFormStart,
+  trackFormSubmit,
+} from "@/lib/analytics";
 
 // Newsletter capture → dashboard CRM (funnel: "newsletter") via /api/lead.
 export default function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [started, setStarted] = useState(false);
   const pathname = usePathname();
 
   const submit = async (e: React.FormEvent) => {
@@ -22,10 +30,22 @@ export default function NewsletterSignup({ compact = false }: { compact?: boolea
           funnel: "newsletter",
           sourcePage: pathname || "/",
           subject: "Newsletter signup",
+          attribution: getAttribution(),
         }),
       });
+      if (res.ok) {
+        identifyLead(email);
+        trackFormSubmit("newsletter", { source_page: pathname || "/" });
+      } else {
+        trackFormFailed("newsletter", `http_${res.status}`, {
+          source_page: pathname || "/",
+        });
+      }
       setStatus(res.ok ? "done" : "error");
     } catch {
+      trackFormFailed("newsletter", "network_error", {
+        source_page: pathname || "/",
+      });
       setStatus("error");
     }
   };
@@ -39,7 +59,15 @@ export default function NewsletterSignup({ compact = false }: { compact?: boolea
   }
 
   return (
-    <form onSubmit={submit} className={compact ? "flex gap-2" : "flex flex-col sm:flex-row gap-3"}>
+    <form
+      onSubmit={submit}
+      onFocusCapture={() => {
+        if (started) return;
+        setStarted(true);
+        trackFormStart("newsletter", { source_page: pathname || "/" });
+      }}
+      className={compact ? "flex gap-2" : "flex flex-col sm:flex-row gap-3"}
+    >
       <input
         type="email"
         required
