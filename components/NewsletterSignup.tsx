@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { track } from "@/lib/gtag";
 
 // Newsletter capture → dashboard CRM (funnel: "newsletter") via /api/lead.
 export default function NewsletterSignup({ compact = false }: { compact?: boolean }) {
@@ -24,6 +25,7 @@ export default function NewsletterSignup({ compact = false }: { compact?: boolea
           subject: "Newsletter signup",
         }),
       });
+      if (res.ok) track("newsletter_signup", { source_page: pathname || "/" });
       setStatus(res.ok ? "done" : "error");
     } catch {
       setStatus("error");

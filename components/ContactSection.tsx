@@ -153,7 +153,7 @@ const ContactSection: React.FC = () => {
     setFormStatus(null);
 
     try {
-      await submitContactForm(formData);
+      await submitContactForm(formData, "/");
       setFormStatus({
         success: true,
         message: "Thank you! Your message has been sent successfully.",

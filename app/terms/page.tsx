@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Powerclub Global",
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Service",
   description:
     "Terms governing your use of the Powerclub Global platform and services.",
-};
+  path: "/terms",
+});
 
 function Section({
   id,

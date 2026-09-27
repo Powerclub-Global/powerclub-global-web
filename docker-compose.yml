@@ -1,0 +1,49 @@
+# Self-hosted Powerclub Global marketing site.
+#
+#   docker compose -p pcg-website up -d --build
+#
+# The container joins the pre-existing pcg-cc-mcp_app-network so that
+# pcg-cloudflared can reach it by name at http://pcg-website:3000. That network
+# is declared external here — this file must never create or modify it.
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pcg-website:latest
+    container_name: pcg-website
+    restart: unless-stopped
+    # Runtime secrets live on the host, outside the repo. See SELF_HOSTING.md.
+    env_file:
+      - /home/pythia/pcg-website/.env
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+    # Host port for direct testing / smoke checks. Public traffic arrives via
+    # the Cloudflare tunnel over the shared docker network, not through this.
+    ports:
+      - "127.0.0.1:3005:3000"
+    networks:
+      - app-network
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      start_period: 25s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  app-network:
+    external: true
+    name: pcg-cc-mcp_app-network

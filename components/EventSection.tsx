@@ -96,7 +96,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
-                       rounded-md sm:rounded-lg bg-[#ae904c] text-white text-xs sm:text-base 
+                       rounded-md sm:rounded-lg bg-[#ae904c] text-black font-semibold text-xs sm:text-base 
                        w-full sm:w-auto transition-colors duration-300 hover:bg-[#ae904c]/90"
             >
               {event.ticketPrice ? `From $${event.ticketPrice.early} ` : "Event Site "}
@@ -280,7 +280,7 @@ const EventsSection: React.FC = () => {
         </div>
       </div>
       <div className="w-full overflow-hidden">
-        <ScrollingRow events={sortedEvents} direction="left" />
+        <ScrollingRow events={sortedEvents.slice(0, 16)} direction="left" />
         {/* <ScrollingRow events={sortedEvents} direction="right" /> */}
       </div>
     </section>

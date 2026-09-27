@@ -408,7 +408,7 @@ export default async function ServicePage({ params }: PageProps) {
                 className="rounded-2xl object-cover w-full h-[400px] brightness-75"
               />
               <img
-                src="/services/press-relations3.jpeg"
+                src="/services/press-relations3.webp"
                 alt="Office space"
                 className="rounded-2xl object-cover w-full h-[400px] mt-8 brightness-75"
               />

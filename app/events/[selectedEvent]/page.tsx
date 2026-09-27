@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import eventsData from "@/data/events.json";
 import EventDetailClient from "./EventDetailClient";
 
@@ -13,6 +14,7 @@ interface EventRecord {
   dateRange?: { start: string; end: string };
   location: string;
   url?: string;
+  image?: string;
   description: string;
 }
 
@@ -33,15 +35,12 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  return pageMetadata({
     title: event.name,
     description: event.description,
-    alternates: { canonical: `/events/${event.id}` },
-    openGraph: {
-      title: event.name,
-      description: event.description,
-    },
-  };
+    path: `/events/${event.id}`,
+    image: event.image,
+  });
 }
 
 export default async function EventDetailPage({ params }: PageProps) {

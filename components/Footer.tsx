@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           {/* Newsletter */}
           <div className="mb-12 max-w-xl">
-            <h3 className="text-[#ae904c] text-sm uppercase tracking-widest mb-2">
+            <p className="text-[#ae904c] text-sm uppercase tracking-widest mb-2">
               The Powerclub Dispatch
-            </h3>
+            </p>
             <p className="text-white/50 text-sm mb-4">
               Conference intel, momentum plays, and network invites — straight
               from the circuit.
@@ -31,13 +31,14 @@ const Footer: React.FC = () => {
           {/* Logo and Social Links */}
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <img
-              src="/logo-transparent.png"
+              src="/logo.webp"
               alt="Logo"
               className="w-20 mb-4 md:mb-0"
             />
             <div className="flex space-x-6">
               <a
                 href="https://www.instagram.com/powerclub.global/"
+      aria-label="Powerclub Global on Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -46,6 +47,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://www.facebook.com/p/Powerclub-Global-100093219199164/"
+      aria-label="Powerclub Global on Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -54,6 +56,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://x.com/powerclubglobal"
+      aria-label="Powerclub Global on X (Twitter)"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -63,6 +66,7 @@ const Footer: React.FC = () => {
 
               <a
                 href="https://www.youtube.com/@powerclubglobal"
+      aria-label="Powerclub Global on YouTube"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -71,6 +75,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://t.me/powerclubglboal"
+      aria-label="Powerclub Global on Telegram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -79,6 +84,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="https://www.linkedin.com/company/powerclub-global-usa"
+      aria-label="Powerclub Global on LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"

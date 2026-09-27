@@ -3,17 +3,18 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import { Suspense, useEffect } from "react";
-import { pageview } from "@/lib/gtag";
-import { GA_TRACKING_ID } from "@/lib/gtag";
+import { GA_ENABLED, GA_TRACKING_ID, pageview } from "@/lib/gtag";
 
 function GoogleAnalyticsContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = pathname + searchParams.toString();
-    pageview(url);
+    const qs = searchParams.toString();
+    pageview(qs ? `${pathname}?${qs}` : pathname);
   }, [pathname, searchParams]);
+
+  if (!GA_ENABLED) return null;
 
   return (
     <>
@@ -29,9 +30,7 @@ function GoogleAnalyticsContent() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_TRACKING_ID}', { send_page_view: false });
           `,
         }}
       />

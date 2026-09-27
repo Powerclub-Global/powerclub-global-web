@@ -66,9 +66,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 strokeWidth={1.5}
               />
             </div>
-            <h3 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
+            <h2 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
               {title}
-            </h3>
+            </h2>
             <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
               {description}
             </p>
@@ -92,9 +92,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                   strokeWidth={1.5}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
+              <h2 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
                 {title}
-              </h3>
+              </h2>
               <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
                 {description}
               </p>
@@ -125,9 +125,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                   strokeWidth={1.5}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
+              <h2 className="text-xl font-semibold mb-4 text-[#ae904c]/90 group-hover:text-[#ae904c] transition-colors duration-300">
                 {title}
-              </h3>
+              </h2>
               <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
                 {description}
               </p>
@@ -161,7 +161,7 @@ const services = [
     description:
       "Professional roadshow services delivering your message across cities with maximum impact and engagement. Backed by our network of local partners.",
     icon: Car,
-    image: "/roadshow.png",
+    image: "/roadshow.webp",
     imageBelow: true,
   },
   {
@@ -184,7 +184,7 @@ const services = [
     description:
       "Unforgettable event experiences that bring your vision to life and leave lasting impressions.",
     icon: PartyPopper,
-    image: "/event.png",
+    image: "/event.webp",
   },
   {
     id: "blockchain-consulting",
@@ -230,11 +230,11 @@ export default function ServicesPage() {
               <span className="whitespace-normal lg:whitespace-nowrap">
                 Empowering Your Brand
               </span>
-              <br />
+              <br />{" "}
               <span className="font-bold text-[#ae904c] whitespace-normal lg:whitespace-nowrap">
                 With Our Services
               </span>
-              <br />
+              <br />{" "}
               and Solutions
             </h1>
             <p className="text-white/60 max-w-2xl text-lg">
@@ -302,7 +302,7 @@ export default function ServicesPage() {
                 className="h-full"
                 href={`/services/${services[7].id}`}
                 imageBelow={true}
-                image="/services/press-relations4.jpeg"
+                image="/services/press-relations4.webp"
               />
             </div>
           </div>
