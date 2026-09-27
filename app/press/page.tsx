@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { getPressReleases } from "@/lib/press";
 import { pageMetadata } from "@/lib/seo";
 
-export const dynamic = 'force-dynamic';
+// ISR rather than force-dynamic: streaming a dynamic render emitted the
+// page's <meta description> after </head>, so it landed in the body.
+export const revalidate = 300;
 
 export const metadata: Metadata = pageMetadata({
   title: "Press & Announcements — Conference Coverage by PCG",

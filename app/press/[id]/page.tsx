@@ -1,7 +1,7 @@
 import { Suspense, use } from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getPressRelease } from "@/lib/press";
+import { getPressRelease, getPressReleases } from "@/lib/press";
 import { pageMetadata } from "@/lib/seo";
 import { ArrowLeft } from "lucide-react";
 import ShareButton from "@/components/ShareButton";
@@ -13,6 +13,17 @@ interface PageProps {
     id: string;
   }>;
 }
+
+
+// Prerendered so metadata lands in <head>: a streamed dynamic render emitted
+// these pages' <meta description> after </head>. getPressReleases swallows a
+// CMS outage, in which case articles fall back to on-demand rendering.
+export async function generateStaticParams() {
+  const posts = await getPressReleases();
+  return posts.map((post) => ({ id: post.slug || post.id }));
+}
+
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;

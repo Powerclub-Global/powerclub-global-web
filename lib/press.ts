@@ -65,18 +65,26 @@ function toPressRelease(dto: CmsPressReleaseDto): PressRelease {
 }
 
 export async function getPressReleases(): Promise<PressRelease[]> {
-  const res = await fetch(
-    `${PCG_BACKEND_URL}/api/public/sites/${SITE_SLUG}/press`,
-    { next: { revalidate: 300 } }
-  );
+  // /press and the sitemap prerender, so an unreachable CMS at build time
+  // must degrade to an empty list rather than fail the build; ISR fills the
+  // page in on the next revalidation.
+  try {
+    const res = await fetch(
+      `${PCG_BACKEND_URL}/api/public/sites/${SITE_SLUG}/press`,
+      { next: { revalidate: 300 } }
+    );
 
-  if (!res.ok) {
-    console.warn(`Failed to fetch press releases: ${res.status}`);
+    if (!res.ok) {
+      console.warn(`Failed to fetch press releases: ${res.status}`);
+      return [];
+    }
+
+    const json = (await res.json()) as ApiResponse<CmsPressReleaseDto[]>;
+    return json.data.map(toPressRelease);
+  } catch (error) {
+    console.warn("Press CMS unreachable:", error);
     return [];
   }
-
-  const json = (await res.json()) as ApiResponse<CmsPressReleaseDto[]>;
-  return json.data.map(toPressRelease);
 }
 
 export async function getPressRelease(

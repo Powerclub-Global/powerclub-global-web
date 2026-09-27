@@ -12,6 +12,10 @@ function findEvent(id: string): Event | undefined {
   return (eventsData.events as Event[]).find((e) => e.id === id);
 }
 
+export function generateStaticParams() {
+  return (eventsData.events as Event[]).map((e) => ({ selectedEvent: e.id }));
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
