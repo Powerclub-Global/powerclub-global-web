@@ -31,7 +31,7 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="w-24 h-24 md:w-40 md:h-40 rounded-full mx-auto mb-4"
-              src="/logo-transparent.png"
+              src="/logo.webp"
               alt="Logo"
             />
             <motion.h1

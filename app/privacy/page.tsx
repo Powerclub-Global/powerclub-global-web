@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Powerclub Global",
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Policy",
   description:
     "How Powerclub Global collects, uses, and protects your personal information.",
-};
+  path: "/privacy",
+});
 
 function Section({
   id,

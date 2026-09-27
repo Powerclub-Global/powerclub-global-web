@@ -63,7 +63,7 @@ const FeaturedEventCard = ({ event }: EventCardProps) => (
         <div className="mt-auto flex gap-4">
           <Link
             href={`/events/${event.id}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-white
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
                      hover:bg-[#ae904c]/90 transition-colors duration-300"
           >
             View Details <ArrowUpRight className="w-4 h-4" />

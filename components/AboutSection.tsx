@@ -42,7 +42,7 @@ const VideoSection: React.FC = () => {
             {!isPlaying ? (
               <>
                 <img
-                  src="/thumbnail.png"
+                  src="/about/video-poster.webp"
                   alt="Video thumbnail"
                   className="w-full h-full object-cover"
                 />
@@ -51,6 +51,7 @@ const VideoSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
 
                 <button
+                  aria-label="Play video"
                   onClick={handlePlayClick}
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                     bg-[#ae904c]/20 hover:bg-[#ae904c]/30 border border-[#ae904c]/50 

@@ -184,7 +184,7 @@ const ServicesSection: React.FC = () => {
               icon={Car}
               title="Road Show"
               description="Professional road show services delivering your message across cities with maximum impact and engagement. Backed by our network of local partners."
-              image="/roadshow.png"
+              image="/roadshow.webp"
               imageBelow={true}
             />
           </div>
@@ -204,7 +204,7 @@ const ServicesSection: React.FC = () => {
                 icon={PartyPopper}
                 title="Events"
                 description="Unforgettable event experiences that bring your vision to life and leave lasting impressions."
-                image="/event.png"
+                image="/event.webp"
               />
             </div>
           </div>

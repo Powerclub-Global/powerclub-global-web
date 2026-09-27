@@ -60,6 +60,7 @@ const SocialLinks = () => (
   <div className="flex space-x-6">
     <a
       href="https://www.instagram.com/powerclub.global/"
+      aria-label="Powerclub Global on Instagram"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -68,6 +69,7 @@ const SocialLinks = () => (
     </a>
     <a
       href="https://www.facebook.com/p/Powerclub-Global-100093219199164/"
+      aria-label="Powerclub Global on Facebook"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -76,6 +78,7 @@ const SocialLinks = () => (
     </a>
     <a
       href="https://x.com/powerclubglobal"
+      aria-label="Powerclub Global on X (Twitter)"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -85,6 +88,7 @@ const SocialLinks = () => (
 
     <a
       href="https://www.youtube.com/@powerclubglobal"
+      aria-label="Powerclub Global on YouTube"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -92,7 +96,8 @@ const SocialLinks = () => (
       <Youtube className="w-5 h-5" />
     </a>
     <a
-      href="t.me/powerclubglboal"
+      href="https://t.me/powerclubglboal"
+      aria-label="Powerclub Global on Telegram"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -101,6 +106,7 @@ const SocialLinks = () => (
     </a>
     <a
       href="https://www.linkedin.com/company/powerclub-global-usa"
+      aria-label="Powerclub Global on LinkedIn"
       target="_blank"
       rel="noopener noreferrer"
       className="text-amber-400/60 hover:text-amber-400 transition-colors duration-300"
@@ -129,7 +135,7 @@ const Navbar: React.FC = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex justify-between items-center">
           <Link href="/" className="cursor-pointer">
-            <img src="/logo-transparent.png" alt="Home" className="w-20" />
+            <img src="/logo.webp" alt="Home" className="w-20" />
           </Link>
           {navItems.map((item) => (
             <NavItem
@@ -144,9 +150,14 @@ const Navbar: React.FC = () => {
         {/* Mobile Layout */}
         <div className="flex md:hidden justify-between items-center relative z-50">
           <Link href="/" className="cursor-pointer">
-            <img src="/logo-transparent.png" alt="Home" className="w-16" />
+            <img src="/logo.webp" alt="Home" className="w-16" />
           </Link>
-          <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="p-2"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
             {isOpen ? (
               <X className="h-6 w-6 text-amber-400/50" />
             ) : (
@@ -173,7 +184,7 @@ const Navbar: React.FC = () => {
         >
           {/* PCG Logo at top with larger size */}
           <div className="flex justify-center pt-8">
-            <img src="/logo-transparent.png" alt="Logo" className="w-32" />
+            <img src="/logo.webp" alt="Logo" className="w-32" />
           </div>
 
           {/* Main navigation items */}

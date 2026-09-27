@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { track } from "@/lib/gtag";
 
 interface CTASectionProps {
   title?: string;
@@ -25,19 +26,19 @@ const CTASection: React.FC<CTASectionProps> = ({
   paragraphText, // Added new prop
 }) => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handlePrimaryClick = () => {
+    track("cta_click", { cta: "primary", page: pathname || "/" });
     if (onPrimaryClick) {
       onPrimaryClick();
     } else {
-      window.open(
-        "https://calendly.com/powerclub-global/business-interaction",
-        "_blank"
-      );
+      router.push("/discovery-call");
     }
   };
 
   const handleSecondaryClick = () => {
+    track("cta_click", { cta: "secondary", page: pathname || "/" });
     if (onSecondaryClick) {
       onSecondaryClick();
     } else {

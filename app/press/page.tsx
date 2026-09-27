@@ -1,8 +1,17 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getPressReleases } from "@/lib/press";
+import { pageMetadata } from "@/lib/seo";
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = pageMetadata({
+  title: "Press & Announcements — Conference Coverage by PCG",
+  description:
+    "Press releases, conference recaps, and announcements from Powerclub Global — coverage from the roadshow, partner news, and what PCG is building next.",
+  path: "/press",
+});
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -103,11 +112,11 @@ export default function PressPage() {
                 <span className="whitespace-normal lg:whitespace-nowrap">
                   Stay Updated with Our
                 </span>
-                <br />
+                <br />{" "}
                 <span className="font-bold text-[#ae904c] whitespace-normal lg:whitespace-nowrap">
                   Latest News
                 </span>
-                <br />
+                <br />{" "}
                 and Announcements
               </h1>
               <p className="text-white/60 max-w-2xl text-lg">

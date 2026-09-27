@@ -199,12 +199,12 @@ function AboutPageContent() {
               <span className="whitespace-normal lg:whitespace-nowrap">
                 Where Vision <br /> meets
               </span>
-              <br />
+              <br />{" "}
               <span className="font-bold text-[#ae904c] whitespace-normal">
                 Excellence <span className="text-white font-normal">And</span>{" "}
                 Innovation
               </span>
-              <br />
+              <br />{" "}
             </h1>
 
             {/* <div className="flex gap-3 mt-8 lg:mt-12">
@@ -505,7 +505,7 @@ function AboutPageContent() {
             </div>
             <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden">
               <img
-                src="/services/press-relations1.jpeg"
+                src="/services/press-relations1.webp"
                 alt="Team collaboration session"
                 className="object-cover w-full h-full"
               />

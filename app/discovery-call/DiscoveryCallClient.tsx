@@ -1,5 +1,7 @@
 "use client";
 
+import { track } from "@/lib/gtag";
+
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -176,6 +178,10 @@ export default function DiscoveryCallClient() {
         meetUrl: data.meetUrl ?? null,
         status: data.status ?? "confirmed",
       });
+      track("discovery_call_submit", {
+        has_slot: !!selectedSlot,
+        booking_status: data.status ?? "confirmed",
+      });
       setStep("success");
     } catch {
       setError("Network error. Please try again.");
@@ -237,6 +243,7 @@ export default function DiscoveryCallClient() {
                   <div>
                     <FieldLabel>How many conferences do you sponsor/attend per year?</FieldLabel>
                     <select
+                      aria-label="How many conferences do you sponsor/attend per year?"
                       className={inputClass}
                       value={q.conferencesSponsoredPerYear}
                       onChange={(e) => setQ({ ...q, conferencesSponsoredPerYear: e.target.value })}
@@ -251,6 +258,7 @@ export default function DiscoveryCallClient() {
                   <div>
                     <FieldLabel>Do you host your own events?</FieldLabel>
                     <select
+                      aria-label="Do you host your own events?"
                       className={inputClass}
                       value={q.hostsOwnEvents}
                       onChange={(e) => setQ({ ...q, hostsOwnEvents: e.target.value })}
@@ -264,6 +272,7 @@ export default function DiscoveryCallClient() {
                   <div>
                     <FieldLabel>Currently investing in event content/coverage?</FieldLabel>
                     <select
+                      aria-label="Currently investing in event content/coverage?"
                       className={inputClass}
                       value={q.investingInContentForEvent}
                       onChange={(e) =>
@@ -279,6 +288,7 @@ export default function DiscoveryCallClient() {
                   <div>
                     <FieldLabel>Timeline / urgency</FieldLabel>
                     <select
+                      aria-label="Timeline / urgency"
                       className={inputClass}
                       value={q.timelineUrgency}
                       onChange={(e) => setQ({ ...q, timelineUrgency: e.target.value })}

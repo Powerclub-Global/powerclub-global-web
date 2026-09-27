@@ -1,6 +1,8 @@
 import { Suspense, use } from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getPressRelease } from "@/lib/press";
+import { pageMetadata } from "@/lib/seo";
 import { ArrowLeft } from "lucide-react";
 import ShareButton from "@/components/ShareButton";
 import Footer from "@/components/Footer";
@@ -10,6 +12,18 @@ interface PageProps {
   params: Promise<{
     id: string;
   }>;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const post = await getPressRelease(id).catch(() => null);
+  if (!post) return { title: "Press release not found", robots: { index: false } };
+  return pageMetadata({
+    title: post.title,
+    description: post.description || `${post.title} — press release from Powerclub Global.`,
+    path: `/press/${id}`,
+    image: post.coverImage || undefined,
+  });
 }
 
 async function PressPost({ id }: { id: string }) {
