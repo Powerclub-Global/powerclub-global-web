@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { getBlogPosts } from "@/lib/notion";
+import { getPressReleases } from "@/lib/press";
 
 export const dynamic = 'force-dynamic';
 import { ArrowUpRight, Sparkles } from "lucide-react";
@@ -10,31 +10,24 @@ import CTASection from "@/components/CTASection";
 import NotionImage from "@/components/NotionImage";
 
 async function PressReleases() {
-  const posts = await getBlogPosts();
+  const posts = await getPressReleases();
 
   return (
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
       {posts.map((post) => (
-        <Link href={`/press/${post.id}`} key={post.id}>
+        <Link href={`/press/${post.slug}`} key={post.id}>
           <div className="group relative h-[450px] perspective-1000">
             <div className="preserve-3d transition-transform duration-500 ease-out group-hover:[transform:rotateX(10deg)_rotateY(-10deg)]">
               <div className="absolute inset-0 rounded-md bg-black/30 blur-xl transform translate-y-4 scale-95 transition-all duration-500 group-hover:translate-y-8 group-hover:scale-90" />
               <div className="absolute inset-0 rounded-md backdrop-blur-sm bg-[#ae904c]/5 border border-[#ae904c]/20 transform transition-all duration-500" />
               <div
-                className="relative h-[450px] rounded-md backdrop-blur-sm bg-gradient-to-b from-[#ae904c]/5 to-[#ae904c]/0 
+                className="relative h-[450px] rounded-md backdrop-blur-sm bg-gradient-to-b from-[#ae904c]/5 to-[#ae904c]/0
                   border border-[#ae904c]/20 group-hover:border-[#ae904c]/40
                   transition-all duration-500 ease-out transform
                   group-hover:-translate-y-2 group-hover:-translate-x-2"
               >
                 <div className="h-48 w-full rounded-t-md overflow-hidden relative bg-[#ae904c]/5">
-                  {post.mediaType === "video" && post.coverVideo ? (
-                    <div className="h-full w-full flex items-center justify-center">
-                      <video
-                        src={post.coverVideo}
-                        className="max-h-full max-w-full object-contain"
-                      />
-                    </div>
-                  ) : post.coverImage ? (
+                  {post.coverImage ? (
                     <NotionImage
                       src={post.coverImage}
                       alt={post.title}
