@@ -1,25 +1,15 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import eventsData from "@/data/events.json";
+import type { Event } from "@/types/events";
 import EventDetailClient from "./EventDetailClient";
 
 interface PageProps {
   params: Promise<{ selectedEvent: string }>;
 }
 
-interface EventRecord {
-  id: string;
-  name: string;
-  dates: string;
-  dateRange?: { start: string; end: string };
-  location: string;
-  url?: string;
-  image?: string;
-  description: string;
-}
-
-function findEvent(id: string): EventRecord | undefined {
-  return (eventsData.events as EventRecord[]).find((e) => e.id === id);
+function findEvent(id: string): Event | undefined {
+  return (eventsData.events as Event[]).find((e) => e.id === id);
 }
 
 export async function generateMetadata({
@@ -46,6 +36,10 @@ export async function generateMetadata({
 export default async function EventDetailPage({ params }: PageProps) {
   const { selectedEvent } = await params;
   const event = findEvent(selectedEvent);
+  // Enough neighbours to fill the marquee without shipping all 87 events.
+  const otherEvents = (eventsData.events as unknown as Event[])
+    .filter((e) => e.id !== selectedEvent)
+    .slice(0, 12);
 
   const jsonLd = event
     ? {
@@ -57,10 +51,23 @@ export default async function EventDetailPage({ params }: PageProps) {
         endDate: event.dateRange?.end ?? undefined,
         location: {
           "@type": "Place",
-          name: event.location,
+          name: event.venue || event.location,
           address: event.location,
         },
-        ...(event.url ? { url: event.url } : {}),
+        // `url` must point at this page — the organiser link lives in
+        // `offers.url`, which is what Google surfaces as the ticket link.
+        url: `https://powerclubglobal.com/events/${event.id}`,
+        ...(event.image
+          ? { image: [`https://powerclubglobal.com${event.image}`] }
+          : {}),
+        ...(event.organizer
+          ? { organizer: { "@type": "Organization", name: event.organizer } }
+          : {}),
+        ...(event.url
+          ? { offers: { "@type": "Offer", url: event.url, availability: "https://schema.org/InStock" } }
+          : {}),
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
       }
     : null;
 
@@ -72,7 +79,7 @@ export default async function EventDetailPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <EventDetailClient selectedEvent={selectedEvent} />
+      <EventDetailClient event={event ?? null} otherEvents={otherEvents} />
     </>
   );
 }

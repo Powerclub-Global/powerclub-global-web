@@ -267,9 +267,9 @@ const WorkflowSection = () => {
         opacity: opacityProgress,
       }}
     >
-      <h1 className="text-4xl lg:text-5xl font-semibold text-[#ae904c] mb-8">
+      <h2 className="text-4xl lg:text-5xl font-semibold text-[#ae904c] mb-8">
         Our Workflow
-      </h1>
+      </h2>
       <Timeline />
     </motion.div>
   );

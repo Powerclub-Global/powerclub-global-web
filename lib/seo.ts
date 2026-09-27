@@ -13,15 +13,17 @@ interface PageMeta {
   ogTitle?: string;
   ogDescription?: string;
   noindex?: boolean;
+  /** Skip the site-name suffix — for titles that are already long. */
+  absoluteTitle?: boolean;
 }
 
 // Next.js does not merge a page's `openGraph` with the root layout's, so every
 // page that sets its own metadata used to lose the share image. Build the full
 // block here instead.
-export function pageMetadata({ title, description, path, image, ogTitle, ogDescription, noindex }: PageMeta): Metadata {
+export function pageMetadata({ title, description, path, image, ogTitle, ogDescription, noindex, absoluteTitle }: PageMeta): Metadata {
   const images = image ? [{ url: image, alt: ogTitle ?? title }] : [OG_IMAGE];
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

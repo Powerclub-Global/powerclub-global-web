@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import eventsData from "@/data/events.json";
+import { getPressReleases } from "@/lib/press";
 import { statSync } from "fs";
 import { join } from "path";
 
@@ -16,7 +17,7 @@ const servicesUpdated = mtime("data/services.ts");
 
 const BASE = "https://powerclubglobal.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/services`, changeFrequency: "monthly", priority: 0.9, lastModified: servicesUpdated },
@@ -44,5 +45,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: eventsUpdated,
   }));
 
-  return [...staticPages, ...servicePages, ...eventPages];
+  // Press articles live in the CMS, so they cannot be derived from a data
+  // file. A CMS outage must not empty the sitemap, hence the catch.
+  let pressPages: MetadataRoute.Sitemap = [];
+  try {
+    pressPages = (await getPressReleases()).map((post) => ({
+      url: `${BASE}/press/${post.slug || post.id}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+      lastModified: post.date ? new Date(post.date) : undefined,
+    }));
+  } catch {
+    pressPages = [];
+  }
+
+  return [...staticPages, ...servicePages, ...eventPages, ...pressPages];
 }

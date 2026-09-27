@@ -19,7 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const post = await getPressRelease(id).catch(() => null);
   if (!post) return { title: "Press release not found", robots: { index: false } };
   return pageMetadata({
+    // absolute: the " · Powerclub Global" template pushed article titles past
+    // 100 characters, well beyond what search results display.
     title: post.title,
+    absoluteTitle: true,
     description: post.description || `${post.title} — press release from Powerclub Global.`,
     path: `/press/${id}`,
     image: post.coverImage || undefined,
@@ -29,12 +32,36 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 async function PressPost({ id }: { id: string }) {
   const post = await getPressRelease(id);
 
+  const jsonLd = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        author: { "@type": "Organization", name: post.author || "Powerclub Global" },
+        publisher: {
+          "@type": "Organization",
+          name: "Powerclub Global",
+          logo: { "@type": "ImageObject", url: "https://powerclubglobal.com/logo.png" },
+        },
+        mainEntityOfPage: `https://powerclubglobal.com/press/${id}`,
+        ...(post.coverImage ? { image: [post.coverImage] } : {}),
+      }
+    : null;
+
   if (!post) {
     notFound();
   }
 
   return (
     <>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
       {/* Back Button */}
       <div className="container mx-auto px-4 pt-32">
         <div className="max-w-4xl mx-auto">
@@ -110,6 +137,35 @@ async function PressPost({ id }: { id: string }) {
                 );
               })}
             </article>
+
+            {/* Press articles are the site's best-engaged organic landing
+                pages but carried no route onward — this is that route. */}
+            <div className="mt-16 border-t border-[#ae904c]/20 pt-10">
+              <p className="text-[#ae904c] text-sm uppercase tracking-widest mb-3">
+                Covering this conference?
+              </p>
+              <h2 className="text-2xl text-white mb-4">
+                PCG turns a conference appearance into pipeline.
+              </h2>
+              <p className="text-white/60 mb-6 max-w-2xl">
+                Coverage, activations and the momentum engine that keeps the
+                event working after the doors close.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/discovery-call"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black font-semibold hover:bg-[#c9a95e] transition-colors"
+                >
+                  Book a discovery call
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40 text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors"
+                >
+                  What PCG does
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -18,6 +18,10 @@ interface NavItemProps {
   onClick?: () => void;
 }
 
+// Rendered as a real anchor: these were <button onClick={window.location}>,
+// which meant crawlers saw no internal links at all (every page read as an
+// orphan), middle-click/open-in-new-tab did nothing, and each nav click cost
+// a full page reload instead of a client-side transition.
 const NavItem: React.FC<NavItemProps> = ({
   text,
   href,
@@ -25,19 +29,14 @@ const NavItem: React.FC<NavItemProps> = ({
   isContact,
   onClick,
 }) => (
-  <button
-    className={`group relative ${
+  <Link
+    href={href}
+    onClick={onClick}
+    className={`group relative inline-flex items-center justify-center ${
       isContact
         ? "bg-[#ae904c] text-white px-6 py-2 rounded-md hover:bg-[#98803f] transition-colors duration-300"
         : `px-4 py-2 ${isMobile ? "w-full text-center" : ""}`
     }`}
-    onClick={(e) => {
-      if (onClick) {
-        e.preventDefault();
-        onClick();
-      }
-      window.location.href = href;
-    }}
   >
     <span
       className={`text-sm font-light tracking-widest ${
@@ -53,7 +52,7 @@ const NavItem: React.FC<NavItemProps> = ({
     {!isContact && (
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-400/40 to-transparent group-hover:via-amber-400/70" />
     )}
-  </button>
+  </Link>
 );
 
 const SocialLinks = () => (

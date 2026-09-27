@@ -222,25 +222,14 @@ function ContactPageContent() {
     }
   };
 
-  if (!isClient) {
-    return (
-      <div className="min-h-screen bg-black">
-        <Navbar />
-        <div className="animate-pulse pt-32 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="h-8 w-48 bg-[#ae904c]/10 rounded mb-4" />
-            <div className="h-4 w-64 bg-[#ae904c]/5 rounded" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <main className="min-h-screen bg-black">
       <Navbar />
       <div className="relative w-full min-h-screen pb-32">
-        {/* Animated Grid Background */}
+        {/* Animated Grid Background — client-only: it is sized from the
+            viewport, and gating the whole page on it left crawlers (and
+            no-JS readers) with an empty skeleton. */}
+        {isClient && (
         <div className="absolute inset-0">
           <svg
             width="100%"
@@ -270,6 +259,7 @@ function ContactPageContent() {
             )}
           </svg>
         </div>
+        )}
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black/80" />

@@ -267,10 +267,6 @@ const EventsSection: React.FC = () => {
             className="inline-flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full 
            bg-[#ae904c]/10 hover:bg-[#ae904c]/20 border border-[#ae904c]/20 
            hover:border-[#ae904c]/40 transition-colors duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "/events";
-            }}
           >
             <span className="text-[#ae904c] font-medium text-sm sm:text-base">
               View All

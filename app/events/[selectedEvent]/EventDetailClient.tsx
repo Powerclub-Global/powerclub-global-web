@@ -20,11 +20,13 @@ import {
 } from "lucide-react";
 // import eventsData from "@/data/events.json";
 import type { Event, EventListItem } from "@/types/events";
-import { Skeleton } from "@/components/ui/Skeleton";
 import Footer from "@/components/Footer";
 
 interface EventDetailClientProps {
-  selectedEvent: string;
+  /** Resolved on the server so the page renders in HTML rather than a
+   * loading skeleton — these pages are the site's main organic entry point. */
+  event: Event | null;
+  otherEvents: Event[];
 }
 
 interface ScrollingRowProps {
@@ -157,32 +159,6 @@ const ScrollingRow: React.FC<ScrollingRowProps> = ({ events, direction }) => {
   );
 };
 
-const LoadingState = () => (
-  <div className="min-h-screen bg-black pt-20">
-    <div className="container mx-auto px-4">
-      <div className="max-w-4xl mx-auto">
-        <div
-          className="bg-gradient-to-br from-[#ae904c]/10 to-black/40 border border-[#ae904c]/30 
-                       backdrop-blur-sm rounded-xl p-8 mb-8 space-y-6"
-        >
-          <Skeleton className="h-10 w-2/3 bg-[#ae904c]/10" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              {[1, 2, 3].map((i) => (
-                <Skeleton key={i} className="h-6 w-full bg-[#ae904c]/10" />
-              ))}
-            </div>
-            <div className="space-y-4">
-              {[1, 2, 3].map((i) => (
-                <Skeleton key={i} className="h-6 w-full bg-[#ae904c]/10" />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 interface EventListCardProps {
   event: EventListItem;
@@ -249,46 +225,11 @@ const SmallEventListCard = ({ event }: EventListCardProps) => (
   </div>
 );
 export default function EventDetailClient({
-  selectedEvent,
+  event,
+  otherEvents,
 }: EventDetailClientProps) {
-  const [event, setEvent] = useState<Event | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [otherEvents, setOtherEvents] = useState<Event[]>([]);
-
-  useEffect(() => {
-    const loadEvent = async () => {
-      setIsLoading(true);
-      try {
-        const response = await import("@/data/events.json");
-        // Type assertion to ensure the events array matches our Event type
-        const eventsData = response.events as unknown as Event[];
-
-        const foundEvent = eventsData.find((e) => e.id === selectedEvent);
-
-        if (foundEvent) {
-          setEvent(foundEvent);
-
-          // Filter and duplicate other events
-          const others = eventsData.filter((e) => e.id !== selectedEvent);
-          const duplicatedEvents = [...others, ...others];
-          setOtherEvents(duplicatedEvents);
-        } else {
-          setEvent(null);
-        }
-      } catch (error) {
-        console.error("Error loading event data:", error);
-        setEvent(null);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadEvent();
-  }, [selectedEvent]);
-
-  if (isLoading) {
-    return <LoadingState />;
-  }
+  // Doubled so the marquee can scroll continuously without a visible seam.
+  const marqueeEvents = [...otherEvents, ...otherEvents];
 
   if (!event) {
     return (
@@ -298,9 +239,9 @@ export default function EventDetailClient({
     );
   }
 
-  const mid = Math.ceil(otherEvents.length / 2);
-  const firstRow = otherEvents.slice(0, mid);
-  const secondRow = otherEvents.slice(mid);
+  const mid = Math.ceil(marqueeEvents.length / 2);
+  const firstRow = marqueeEvents.slice(0, mid);
+  const secondRow = marqueeEvents.slice(mid);
 
   return (
     <>
@@ -394,13 +335,23 @@ export default function EventDetailClient({
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex gap-4 mt-8">
+              <div className="flex flex-wrap gap-4 mt-8">
+                {/* PCG's own CTA sits first: these pages are the site's main
+                    organic entry point, and every link on them used to send
+                    the visitor to the organiser instead. */}
+                <Link
+                  href="/discovery-call"
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black
+                         font-semibold hover:bg-[#c9a95e] transition-colors duration-300"
+                >
+                  Going? Talk to PCG <ArrowRight className="w-4 h-4" />
+                </Link>
                 <a
                   href={event.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
-                         hover:bg-[#ae904c]/90 transition-colors duration-300"
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
+                         text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
                 >
                   Register Now <ExternalLink className="w-4 h-4" />
                 </a>

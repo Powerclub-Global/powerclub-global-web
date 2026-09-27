@@ -19,7 +19,9 @@ import {
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import type { Metadata } from "next";
 import { services } from "@/data/services";
+import { pageMetadata } from "@/lib/seo";
 import Partners from "@/components/Carousel";
 import { cn } from "@/lib/utils";
 import FAQSection from "@/components/FAQSection";
@@ -166,6 +168,23 @@ interface PageProps {
     serviceId: string;
   }>;
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ serviceId: string }>;
+}): Promise<Metadata> {
+  const { serviceId } = await params;
+  const service = services.find((s) => s.id === serviceId);
+  if (!service) return { title: "Service not found", robots: { index: false } };
+  return pageMetadata({
+    title: `${service.title} — Powerclub Global Services`,
+    description: service.description,
+    path: `/services/${service.id}`,
+    image: service.image,
+  });
 }
 
 export default async function ServicePage({ params }: PageProps) {
