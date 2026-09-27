@@ -136,7 +136,16 @@ const DarkGridBackground: React.FC<PropsWithChildren> = ({ children }) => {
 
   // Initialize client-side state
   useEffect(() => {
-    setIsClient(true);
+    // The grid is decorative and drives a requestAnimationFrame loop that
+    // mutates inline styles on every cell. Mounting it during hydration kept
+    // the first frame from painting (LCP render delay ~11s with the hero text
+    // already in the HTML), so wait for idle and let the content paint first.
+    const showGrid = () => setIsClient(true);
+    const hasIdle = "requestIdleCallback" in window;
+    const idle: number = hasIdle
+      ? window.requestIdleCallback(showGrid, { timeout: 2000 })
+      : window.setTimeout(showGrid, 1200);
+
     const updateDimensions = () => {
       setDimensions({
         width: window.innerWidth,
@@ -150,7 +159,11 @@ const DarkGridBackground: React.FC<PropsWithChildren> = ({ children }) => {
 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+      if (hasIdle) window.cancelIdleCallback(idle);
+      else window.clearTimeout(idle);
+    };
   }, []);
 
   useEffect(() => {
@@ -250,7 +263,6 @@ const DarkGridBackground: React.FC<PropsWithChildren> = ({ children }) => {
                   fill="transparent"
                   stroke="rgba(255, 215, 0, 0.1)"
                   strokeWidth="1"
-                  className="transition-all duration-200"
                   style={{
                     fill: `rgba(255, 215, 0, ${opacity * 0.25})`,
                   }}
