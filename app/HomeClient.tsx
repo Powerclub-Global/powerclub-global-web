@@ -26,28 +26,25 @@ export default function Home() {
       <DarkGridBackground>
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center min-h-screen max-w-5xl mx-auto text-center -mt-10">
-            <motion.img
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+            <img
               className="w-24 h-24 md:w-40 md:h-40 rounded-full mx-auto mb-4"
               src="/logo.webp"
               alt="Logo"
+              width={160}
+              height={160}
+              fetchPriority="high"
             />
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-2xl md:text-4xl lg:text-6xl font-bold mb-6 md:mb-8 tracking-tight px-4"
-            >
+            {/* Not animated: this is the LCP element, and fading it in
+                deferred Largest Contentful Paint until the animation ended. */}
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-6 md:mb-8 tracking-tight px-4">
               <span className="bg-clip-text text-transparent uppercase bg-gradient-to-r from-[#ae904c]/80 via-[#ae904c] to-[#ae904c]/80">
                 Championing the Bold to Achieve the Extraordinary
               </span>
-            </motion.h1>
+            </h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="text-xs md:text-base lg:text-lg text-white/60 mb-8 md:mb-12 uppercase tracking-wide max-w-3xl font-light px-4"
             >
               Powerclub Global is a leading international agency specializing in
@@ -57,7 +54,7 @@ export default function Home() {
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               onClick={handleGetStarted}
               className="px-6 md:px-10 py-3 md:py-4 bg-gradient-to-r from-[#ae904c]/10 to-[#ae904c]/10 
               border border-[#ae904c]/30 text-[#ae904c]/90 rounded-lg 
