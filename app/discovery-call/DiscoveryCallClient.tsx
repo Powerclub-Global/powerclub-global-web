@@ -74,6 +74,28 @@ function FieldLabel({ children }: { children: React.ReactNode }) {
 const inputClass =
   "w-full bg-black/30 border border-[#ae904c]/25 rounded-lg px-4 py-3 text-white placeholder-white/30 outline-none focus:border-[#ae904c] transition-colors";
 
+// Render an IANA id as the reader's short zone name ("Eastern Time (ET)"),
+// falling back to the city part if Intl has no long name for it.
+function tzLabel(timezone: string) {
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      timeZoneName: "long",
+    }).formatToParts(new Date());
+    const name = parts.find((p) => p.type === "timeZoneName")?.value;
+    const abbr = new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      timeZoneName: "short",
+    })
+      .formatToParts(new Date())
+      .find((p) => p.type === "timeZoneName")?.value;
+    if (name) return abbr && abbr !== name ? `${name} (${abbr})` : name;
+  } catch {
+    // fall through
+  }
+  return timezone.split("/").pop()?.replace(/_/g, " ") ?? timezone;
+}
+
 function groupSlotsByDay(slots: Slot[], timezone: string) {
   const groups = new Map<string, Slot[]>();
   for (const slot of slots) {
@@ -124,7 +146,7 @@ export default function DiscoveryCallClient() {
         if (!cancelled) {
           setAvailability({
             schedulingAvailable: false,
-            timezone: "Asia/Hong_Kong",
+            timezone: "America/New_York",
             slots: [],
             message: "Scheduling is temporarily unavailable. Please submit your info and we'll follow up.",
           });
@@ -356,7 +378,7 @@ export default function DiscoveryCallClient() {
                   <>
                     <div className="flex items-center gap-2 text-sm text-white/50 mb-2">
                       <CalendarClock className="w-4 h-4 text-[#ae904c]" />
-                      Times shown in {availability.timezone.replace("_", " ")} — 30 min via
+                      Times shown in {tzLabel(availability.timezone)} — 30 min via
                       Google Meet
                     </div>
                     <div className="max-h-[420px] overflow-y-auto pr-1 space-y-5">
