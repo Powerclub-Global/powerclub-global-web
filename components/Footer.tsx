@@ -123,9 +123,8 @@ const Footer: React.FC = () => {
 
           <p className="text-center text-xs text-white/40 max-w-xl mx-auto mb-8">
             &ldquo;Text Theodore&rdquo; opens a message to +1 (645) 233-0500.
-            Theodore is our AI client-relations assistant, and a Powerclub
-            Global team member follows up. Message and data rates may apply;
-            reply STOP to opt out.
+            Theodore is our AI client-relations assistant. Message and data
+            rates may apply; reply STOP to opt out.
           </p>
 
           {/* Divider */}
