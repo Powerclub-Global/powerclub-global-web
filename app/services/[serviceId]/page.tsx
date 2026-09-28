@@ -283,26 +283,26 @@ export default async function ServicePage({ params }: PageProps) {
           <div className="flex flex-col gap-5 w-full lg:max-w-lg">
             <div className="h-48 lg:h-1/3">
               <img
-                src={`/services/${service.id}3.jpeg`}
+                src={`/services/${service.id}3.webp`}
                 className="w-full h-full object-cover brightness-75 hover:brightness-100"
                 alt={service.title}
               />
             </div>
             <div className="flex gap-5 h-32 lg:h-1/4">
               <img
-                src={`/services/${service.id}2.jpeg`}
+                src={`/services/${service.id}2.webp`}
                 className="w-1/2 h-full object-cover brightness-75 hover:brightness-100"
                 alt={service.title}
               />
               <img
-                src={`/services/${service.id}1.jpeg`}
+                src={`/services/${service.id}1.webp`}
                 className="w-1/2 h-full object-cover brightness-75 hover:brightness-100"
                 alt={service.title}
               />
             </div>
             <div className="h-48 lg:h-1/3">
               <img
-                src={`/services/${service.id}4.jpeg`}
+                src={`/services/${service.id}4.webp`}
                 className="w-full h-full object-cover brightness-75 hover:brightness-100"
                 alt={service.title}
               />
@@ -374,7 +374,7 @@ export default async function ServicePage({ params }: PageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden order-2 lg:order-1">
               <img
-                src={`/services/${service.id}1.jpeg`}
+                src={`/services/${service.id}1.webp`}
                 alt="Placeholder"
                 className="object-cover w-full h-full"
               />

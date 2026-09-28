@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { track } from "@/lib/gtag";
 
@@ -27,6 +28,13 @@ const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   const router = useRouter();
   const pathname = usePathname();
+
+  const primaryHref = "/discovery-call";
+  const secondaryHref = "/contact";
+  const primaryClass =
+    "px-8 py-4 rounded-lg bg-[#ae904c] text-black font-semibold hover:bg-[#c9a95e] transition-colors duration-300 flex items-center justify-center gap-2";
+  const secondaryClass =
+    "px-8 py-4 rounded-lg border border-[#ae904c]/30 text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300 flex items-center justify-center gap-2";
 
   const handlePrimaryClick = () => {
     track("cta_click", { cta: "primary", page: pathname || "/" });
@@ -85,21 +93,38 @@ const CTASection: React.FC<CTASectionProps> = ({
               {displayParagraph}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handlePrimaryClick}
-                className="px-8 py-4 rounded-lg bg-[#ae904c] text-white hover:bg-[#ae904c]/90
-                          transition-colors duration-300 flex items-center justify-center gap-2"
-              >
-                {primaryButtonText} <ArrowRight className="w-4 h-4" />
-              </button>
-              <button
-                onClick={handleSecondaryClick}
-                className="px-8 py-4 rounded-lg border border-[#ae904c]/30 text-[#ae904c]
-                          hover:bg-[#ae904c]/10 transition-colors duration-300
-                          flex items-center justify-center gap-2"
-              >
-                {secondaryButtonText} <ArrowRight className="w-4 h-4" />
-              </button>
+              {onPrimaryClick ? (
+                <button
+                  onClick={handlePrimaryClick}
+                  className={primaryClass}
+                >
+                  {primaryButtonText} <ArrowRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <Link
+                  href={primaryHref}
+                  onClick={() => track("cta_click", { cta: "primary", page: pathname || "/" })}
+                  className={primaryClass}
+                >
+                  {primaryButtonText} <ArrowRight className="w-4 h-4" />
+                </Link>
+              )}
+              {onSecondaryClick ? (
+                <button
+                  onClick={handleSecondaryClick}
+                  className={secondaryClass}
+                >
+                  {secondaryButtonText} <ArrowRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <Link
+                  href={secondaryHref}
+                  onClick={() => track("cta_click", { cta: "secondary", page: pathname || "/" })}
+                  className={secondaryClass}
+                >
+                  {secondaryButtonText} <ArrowRight className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           </div>
         </div>

@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
       "development",
       "branding",
       "social-media",
-      "influencer-relations",
     ].map((id) => ({
       source: `/services/${id}`,
       destination: "/services",

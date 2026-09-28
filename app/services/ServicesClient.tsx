@@ -154,10 +154,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   </Link>
 );
 
+// Roadshow and Experiences are the offer; press and influencer relations are
+// how the coverage-for-credentials model actually works, so all four earn a page.
 const FEATURED_IDS = [
   "roadshow-management",
   "experiences",
   "press-relations",
+  "influencer-relations",
 ];
 
 const services = [
@@ -207,6 +210,7 @@ const services = [
   },
   {
     id: "influencer-relations",
+    image: "/services/influencer-relations1.webp",
     title: "Influencer Relations",
     description: "Connect with authentic voices in the industry.",
     icon: MessageSquare,
@@ -257,7 +261,7 @@ export default function ServicesPage() {
           {/* Three services carry the business; the rest are capabilities
               that support them rather than pages competing for their own
               queries. */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {featured.map((svc) => (
               <div key={svc.id} className="h-full">
                 <ServiceCard

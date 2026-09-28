@@ -343,7 +343,7 @@ export const services = [
   },
   {
     id: "influencer-relations",
-    featured: false,
+    featured: true,
     maintitle: "Influencer Relations",
     title: "Influencer Relations",
     prefix: "Connecting With",
