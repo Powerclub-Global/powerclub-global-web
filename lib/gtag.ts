@@ -39,7 +39,8 @@ export type ConversionEvent =
   | "general_call_submit"
   | "contact_submit"
   | "newsletter_signup"
-  | "cta_click";
+  | "cta_click"
+  | "text_theodore_click";
 
 export const track = (name: ConversionEvent, params: Record<string, string | number | boolean | undefined> = {}) => {
   if (!hasGtag()) return;
