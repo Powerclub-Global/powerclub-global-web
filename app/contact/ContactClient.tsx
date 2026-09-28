@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import React, { useEffect, useState, Suspense } from "react";
 import {
@@ -92,13 +93,13 @@ const HighlightCard: React.FC = () => (
         </p>
         <p className="text-white/70">We&apos;d love to hear from you.</p>
         <div className="flex gap-4">
-          <button
-            onClick={onScheduleCall}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-white
-            hover:bg-[#ae904c]/90 transition-colors duration-300"
+          <Link
+            href="/discovery-call"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
+            hover:bg-[#c9a95e] transition-colors duration-300"
           >
             Schedule Call <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
           {/* <button
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#ae904c]/30
             text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
@@ -466,9 +467,3 @@ export default function ContactPage() {
   );
 }
 
-const onScheduleCall = () => {
-  window.open(
-    "https://calendly.com/powerclub-global/business-interaction",
-    "_blank"
-  );
-};

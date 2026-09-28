@@ -42,7 +42,8 @@ export const metadata: Metadata = {
 
 const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
+  areaServed: "Worldwide",
   name: "Powerclub Global",
   alternateName: "PCG",
   url: "https://powerclubglobal.com",
@@ -59,6 +60,7 @@ const orgJsonLd = {
     "https://www.youtube.com/@powerclubglobal",
     "https://www.facebook.com/p/Powerclub-Global-100093219199164/",
     "https://t.me/powerclubglboal",
+    "https://www.linkedin.com/company/powerclub-global-usa",
   ],
 };
 

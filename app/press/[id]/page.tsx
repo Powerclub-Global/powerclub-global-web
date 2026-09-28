@@ -1,4 +1,3 @@
-import { Suspense, use } from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPressRelease, getPressReleases } from "@/lib/press";
@@ -184,20 +183,18 @@ async function PressPost({ id }: { id: string }) {
   );
 }
 
-export default function PressPostPage({ params }: PageProps) {
-  const { id } = use(params);
+export default async function PressPostPage({ params }: PageProps) {
+  const { id } = await params;
+  // Resolved here rather than inside <Suspense>: once the streamed shell is
+  // flushed the 200 is committed, so notFound() could no longer set the
+  // status. Legacy Notion-UUID URLs were serving a "not found" body with a
+  // 200, which Google treats as a soft 404.
+  const post = await getPressRelease(id).catch(() => null);
+  if (!post) notFound();
 
   return (
     <main className="min-h-screen bg-black">
-      <Suspense
-        fallback={
-          <div className="flex items-center justify-center min-h-screen">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite] text-[#ae904c]" />
-          </div>
-        }
-      >
-        <PressPost id={id} />
-      </Suspense>
+      <PressPost id={id} />
       <Footer />
     </main>
   );

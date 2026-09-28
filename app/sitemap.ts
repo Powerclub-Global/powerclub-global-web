@@ -42,7 +42,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${BASE}/events/${e.id}`,
     changeFrequency: "weekly",
     priority: 0.6,
-    lastModified: eventsUpdated,
+    // No per-event updated field exists, and stamping all 87 with the data
+    // file's mtime tells Google everything changed at once — which teaches it
+    // to ignore our lastmod entirely. Better to omit it.
   }));
 
   // Press articles live in the CMS, so they cannot be derived from a data
