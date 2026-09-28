@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import eventsData from "@/data/events.json";
 import { getPressReleases } from "@/lib/press";
+import { getInsights } from "@/lib/insights";
 import { statSync } from "fs";
 import { join } from "path";
 
@@ -25,6 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/about`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/sovereign-stack`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/press`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/insights`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/discovery-call`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/schedule-call`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/contact`, changeFrequency: "yearly", priority: 0.7 },
@@ -64,5 +66,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pressPages = [];
   }
 
-  return [...staticPages, ...servicePages, ...eventPages, ...pressPages];
+  // Drafts are excluded by getInsights().
+  const insightPages: MetadataRoute.Sitemap = getInsights().map((post) => ({
+    url: `${BASE}/insights/${post.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    lastModified: new Date(post.updated ?? post.published),
+  }));
+
+  return [
+    ...staticPages,
+    ...servicePages,
+    ...eventPages,
+    ...pressPages,
+    ...insightPages,
+  ];
 }
