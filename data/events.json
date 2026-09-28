@@ -424,6 +424,78 @@
         "bitcoin",
         "mining",
         "lightning"
+      ],
+      "clips": [
+        {
+          "title": "It's IRRESPONSIBLE for Companies Not to Have Bitcoin",
+          "videoUrl": "https://www.youtube.com/embed/lb79L-Fpj8I",
+          "thumbnail": "https://i.ytimg.com/vi/lb79L-Fpj8I/hqdefault.jpg"
+        },
+        {
+          "title": "Arthur Hayes: AI Is the New Subprime — And It Will Destroy Human Accountants",
+          "videoUrl": "https://www.youtube.com/embed/0FR3qHh3whw",
+          "thumbnail": "https://i.ytimg.com/vi/0FR3qHh3whw/hqdefault.jpg",
+          "speaker": "Arthur Hayes"
+        },
+        {
+          "title": "Kash Patel: The US Wants to Be the Crypto Capital of the World",
+          "videoUrl": "https://www.youtube.com/embed/qL1K2VEc3ME",
+          "thumbnail": "https://i.ytimg.com/vi/qL1K2VEc3ME/hqdefault.jpg",
+          "speaker": "Kash Patel"
+        },
+        {
+          "title": "Kash Patel: The FBI Is Dismantling Foreign Crypto Scam Operations",
+          "videoUrl": "https://www.youtube.com/embed/UxxJLFszYzM",
+          "thumbnail": "https://i.ytimg.com/vi/UxxJLFszYzM/hqdefault.jpg",
+          "speaker": "Kash Patel"
+        },
+        {
+          "title": "Michael Saylor: The End Game — A High-Yield Digital Bank Backed by Bitcoin",
+          "videoUrl": "https://www.youtube.com/embed/Hji-KA1tJ_M",
+          "thumbnail": "https://i.ytimg.com/vi/Hji-KA1tJ_M/hqdefault.jpg",
+          "speaker": "Michael Saylor"
+        },
+        {
+          "title": "Michael Saylor: The Massive Arbitrage Opportunity Most People Are Missing",
+          "videoUrl": "https://www.youtube.com/embed/kWCDAITJOTA",
+          "thumbnail": "https://i.ytimg.com/vi/kWCDAITJOTA/hqdefault.jpg",
+          "speaker": "Michael Saylor"
+        },
+        {
+          "title": "Geopolitical Chaos Is Bitcoin's Secret Weapon",
+          "videoUrl": "https://www.youtube.com/embed/mvk-_Jj9rFg",
+          "thumbnail": "https://i.ytimg.com/vi/mvk-_Jj9rFg/hqdefault.jpg"
+        },
+        {
+          "title": "Eric Trump: Banks Keep Your Money for 72 Hours — Then Charge You to Get It Back",
+          "videoUrl": "https://www.youtube.com/embed/hRhvR45qNhU",
+          "thumbnail": "https://i.ytimg.com/vi/hRhvR45qNhU/hqdefault.jpg",
+          "speaker": "Eric Trump"
+        },
+        {
+          "title": "Eric Trump: Younger Generations Own Bitcoin — The $124 Trillion Wealth Transfer Is Coming",
+          "videoUrl": "https://www.youtube.com/embed/t6rm4l3C3t8",
+          "thumbnail": "https://i.ytimg.com/vi/t6rm4l3C3t8/hqdefault.jpg",
+          "speaker": "Eric Trump"
+        }
+      ],
+      "mediaPartner": true,
+      "articles": [
+        {
+          "title": "Bitcoin 2025 Las Vegas Hosts the World's Largest Bitcoin Conference",
+          "url": "/press/bitcoin-2025-las-vegas-hosts-the-worlds-largest-bitcoin-conference",
+          "date": "May 2025"
+        },
+        {
+          "title": "A Convergence of Visionaries Shaping the Future of Digital Finance at Bitcoin 2025",
+          "url": "/press/a-convergence-of-visionaries-shaping-the-future-of-digital-finance-at-bitcoin-2025-in-las-vegas",
+          "date": "May 2025"
+        },
+        {
+          "title": "Side Events Empowering Industry Game-Changers at Bitcoin 2025 Las Vegas",
+          "url": "/press/side-events-empowering-industry-game-changers-at-bitcoin-2025-las-vegas",
+          "date": "May 2025"
+        }
       ]
     },
     {

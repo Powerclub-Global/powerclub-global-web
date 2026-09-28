@@ -82,8 +82,38 @@ export default async function EventDetailPage({ params }: PageProps) {
       }
     : null;
 
+  const videoJsonLd = (event?.clips ?? [])
+    .map((clip) => {
+      const id = clip.videoUrl.match(
+        /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{6,})/
+      )?.[1];
+      if (!id) return null;
+      return {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: clip.title,
+        description: `${clip.title}${event?.name ? ` — filmed by Powerclub Global at ${event.name}.` : ""}`,
+        thumbnailUrl: clip.thumbnail ?? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+        embedUrl: `https://www.youtube.com/embed/${id}`,
+        uploadDate: event?.dateRange?.start ?? event?.dates,
+        publisher: {
+          "@type": "Organization",
+          name: "Powerclub Global",
+          logo: { "@type": "ImageObject", url: "https://powerclubglobal.com/logo.png" },
+        },
+      };
+    })
+    .filter(Boolean);
+
   return (
     <>
+      {videoJsonLd.map((v, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(v) }}
+        />
+      ))}
       {jsonLd && (
         <script
           type="application/ld+json"

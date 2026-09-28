@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import ClipCard from "@/components/ClipCard";
 import {
   Calendar,
   MapPin,
@@ -477,21 +478,7 @@ export default function EventDetailClient({
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {event.clips.map((c, i) => (
-                      <div key={i} className="rounded-lg overflow-hidden bg-black/20 border border-[#ae904c]/10">
-                        <video
-                          controls
-                          preload="none"
-                          poster={c.thumbnail}
-                          className="w-full aspect-video object-cover"
-                          src={c.videoUrl}
-                        />
-                        <div className="p-3">
-                          <div className="text-white/90 text-sm font-medium">{c.title}</div>
-                          {c.speaker && (
-                            <div className="text-white/50 text-xs mt-0.5">{c.speaker}</div>
-                          )}
-                        </div>
-                      </div>
+                      <ClipCard key={i} clip={c} />
                     ))}
                   </div>
                 </motion.div>
