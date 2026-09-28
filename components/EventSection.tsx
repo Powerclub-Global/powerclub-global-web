@@ -91,17 +91,19 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
           </div>
 
           <div className="flex flex-row sm:flex-row gap-2 sm:gap-4 mt-3 sm:mt-4">
-            <Link
-              href={event.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
-                       rounded-md sm:rounded-lg bg-[#ae904c] text-black font-semibold text-xs sm:text-base 
-                       w-full sm:w-auto transition-colors duration-300 hover:bg-[#ae904c]/90"
-            >
-              {event.ticketPrice ? `From $${event.ticketPrice.early} ` : "Event Site "}
-              <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
-            </Link>
+            {event.url && (
+              <Link
+                href={event.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
+                         rounded-md sm:rounded-lg bg-[#ae904c] text-black font-semibold text-xs sm:text-base 
+                         w-full sm:w-auto transition-colors duration-300 hover:bg-[#ae904c]/90"
+              >
+                {event.ticketPrice ? `From $${event.ticketPrice.early} ` : "Event Site "}
+                <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
+              </Link>
+            )}
             <Link
               href={`/events/${event.id}`}
               className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 

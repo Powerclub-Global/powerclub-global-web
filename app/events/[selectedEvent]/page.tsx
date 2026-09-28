@@ -8,6 +8,11 @@ interface PageProps {
   params: Promise<{ selectedEvent: string }>;
 }
 
+function isPast(event: Event): boolean {
+  const end = event.dateRange?.end;
+  return !!end && end < new Date().toISOString().slice(0, 10);
+}
+
 function findEvent(id: string): Event | undefined {
   return (eventsData.events as Event[]).find((e) => e.id === id);
 }
@@ -67,7 +72,9 @@ export default async function EventDetailPage({ params }: PageProps) {
         ...(event.organizer
           ? { organizer: { "@type": "Organization", name: event.organizer } }
           : {}),
-        ...(event.url
+        // Only upcoming events advertise tickets: Google's event policy treats
+        // "InStock" on a finished event as misleading, and 54 of 87 are past.
+        ...(event.url && !isPast(event)
           ? { offers: { "@type": "Offer", url: event.url, availability: "https://schema.org/InStock" } }
           : {}),
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",

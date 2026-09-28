@@ -180,7 +180,7 @@ export async function generateMetadata({
   const service = services.find((s) => s.id === serviceId);
   if (!service) return { title: "Service not found", robots: { index: false } };
   return pageMetadata({
-    title: `${service.title} — Powerclub Global Services`,
+    title: `${service.maintitle || service.title} — Powerclub Global Services`,
     description: service.description,
     path: `/services/${service.id}`,
     image: service.image,

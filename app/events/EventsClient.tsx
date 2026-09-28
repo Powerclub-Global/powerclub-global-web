@@ -68,15 +68,17 @@ const FeaturedEventCard = ({ event }: EventCardProps) => (
           >
             View Details <ArrowUpRight className="w-4 h-4" />
           </Link>
-          <a
-            href={event.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#ae904c]/30
-                     text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
-          >
-            Register <ArrowUpRight className="w-4 h-4" />
-          </a>
+          {event.url && (
+            <a
+              href={event.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#ae904c]/30
+                       text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
+            >
+              Register <ArrowUpRight className="w-4 h-4" />
+            </a>
+          )}
         </div>
       </div>
     </div>

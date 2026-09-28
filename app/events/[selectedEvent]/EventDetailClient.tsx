@@ -87,17 +87,19 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
           </div>
 
           <div className="flex flex-row sm:flex-row gap-2 sm:gap-4 mt-3 sm:mt-4">
-            <Link
-              href={event.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
-                               rounded-md sm:rounded-lg bg-[#ae904c] text-xs sm:text-base 
-                               text-white w-full sm:w-auto transition-colors duration-300 
-                               hover:bg-[#ae904c]/90"
-            >
-              Register <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
-            </Link>
+            {event.url && (
+              <Link
+                href={event.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
+                                 rounded-md sm:rounded-lg bg-[#ae904c] text-xs sm:text-base 
+                                 text-white w-full sm:w-auto transition-colors duration-300 
+                                 hover:bg-[#ae904c]/90"
+              >
+                Register <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
+              </Link>
+            )}
             <Link
               href={`/events/${event.id}`}
               className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
@@ -346,15 +348,17 @@ export default function EventDetailClient({
                 >
                   Going? Talk to PCG <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a
-                  href={event.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
+                {event.url && (
+                  <a
+                    href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
                          text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
-                >
-                  Register Now <ExternalLink className="w-4 h-4" />
-                </a>
+                  >
+                    Register Now <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
                 <button
                   className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/30
                          text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
