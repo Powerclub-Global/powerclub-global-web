@@ -154,6 +154,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   </Link>
 );
 
+const FEATURED_IDS = [
+  "roadshow-management",
+  "experiences",
+  "press-relations",
+];
+
 const services = [
   {
     id: "roadshow-management",
@@ -207,11 +213,15 @@ const services = [
   },
   {
     id: "press-relations",
+    image: "/services/press-relations4.webp",
     title: "Press Relations",
     description: "Strategic media coverage and PR campaign management.",
     icon: Newspaper,
   },
 ];
+
+const featured = FEATURED_IDS.map((id) => services.find((s) => s.id === id)!).filter(Boolean);
+const supporting = services.filter((s) => !FEATURED_IDS.includes(s.id));
 
 export default function ServicesPage() {
   return (
@@ -244,67 +254,40 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Top Bento Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-6">
-            {/* Main Roadshow Service */}
-            <div className="h-full">
-              <ServiceCard
-                {...services[0]}
-                className="h-full"
-                href={`/services/${services[0].id}`}
-              />
-            </div>
-
-            {/* Supporting Services Grid */}
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <ServiceCard
-                {...services[1]}
-                href={`/services/${services[1].id}`}
-              />
-              <ServiceCard
-                {...services[2]}
-                href={`/services/${services[2].id}`}
-              />
-              <div className="md:col-span-2">
+          {/* Three services carry the business; the rest are capabilities
+              that support them rather than pages competing for their own
+              queries. */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featured.map((svc) => (
+              <div key={svc.id} className="h-full">
                 <ServiceCard
-                  {...services[3]}
-                  href={`/services/${services[3].id}`}
+                  {...svc}
+                  className="h-full"
+                  href={`/services/${svc.id}`}
+                  imageBelow
                 />
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Bottom Mirrored Bento Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Supporting Services Grid */}
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 order-2 lg:order-1">
-              <ServiceCard
-                {...services[4]}
-                href={`/services/${services[4].id}`}
-              />
-              <ServiceCard
-                {...services[5]}
-                href={`/services/${services[5].id}`}
-              />
-              <div className="md:col-span-2">
-                <ServiceCard
-                  {...services[6]}
-                  href={`/services/${services[6].id}`}
-                  image="/services/influencer-relations2.jpeg"
-                />
-              </div>
-            </div>
-
-            {/* Last Service Card */}
-            <div className="h-full order-1 lg:order-2">
-              <ServiceCard
-                {...services[7]}
-                className="h-full"
-                href={`/services/${services[7].id}`}
-                imageBelow={true}
-                image="/services/press-relations4.webp"
-              />
-            </div>
+          <div className="max-w-6xl mx-auto mt-16 border-t border-[#ae904c]/20 pt-10">
+            <h2 className="text-[#ae904c] text-sm uppercase tracking-widest mb-3">
+              Also delivered as part of an engagement
+            </h2>
+            <p className="text-white/60 max-w-2xl mb-6">
+              These run inside a roadshow or activation rather than as
+              standalone retainers. Ask about them on your call.
+            </p>
+            <ul className="flex flex-wrap gap-x-3 gap-y-3 list-none p-0">
+              {supporting.map((svc) => (
+                <li
+                  key={svc.id}
+                  className="px-4 py-2 rounded-full border border-[#ae904c]/25 text-white/75 text-sm"
+                >
+                  {svc.title}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

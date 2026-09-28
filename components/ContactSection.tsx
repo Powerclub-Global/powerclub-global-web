@@ -91,7 +91,7 @@ const HighlightCard: React.FC = () => (
         <p className="text-white/70">We&apos;d love to hear from you.</p>
         <div className="flex gap-4">
           <Link
-            href="/discovery-call"
+            href="/schedule-call"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
             hover:bg-[#c9a95e] transition-colors duration-300"
           >

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState, Suspense } from "react";
 import {
   Mail,
+  Phone,
   Send,
   MessageCircle,
   ArrowRight,
@@ -22,6 +23,9 @@ interface ContactCardProps {
   title: string;
   info: string;
   primary?: boolean;
+  /** Makes the card's value actionable (tel:, mailto:). */
+  href?: string;
+  note?: string;
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({
@@ -29,6 +33,8 @@ const ContactCard: React.FC<ContactCardProps> = ({
   title,
   info,
   primary = false,
+  href,
+  note,
 }) => (
   <div
     className={`group p-6 rounded-xl backdrop-blur-sm 
@@ -58,13 +64,22 @@ const ContactCard: React.FC<ContactCardProps> = ({
         >
           {title}
         </h4>
-        <p className={`${primary ? "text-white/90" : "text-white/60"}`}>
-          {info}
-        </p>
+        {href ? (
+          <a
+            href={href}
+            className={`${primary ? "text-white/90" : "text-white/60"} hover:underline underline-offset-4`}
+          >
+            {info}
+          </a>
+        ) : (
+          <p className={`${primary ? "text-white/90" : "text-white/60"}`}>
+            {info}
+          </p>
+        )}
       </div>
     </div>
     <p className="text-white/60 mt-2">
-      We&apos;re here to answer any questions you may have.
+      {note ?? "We\u2019re here to answer any questions you may have."}
     </p>
   </div>
 );
@@ -94,7 +109,7 @@ const HighlightCard: React.FC = () => (
         <p className="text-white/70">We&apos;d love to hear from you.</p>
         <div className="flex gap-4">
           <Link
-            href="/discovery-call"
+            href="/schedule-call"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
             hover:bg-[#c9a95e] transition-colors duration-300"
           >
@@ -300,10 +315,18 @@ function ContactPageContent() {
               <div className="lg:col-span-5 flex flex-col gap-6">
                 <HighlightCard />
                 <ContactCard
+                  icon={Phone}
+                  title="Call Theodore"
+                  info="+1 (645) 233-0500"
+                  href="tel:+16452330500"
+                  note="Client relations and advisory — reach a person, not a queue."
+                  primary
+                />
+                <ContactCard
                   icon={Mail}
                   title="Email Us"
                   info="innovate@powerclubglobal.com"
-                  primary
+                  href="mailto:innovate@powerclubglobal.com"
                 />
               </div>
 

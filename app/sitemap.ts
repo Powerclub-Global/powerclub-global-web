@@ -26,17 +26,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/sovereign-stack`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/press`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/discovery-call`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/schedule-call`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/contact`, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/privacy`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/terms`, changeFrequency: "yearly", priority: 0.1 },
   ];
 
-  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
-    url: `${BASE}/services/${s.id}`,
-    changeFrequency: "monthly",
-    priority: 0.7,
-    lastModified: servicesUpdated,
-  }));
+  const servicePages: MetadataRoute.Sitemap = services
+    .filter((s) => s.featured)
+    .map((s) => ({
+      url: `${BASE}/services/${s.id}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+      lastModified: servicesUpdated,
+    }));
 
   const eventPages: MetadataRoute.Sitemap = eventsData.events.map((e) => ({
     url: `${BASE}/events/${e.id}`,

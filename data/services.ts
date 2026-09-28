@@ -11,6 +11,7 @@ import {
 export const services = [
   {
     id: "roadshow-management",
+    featured: true,
     maintitle: "Roadshow Management",
     title: "Brand with Dynamic",
     prefix: "Amplify Your ",
@@ -65,6 +66,7 @@ export const services = [
   },
   {
     id: "blockchain-consulting",
+    featured: false,
     maintitle: "Blockchain and Web3 Consulting",
     title: "Blockchain and Web3 Consulting",
     prefix: "Transforming Business",
@@ -120,6 +122,7 @@ export const services = [
   },
   {
     id: "experiences",
+    featured: true,
     maintitle: "Experiences",
     title: "for Exceptional",
     prefix: "Your Trusted Partner",
@@ -174,6 +177,7 @@ export const services = [
   },
   {
     id: "development",
+    featured: false,
     maintitle: "Web Development",
     title: "Business with Expert ",
     prefix: "Transform Your",
@@ -229,6 +233,7 @@ export const services = [
   },
   {
     id: "branding",
+    featured: false,
     maintitle: "Branding",
     title: "Branding",
     prefix: "Elevating Your",
@@ -283,6 +288,7 @@ export const services = [
   },
   {
     id: "social-media",
+    featured: false,
     maintitle: "Social Media",
     title: "Social Media",
     prefix: "Expert",
@@ -337,6 +343,7 @@ export const services = [
   },
   {
     id: "influencer-relations",
+    featured: false,
     maintitle: "Influencer Relations",
     title: "Influencer Relations",
     prefix: "Connecting With",
@@ -391,6 +398,7 @@ export const services = [
   },
   {
     id: "press-relations",
+    featured: true,
     maintitle: "Press Relations",
     title: "Press Relations",
     prefix: "Managing Your",

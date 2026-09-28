@@ -1,6 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Consolidated the service pages down to the three PCG actually sells;
+  // the retired ones were indexed, so they redirect rather than 404.
+  async redirects() {
+    return [
+      "blockchain-consulting",
+      "development",
+      "branding",
+      "social-media",
+      "influencer-relations",
+    ].map((id) => ({
+      source: `/services/${id}`,
+      destination: "/services",
+      permanent: true,
+    }));
+  },
+
   async headers() {
     return [
       {

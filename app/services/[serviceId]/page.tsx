@@ -171,6 +171,10 @@ interface PageProps {
 }
 
 
+export function generateStaticParams() {
+  return services.filter((s) => s.featured).map((s) => ({ serviceId: s.id }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -188,6 +192,9 @@ export async function generateMetadata({
 }
 
 export default async function ServicePage({ params }: PageProps) {
+  // Service schema: these three pages are the ones meant to rank for
+  // "roadshow management" / "event activations" style intent queries.
+
   const resolvedParams = await params;
 
   const service = services.find((s) => s.id === resolvedParams.serviceId);
@@ -201,7 +208,35 @@ export default async function ServicePage({ params }: PageProps) {
     const nextIndex = (currentIndex + i + 1) % services.length;
     return services[nextIndex];
   });
+  const serviceJsonLd = service
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: service.maintitle || service.title,
+        description: service.description,
+        serviceType: service.maintitle || service.title,
+        areaServed: "Worldwide",
+        provider: {
+          "@type": "Organization",
+          name: "Powerclub Global",
+          url: "https://powerclubglobal.com",
+          telephone: "+1-645-233-0500",
+        },
+        url: `https://powerclubglobal.com/services/${service.id}`,
+        ...(service.image
+          ? { image: `https://powerclubglobal.com${service.image}` }
+          : {}),
+      }
+    : null;
+
   return (
+    <>
+      {serviceJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
+      )}
     <main className="min-h-screen bg-black">
       <Navbar />
       <div className="flex flex-col lg:flex-row justify-between pt-10 lg:pt-20 px-4 md:px-8 lg:px-16 xl:px-32 overflow-hidden">
@@ -471,5 +506,6 @@ export default async function ServicePage({ params }: PageProps) {
       </section>
       <Footer />
     </main>
+    </>
   );
 }

@@ -53,6 +53,17 @@ const orgJsonLd = {
   description:
     "Conference impact agency for technology startups: high-impact event engagements, afterparties, and the post-event momentum infrastructure that converts them into pipeline.",
   email: "innovate@powerclubglobal.com",
+  telephone: "+1-645-233-0500",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+1-645-233-0500",
+      contactType: "sales",
+      email: "innovate@powerclubglobal.com",
+      areaServed: "Worldwide",
+      availableLanguage: ["en"],
+    },
+  ],
   address: { "@type": "PostalAddress", addressLocality: "Miami", addressRegion: "FL", addressCountry: "US" },
   sameAs: [
     "https://x.com/powerclubglobal",

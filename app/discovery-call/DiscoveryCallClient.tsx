@@ -244,6 +244,16 @@ export default function DiscoveryCallClient() {
                 A few quick questions, then pick a real time on our calendar. We&apos;ll send a
                 Google Meet link — no back-and-forth required.
               </p>
+              <p className="text-white/50 text-sm mt-4">
+                Prefer to talk now?{" "}
+                <a
+                  href="tel:+16452330500"
+                  onClick={() => track("cta_click", { cta: "phone", page: "/discovery-call" })}
+                  className="text-[#ae904c] hover:text-[#c9a95e] underline underline-offset-4"
+                >
+                  +1 (645) 233-0500
+                </a>
+              </p>
             </div>
           )}
 

@@ -36,6 +36,7 @@ export const event = ({
 // keep them in sync with the property configuration.
 export type ConversionEvent =
   | "discovery_call_submit"
+  | "general_call_submit"
   | "contact_submit"
   | "newsletter_signup"
   | "cta_click";
