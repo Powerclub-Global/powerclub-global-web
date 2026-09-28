@@ -1,13 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import {
-  Car,
-  Share2,
-  PartyPopper,
-  ArrowRight,
-  Code,
-  LucideIcon,
-} from "lucide-react";
+import { ArrowRight, LucideIcon } from "lucide-react";
+import { services } from "@/data/services";
 import { motion } from "motion/react";
 
 interface ServiceCardProps {
@@ -17,6 +11,7 @@ interface ServiceCardProps {
   image?: string;
   className?: string;
   imageBelow?: boolean;
+  href: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -26,8 +21,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   image,
   className = "",
   imageBelow = false,
+  href,
 }) => (
-  <div className={`group relative rounded-md perspective-1000 ${className}`}>
+  <Link
+    href={href}
+    className={`group relative block rounded-md perspective-1000 ${className}`}
+  >
     <div className="preserve-3d transition-all duration-500 ease-out group-hover:[transform:rotateX(2deg)_rotateY(-2deg)]">
       <div className="absolute inset-0 rounded-md bg-black/30 blur-xl transform translate-y-4 scale-95 transition-all duration-500 group-hover:translate-y-6 group-hover:scale-90" />
       <div
@@ -57,7 +56,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
               {description}
             </p>
-            <button
+            <span
               className="flex items-center text-[#ae904c]/80 hover:text-[#ae904c] transition-all duration-300 
               group-hover:translate-x-2 relative overflow-hidden
               before:absolute before:-inset-3 before:rounded-lg before:bg-[#ae904c]/5 
@@ -65,7 +64,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             >
               Learn More{" "}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </span>
           </div>
         ) : imageBelow ? (
           <div className="relative z-10 h-full flex flex-col transform transition-transform duration-500 group-hover:-translate-y-1">
@@ -83,10 +82,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
                 {description}
               </p>
-              <button className="flex items-center text-[#ae904c]/80 hover:text-[#ae904c] transition-all duration-300 group-hover:translate-x-2">
+              <span className="flex items-center text-[#ae904c]/80 hover:text-[#ae904c] transition-all duration-300 group-hover:translate-x-2">
                 Learn More{" "}
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+              </span>
             </div>
             <div className="p-8 pt-0">
               <div className="relative w-full h-[19rem] rounded-lg overflow-hidden bg-[#ae904c]/10 transform transition-transform duration-500 group-hover:scale-105">
@@ -118,10 +117,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               <p className="text-white/60 mb-6 group-hover:text-white/70 transition-colors duration-300">
                 {description}
               </p>
-              <button className="flex items-center text-[#ae904c]/80 hover:text-[#ae904c] transition-all duration-300 group-hover:translate-x-2">
+              <span className="flex items-center text-[#ae904c]/80 hover:text-[#ae904c] transition-all duration-300 group-hover:translate-x-2">
                 Learn More{" "}
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+              </span>
             </div>
             <div className="flex-1 p-8">
               <div className="relative w-full h-full rounded-lg overflow-hidden bg-[#ae904c]/10 transform transition-transform duration-500 group-hover:scale-105">
@@ -140,8 +139,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         )}
       </div>
     </div>
-  </div>
+  </Link>
 );
+
+const featured = services.filter((service) => service.featured);
+const lead = featured.find((service) => service.id === "roadshow-management")!;
+const rest = [
+  featured.find((service) => service.id === "experiences")!,
+  featured.find((service) => service.id === "press-relations")!,
+  featured.find((service) => service.id === "influencer-relations")!,
+];
 
 const ServicesSection: React.FC = () => {
   return (
@@ -182,32 +189,29 @@ const ServicesSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div className="h-full">
             <ServiceCard
-              icon={Car}
-              title="Road Show"
-              description="Professional road show services delivering your message across cities with maximum impact and engagement. Backed by our network of local partners."
+              icon={lead.icon}
+              title={lead.maintitle}
+              description={lead.description}
               image="/roadshow.webp"
               imageBelow={true}
+              href={`/services/${lead.id}`}
             />
           </div>
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ServiceCard
-              icon={Share2}
-              title="Social Media"
-              description="Strategic social media management to boost your brand presence and connect with your target audience."
-            />
-            <ServiceCard
-              icon={Code}
-              title="Web Development"
-              description="Custom web solutions that combine cutting-edge technology with seamless UX to bring your digital vision to life."
-            />
-            <div className="md:col-span-2">
-              <ServiceCard
-                icon={PartyPopper}
-                title="Events"
-                description="Unforgettable event experiences that bring your vision to life and leave lasting impressions."
-                image="/event.webp"
-              />
-            </div>
+            {rest.map((service) => (
+              <div
+                key={service.id}
+                className={service.id === "experiences" ? "md:col-span-2" : ""}
+              >
+                <ServiceCard
+                  icon={service.icon}
+                  title={service.maintitle}
+                  description={service.description}
+                  image={service.id === "experiences" ? "/event.webp" : undefined}
+                  href={`/services/${service.id}`}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
