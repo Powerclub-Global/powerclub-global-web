@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState, Suspense } from "react";
 import {
   Mail,
-  Phone,
   Send,
   MessageCircle,
   ArrowRight,
