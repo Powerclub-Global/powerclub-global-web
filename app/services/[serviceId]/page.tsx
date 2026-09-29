@@ -248,7 +248,7 @@ export default async function ServicePage({ params }: PageProps) {
             <div>
               <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#ae904c]/10 text-[#ae904c] text-xs md:text-sm mb-6 md:mb-8">
                 <Sparkles className="inline-block w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" />
-                No. 1 in the world
+                Built for the conference circuit
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white uppercase">

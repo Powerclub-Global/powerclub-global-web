@@ -18,7 +18,7 @@ export const services = [
     suffix: "RoadShow Events",
     description:
       "Turn your roadshow events into unforgettable experiences, online and on the ground",
-    longDescription: `Evolving live experiences seem to play a vital role in building brand visibility and creating customer engagements. Powerclub Global is the world's best event organizing agency, committed to delivering spirited and engaging high-energy events that hold the gaze of their audience for a lifetime. Be it product launches, service promotion, or just getting closer to your audience, brand exposure and stardom will be brought to you through our roadshow services.`,
+    longDescription: `Evolving live experiences seem to play a vital role in building brand visibility and creating customer engagements. Powerclub Global is an event agency built around the conference circuit, committed to delivering high-energy events that hold an audience's attention long after the doors close. Be it product launches, service promotion, or just getting closer to your audience, brand exposure and stardom will be brought to you through our roadshow services.`,
     icon: Car,
     isMain: true,
     image: "/services/roadshow.jpg",

@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Site navigation — the header nav is the only other route into
-              these pages, and /sovereign-stack had no internal link at all. */}
+              these pages. */}
           <nav
             aria-label="Footer"
             className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8 text-sm"
@@ -107,7 +107,6 @@ const Footer: React.FC = () => {
               { href: "/events", label: "Conferences" },
               { href: "/press", label: "Press" },
               { href: "/insights", label: "Insights" },
-              { href: "/sovereign-stack", label: "Sovereign Stack" },
               { href: BOOK_HREF, label: BOOK_LABEL },
               { href: MESSAGE_HREF, label: "Contact" },
             ].map((l) => (
