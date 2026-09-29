@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TextTheodoreModal from "@/components/TextTheodoreModal";
+import { track } from "@/lib/gtag";
 import { submitContactForm, ContactFormData } from "@/app/contact/contact";
 
 interface ContactCardProps {
@@ -25,6 +27,8 @@ interface ContactCardProps {
   primary?: boolean;
   /** Makes the card's value actionable (tel:, mailto:). */
   href?: string;
+  /** Renders the value as a button that runs this instead of a link. */
+  onClick?: () => void;
   note?: string;
 }
 
@@ -34,6 +38,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
   info,
   primary = false,
   href,
+  onClick,
   note,
 }) => (
   <div
@@ -64,7 +69,15 @@ const ContactCard: React.FC<ContactCardProps> = ({
         >
           {title}
         </h4>
-        {href ? (
+        {onClick ? (
+          <button
+            type="button"
+            onClick={onClick}
+            className={`${primary ? "text-white/90" : "text-white/60"} hover:underline underline-offset-4 text-left`}
+          >
+            {info}
+          </button>
+        ) : href ? (
           <a
             href={href}
             className={`${primary ? "text-white/90" : "text-white/60"} hover:underline underline-offset-4`}
@@ -131,6 +144,7 @@ function ContactPageContent() {
   const [time, setTime] = useState(0);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isClient, setIsClient] = useState(false);
+  const [textOpen, setTextOpen] = useState(false);
   const gridSize = 60;
 
   // Form state
@@ -315,11 +329,14 @@ function ContactPageContent() {
               <div className="lg:col-span-5 flex flex-col gap-6">
                 <HighlightCard />
                 <ContactCard
-                  icon={Phone}
-                  title="Call Theodore"
+                  icon={MessageCircle}
+                  title="Text Theodore"
                   info="+1 (645) 233-0500"
-                  href="tel:+16452330500"
-                  note="Client relations and advisory — reach a person, not a queue."
+                  onClick={() => {
+                    track("text_theodore_click", { placement: "contact_page" });
+                    setTextOpen(true);
+                  }}
+                  note="Our AI client-relations assistant replies right away. No form to fill out. Prefer to talk? You can call the same number."
                   primary
                 />
                 <ContactCard
@@ -477,6 +494,7 @@ function ContactPageContent() {
           </div>
         </div>
       </div>
+      <TextTheodoreModal open={textOpen} onClose={() => setTextOpen(false)} />
       <Footer />
     </main>
   );
