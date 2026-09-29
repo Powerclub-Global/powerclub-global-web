@@ -130,6 +130,17 @@ const SocialLinks = () => (
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [textOpen, setTextOpen] = useState(false);
+  const [textContext, setTextContext] = useState<string | undefined>();
+
+  // Pages that know what they are about mark themselves with
+  // data-page-context, so the pre-filled text can name it.
+  const openText = (placement: string) => {
+    track("text_theodore_click", { placement });
+    setTextContext(
+      document.querySelector("[data-page-context]")?.getAttribute("data-page-context") || undefined
+    );
+    setTextOpen(true);
+  };
 
   const navItems = [
     { text: "ABOUT", href: "/about" },
@@ -157,10 +168,7 @@ const Navbar: React.FC = () => {
               isContact={item.isContact}
               onClick={
                 item.isContact
-                  ? () => {
-                      track("text_theodore_click", { placement: "nav" });
-                      setTextOpen(true);
-                    }
+                  ? () => openText("nav")
                   : undefined
               }
             />
@@ -223,10 +231,7 @@ const Navbar: React.FC = () => {
                   isContact={item.isContact}
                   onClick={() => {
                     setIsOpen(false);
-                    if (item.isContact) {
-                      track("text_theodore_click", { placement: "nav_mobile" });
-                      setTextOpen(true);
-                    }
+                    if (item.isContact) openText("nav_mobile");
                   }}
                 />
               </div>
@@ -239,7 +244,11 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <TextTheodoreModal open={textOpen} onClose={() => setTextOpen(false)} />
+      <TextTheodoreModal
+        open={textOpen}
+        onClose={() => setTextOpen(false)}
+        context={textContext}
+      />
     </nav>
   );
 };

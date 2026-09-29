@@ -11,15 +11,12 @@ import PressReleaseSection from "@/components/PressReleaseSection";
 import ServicesSection from "@/components/ServicesSection";
 import EventSection from "@/components/EventSection";
 import DarkGridBackground3 from "@/components/DarkGridBackground3";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import InlineCTA from "@/components/InlineCTA";
+import { BOOK_HREF, BOOK_LABEL } from "@/lib/booking";
+import { track } from "@/lib/gtag";
 
 export default function Home() {
-  const router = useRouter();
-  const handleGetStarted = () => {
-    // navigate to contact page
-    router.push("/contact");
-  };
-
   return (
     <main className="relative">
       <Navbar />
@@ -51,18 +48,33 @@ export default function Home() {
               branding, marketing, and digital innovation for early to mid-stage
               technology startups.
             </motion.p>
-            <motion.button
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              onClick={handleGetStarted}
-              className="px-6 md:px-10 py-3 md:py-4 bg-gradient-to-r from-[#ae904c]/10 to-[#ae904c]/10 
-              border border-[#ae904c]/30 text-[#ae904c]/90 rounded-lg 
-              hover:bg-[#ae904c]/20 transition-all duration-300 
-              uppercase tracking-wider text-xs md:text-sm font-light"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
             >
-              Get Started
-            </motion.button>
+              {/* A real link (crawlable, opens in a new tab) to the booking
+                  page, styled as the primary action. */}
+              <Link
+                href={BOOK_HREF}
+                onClick={() => track("cta_click", { cta: "hero_book", page: "/" })}
+                className="px-6 md:px-10 py-3 md:py-4 bg-[#ae904c] text-black rounded-lg
+                hover:bg-[#c9a95e] transition-colors duration-300
+                uppercase tracking-wider text-xs md:text-sm font-medium"
+              >
+                {BOOK_LABEL}
+              </Link>
+              <Link
+                href="/events"
+                onClick={() => track("cta_click", { cta: "hero_events", page: "/" })}
+                className="px-6 md:px-10 py-3 md:py-4 border border-[#ae904c]/40 text-[#ae904c] rounded-lg
+                hover:bg-[#ae904c]/10 transition-colors duration-300
+                uppercase tracking-wider text-xs md:text-sm font-light"
+              >
+                See Upcoming Conferences
+              </Link>
+            </motion.div>
           </div>
         </div>
       </DarkGridBackground>
@@ -73,6 +85,12 @@ export default function Home() {
 
       <DarkGridBackground3>
         <EventSection />
+        <InlineCTA
+          heading="Planning your 2027 conference circuit?"
+          body="Tell us which events you are considering. We will say where a sponsorship, a speaking slot or a media partnership is worth it, and where it is not."
+          context={{ interest: "sponsor" }}
+          textContext="sponsoring at conferences"
+        />
       </DarkGridBackground3>
 
       <DarkGridBackground2>

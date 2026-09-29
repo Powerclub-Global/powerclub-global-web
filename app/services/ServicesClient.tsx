@@ -298,8 +298,6 @@ export default function ServicesPage() {
         <CTASection
           title="Ready to Make an Impact?"
           description="Whether you're planning a roadshow or need supporting services, we're here to help you succeed."
-          primaryButtonText="Start Your Journey"
-          secondaryButtonText="Explore Services"
         />
 
         <Footer />

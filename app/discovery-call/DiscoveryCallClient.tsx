@@ -1,6 +1,7 @@
 "use client";
 
 import { track } from "@/lib/gtag";
+import { useSearchParams } from "next/navigation";
 
 import React, { useEffect, useMemo, useState } from "react";
 import {
@@ -113,8 +114,15 @@ function groupSlotsByDay(slots: Slot[], timezone: string) {
 }
 
 export default function DiscoveryCallClient() {
+  const params = useSearchParams();
   const [step, setStep] = useState<Step>("questions");
   const [q, setQ] = useState<Questionnaire>(EMPTY_Q);
+
+  // /discovery-call?name=<event> pre-fills "Which conference is this about?"
+  useEffect(() => {
+    const name = params.get("name");
+    if (name) setQ((prev) => (prev.relatedConferenceName ? prev : { ...prev, relatedConferenceName: name }));
+  }, [params]);
 
   const [availability, setAvailability] = useState<AvailabilityResponse | null>(null);
   const [loadingAvailability, setLoadingAvailability] = useState(true);

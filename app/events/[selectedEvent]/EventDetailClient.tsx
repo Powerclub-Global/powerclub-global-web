@@ -22,6 +22,9 @@ import {
 // import eventsData from "@/data/events.json";
 import type { Event, EventListItem } from "@/types/events";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { BOOK_HREF, withContext } from "@/lib/booking";
+import { track } from "@/lib/gtag";
 
 interface EventDetailClientProps {
   /** Resolved on the server so the page renders in HTML rather than a
@@ -227,6 +230,41 @@ const SmallEventListCard = ({ event }: EventListCardProps) => (
     </div>
   </div>
 );
+const isPastEvent = (event: Event): boolean => {
+  const end = event.dateRange?.end;
+  return !!end && end < new Date().toISOString().slice(0, 10);
+};
+
+// Downloads a one-event .ics so "Add to Calendar" does something. All-day,
+// end date is exclusive in iCalendar, hence the +1 day.
+const downloadIcs = (event: Event) => {
+  if (!event.dateRange) return;
+  const d = (iso: string) => iso.replace(/-/g, "");
+  const endExclusive = new Date(`${event.dateRange.end}T00:00:00Z`);
+  endExclusive.setUTCDate(endExclusive.getUTCDate() + 1);
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Powerclub Global//Events//EN",
+    "BEGIN:VEVENT",
+    `UID:${event.id}@powerclubglobal.com`,
+    `DTSTAMP:${new Date().toISOString().replace(/[-:]|\.\d{3}/g, "")}`,
+    `DTSTART;VALUE=DATE:${d(event.dateRange.start)}`,
+    `DTEND;VALUE=DATE:${d(endExclusive.toISOString().slice(0, 10))}`,
+    `SUMMARY:${event.name}`,
+    `LOCATION:${(event.venue ? `${event.venue}, ` : "") + event.location}`,
+    `URL:https://powerclubglobal.com/events/${event.id}`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ];
+  const blob = new Blob([lines.join("\r\n")], { type: "text/calendar" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${event.id}.ics`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
 export default function EventDetailClient({
   event,
   otherEvents,
@@ -242,15 +280,34 @@ export default function EventDetailClient({
     );
   }
 
+  const past = isPastEvent(event);
+  const eventCtx = { event: event.id, name: event.name };
+  const talkHref = withContext(BOOK_HREF, {
+    ...eventCtx,
+    interest: past ? "next-edition" : "sponsor",
+  });
+  const share = async () => {
+    const url = `https://powerclubglobal.com/events/${event.id}`;
+    try {
+      if (navigator.share) await navigator.share({ title: event.name, url });
+      else await navigator.clipboard.writeText(url);
+    } catch {
+      // user cancelled the share sheet, or clipboard blocked: nothing to do
+    }
+  };
+
   const mid = Math.ceil(marqueeEvents.length / 2);
   const firstRow = marqueeEvents.slice(0, mid);
   const secondRow = marqueeEvents.slice(mid);
 
   return (
     <>
-      <main className="min-h-screen bg-black">
+      <main className="min-h-screen bg-black" data-page-context={event.name}>
+        {/* Event pages had no header navigation at all: no logo, no route to
+            the rest of the site, no contact option. */}
+        <Navbar />
         {/* Hero Section */}
-        <div className="relative h-[40vh] md:h-[50vh]">
+        <div className="relative h-[40vh] md:h-[50vh] mt-16">
           <Image
             src={event.image}
             alt={event.name}
@@ -285,6 +342,9 @@ export default function EventDetailClient({
                   {event.name}
                 </h1>
                 <button
+                  type="button"
+                  onClick={share}
+                  aria-label={`Share ${event.name}`}
                   className="p-2 rounded-lg border border-[#ae904c]/30 text-[#ae904c] 
                          hover:bg-[#ae904c]/10 transition-colors duration-300"
                 >
@@ -343,13 +403,15 @@ export default function EventDetailClient({
                     organic entry point, and every link on them used to send
                     the visitor to the organiser instead. */}
                 <Link
-                  href="/discovery-call"
+                  href={talkHref}
+                  onClick={() => track("cta_click", { cta: past ? "event_next_edition" : "event_talk", page: `/events/${event.id}` })}
                   className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black
                          font-semibold hover:bg-[#c9a95e] transition-colors duration-300"
                 >
-                  Going? Talk to PCG <ArrowRight className="w-4 h-4" />
+                  {past ? "Plan the next edition" : `Talk to PCG about ${event.name}`}{" "}
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
-                {event.url && (
+                {event.url && !past && (
                   <a
                     href={event.url}
                     target="_blank"
@@ -360,12 +422,16 @@ export default function EventDetailClient({
                     Register Now <ExternalLink className="w-4 h-4" />
                   </a>
                 )}
-                <button
-                  className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/30
-                         text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
-                >
-                  Add to Calendar <CalendarIcon className="w-4 h-4" />
-                </button>
+                {!past && event.dateRange && (
+                  <button
+                    type="button"
+                    onClick={() => downloadIcs(event)}
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/30
+                           text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
+                  >
+                    Add to Calendar <CalendarIcon className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             </motion.div>
 
@@ -398,36 +464,42 @@ export default function EventDetailClient({
                          backdrop-blur-sm rounded-xl p-8"
                 >
                   <h2 className="text-xl font-semibold text-[#ae904c] mb-4">
-                    Attend or Sponsor {event.name} with PCG
+                    {past
+                      ? `Planning for the next edition of ${event.name}?`
+                      : `Attend or Sponsor ${event.name} with PCG`}
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-4">
-                    PCG covers the conference circuit as a media partner and
-                    books sponsorships directly for the shows we work. Whether
-                    you&apos;re buying a ticket, taking a booth, or building a
-                    full activation — start here and we&apos;ll handle the rest.
+                    {past
+                      ? "This edition has taken place. PCG covers the conference circuit as a media partner and books sponsorships directly for the shows we work. If you want a sponsorship, a speaking slot or media coverage at the next one, start the conversation early."
+                      : "PCG covers the conference circuit as a media partner and books sponsorships directly for the shows we work. Whether you\u2019re buying a ticket, taking a booth, or building a full activation, start here and we\u2019ll handle the rest."}
                   </p>
                   <ul className="text-white/70 text-sm space-y-2 mb-6">
                     <li>— Sponsorship packages &amp; booth placement, brokered by PCG</li>
-                    <li>— Tickets{event.promoCode ? ` — use code ${event.promoCode}` : ""}</li>
+                    {!past && (
+                      <li>— Tickets{event.promoCode ? ` — use code ${event.promoCode}` : ""}</li>
+                    )}
                     <li>— Activations, afterparties &amp; post-event momentum</li>
                   </ul>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href={`/contact?event=${event.id}&interest=sponsor`}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-white
-                             hover:bg-[#ae904c]/90 transition-colors duration-300"
+                      href={talkHref}
+                      onClick={() => track("cta_click", { cta: past ? "event_block_next_edition" : "event_block_sponsor", page: `/events/${event.id}` })}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black font-semibold
+                             hover:bg-[#c9a95e] transition-colors duration-300"
                     >
-                      Book a Sponsorship <ArrowRight className="w-4 h-4" />
+                      {past ? "Plan the next edition" : "Book a Sponsorship"} <ArrowRight className="w-4 h-4" />
                     </Link>
-                    <a
-                      href={event.ticketUrl || event.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
-                             text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
-                    >
-                      Get Tickets <ExternalLink className="w-4 h-4" />
-                    </a>
+                    {!past && (
+                      <a
+                        href={event.ticketUrl || event.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[#ae904c]/40
+                               text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors duration-300"
+                      >
+                        Get Tickets <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </motion.div>
 

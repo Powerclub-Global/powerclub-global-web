@@ -17,6 +17,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TextTheodoreModal from "@/components/TextTheodoreModal";
 import { track } from "@/lib/gtag";
+import { useSearchParams } from "next/navigation";
+import { intentSentence } from "@/lib/booking";
 import { submitContactForm, ContactFormData } from "@/app/contact/contact";
 
 interface ContactCardProps {
@@ -125,7 +127,7 @@ const HighlightCard: React.FC = () => (
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
             hover:bg-[#c9a95e] transition-colors duration-300"
           >
-            Schedule Call <ArrowRight className="w-4 h-4" />
+            Book a Call <ArrowRight className="w-4 h-4" />
           </Link>
           {/* <button
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#ae904c]/30
@@ -140,6 +142,7 @@ const HighlightCard: React.FC = () => (
 );
 
 function ContactPageContent() {
+  const params = useSearchParams();
   const [time, setTime] = useState(0);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isClient, setIsClient] = useState(false);
@@ -155,6 +158,11 @@ function ContactPageContent() {
     message: "",
     sms_consent: false,
   });
+  // /contact?name=<event>&interest=<sponsor|media|speak> pre-fills the message.
+  useEffect(() => {
+    const sentence = intentSentence(params.get("name"), params.get("interest"));
+    if (sentence) setFormData((prev) => (prev.message ? prev : { ...prev, message: sentence }));
+  }, [params]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<{
     success: boolean;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { FaTelegram, FaXTwitter } from "react-icons/fa6";
 import NewsletterSignup from "./NewsletterSignup";
+import { BOOK_HREF, BOOK_LABEL, MESSAGE_HREF } from "@/lib/booking";
 
 const Footer: React.FC = () => {
   return (
@@ -107,9 +108,8 @@ const Footer: React.FC = () => {
               { href: "/press", label: "Press" },
               { href: "/insights", label: "Insights" },
               { href: "/sovereign-stack", label: "Sovereign Stack" },
-              { href: "/discovery-call", label: "Book a Call" },
-              { href: "/schedule-call", label: "Schedule a Call" },
-              { href: "/contact", label: "Contact" },
+              { href: BOOK_HREF, label: BOOK_LABEL },
+              { href: MESSAGE_HREF, label: "Contact" },
             ].map((l) => (
               <Link
                 key={l.href}

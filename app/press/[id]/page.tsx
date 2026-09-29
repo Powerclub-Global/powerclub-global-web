@@ -163,10 +163,10 @@ async function PressPost({ id }: { id: string }) {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/discovery-call"
+                  href="/schedule-call?interest=media"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black font-semibold hover:bg-[#c9a95e] transition-colors"
                 >
-                  Book a discovery call
+                  Book a Call
                 </Link>
                 <Link
                   href="/services"

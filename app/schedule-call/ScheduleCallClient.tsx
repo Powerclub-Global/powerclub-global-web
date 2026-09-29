@@ -6,6 +6,8 @@ import { CalendarClock, CheckCircle, Loader, Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { track } from "@/lib/gtag";
+import { useSearchParams } from "next/navigation";
+import { TOPICS, topicFromParams, intentSentence } from "@/lib/booking";
 
 interface Slot {
   startAt: string;
@@ -18,16 +20,6 @@ interface Availability {
   slots: Slot[];
   message?: string;
 }
-
-// Deliberately broad: /discovery-call already covers the roadshow-scoped
-// questionnaire, so this page exists for everything that is not that.
-const TOPICS = [
-  "Conference sponsorship or activation",
-  "Media partnership / press coverage",
-  "Speaking opportunity",
-  "Sovereign Stack / ORCHA",
-  "Something else",
-];
 
 // Render an IANA id as the reader's short zone name.
 function tzLabel(timezone: string) {
@@ -52,15 +44,24 @@ function tzLabel(timezone: string) {
 }
 
 export default function ScheduleCallClient() {
+  const params = useSearchParams();
   const [availability, setAvailability] = useState<Availability | null>(null);
   const [selected, setSelected] = useState<Slot | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
-  const [topic, setTopic] = useState(TOPICS[0]);
+  const [topic, setTopic] = useState<string>(TOPICS[0]);
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
+
+  // Carry over what the visitor was looking at: /schedule-call?event=&name=&interest=&topic=
+  useEffect(() => {
+    const t = topicFromParams(params.get("topic"), params.get("interest"));
+    if (t) setTopic(t);
+    const sentence = intentSentence(params.get("name"), params.get("interest"));
+    if (sentence) setMessage((m) => m || sentence);
+  }, [params]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState<{ message: string; meetUrl: string | null } | null>(null);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import { Suspense } from "react";
 import DiscoveryCallClient from "./DiscoveryCallClient";
 
 export const metadata: Metadata = pageMetadata({
@@ -13,5 +14,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function DiscoveryCallPage() {
-  return <DiscoveryCallClient />;
+  return (
+    <Suspense fallback={null}>
+      <DiscoveryCallClient />
+    </Suspense>
+  );
 }

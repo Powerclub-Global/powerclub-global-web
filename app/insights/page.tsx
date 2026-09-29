@@ -72,8 +72,7 @@ export default function InsightsPage() {
       <CTASection
         title="Planning next year's circuit?"
         description="We run conference roadshows end to end — and the 30 days after each one."
-        primaryButtonText="Book a discovery call"
-        secondaryButtonText="Talk to us"
+        primaryHref="/schedule-call?interest=sponsor"
       />
       <Footer />
     </main>

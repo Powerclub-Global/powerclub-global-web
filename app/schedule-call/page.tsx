@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import { Suspense } from "react";
 import ScheduleCallClient from "./ScheduleCallClient";
 
 export const metadata: Metadata = pageMetadata({
@@ -10,5 +11,10 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ScheduleCallPage() {
-  return <ScheduleCallClient />;
+  // useSearchParams (pre-filling from ?event=&topic=) needs a Suspense boundary.
+  return (
+    <Suspense fallback={null}>
+      <ScheduleCallClient />
+    </Suspense>
+  );
 }

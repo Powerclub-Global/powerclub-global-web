@@ -19,6 +19,8 @@ import {
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import InlineCTA from "@/components/InlineCTA";
+import { serviceBookingHref } from "@/lib/booking";
 import type { Metadata } from "next";
 import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/seo";
@@ -237,7 +239,7 @@ export default async function ServicePage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
       )}
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black" data-page-context={service.maintitle || service.title}>
       <Navbar />
       <div className="flex flex-col lg:flex-row justify-between pt-10 lg:pt-20 px-4 md:px-8 lg:px-16 xl:px-32 overflow-hidden">
         {/* Left side content */}
@@ -337,6 +339,12 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      <InlineCTA
+        heading={`Talk to us about ${service.maintitle || service.title}`}
+        body="Book a call and we will tell you plainly whether this fits, what it involves and what it costs."
+        bookHref={serviceBookingHref(service.id)}
+        textContext={(service.maintitle || service.title).toLowerCase()}
+      />
       {/* Feature cards 2 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 md:py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
@@ -478,6 +486,7 @@ export default async function ServicePage({ params }: PageProps) {
       <CTASection
         headingText={service.ctaheading}
         paragraphText={service.ctapara}
+        primaryHref={serviceBookingHref(service.id)}
       />
       <section className="max-w-7xl mx-auto px-4 md:px-8 mb-24">
         <h2 className="text-4xl lg:text-5xl font-semibold text-[#ae904c] mb-16">

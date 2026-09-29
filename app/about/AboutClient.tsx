@@ -8,7 +8,9 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import InlineCTA from "@/components/InlineCTA";
+import { BOOK_HREF, BOOK_LABEL } from "@/lib/booking";
 
 interface FeatureCard {
   title: string;
@@ -175,12 +177,6 @@ const StatCounter = ({ stat, index }: { stat: Stat; index: number }) => {
 };
 
 function AboutPageContent() {
-  const router = useRouter();
-
-  const handleGetStarted = () => {
-    router.push("/contact");
-  };
-
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
@@ -221,12 +217,12 @@ function AboutPageContent() {
               immersive experiences that leave lasting impressions.
             </p>
             <div className="">
-              <button
-                onClick={handleGetStarted}
-                className="bg-[#ae904c] text-white max-w-44 px-6 py-3 rounded-lg mt-8 lg:mt-12 flex items-center gap-2"
+              <Link
+                href={BOOK_HREF}
+                className="bg-[#ae904c] text-black font-semibold max-w-44 px-6 py-3 rounded-lg mt-8 lg:mt-12 flex items-center gap-2 hover:bg-[#c9a95e] transition-colors"
               >
-                Book A Call
-              </button>
+                {BOOK_LABEL}
+              </Link>
             </div>
           </div>
         </div>
@@ -332,6 +328,11 @@ function AboutPageContent() {
           </div>
         ))}
       </div>
+      <InlineCTA
+        heading="Want this for your next conference?"
+        body="Book a call and we will walk through what PCG would do for your event, and what it would cost."
+        textContext="working with PCG"
+      />
       {/* Past Events Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 pb-24 pt-32">
         <h2 className="text-4xl lg:text-5xl font-bold text-[#ae904c] text-center mb-16">

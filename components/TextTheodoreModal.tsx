@@ -3,20 +3,27 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { MessageSquare, Phone, Mail, CalendarClock, X } from "lucide-react";
 import { track } from "@/lib/gtag";
-
-export const THEODORE_SMS_HREF =
-  "sms:+16452330500?&body=Hi%20Theodore%2C%20I%27m%20reaching%20out%20via%20the%20Powerclub%20Global%20site.";
-const THEODORE_TEL_HREF = "tel:+16452330500";
+import {
+  smsHref,
+  BOOK_HREF,
+  BOOK_LABEL,
+  MESSAGE_HREF,
+  MESSAGE_LABEL,
+  THEODORE_NUMBER,
+  THEODORE_NUMBER_DISPLAY,
+} from "@/lib/booking";
 
 interface Props {
   open: boolean;
   onClose: () => void;
+  /** What the visitor is looking at, e.g. "TOKEN2049 Dubai 2027". Goes into the pre-filled text. */
+  context?: string;
 }
 
 // Text-first contact panel. A bare sms: link does nothing on most desktop
 // browsers, so the panel also carries a QR code (the same sms: URI) to scan
 // from a phone, a call link, and the form routes for people who won't text.
-const TextTheodoreModal: React.FC<Props> = ({ open, onClose }) => {
+const TextTheodoreModal: React.FC<Props> = ({ open, onClose, context }) => {
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -71,18 +78,18 @@ const TextTheodoreModal: React.FC<Props> = ({ open, onClose }) => {
           <div className="mt-6 grid gap-6 md:grid-cols-[1fr_auto] items-start rounded-md border border-[#ae904c]/15 p-5">
             <div className="space-y-3">
               <a
-                href={THEODORE_SMS_HREF}
+                href={smsHref(context)}
                 onClick={() => track("text_theodore_click", { placement: "modal_text" })}
                 className="flex items-center justify-center gap-2 rounded-md bg-[#ae904c] px-5 py-3 font-medium text-black hover:bg-[#c2a45c] transition-colors"
               >
                 <MessageSquare className="w-4 h-4" /> Text Theodore
               </a>
               <a
-                href={THEODORE_TEL_HREF}
+                href={`tel:${THEODORE_NUMBER}`}
                 onClick={() => track("text_theodore_click", { placement: "modal_call" })}
                 className="flex items-center justify-center gap-2 rounded-md border border-[#ae904c]/40 px-5 py-3 text-[#ae904c] hover:bg-[#ae904c]/10 transition-colors"
               >
-                <Phone className="w-4 h-4" /> Call +1 (645) 233-0500
+                <Phone className="w-4 h-4" /> Call {THEODORE_NUMBER_DISPLAY}
               </a>
               <p className="text-xs text-white/40 leading-relaxed">
                 Message and data rates may apply. Reply STOP to opt out.
@@ -107,24 +114,24 @@ const TextTheodoreModal: React.FC<Props> = ({ open, onClose }) => {
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <Link
-              href="/schedule-call"
+              href={BOOK_HREF}
               onClick={onClose}
               className="flex items-center gap-3 rounded-md border border-[#ae904c]/15 p-4 hover:border-[#ae904c]/40 transition-colors"
             >
               <CalendarClock className="w-5 h-5 text-[#ae904c]" />
               <span>
-                <span className="block">Schedule a call</span>
+                <span className="block">{BOOK_LABEL}</span>
                 <span className="block text-xs text-white/45">Pick a time that suits you</span>
               </span>
             </Link>
             <Link
-              href="/contact"
+              href={MESSAGE_HREF}
               onClick={onClose}
               className="flex items-center gap-3 rounded-md border border-[#ae904c]/15 p-4 hover:border-[#ae904c]/40 transition-colors"
             >
               <Mail className="w-5 h-5 text-[#ae904c]" />
               <span>
-                <span className="block">Send a message</span>
+                <span className="block">{MESSAGE_LABEL}</span>
                 <span className="block text-xs text-white/45">Email or the contact form</span>
               </span>
             </Link>

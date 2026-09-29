@@ -4,6 +4,12 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { track } from "@/lib/gtag";
+import {
+  BOOK_HREF,
+  BOOK_LABEL,
+  MESSAGE_HREF,
+  MESSAGE_LABEL,
+} from "@/lib/booking";
 
 interface CTASectionProps {
   title?: string;
@@ -14,23 +20,26 @@ interface CTASectionProps {
   onSecondaryClick?: () => void;
   headingText?: string; // New prop for heading text
   paragraphText?: string; // New prop for paragraph text
+  /** Defaults to the sitewide booking route; pass one to carry a topic. */
+  primaryHref?: string;
+  secondaryHref?: string;
 }
 
 const CTASection: React.FC<CTASectionProps> = ({
   title = "Let's Work Together!",
   description = "Let's work together to achieve your goals. Our team of experts is ready to help bring your vision to life.",
-  primaryButtonText = "Schedule Call",
-  secondaryButtonText = "Contact Us",
+  primaryButtonText = BOOK_LABEL,
+  secondaryButtonText = MESSAGE_LABEL,
   onPrimaryClick,
   onSecondaryClick,
   headingText, // Added new prop
   paragraphText, // Added new prop
+  primaryHref = BOOK_HREF,
+  secondaryHref = MESSAGE_HREF,
 }) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const primaryHref = "/discovery-call";
-  const secondaryHref = "/contact";
   const primaryClass =
     "px-8 py-4 rounded-lg bg-[#ae904c] text-black font-semibold hover:bg-[#c9a95e] transition-colors duration-300 flex items-center justify-center gap-2";
   const secondaryClass =
@@ -41,7 +50,7 @@ const CTASection: React.FC<CTASectionProps> = ({
     if (onPrimaryClick) {
       onPrimaryClick();
     } else {
-      router.push("/discovery-call");
+      router.push(primaryHref);
     }
   };
 
@@ -50,7 +59,7 @@ const CTASection: React.FC<CTASectionProps> = ({
     if (onSecondaryClick) {
       onSecondaryClick();
     } else {
-      router.push("/contact");
+      router.push(secondaryHref);
     }
   };
 
