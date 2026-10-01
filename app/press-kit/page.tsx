@@ -24,26 +24,39 @@ const LONG =
 const LISTING =
   "Powerclub Global is an official media and sponsorship partner of [Event]. PCG covers the show first-hand and works with the organiser to bring sponsors and exhibitors, and to plan and produce their on-site activations. powerclubglobal.com";
 
-const logos = [
-  {
-    file: "/press-kit/pcg-logo-transparent.png",
-    name: "Mark, transparent",
-    note: "400 px PNG. For dark backgrounds only; the PCG letters are white.",
-    bg: "bg-[#08090c]",
-  },
-  {
-    file: "/press-kit/pcg-logo-on-black-1024.png",
-    name: "Mark on black, large",
-    note: "1024 px PNG. Self-contained tile, safe on light backgrounds.",
-    bg: "bg-[#08090c]",
-  },
-  {
-    file: "/press-kit/pcg-logo-on-black-500.png",
-    name: "Mark on black, small",
-    note: "500 px PNG. For logo walls and web listings.",
-    bg: "bg-[#08090c]",
-  },
+type Logo = { file: string; name: string; note: string; bg: string };
+
+const marks: Logo[] = [
+  { file: "/press-kit/pcg-mark-on-black.png", name: "Mark on black", note: "1024 px PNG, black tile.", bg: "bg-[#08090c]" },
+  { file: "/press-kit/pcg-mark-on-white.png", name: "Mark on white", note: "1024 px PNG, white tile.", bg: "bg-white" },
+  { file: "/press-kit/pcg-mark-transparent-for-dark.png", name: "Mark, transparent, for dark", note: "1024 px PNG. White lettering; use on dark backgrounds.", bg: "bg-[#08090c]" },
+  { file: "/press-kit/pcg-mark-transparent-for-light.png", name: "Mark, transparent, for light", note: "1024 px PNG. Black lettering; use on light backgrounds.", bg: "bg-white" },
 ];
+
+const horizontals: Logo[] = [
+  { file: "/press-kit/pcg-horizontal-on-black.png", name: "Horizontal on black", note: "2967 px wide PNG, black background.", bg: "bg-[#08090c]" },
+  { file: "/press-kit/pcg-horizontal-on-white.png", name: "Horizontal on white", note: "2967 px wide PNG, white background.", bg: "bg-white" },
+  { file: "/press-kit/pcg-horizontal-transparent-for-dark.png", name: "Horizontal, transparent, for dark", note: "White lettering; use on dark backgrounds.", bg: "bg-[#08090c]" },
+  { file: "/press-kit/pcg-horizontal-transparent-for-light.png", name: "Horizontal, transparent, for light", note: "Black lettering; use on light backgrounds.", bg: "bg-white" },
+];
+
+function LogoCard({ l, wide }: { l: Logo; wide?: boolean }) {
+  return (
+    <div className="rounded-lg border border-[#ae904c]/25 overflow-hidden">
+      <div className={`${l.bg} ${wide ? "aspect-[3/1] p-4" : "aspect-square"} flex items-center justify-center`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={l.file} alt={`Powerclub Global logo, ${l.name.toLowerCase()}`} className="w-full h-full object-contain" />
+      </div>
+      <div className="p-4">
+        <p className="font-semibold text-sm">{l.name}</p>
+        <p className="text-white/50 text-xs mt-1 mb-3">{l.note}</p>
+        <a href={l.file} download className="text-[#ae904c] text-sm hover:underline underline-offset-4">
+          Download PNG
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default async function PressKitPage() {
   const tracked = (eventsData.events as unknown[]).length;
@@ -67,25 +80,20 @@ export default async function PressKitPage() {
           </a>
 
           <h2 className="text-2xl text-[#ae904c] mb-5">Logos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-4">
-            {logos.map((l) => (
-              <div key={l.file} className="rounded-lg border border-[#ae904c]/25 overflow-hidden">
-                <div className={`${l.bg} aspect-square flex items-center justify-center`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={l.file} alt={`Powerclub Global logo, ${l.name.toLowerCase()}`} className="w-full h-full object-contain" />
-                </div>
-                <div className="p-4">
-                  <p className="font-semibold text-sm">{l.name}</p>
-                  <p className="text-white/50 text-xs mt-1 mb-3">{l.note}</p>
-                  <a href={l.file} download className="text-[#ae904c] text-sm hover:underline underline-offset-4">
-                    Download PNG
-                  </a>
-                </div>
-              </div>
+          <h3 className="text-white font-semibold mb-3">Mark</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+            {marks.map((l) => (
+              <LogoCard key={l.file} l={l} />
+            ))}
+          </div>
+          <h3 className="text-white font-semibold mb-3">Horizontal, with name</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-4">
+            {horizontals.map((l) => (
+              <LogoCard key={l.file} l={l} wide />
             ))}
           </div>
           <p className="text-white/50 text-sm mb-14">
-            Please do not recolour, stretch or add effects, and leave clear space around the mark of at least the height of the &quot;P&quot;.
+            Use the transparent files on a plain background of the matching tone. Please do not recolour, stretch or add effects, and leave clear space around the mark of at least the height of the &quot;P&quot;.
             Need a vector or a larger file? Email{" "}
             <a href="mailto:press@powerclubglobal.com" className="text-[#ae904c] underline underline-offset-4">press@powerclubglobal.com</a>.
           </p>

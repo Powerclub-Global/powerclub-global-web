@@ -47,7 +47,7 @@ const orgJsonLd = {
   name: "Powerclub Global",
   alternateName: "PCG",
   url: "https://powerclubglobal.com",
-  logo: "https://powerclubglobal.com/logo-black.png",
+  logo: "https://powerclubglobal.com/press-kit/pcg-mark-on-black.png",
   foundingDate: "2018",
   founder: { "@type": "Person", name: "Jessy Artman" },
   description:
