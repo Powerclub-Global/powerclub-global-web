@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the official page: General Admission about US$550, Developers about US$250, Students about US$100, Late Bird about US$800.",
-    sponsorship:
-      "Not published. The official site has a sponsor application and lists 40+ partners including Phantom, Solflare, Alchemy, OpenSea and Pyth; no rate card is public.",
   },
   attendees:
     "Developers, ecosystem founders, wallet and infrastructure teams, investors, and a growing institutional and fintech group. Coverage cites an expectation of 8,000+ attendees from 100+ countries; this is organiser-side pre-event reporting for 2026, not a verified count. The official page points to institutions such as J.P. Morgan, Goldman Sachs, BlackRock, State Street and Citigroup having used the network.",

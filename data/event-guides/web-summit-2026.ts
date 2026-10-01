@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from published pricing: general tickets about EUR 895-995, premium passes from about EUR 1,585, executive-level passes reported at EUR 4,000+.",
-    sponsorship:
-      "Startup exhibition packages are public through the Alpha, Beta and Growth programmes; larger exhibition space is quoted privately. PCG shares current sponsorship and exhibition pricing on a call.",
   },
   attendees:
     "Startup founders, investors, corporate innovation teams, large-tech and media staff, and a lot of press. Organiser-reported figures: 71,386 attendees from 157 countries and 2,725 startup exhibitors in 2025; 2026 is expected at 70,000+. Crypto is a small slice of that.",

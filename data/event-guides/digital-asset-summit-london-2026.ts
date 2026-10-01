@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the registration page: VIP listed at US$1,999 (early access, sold out), standard at US$2,499 (sold out), and last-chance tickets at US$2,999. Registration has moved to Luma.",
-    sponsorship:
-      "Not published. Blockworks sells sponsorship by private prospectus; no public rate card was found.",
     note: "Venue is the London Hilton on Park Lane, so capacity is limited and sponsor visibility is high per pound spent.",
   },
   attendees:

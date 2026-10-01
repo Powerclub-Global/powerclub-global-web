@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: the 2026 San Francisco pass was listed around $1,795. 2027 Las Vegas pricing was not on the pages we could read.",
-    sponsorship:
-      "Not published. HumanX sells sponsorship by prospectus; the organiser reports 400+ sponsors at the Las Vegas edition, so there are many tiers, but we have no public rate card.",
     note: "HumanX also runs a Europe event in Amsterdam (September 20-22, 2027). Note the 2026 US edition was in San Francisco; 2027 returns to Mandalay Bay.",
   },
   attendees:

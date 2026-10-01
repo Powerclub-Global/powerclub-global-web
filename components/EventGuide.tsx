@@ -24,13 +24,12 @@ export default function EventGuideBlock({ guide, eventName }: { guide: EventGuid
       </h2>
       <p className="text-white/80 leading-relaxed mb-6">{guide.verdict}</p>
 
-      <h3 className="text-white font-semibold mb-2">What it costs</h3>
-      <ul className="space-y-1.5 text-white/70 text-sm mb-1">
-        {guide.costs.ticket && <li><span className="text-white/90">Tickets:</span> {guide.costs.ticket}</li>}
-        <li><span className="text-white/90">Sponsorship:</span> {guide.costs.sponsorship}</li>
-      </ul>
+      <h3 className="text-white font-semibold mb-2">Tickets</h3>
+      <p className="text-white/70 text-sm leading-relaxed mb-1">
+        {guide.costs.ticket ?? "Ticket prices are not published yet."}
+      </p>
       <p className="text-white/40 text-xs mb-6">
-        {guide.costs.note ?? "Estimates from public pricing and market sources, not a rate card. Ask for the current prospectus before budgeting."}
+        {guide.costs.note ?? "Estimates from public pricing; check the organiser for current prices."} Sponsorship and exhibition packages are discussed privately with PCG.
       </p>
 
       <h3 className="text-white font-semibold mb-2">Who attends</h3>

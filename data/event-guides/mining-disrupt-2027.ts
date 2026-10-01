@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Not published on the official site. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and all sales are final. Use code PCG at checkout.",
-    sponsorship:
-      "Not published. The site says about 200 booths across tier packages; request the prospectus for pricing.",
     note: "Mining Disrupt and Intelligence Disrupt run together on March 22\u201324, 2027 at the Irving Convention Center at Las Colinas. See the Intelligence Disrupt guide for the official package prices.",
   },
   attendees:

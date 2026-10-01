@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Roughly EUR 1,400 to 2,700 plus VAT depending on pass: member bundle about EUR 1,399, Expo and Content about EUR 1,699, VIP about EUR 1,999, solution providers about EUR 2,699. Startups, academia and students get discounted tiers. Estimates from listings.",
-    sponsorship:
-      "Not published. Partners include AWS, Meta, Google, NVIDIA, Microsoft, IBM, SAP, Intel and Accenture, but there is no public rate card. Request the prospectus from the organiser, InspiredMinds.",
     note: "Ticket prices are third-party reported and exclude VAT. Sponsorship is by private prospectus. Confirm with the organiser before budgeting.",
   },
   attendees:

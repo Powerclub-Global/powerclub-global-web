@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Not published on the official site, which lists three access levels without prices. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and non-refundable. Use code PCG at checkout.",
-    sponsorship:
-      "The organiser sells six tiers (Disruptor, Core, Premier, Flagship, Title and one invitation-only Powered By), packages without a booth, a Mobile Data Center Showcase for full-size hardware, and one-company-only add-ons such as the pre-party, after-party and private dinners. PCG shares pricing and what each tier includes on a call.",
     note: "Structure is from the organiser's exhibitor guide for the March 2027 show. Pricing is shared on a call.",
   },
   attendees:

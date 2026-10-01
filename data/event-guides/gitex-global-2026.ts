@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Third-party guides put the visitor pass around AED 600 (roughly USD 165), with conference passes from about AED 1,600 and premium packages higher. 2026 pricing is not published on the official page, so these are estimates.",
-    sponsorship:
-      "Not published. Stands and sponsorship are sold by Dubai World Trade Centre sales through a private prospectus, with no public rate card.",
     note: "Ticket figures come from third-party guides, not the organiser.",
   },
   attendees:

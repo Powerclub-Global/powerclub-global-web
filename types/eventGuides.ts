@@ -7,10 +7,9 @@ export interface EventGuide {
   updated: string;
   /** Two or three sentences: who this event is worth it for, and who should skip it. */
   verdict: string;
-  /** Estimates only, labelled as such. No per-client figures. */
+  /** Public ticket prices only. Sponsorship and exhibition pricing is never published; it is discussed privately. */
   costs: {
     ticket?: string;
-    sponsorship: string;
     note?: string;
   };
   /** Who actually attends, by role and sector. Organiser claims labelled as such. */

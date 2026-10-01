@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: roughly $1,300 to $1,700 per person for full access. The official 2027 ticket page lists an early-bird full pass at $1,699 and approval-gated tiers at $1,299 (Fortune 1000 VP and above, startup C-suite, AI technologists). A four-ticket team bundle is listed at $5,596. Fees are added on top.",
-    sponsorship:
-      "Not published. Sponsorship runs through a contact form with the organiser's sponsorship team and there is no public rate card. Treat any figure you hear as a quote to confirm, not a list price.",
     note: "Prices are early-bird and will likely rise closer to the event. Hotel room blocks at the Hilton were offered for the 2026 edition; check whether 2027 has one.",
   },
   attendees:

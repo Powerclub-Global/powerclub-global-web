@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from past editions, not the 2027 rate card: early bird roughly USD 500 to 800, general admission roughly USD 1,000 to 1,500, VIP from about USD 3,000. The official site currently advertises Super Early Bird pricing without listing figures.",
-    sponsorship:
-      "Not published. Exhibition space and partnerships are sold by private prospectus through the organiser, so any figure would be a guess.",
     note: "Dubai side-event hospitality and hotels during the event week are the larger hidden cost.",
   },
   attendees:

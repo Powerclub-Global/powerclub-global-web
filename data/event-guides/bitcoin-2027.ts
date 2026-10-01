@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: general admission roughly $200 to $400, Pro Pass roughly $500 to $1,000, Whale Pass roughly $3,600 to $5,000. Sources disagree on 2027 prices, so confirm on the official ticket page. For reference, the 2026 Las Vegas edition listed general admission at $699 and the Whale Pass at $12,999 (these were increased from earlier tiers). Bulk discounts of 10 to 15% are listed for groups.",
-    sponsorship:
-      "Not published. Sponsorship is by private prospectus from BTC Inc with no public rate card. The 2027 site names Block, Gemini, Robinhood Crypto, BITMAIN and Bitwise among supporters.",
     note: "Separate After Hours passes (about $99 to $149 in the listings we saw) cover official parties.",
   },
   attendees:

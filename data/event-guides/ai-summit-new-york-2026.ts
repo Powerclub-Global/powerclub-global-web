@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the organiser's early-bird listing: Expo-only pass around $99-$199, Delegate around $2,100-$2,900, VIP around $2,800-$3,500. Prices step up as the date nears.",
-    sponsorship:
-      "Not published. Sponsorship is by private prospectus from Informa Tech, so budget for a conversation rather than a rate card. Expect exhibit space at an event this size to run well into five figures, but that is our estimate, not a quoted price.",
     note: "Check the live ticket page; early-bird dates on the site may change.",
   },
   attendees:

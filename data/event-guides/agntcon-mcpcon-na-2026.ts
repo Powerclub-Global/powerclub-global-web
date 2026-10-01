@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Standard attendee registration is about US$475, rising to about US$925 for late registration from October 8, 2026. Academic and Expo plus Party passes are about US$149. Member and group discounts exist. Estimates from the organiser's registration page as reported.",
-    sponsorship:
-      "Not published as a rate card. Tiers are Diamond, Platinum, Gold, Silver and Startup; prices are by prospectus from the Linux Foundation.",
     note: "Registration figures were reported via third-party summaries of the official page. Sponsorship prices are not public. Confirm before budgeting.",
   },
   attendees:

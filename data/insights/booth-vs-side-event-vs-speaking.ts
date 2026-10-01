@@ -56,7 +56,7 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "Published estimates put entry-level exhibitor presence at large events somewhere around $15,000 to $50,000, mid tiers at $50,000 to $100,000, and the headline packages well above that, before travel, build, staff and giveaways. Lead time is long. The good floor positions go early, often six to nine months out.",
+      text: "Entry-level exhibitor presence at large events sits in the mid five figures, mid tiers run to low six figures, and the headline packages go well above that, before travel, build, staff and giveaways. We do not publish sponsorship pricing; we share it on calls. Lead time is long. The good floor positions go early, often six to nine months out.",
     },
     { type: "h3", text: "Hosted side event" },
     {
@@ -65,7 +65,7 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "Cost scales with headcount and venue. Estimates circulating in the market put a builder dinner at roughly $5,000 to $20,000, a panel with drinks for eighty to two hundred and fifty people at $15,000 to $50,000, and a large rooftop or club party at $40,000 to $150,000 or more. Co-hosting with two or three other teams brings the larger formats down considerably. The risks are real: a poorly invited room is an expensive empty room, and in the busiest week of the year you are competing with several hundred other invitations for the same evening.",
+      text: "Cost scales with headcount and venue. As broad bands, a builder dinner is a low to mid five-figure cost, a panel with drinks for eighty to two hundred and fifty people is a mid five-figure cost, and a large rooftop or club party runs from mid five figures into six. Co-hosting with two or three other teams brings the larger formats down considerably. The risks are real: a poorly invited room is an expensive empty room, and in the busiest week of the year you are competing with several hundred other invitations for the same evening.",
     },
     { type: "h3", text: "Speaking slot" },
     {
@@ -89,14 +89,14 @@ const article: Insight = {
     {
       type: "table",
       caption:
-        "Cost ranges are illustrative estimates from public sources and our own observation, not quotes. Scores are our judgement.",
+        "Costs are broad bands from our own observation, not quotes or price lists. Scores are our judgement.",
       head: ["", "Booth", "Hosted side event", "Speaking slot", "Press presence"],
       rows: [
         [
-          "Typical cost (estimate)",
-          "$15K to $100K+ plus build and staff",
-          "$5K to $20K dinner; $15K to $150K+ larger formats",
-          "Free if earned; part of a five-figure package if sponsored",
+          "Typical cost (band)",
+          "Mid five figures and up, plus build and staff",
+          "Low to mid five figures for a dinner; mid five to six figures for larger formats",
+          "Free if earned; part of a sponsorship package if bought",
           "Mostly time and production; credentials by arrangement",
         ],
         [
@@ -164,13 +164,13 @@ const article: Insight = {
     { type: "h2", text: "If you only have a given budget" },
     {
       type: "p",
-      text: "These are illustrative scenarios built from the estimates above. They are not client figures and they are not recommendations for a specific event.",
+      text: "These are illustrative scenarios built from the bands above. They are not client figures and they are not recommendations for a specific event.",
     },
     {
       type: "h3", text: "Around $15,000 for one event" },
     {
       type: "p",
-      text: "Skip the booth. Put roughly $8,000 to $10,000 into a builder dinner for twenty to thirty hand-picked guests, spend the rest on travel and on someone to film the evening, and spend a few weeks of effort on a speaking application. You will not have scale, but you will have a guest list you chose and a clear reason to follow up with each of them.",
+      text: "Skip the booth. Put the largest share into a builder dinner for twenty to thirty hand-picked guests, spend the rest on travel and on someone to film the evening, and spend a few weeks of effort on a speaking application. You will not have scale, but you will have a guest list you chose and a clear reason to follow up with each of them.",
     },
     {
       type: "h3",

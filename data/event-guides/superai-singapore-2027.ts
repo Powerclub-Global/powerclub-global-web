@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: roughly US$300 to US$3,000 per person. The 2026 edition listed tiers of about US$299 (super early), US$499, US$999 (regular) and US$2,999 (special access). The 2027 site currently shows a US$999 Pro pass. Prices rise as the date approaches.",
-    sponsorship:
-      "Not published. Exhibiting and sponsorship run through a private prospectus on request, with no public rate card. Expect it to scale with booth size and speaking slots, and ask for the prospectus before budgeting.",
     note: "Ticket tiers are taken from the organiser site and third-party listings for 2026 and may change for 2027. Flights and Marina Bay hotels are a separate and large cost that week.",
   },
   attendees:

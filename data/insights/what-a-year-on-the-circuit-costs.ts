@@ -1,16 +1,17 @@
 import type { Insight } from "@/types/insights";
 
 /**
- * Cost figures in this piece are ESTIMATES, built from public sponsor guides,
- * published ticket prices and general trade-show budgeting rules. No client
- * figures are used. Sami: check every number against what you see in the field
- * before publishing.
+ * Cost analysis here is deliberately BANDED. Per Bodhi (2026-10-01) we do not
+ * publish sponsorship or exhibition prices; those are shared on calls. Public
+ * ticket prices and non-sponsorship operating costs (travel, content) are the
+ * only dollar figures. No client figures are used. Sami: check the bands
+ * against what you see in the field before publishing.
  */
 const article: Insight = {
   slug: "what-a-year-on-the-circuit-costs",
   title: "What a Year on the Crypto Conference Circuit Actually Costs",
   description:
-    "Estimated costs for a five-event year at lean, standard and flagship levels: sponsorship, side events, travel, content and the staffing nobody budgets for.",
+    "What a five-event year costs at lean, standard and flagship levels, in bands: sponsorship, side events, travel, content and the staffing nobody budgets for.",
   published: "2026-10-01",
   author: "Sami Satoshi",
   status: "draft",
@@ -35,12 +36,12 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "This is our attempt to put the whole year on one page. A note on the numbers before we start: every figure here is an estimate. The biggest events sell through private prospectuses with no public rate card, so the ranges below come from published sponsor guides, advertised ticket prices, general trade-show budgeting rules and our own time on the circuit. We have not used any client's actual spend, and where we are guessing we say so.",
+      text: "This is our attempt to put the whole year on one page. A note on the numbers before we start: this is an analysis in bands, not a price list. The biggest events sell through private prospectuses with no public rate card, and we do not publish sponsorship pricing; we share it on calls. What follows is built from advertised ticket prices, general trade-show budgeting rules and our own time on the circuit, and where we are guessing we say so. We have not used any client's actual spend.",
     },
     { type: "h2", text: "The invoice is the smallest part" },
     {
       type: "p",
-      text: "Outside crypto, exhibitors have a rule of thumb: the all-in cost of a show is roughly three times the booth rental. It comes from general trade-show budgeting, not from our sector, and crypto is messier. But the direction holds. When a team says “we paid $40,000 for a gold package”, the honest figure is usually $80,000 to $120,000 once the rest is counted.",
+      text: "Outside crypto, exhibitors have a rule of thumb: the all-in cost of a show is roughly three times the booth rental. It comes from general trade-show budgeting, not from our sector, and crypto is messier. But the direction holds. When a team says “we paid for a gold package”, the honest figure is usually two to three times the invoice once the rest is counted.",
     },
     {
       type: "p",
@@ -49,24 +50,24 @@ const article: Insight = {
     { type: "h2", text: "What the sponsorship fee buys" },
     {
       type: "p",
-      text: "The largest events do not publish prices. TOKEN2049 sells bespoke packages through a prospectus, and published guides from agencies that sell into the space put the tiers at roughly the following. Treat them as ballparks that move with timing and availability.",
+      text: "The largest events do not publish prices. TOKEN2049 sells bespoke packages through a prospectus. We do not quote sponsor prices here, but the shape of the ladder is consistent across the tier-one events, and it is worth seeing in relative terms.",
     },
     {
       type: "table",
       caption:
-        "Estimated sponsorship tiers at tier-one crypto conferences, USD. Compiled from public sponsor guides; not an official rate card.",
-      head: ["Tier", "Typical range", "What usually comes with it"],
+        "How the sponsorship ladder is structured at tier-one crypto conferences, in relative terms. Pricing is shared on a call, not published here.",
+      head: ["Tier", "Cost relative to a small booth", "What usually comes with it"],
       rows: [
-        ["Title / headline", "$250,000 to $750,000+", "Main-stage naming, keynote, large booth, logo everywhere"],
-        ["Platinum", "$100,000 to $250,000", "Speaking slot, premium booth, side-event slot, a large block of passes"],
-        ["Gold", "$50,000 to $100,000", "Panel or workshop slot, mid-size booth, 10 to 20 passes"],
-        ["Silver / small booth", "$15,000 to $50,000", "Small booth or table, logo placement, 5 to 10 passes"],
-        ["Official side event listing", "$5,000 to $25,000", "A place on the official calendar, no booth"],
+        ["Title / headline", "Many times over; the top of the ladder", "Main-stage naming, keynote, large booth, logo everywhere"],
+        ["Platinum", "Several times", "Speaking slot, premium booth, side-event slot, a large block of passes"],
+        ["Gold", "Roughly two to three times", "Panel or workshop slot, mid-size booth, 10 to 20 passes"],
+        ["Silver / small booth", "The baseline", "Small booth or table, logo placement, 5 to 10 passes"],
+        ["Official side event listing", "A fraction of the baseline", "A place on the official calendar, no booth"],
       ],
     },
     {
       type: "p",
-      text: "There are cheaper doors in. TOKEN2049 advertises a startup stand at $4,900 that includes a two-day stand, tickets and a short pitch slot. Bitcoin 2026 lists a flat-rate marketplace spot at $6,000 with two exhibitor passes. Consensus exhibitor space is reported at $15,000 to $40,000. The pattern across all three is that the entry price is public, and everything above it is negotiated.",
+      text: "There are cheaper doors in. TOKEN2049 advertises a startup stand that includes a two-day stand, tickets and a short pitch slot. Bitcoin 2026 lists a flat-rate marketplace spot with exhibitor passes. Both sit well below a standard exhibitor package. The pattern across the circuit is that the entry price is public, and everything above it is negotiated.",
     },
     {
       type: "p",
@@ -84,7 +85,7 @@ const article: Insight = {
     { type: "h2", text: "The booth, and everything it needs" },
     {
       type: "p",
-      text: "A booth is more than the space. Design, shipping, setup, electrical, furniture and screens usually add $5,000 to $15,000 even for a modest build, and published guides put a full custom booth at $20,000 to $80,000 before staffing. Swag adds more: ordering for 60 to 70 percent of expected traffic at $15 to $40 a unit is a figure that surprises people who have not done it.",
+      text: "A booth is more than the space. Design, shipping, setup, electrical, furniture and screens usually add a low five-figure sum even for a modest build, and a full custom booth can cost several times a modest one before staffing. Swag adds more: ordering for 60 to 70 percent of expected traffic at $15 to $40 a unit is a figure that surprises people who have not done it.",
     },
     {
       type: "p",
@@ -97,13 +98,13 @@ const article: Insight = {
     },
     {
       type: "table",
-      caption: "Estimated side-event costs by format, USD. Published agency guides plus our own observation; venue, city and week all move these.",
-      head: ["Format", "Typical attendance", "Estimated cost"],
+      caption: "Side-event costs by format, as broad bands. Our own observation plus published agency guides; venue, city and week all move these.",
+      head: ["Format", "Typical attendance", "Cost band"],
       rows: [
-        ["Builder or founder dinner", "20 to 40", "$5,000 to $20,000"],
-        ["Panel or fireside with drinks", "80 to 250", "$15,000 to $50,000"],
-        ["Co-hosted party (your share)", "300 to 1,000", "$15,000 to $50,000"],
-        ["Solo rooftop or club party", "300 to 1,000", "$40,000 to $150,000"],
+        ["Builder or founder dinner", "20 to 40", "Low to mid five figures"],
+        ["Panel or fireside with drinks", "80 to 250", "Mid five figures"],
+        ["Co-hosted party (your share)", "300 to 1,000", "Mid five figures"],
+        ["Solo rooftop or club party", "300 to 1,000", "Mid five to low six figures"],
       ],
     },
     {
@@ -122,32 +123,32 @@ const article: Insight = {
     },
     {
       type: "table",
-      caption: "Estimated per-event cost by posture, USD (tickets, travel, activity and content included).",
+      caption: "Per-event cost by posture, as bands (tickets, travel, activity and content included). Sponsorship pricing is shared on a call.",
       head: ["Posture", "What it means", "Per event"],
       rows: [
-        ["Attend", "Two people, tickets, travel, meetings, no activation", "$9,000 to $17,000"],
-        ["Attend + side event", "As above, plus a dinner or co-hosted event and basic content", "$15,000 to $35,000"],
-        ["Booth", "Small booth, 3 to 4 staff, swag, content", "$35,000 to $100,000"],
-        ["Flagship", "Gold or above, a speaking slot, a solo side event, full content", "$95,000 to $215,000"],
+        ["Attend", "Two people, tickets, travel, meetings, no activation", "Low five figures"],
+        ["Attend + side event", "As above, plus a dinner or co-hosted event and basic content", "About two to three times Attend"],
+        ["Booth", "Small booth, 3 to 4 staff, swag, content", "About three to six times Attend"],
+        ["Flagship", "Gold or above, a speaking slot, a solo side event, full content", "Mid five to low six figures and up"],
       ],
     },
     {
       type: "table",
-      caption: "Estimated annual cost for five events, USD. Excludes the fixed costs listed below.",
-      head: ["Year", "Mix", "Estimated total"],
+      caption: "Annual cost for five events, as bands. Excludes the fixed costs listed below.",
+      head: ["Year", "Mix", "Estimated band"],
       rows: [
-        ["Lean", "Five events at attend + side event", "$75,000 to $175,000"],
-        ["Standard", "Three at attend + side event, two with a booth", "$115,000 to $305,000"],
-        ["Flagship", "One flagship, two booths, two attend + side event", "$195,000 to $485,000"],
+        ["Lean", "Five events at attend + side event", "High five to low six figures"],
+        ["Standard", "Three at attend + side event, two with a booth", "Low to mid six figures"],
+        ["Flagship", "One flagship, two booths, two attend + side event", "Mid six figures"],
       ],
     },
     {
       type: "p",
-      text: "Those totals leave out the costs that are not tied to any one event. Someone has to own the programme: choosing events, building guest lists, running follow-up. Even a quarter of a senior person's time is plausibly $20,000 to $40,000 a year, and CRM, enrichment and scheduling tools add a few thousand more. These are our estimates, and many teams carry them without ever naming them as conference costs.",
+      text: "These are our estimates and the bands are wide because the real number depends on city, tier and how early you commit. They leave out the costs that are not tied to any one event. Someone has to own the programme: choosing events, building guest lists, running follow-up. Even a quarter of a senior person's time is plausibly a low five-figure sum a year, and CRM, enrichment and scheduling tools add a few thousand more. Many teams carry them without ever naming them as conference costs.",
     },
     {
       type: "callout",
-      text: "A public forum post we keep coming back to describes a team spending about $180,000 on six conferences and ending with three qualified leads. That is $30,000 an event, which sits squarely in our lean-to-standard band. The spend was not extravagant. The problem was that it bought attendance without the machinery to turn it into meetings.",
+      text: "A public forum post we keep coming back to describes a team spending a six-figure sum on six conferences and ending with three qualified leads. Spread across six events, that sits squarely in our lean-to-standard band. The spend was not extravagant. The problem was that it bought attendance without the machinery to turn it into meetings.",
     },
     { type: "h2", text: "Where the money is most often wasted" },
     {

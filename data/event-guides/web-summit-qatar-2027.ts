@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the 2026 edition: general tickets around EUR 995 at a discounted rate (regular about EUR 1,595), VIP about EUR 1,585-1,950, investor access free on acceptance, with a paid Investor Platinum tier around QR 12,995. 2027 prices are not yet confirmed.",
-    sponsorship:
-      "Not published. Partnerships are handled by Web Summit's sales team and the programme is run with Qatari government backing. We have no public rate card to cite.",
     note: "Startup programme places are by application and have been discounted or free in some tiers; check the live programme page.",
   },
   attendees:

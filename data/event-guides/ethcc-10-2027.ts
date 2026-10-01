@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Published tiered waves for the 2027 edition: about EUR 390 early bird (Sep 15 to Oct 15, 2026), EUR 590 full pass, EUR 750 late pass and EUR 990 last call, with day passes from roughly EUR 200 to EUR 320. Check the official site for current wave.",
-    sponsorship:
-      "Estimate only: sponsorship is by private prospectus and no public rate card is published. Expect booth and sponsor packages to scale with the organiser's claimed 150+ sponsors and partners.",
     note: "Cannes hotels and flights around the Palais des Festivals tend to cost more than the pass itself. Book early.",
   },
   attendees:

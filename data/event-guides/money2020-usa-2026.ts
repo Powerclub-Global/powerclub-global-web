@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Roughly US$3,600 early to about US$4,200 close to the event; one listing shows a standard pass at about US$4,049. Group discounts of about US$299 per pass for three or more are reported. Estimates; prices rise in tiers.",
-    sponsorship:
-      "Not published. The organiser lists 300+ sponsors and curated packages through an application, with no public rate card.",
     note: "Pass prices are from third-party listings; the organiser uses a pass picker. Sponsorship is by application. Confirm before budgeting.",
   },
   attendees:

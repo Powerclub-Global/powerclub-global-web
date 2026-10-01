@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Roughly US$399 early-bird up to US$699 at the Last Bird tier, and about US$4,999 for the Special Access Pass (priority access, Speakers Reception, TOKEN2049 Institutional). Estimates; prices move by sales phase.",
-    sponsorship:
-      "Not published. Title sponsorship runs on a bespoke prospectus with no public rate card, so any figure you see quoted elsewhere is third-party guesswork. Ask the organiser directly.",
     note: "Ticket figures are from the organiser's ticket page and third-party listings as of October 2026. Sponsorship is by private prospectus. Confirm everything before budgeting.",
   },
   attendees:

@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: roughly US$3,500 to US$4,200 for a standard pass, rising toward the event, and about US$1,900 for a growth-stage startup pass, based on 2026 pricing reported by third parties. Not yet published for 2027.",
-    sponsorship:
-      "Not published. Sponsorship and exhibiting are sold through a private prospectus with no public rate card. The organiser reports 300+ sponsors on the 2026 show floor, so budget for stand build, staff, travel and Las Vegas hotels on top of any package fee.",
     note: "2027 moves to the Las Vegas Convention Center and Resorts World, so expect pricing and layout to differ from 2026 at the Venetian.",
   },
   attendees:

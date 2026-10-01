@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the 2026 edition: four-day conference pass about $2,172 early bird and $2,525 regular; one-day pass about $1,260; exhibits-only from about $930 (single day about $110). 2027 registration had not opened on the page we read.",
-    sponsorship:
-      "Not published. Sponsorship and exhibiting are arranged with NVIDIA directly and are largely oriented to partners; we found no public rate card.",
     note: "GTC alumni discounts and team packages exist. NVIDIA also runs GTC events in Berlin and Washington, D.C. later in 2026.",
   },
   attendees:

@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate based on the 2026 edition: Exhibits Plus pass about $350 (early bird about $149), Deluxe Conference Pass about $1,700 (early bird about $1,400). 2027 pricing is not yet on the pages we could read.",
-    sponsorship:
-      "Not published. Exhibit space and sponsorships are sold by the Consumer Technology Association on request. Booths at CES range from small Eureka Park startup tables to multi-hundred-thousand-dollar builds, but we have no grounded figure to quote.",
     note: "Hotel costs in Las Vegas that week are a bigger budget line than the pass for most small teams.",
   },
   attendees:

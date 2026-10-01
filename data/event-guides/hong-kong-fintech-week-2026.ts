@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from the official ticket page: General about US$499, Investor about US$1,039, Executive about US$2,299, Startup about US$219. A Greater Bay Area executive tour add-on (Nov 4-5) is listed at about US$800. Prices change, so check before budgeting.",
-    sponsorship:
-      "No public rate card. Exhibition and sponsorship are sold by enquiry, with startup exhibition packages at the low end. PCG shares current pricing and what each package includes on a call.",
     note: "Side events are separate and mostly free or low cost to attend; hosting one is a separate budget line.",
   },
   attendees:

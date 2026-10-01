@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "2026 registration is open, with an early registration deadline of October 30, 2026. We could not confirm the pass prices, so they are not listed here; check the registration page.",
-    sponsorship:
-      "Not published. Sponsorship runs through a prospectus, and applications close November 4, 2026. No public rate card.",
     note: "A virtual pass is offered alongside in-person attendance.",
   },
   attendees:

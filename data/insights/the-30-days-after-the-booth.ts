@@ -18,11 +18,11 @@ const article: Insight = {
   body: [
     {
       type: "p",
-      text: "A team we spoke with this year put it plainly on a public forum: they spent a little over $180,000 sponsoring six conferences and came away with three qualified leads. The post reads as a verdict on conference sponsorship. It is actually a verdict on what happened after each one.",
+      text: "A team we spoke with this year put it plainly on a public forum: they spent a six-figure sum sponsoring six conferences and came away with three qualified leads. The post reads as a verdict on conference sponsorship. It is actually a verdict on what happened after each one.",
     },
     {
       type: "p",
-      text: "That distinction matters, because the spend is not the problem. A booth at a tier-one crypto conference runs somewhere between $15,000 and $50,000, gold tiers reach $100,000, and the top packages at the largest events go well past that. Those numbers buy real access: a few thousand of the right people in one building for two days. The failure is almost never that nobody came to the booth. It is that eleven days later the badge scans are still sitting in a CSV, the panel footage is unedited, and the person who said “send me that deck” has been to two other conferences since.",
+      text: "That distinction matters, because the spend is not the problem. A booth at a tier-one crypto conference is a mid five-figure cost, gold tiers reach six figures, and the top packages at the largest events go well past that. Those numbers buy real access: a few thousand of the right people in one building for two days. The failure is almost never that nobody came to the booth. It is that eleven days later the badge scans are still sitting in a CSV, the panel footage is unedited, and the person who said “send me that deck” has been to two other conferences since.",
     },
     { type: "h2", text: "Why the month after is where the money is" },
     {
@@ -31,7 +31,7 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "The industry benchmark most often quoted is that a B2B conference lead costs between $150 and $300. That figure assumes the follow-up happens. Where it does not, the real cost per closed deal is whatever you spent divided by roughly zero, which is the arithmetic behind that $180,000 post.",
+      text: "The industry benchmark most often quoted is that a B2B conference lead costs between $150 and $300. That figure assumes the follow-up happens. Where it does not, the real cost per closed deal is whatever you spent divided by roughly zero, which is the arithmetic behind that six-figure post.",
     },
     {
       type: "callout",
@@ -89,7 +89,7 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "That is the actual argument for treating conferences as a circuit rather than a series of one-off decisions. Run five events a year as five separate projects and the follow-up is improvised five times. Run them as one programme and the capture, the content pipeline and the routing are built once and reused — which is the difference between a $180,000 line item and a pipeline.",
+      text: "That is the actual argument for treating conferences as a circuit rather than a series of one-off decisions. Run five events a year as five separate projects and the follow-up is improvised five times. Run them as one programme and the capture, the content pipeline and the routing are built once and reused — which is the difference between a six-figure line item and a pipeline.",
     },
     { type: "h2", text: "What to take from this" },
     {

@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: from under $100 for a booth or exhibitor-hall pass to roughly $150 for a business pass, and about $3,500 for a VIP pass, based on the 2026 edition's listing. 2027 prices were not found.",
-    sponsorship:
-      "Not published. The site shows Title, Platinum, Gold, Silver, Stage Partner, Media Partner and Partner tiers but no public rate card.",
     note: "Ticket numbers are from the 2026 edition and may change for the larger 2027 venue.",
   },
   attendees:

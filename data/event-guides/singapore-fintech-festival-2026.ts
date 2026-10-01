@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Published 2026 passes: Delegate SGD 1,500 (group rates from SGD 800 each at 10+), Executive SGD 6,000, Startup SGD 650, MeetUp SGD 380, Livestream SGD 250. Policy, Academic and Trade Visitor passes are listed as complimentary; Media is by application.",
-    sponsorship:
-      "Not published. Sponsorship and exhibition run through a private prospectus with no public rate card. Treat any figure you hear as unverified until you hold the prospectus.",
     note: "Ticket prices are taken from the official registration page and may change before November.",
   },
   attendees:

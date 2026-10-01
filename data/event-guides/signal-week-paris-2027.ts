@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Not published. The Signal Week site routes visitors to a registration link and does not show prices in the pages we could read. Past Paris Blockchain Week editions used tiered, deadline-based pricing, so expect early-bird rates to rise.",
-    sponsorship:
-      "Not published. The site says founding partnership opportunities are open and points to a sponsor page; there is no public rate card.",
     note: "Do not budget from the 2026 edition's numbers until 2027 pricing appears.",
   },
   attendees:

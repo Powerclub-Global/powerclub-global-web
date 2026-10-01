@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Listed on the official site: General Admission $21, Pro Pass $299, Whale Pass $2,999, before fees. The site says prices will rise.",
-    sponsorship:
-      "Not published. Sponsorship is by private prospectus from BTC Inc with no public rate card.",
     note: "Pass prices are from the official site and the Eventbrite listing and may change.",
   },
   attendees:

@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Not published for 2026. The official site currently shows only the 2025 edition.",
-    sponsorship:
-      "Not published. No public rate card; 2025 sponsors are listed on the site but pricing is by private prospectus from Chainlink Labs.",
     note: "No 2026 pricing is available. Check the official site once dates are announced.",
   },
   attendees:

@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate from public reports of the July ticket launch: general admission about US$499 in ETH or US$999 in fiat in the first wave, rising to about US$599 / US$1,199; early bird around US$349; Patron US$1,337. Indian residents, students and Ethereum contributors get large discounts (reports cite as low as US$25 for Indian students). Check devcon.org for current waves.",
-    sponsorship:
-      "Not published. The Ethereum Foundation announcement mentions Supporter spaces and said details would follow; no public rate card was found. Assume private enquiry.",
     note: "Devcon is run by the Ethereum Foundation, not a commercial organiser, so sponsorship is curated and not simply bought.",
   },
   attendees:

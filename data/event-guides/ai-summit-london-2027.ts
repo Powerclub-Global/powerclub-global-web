@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate: about GBP 2,500 to 2,800 plus VAT for a full delegate or solution-provider pass, GBP 749 plus VAT for start-up, academic and government rates, and around GBP 100 plus VAT for a one-day expo-only pass. These figures are from the 2026 edition's pricing page; 2027 pricing is not yet published and the site asks you to register interest.",
-    sponsorship:
-      "Not published. Sponsorship is by private prospectus. The 2026 edition listed IBM, AWS, EY, KPMG, HPE and NICE among its sponsors, which indicates the top tiers are priced for large enterprise budgets.",
     note: "The organiser also sells a solution-provider pass aimed at vendors, with curated one-to-one buyer meetings.",
   },
   attendees:

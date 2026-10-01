@@ -9,8 +9,6 @@ const guide: EventGuide = {
   costs: {
     ticket:
       "Estimate based on the 2026 Miami edition, since 2027 pricing is not on the homepage: Pro pass roughly USD 800 to 1,000, Platinum roughly USD 1,400 to 1,800, with early-bird discounts. Third-party listings disagree, so confirm on the official site.",
-    sponsorship:
-      "Not published. Sponsorship is handled through the organiser's sponsor enquiry process; there is no public rate card.",
     note: "Miami Beach hotel prices during event week are high. Book early.",
   },
   attendees:
