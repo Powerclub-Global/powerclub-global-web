@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/services`, changeFrequency: "monthly", priority: 0.9, lastModified: servicesUpdated },
-    { url: `${BASE}/events`, changeFrequency: "weekly", priority: 0.9, lastModified: eventsUpdated },
+    { url: `${BASE}/conferences`, changeFrequency: "weekly", priority: 0.9, lastModified: eventsUpdated },
     { url: `${BASE}/about`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/sovereign-stack`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/press-kit`, changeFrequency: "monthly", priority: 0.5 },
@@ -44,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
   const eventPages: MetadataRoute.Sitemap = eventsData.events.map((e) => ({
-    url: `${BASE}/events/${e.id}`,
+    url: `${BASE}/conferences/${e.id}`,
     changeFrequency: "weekly",
     priority: 0.6,
     // No per-event updated field exists, and stamping all 87 with the data

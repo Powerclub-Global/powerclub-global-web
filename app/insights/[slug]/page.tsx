@@ -228,7 +228,7 @@ export default async function InsightPage({ params }: PageProps) {
                 {events.map((e) => (
                   <li key={e.id}>
                     <Link
-                      href={`/events/${e.id}`}
+                      href={`/conferences/${e.id}`}
                       className="text-white/75 hover:text-[#ae904c] transition-colors"
                     >
                       {e.name} <span className="text-white/40">· {e.location}</span>

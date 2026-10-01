@@ -10,8 +10,8 @@ export interface ProofCounts {
 // renders elsewhere so the numbers cannot drift from the pages they link to.
 export default function ProofStrip({ tracked, upcoming, writeUps }: ProofCounts) {
   const items = [
-    { value: tracked, label: "conferences tracked across crypto, AI and fintech", href: "/events" },
-    { value: upcoming, label: "on the calendar from here to 2027", href: "/events" },
+    { value: tracked, label: "conferences tracked across crypto, AI and fintech", href: "/conferences" },
+    { value: upcoming, label: "on the calendar from here to 2027", href: "/conferences" },
     { value: writeUps, label: "first-hand write-ups from events we attended", href: "/press" },
   ];
   return (

@@ -23,7 +23,8 @@
         "technology",
         "innovation",
         "consumer electronics"
-      ]
+      ],
+      "category": "technology"
     },
     {
       "id": "wagmi-miami-2025",
@@ -49,7 +50,8 @@
         "crypto",
         "web3",
         "defi"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "crypto-gathering-2025",
@@ -74,7 +76,8 @@
         "crypto",
         "blockchain",
         "investment"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "digital-assets-forum",
@@ -99,6 +102,10 @@
         "institutional",
         "digital assets",
         "finance"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -124,7 +131,8 @@
         "asia",
         "blockchain",
         "finance"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "digital-assets-week-hongkong",
@@ -149,7 +157,8 @@
         "digital assets",
         "asia",
         "defi"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "crypto-expo-europe",
@@ -174,7 +183,8 @@
         "crypto",
         "eastern europe",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "web3-amsterdam",
@@ -199,7 +209,8 @@
         "web3",
         "blockchain",
         "europe"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "next-block-expo",
@@ -224,7 +235,8 @@
         "blockchain",
         "central europe",
         "ethereum"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "dc-blockchain-summit",
@@ -249,7 +261,8 @@
         "policy",
         "regulation",
         "government"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "paris-blockchain-week",
@@ -274,7 +287,8 @@
         "blockchain",
         "europe",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "canada-crypto-week",
@@ -299,7 +313,8 @@
         "canada",
         "crypto",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "blockchain-futurist-toronto",
@@ -324,7 +339,8 @@
         "blockchain",
         "innovation",
         "technology"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "ethwomen",
@@ -349,7 +365,8 @@
         "ethereum",
         "women",
         "diversity"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "consensus-toronto",
@@ -374,7 +391,8 @@
         "blockchain",
         "canada",
         "technology"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "digital-assets-week-ny",
@@ -399,7 +417,8 @@
         "digital assets",
         "institutional",
         "finance"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "bitcoin-2025",
@@ -496,7 +515,8 @@
           "url": "/press/side-events-empowering-industry-game-changers-at-bitcoin-2025-las-vegas",
           "date": "May 2025"
         }
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "icma-conference",
@@ -521,7 +541,9 @@
         "finance",
         "capital markets",
         "banking"
-      ]
+      ],
+      "category": "fintech",
+      "alsoCategories": []
     },
     {
       "id": "crypto-valley-conference",
@@ -546,7 +568,8 @@
         "switzerland",
         "regulation",
         "banking"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "permissionless-iv",
@@ -571,7 +594,8 @@
         "defi",
         "web3",
         "finance"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "ethereum-community-conference",
@@ -596,7 +620,8 @@
         "ethereum",
         "developers",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "rare-evo-2025",
@@ -621,7 +646,8 @@
         "nft",
         "digital art",
         "gaming"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "cbdc-conference",
@@ -646,6 +672,10 @@
         "cbdc",
         "central banks",
         "digital currency"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -671,7 +701,8 @@
         "korea",
         "asia",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "mainnet-2025",
@@ -696,6 +727,10 @@
         "institutional",
         "finance",
         "data"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -721,7 +756,8 @@
         "middle east",
         "blockchain",
         "finance"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "devconnect-buenos-aires-2025",
@@ -742,7 +778,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "bitcoin-mena-2025",
@@ -762,7 +799,8 @@
         "bitcoin",
         "blockchain"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "solana-breakpoint-2025",
@@ -782,7 +820,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "ces-2026",
@@ -801,7 +840,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "technology"
     },
     {
       "id": "wef-davos-2026",
@@ -820,7 +860,11 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "policy",
+      "alsoCategories": [
+        "ai"
+      ]
     },
     {
       "id": "web-summit-qatar-2026",
@@ -840,7 +884,12 @@
         "ai",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "technology",
+      "alsoCategories": [
+        "ai",
+        "blockchain"
+      ]
     },
     {
       "id": "consensus-hong-kong-2026",
@@ -860,7 +909,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "waicf-cannes-2026",
@@ -879,7 +929,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "ethdenver-2026",
@@ -900,7 +951,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "mwc-barcelona-2026",
@@ -919,7 +971,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "technology"
     },
     {
       "id": "nvidia-gtc-2026",
@@ -938,7 +991,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "digital-asset-summit-2026",
@@ -958,7 +1012,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "ethcc-9-cannes-2026",
@@ -979,7 +1034,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "humanx-2026",
@@ -998,7 +1054,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "paris-blockchain-week-2026",
@@ -1018,7 +1075,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "hong-kong-web3-festival-2026",
@@ -1039,7 +1097,11 @@
         "web3",
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain",
+      "alsoCategories": [
+        "ai"
+      ]
     },
     {
       "id": "bitcoin-2026-las-vegas",
@@ -1059,7 +1121,8 @@
         "bitcoin",
         "blockchain"
       ],
-      "attended": true
+      "attended": true,
+      "category": "blockchain"
     },
     {
       "id": "token2049-dubai-2026",
@@ -1072,14 +1135,16 @@
       "location": "Dubai, UAE",
       "url": "https://www.token2049.com/dubai",
       "image": "/events/fetched/token2049-dubai-2026.jpg",
-      "description": "The world's premier crypto event with 15,000+ attendees and 200+ speakers including Pavel Durov, anchoring TOKEN2049 Week (April 27 – May 3) across Dubai.",
+      "description": "TOKEN2049 Dubai was planned for April 29-30, 2026 at Madinat Jumeirah. The organiser postponed it on March 13, 2026 citing regional security conditions, and it moved to April 21-22, 2027. Registered tickets carry forward.",
       "venue": "Madinat Jumeirah",
       "organizer": "TOKEN2049",
       "tags": [
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain",
+      "postponedTo": "2027-04-21"
     },
     {
       "id": "consensus-miami-2026",
@@ -1099,7 +1164,8 @@
         "blockchain",
         "web3"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain"
     },
     {
       "id": "superai-singapore-2026",
@@ -1118,7 +1184,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "vivatech-2026",
@@ -1137,7 +1204,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "technology"
     },
     {
       "id": "ai-engineer-worlds-fair-2026",
@@ -1156,7 +1224,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "mining-disrupt-2026",
@@ -1177,7 +1246,11 @@
         "blockchain",
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "blockchain",
+      "alsoCategories": [
+        "ai"
+      ]
     },
     {
       "id": "ai4-2026",
@@ -1196,7 +1269,8 @@
       "tags": [
         "ai"
       ],
-      "attended": false
+      "attended": false,
+      "category": "ai"
     },
     {
       "id": "bitcoin-asia-2026",
@@ -1259,7 +1333,8 @@
         "VRQQ",
         "X Layer",
         "Yulevo"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "nft-nyc-2026",
@@ -1278,7 +1353,8 @@
       "tags": [
         "web3",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "mainnet-2026",
@@ -1297,7 +1373,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "european-blockchain-convention-2026",
@@ -1316,7 +1393,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "korea-blockchain-week-2026",
@@ -1335,7 +1413,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "token2049-singapore-2026",
@@ -1354,7 +1433,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "world-summit-ai-2026",
@@ -1372,7 +1452,8 @@
       "organizer": "Inspired Minds",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "money2020-usa-2026",
@@ -1391,6 +1472,10 @@
       "tags": [
         "blockchain",
         "ai"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -1409,7 +1494,8 @@
       "organizer": "Agentic AI Foundation (Linux Foundation)",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "smartcon-2026",
@@ -1428,7 +1514,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "hong-kong-fintech-week-2026",
@@ -1447,6 +1534,10 @@
       "tags": [
         "blockchain",
         "ai"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -1467,7 +1558,8 @@
         "ethereum",
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "web-summit-2026",
@@ -1486,6 +1578,10 @@
       "tags": [
         "ai",
         "web3"
+      ],
+      "category": "technology",
+      "alsoCategories": [
+        "ai"
       ]
     },
     {
@@ -1504,7 +1600,8 @@
       "organizer": "Blockworks",
       "tags": [
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "solana-breakpoint-2026",
@@ -1523,7 +1620,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "singapore-fintech-festival-2026",
@@ -1542,6 +1640,10 @@
       "tags": [
         "blockchain",
         "ai"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
+        "blockchain"
       ]
     },
     {
@@ -1562,6 +1664,10 @@
         "blockchain",
         "web3",
         "ai"
+      ],
+      "category": "blockchain",
+      "alsoCategories": [
+        "ai"
       ]
     },
     {
@@ -1580,7 +1686,8 @@
       "organizer": "NeurIPS Foundation",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "bitcoin-mena-2026",
@@ -1599,7 +1706,8 @@
       "tags": [
         "bitcoin",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "gitex-global-2026",
@@ -1616,6 +1724,11 @@
       "venue": "Dubai Exhibition Centre, Expo City",
       "organizer": "Dubai World Trade Centre",
       "tags": [
+        "ai",
+        "blockchain"
+      ],
+      "category": "technology",
+      "alsoCategories": [
         "ai",
         "blockchain"
       ]
@@ -1636,6 +1749,32 @@
       "organizer": "Informa Tech",
       "tags": [
         "ai"
+      ],
+      "category": "ai"
+    },
+    {
+      "id": "g20-miami-2026",
+      "name": "G20 Leaders' Summit 2026 (Miami)",
+      "dates": "December 14–15, 2026",
+      "dateRange": {
+        "start": "2026-12-14",
+        "end": "2026-12-15"
+      },
+      "location": "Doral (Miami), Florida, USA",
+      "url": "https://g20.org",
+      "image": "/events/miami-bfc.png",
+      "description": "The 21st G20 Leaders' Summit, hosted by the United States at Trump National Doral Miami, with business and finance programming around it.",
+      "venue": "Trump National Doral Miami",
+      "organizer": "United States Government (G20 presidency 2026)",
+      "tags": [
+        "g20",
+        "government",
+        "trade"
+      ],
+      "access": "government-accredited",
+      "category": "policy",
+      "alsoCategories": [
+        "fintech"
       ]
     },
     {
@@ -1654,6 +1793,33 @@
       "organizer": "Consumer Technology Association",
       "tags": [
         "ai"
+      ],
+      "category": "technology"
+    },
+    {
+      "id": "wef-davos-2027",
+      "name": "World Economic Forum Annual Meeting 2027",
+      "dates": "January 18–22, 2027",
+      "dateRange": {
+        "start": "2027-01-18",
+        "end": "2027-01-22"
+      },
+      "location": "Davos-Klosters, Switzerland",
+      "url": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2027/",
+      "image": "/events/switzerland.png",
+      "description": "The World Economic Forum's flagship annual gathering of business, government, civil society and media leaders. An independent ecosystem of AI and digital-asset side events runs alongside it on the Davos Promenade.",
+      "venue": "Davos Congress Centre",
+      "organizer": "World Economic Forum",
+      "tags": [
+        "davos",
+        "ai",
+        "digital assets"
+      ],
+      "access": "invitation-only",
+      "category": "policy",
+      "alsoCategories": [
+        "ai",
+        "blockchain"
       ]
     },
     {
@@ -1673,6 +1839,11 @@
       "tags": [
         "ai",
         "web3"
+      ],
+      "category": "technology",
+      "alsoCategories": [
+        "ai",
+        "blockchain"
       ]
     },
     {
@@ -1691,7 +1862,8 @@
       "organizer": "HumanX",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "nvidia-gtc-2027",
@@ -1709,66 +1881,8 @@
       "organizer": "NVIDIA",
       "tags": [
         "ai"
-      ]
-    },
-    {
-      "id": "ethcc-10-2027",
-      "name": "EthCC[10] 2027",
-      "dates": "April 12–15, 2027",
-      "dateRange": {
-        "start": "2027-04-12",
-        "end": "2027-04-15"
-      },
-      "location": "Cannes, France",
-      "url": "https://ethcc.io/",
-      "image": "/events/fetched/ethcc-10-2027.jpg",
-      "description": "The 10th-anniversary edition of the Ethereum Community Conference, Europe's largest Ethereum event, held at the Palais des Festivals through 2028.",
-      "venue": "Palais des Festivals",
-      "organizer": "Ethereum France",
-      "tags": [
-        "ethereum",
-        "blockchain",
-        "web3"
-      ]
-    },
-    {
-      "id": "token2049-dubai-2027",
-      "name": "TOKEN2049 Dubai 2027",
-      "dates": "April 21–22, 2027",
-      "dateRange": {
-        "start": "2027-04-21",
-        "end": "2027-04-22"
-      },
-      "location": "Dubai, UAE",
-      "url": "https://www.token2049.com/dubai",
-      "image": "/events/fetched/token2049-dubai-2027.jpg",
-      "description": "TOKEN2049's Middle East edition, expecting 15,000 attendees from 4,000+ companies; rescheduled from 2026 to April 2027.",
-      "venue": "Madinat Jumeirah",
-      "organizer": "TOKEN2049",
-      "tags": [
-        "blockchain",
-        "web3"
-      ]
-    },
-    {
-      "id": "consensus-miami-2027",
-      "name": "Consensus Miami 2027",
-      "dates": "May 4–6, 2027",
-      "dateRange": {
-        "start": "2027-05-04",
-        "end": "2027-05-06"
-      },
-      "location": "Miami, USA",
-      "url": "https://consensus.coindesk.com/",
-      "image": "/events/fetched/consensus-miami-2027.jpg",
-      "description": "CoinDesk's flagship digital assets, finance, and technology event, returning to Miami after a 15,000-attendee debut in 2026.",
-      "venue": "Miami Beach Convention Center",
-      "organizer": "CoinDesk",
-      "tags": [
-        "blockchain",
-        "bitcoin",
-        "web3"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "intelligence-disrupt-2027",
@@ -1791,7 +1905,11 @@
       ],
       "mediaPartner": true,
       "ticketUrl": "https://intelligencedisrupt.com/?code=PCG",
-      "promoCode": "PCG"
+      "promoCode": "PCG",
+      "category": "ai",
+      "alsoCategories": [
+        "blockchain"
+      ]
     },
     {
       "id": "mining-disrupt-2027",
@@ -1813,7 +1931,95 @@
       ],
       "mediaPartner": true,
       "ticketUrl": "https://miningdisrupt.com/?code=PCG",
-      "promoCode": "PCG"
+      "promoCode": "PCG",
+      "category": "blockchain"
+    },
+    {
+      "id": "dc-blockchain-summit-2027",
+      "name": "DC Blockchain Summit 2027",
+      "dates": "April 6–7, 2027",
+      "dateRange": {
+        "start": "2027-04-06",
+        "end": "2027-04-07"
+      },
+      "location": "Washington, DC",
+      "url": "https://www.dcblockchainsummit.com/",
+      "image": "/events/dc.png",
+      "description": "Washington's long-running blockchain and digital-asset policy summit, bringing lawmakers, regulators and industry into the same room.",
+      "venue": "Washington, DC (venue to be confirmed)",
+      "organizer": "The Digital Chamber",
+      "tags": [
+        "policy",
+        "regulation",
+        "digital assets"
+      ],
+      "access": "open",
+      "category": "blockchain",
+      "alsoCategories": [
+        "policy"
+      ]
+    },
+    {
+      "id": "ethcc-10-2027",
+      "name": "EthCC[10] 2027",
+      "dates": "April 12–15, 2027",
+      "dateRange": {
+        "start": "2027-04-12",
+        "end": "2027-04-15"
+      },
+      "location": "Cannes, France",
+      "url": "https://ethcc.io/",
+      "image": "/events/fetched/ethcc-10-2027.jpg",
+      "description": "The 10th-anniversary edition of the Ethereum Community Conference, Europe's largest Ethereum event, held at the Palais des Festivals through 2028.",
+      "venue": "Palais des Festivals",
+      "organizer": "Ethereum France",
+      "tags": [
+        "ethereum",
+        "blockchain",
+        "web3"
+      ],
+      "category": "blockchain"
+    },
+    {
+      "id": "token2049-dubai-2027",
+      "name": "TOKEN2049 Dubai 2027",
+      "dates": "April 21–22, 2027",
+      "dateRange": {
+        "start": "2027-04-21",
+        "end": "2027-04-22"
+      },
+      "location": "Dubai, UAE",
+      "url": "https://www.token2049.com/dubai",
+      "image": "/events/fetched/token2049-dubai-2027.jpg",
+      "description": "TOKEN2049's Middle East edition, expecting 15,000 attendees from 4,000+ companies; rescheduled from 2026 to April 2027.",
+      "venue": "Madinat Jumeirah",
+      "organizer": "TOKEN2049",
+      "tags": [
+        "blockchain",
+        "web3"
+      ],
+      "category": "blockchain"
+    },
+    {
+      "id": "consensus-miami-2027",
+      "name": "Consensus Miami 2027",
+      "dates": "May 4–6, 2027",
+      "dateRange": {
+        "start": "2027-05-04",
+        "end": "2027-05-06"
+      },
+      "location": "Miami, USA",
+      "url": "https://consensus.coindesk.com/",
+      "image": "/events/fetched/consensus-miami-2027.jpg",
+      "description": "CoinDesk's flagship digital assets, finance, and technology event, returning to Miami after a 15,000-attendee debut in 2026.",
+      "venue": "Miami Beach Convention Center",
+      "organizer": "CoinDesk",
+      "tags": [
+        "blockchain",
+        "bitcoin",
+        "web3"
+      ],
+      "category": "blockchain"
     },
     {
       "id": "agent-conference-2027",
@@ -1831,7 +2037,8 @@
       "organizer": "Agent Conference",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "ai-summit-london-2027",
@@ -1849,7 +2056,8 @@
       "organizer": "Informa Tech",
       "tags": [
         "ai"
-      ]
+      ],
+      "category": "ai"
     },
     {
       "id": "signal-week-paris-2027",
@@ -1868,7 +2076,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "bitcoin-2027",
@@ -1887,7 +2096,8 @@
       "tags": [
         "bitcoin",
         "blockchain"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "webx-tokyo-2027",
@@ -1906,7 +2116,8 @@
       "tags": [
         "blockchain",
         "web3"
-      ]
+      ],
+      "category": "blockchain"
     },
     {
       "id": "superai-singapore-2027",
@@ -1924,6 +2135,33 @@
       "organizer": "SuperAI",
       "tags": [
         "ai"
+      ],
+      "category": "ai"
+    },
+    {
+      "id": "unga82-high-level-week-2027",
+      "name": "UN General Assembly High-Level Week 2027 (UNGA82)",
+      "dates": "September 21–27, 2027",
+      "dateRange": {
+        "start": "2027-09-21",
+        "end": "2027-09-27"
+      },
+      "location": "New York City, USA",
+      "url": "https://gadebate.un.org/en",
+      "image": "/events/ny.png",
+      "description": "The annual high-level week of the UN General Assembly, with a wide ring of independent side events on AI, digital assets and fintech. Dates are provisional until the UN publishes its 2027 schedule.",
+      "venue": "United Nations Headquarters",
+      "organizer": "United Nations",
+      "tags": [
+        "un",
+        "government",
+        "diplomacy"
+      ],
+      "access": "government-accredited",
+      "category": "policy",
+      "alsoCategories": [
+        "ai",
+        "fintech"
       ]
     },
     {
@@ -1942,6 +2180,10 @@
       "organizer": "Money20/20 (Ascential)",
       "tags": [
         "fintech",
+        "ai"
+      ],
+      "category": "fintech",
+      "alsoCategories": [
         "ai"
       ]
     }

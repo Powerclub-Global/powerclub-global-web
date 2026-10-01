@@ -38,7 +38,7 @@ export async function generateMetadata({
   return pageMetadata({
     title: event.name,
     description: event.description,
-    path: `/events/${event.id}`,
+    path: `/conferences/${event.id}`,
     image: event.image,
   });
 }
@@ -66,7 +66,7 @@ export default async function EventDetailPage({ params }: PageProps) {
         },
         // `url` must point at this page — the organiser link lives in
         // `offers.url`, which is what Google surfaces as the ticket link.
-        url: `https://powerclubglobal.com/events/${event.id}`,
+        url: `https://powerclubglobal.com/conferences/${event.id}`,
         ...(event.image
           ? { image: [`https://powerclubglobal.com${event.image}`] }
           : {}),

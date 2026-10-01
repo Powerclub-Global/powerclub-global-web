@@ -14,7 +14,13 @@ const nextConfig: NextConfig = {
       destination: "/services",
       permanent: true,
     }));
-    return retired;
+    // Events became Conferences. Single-segment ids only, so static files under
+    // /events/ (images, including /events/fetched/...) keep resolving.
+    return [
+      ...retired,
+      { source: "/events", destination: "/conferences", permanent: true },
+      { source: "/events/:id([a-z0-9-]+)", destination: "/conferences/:id", permanent: true },
+    ];
   },
 
   async headers() {

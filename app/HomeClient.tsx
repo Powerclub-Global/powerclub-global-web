@@ -67,7 +67,7 @@ export default function Home({ proof }: { proof: ProofCounts }) {
                 {BOOK_LABEL}
               </Link>
               <Link
-                href="/events"
+                href="/conferences"
                 onClick={() => track("cta_click", { cta: "hero_events", page: "/" })}
                 className="px-6 md:px-10 py-3 md:py-4 border border-[#ae904c]/40 text-[#ae904c] rounded-lg
                 hover:bg-[#ae904c]/10 transition-colors duration-300

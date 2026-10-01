@@ -15,6 +15,7 @@ import {
 import Navbar from "@/components/Navbar";
 import eventsData from "@/data/events.json";
 import InlineCTA from "@/components/InlineCTA";
+import { CATEGORY_LABELS, type EventCategory } from "@/types/events";
 import Footer from "@/components/Footer";
 import DarkGridBackground from "@/components/DarkGridBackground3";
 import DateRangePicker from "@/components/ui/DateRangePicker";
@@ -63,7 +64,7 @@ const FeaturedEventCard = ({ event }: EventCardProps) => (
 
         <div className="mt-auto flex gap-4">
           <Link
-            href={`/events/${event.id}`}
+            href={`/conferences/${event.id}`}
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ae904c] text-black font-semibold
                      hover:bg-[#ae904c]/90 transition-colors duration-300"
           >
@@ -118,7 +119,7 @@ const SmallEventCard = ({ event }: EventCardProps) => (
       </div>
 
       <Link
-        href={`/events/${event.id}`}
+        href={`/conferences/${event.id}`}
         className="flex items-center justify-center gap-2 w-full px-3 py-1.5 rounded-lg 
                    bg-[#ae904c]/10 border border-[#ae904c]/30 text-[#ae904c] text-sm
                    hover:bg-[#ae904c]/20 transition-all duration-300"
@@ -214,9 +215,12 @@ const LocationFilter = ({
   );
 };
 
+const CATEGORY_ORDER: EventCategory[] = ["blockchain", "ai", "fintech", "technology", "policy"];
+
 function EventsPageContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState<EventCategory | "all">("all");
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
 
@@ -278,7 +282,12 @@ function EventsPageContent() {
       return true;
     })();
 
-    return matchesSearch && matchesLocation && matchesDateRange;
+    const matchesCategory =
+      selectedCategory === "all" ||
+      event.category === selectedCategory ||
+      (event.alsoCategories ?? []).includes(selectedCategory);
+
+    return matchesSearch && matchesLocation && matchesDateRange && matchesCategory;
   });
 
   // Separate filtered events into upcoming and past
@@ -323,19 +332,44 @@ function EventsPageContent() {
                 transition={{ delay: 0.2 }}
                 className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto"
               >
-                Join us at these blockchain and technology conferences around
-                the world
+                The blockchain, AI and fintech conferences we track and cover
+                around the world, plus the government summits we follow
               </motion.p>
             </div>
 
             {/* Filters */}
             <div className="max-w-6xl mx-auto mb-12">
+              <div className="flex flex-wrap gap-2 mb-4" role="group" aria-label="Filter by category">
+                {(["all", ...CATEGORY_ORDER] as const).map((c) => {
+                  const active = selectedCategory === c;
+                  return (
+                    <button
+                      key={c}
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => setSelectedCategory(c)}
+                      className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                        active
+                          ? "bg-[#ae904c] text-black border-[#ae904c] font-semibold"
+                          : "border-white/15 text-white/70 hover:border-[#ae904c]/50"
+                      }`}
+                    >
+                      {c === "all" ? "All" : CATEGORY_LABELS[c]}
+                    </button>
+                  );
+                })}
+              </div>
+              {selectedCategory === "policy" && (
+                <p className="text-white/50 text-sm mb-4 max-w-2xl">
+                  Government and institutional functions we would seek press accreditation for. Access is by invitation or accreditation, not an open ticket.
+                </p>
+              )}
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-1">
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
                   <input
                     type="text"
-                    placeholder="Search events..."
+                    placeholder="Search conferences..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 rounded-lg bg-white/5 border border-white/10 

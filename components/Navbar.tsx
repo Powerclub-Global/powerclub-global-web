@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { text: "ABOUT", href: "/about" },
-    { text: "EVENTS", href: "/events" },
+    { text: "CONFERENCES", href: "/conferences" },
     { text: "SERVICES", href: "/services" },
     { text: "PRESS RELEASES", href: "/press" },
     { text: "TEXT THEODORE", href: "#", isContact: true },

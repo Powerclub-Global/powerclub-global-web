@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
             {[
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
-              { href: "/events", label: "Conferences" },
+              { href: "/conferences", label: "Conferences" },
               { href: "/press", label: "Press" },
               { href: "/insights", label: "Insights" },
               { href: BOOK_HREF, label: BOOK_LABEL },

@@ -109,7 +109,7 @@ const EventCard = ({ event, index }: { event: Event; index: number }) => {
               </Link>
             )}
             <Link
-              href={`/events/${event.id}`}
+              href={`/conferences/${event.id}`}
               className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
                                rounded-md sm:rounded-lg border border-[#ae904c]/30 bg-transparent text-xs sm:text-base 
                                text-[#ae904c] w-full sm:w-auto transition-colors duration-300 
@@ -257,7 +257,7 @@ const downloadIcs = (event: Event) => {
     `DTEND;VALUE=DATE:${d(endExclusive.toISOString().slice(0, 10))}`,
     `SUMMARY:${event.name}`,
     `LOCATION:${(event.venue ? `${event.venue}, ` : "") + event.location}`,
-    `URL:https://powerclubglobal.com/events/${event.id}`,
+    `URL:https://powerclubglobal.com/conferences/${event.id}`,
     "END:VEVENT",
     "END:VCALENDAR",
   ];
@@ -287,12 +287,13 @@ export default function EventDetailClient({
 
   const past = isPastEvent(event);
   const eventCtx = { event: event.id, name: event.name };
+  const gov = event.category === "policy";
   const talkHref = withContext(BOOK_HREF, {
     ...eventCtx,
-    interest: past ? "next-edition" : "sponsor",
+    interest: gov ? "media" : past ? "next-edition" : "sponsor",
   });
   const share = async () => {
-    const url = `https://powerclubglobal.com/events/${event.id}`;
+    const url = `https://powerclubglobal.com/conferences/${event.id}`;
     try {
       if (navigator.share) await navigator.share({ title: event.name, url });
       else await navigator.clipboard.writeText(url);
@@ -324,12 +325,12 @@ export default function EventDetailClient({
 
           {/* Back Button */}
           <Link
-            href="/events"
+            href="/conferences"
             className="absolute top-8 left-8 flex items-center gap-2 text-white/90 hover:text-white 
                  transition-colors duration-300"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Events
+            Back to Conferences
           </Link>
         </div>
 
@@ -409,14 +410,14 @@ export default function EventDetailClient({
                     the visitor to the organiser instead. */}
                 <Link
                   href={talkHref}
-                  onClick={() => track("cta_click", { cta: past ? "event_next_edition" : "event_talk", page: `/events/${event.id}` })}
+                  onClick={() => track("cta_click", { cta: past ? "event_next_edition" : "event_talk", page: `/conferences/${event.id}` })}
                   className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black
                          font-semibold hover:bg-[#c9a95e] transition-colors duration-300"
                 >
                   {past ? "Plan the next edition" : `Talk to PCG about ${event.name}`}{" "}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                {event.url && !past && (
+                {event.url && !past && !gov && (
                   <a
                     href={event.url}
                     target="_blank"
@@ -470,6 +471,35 @@ export default function EventDetailClient({
                   className="bg-gradient-to-br from-[#ae904c]/15 to-black/40 border border-[#ae904c]/40
                          backdrop-blur-sm rounded-xl p-8"
                 >
+                  {gov ? (
+                    <>
+                      <h2 className="text-xl font-semibold text-[#ae904c] mb-4">
+                        Following {event.name}
+                      </h2>
+                      <p className="text-white/70 leading-relaxed mb-4">
+                        This is a government or institutional function, not an
+                        open ticketed conference. Access is by invitation or
+                        official accreditation. PCG follows it as part of the
+                        circuit, and the side events around it are where
+                        digital-asset, AI and fintech companies do most of their
+                        work.
+                      </p>
+                      <ul className="text-white/70 text-sm space-y-2 mb-6">
+                        <li>— What to watch and which side events matter for your sector</li>
+                        <li>— How companies get in the room, and what is realistic</li>
+                        <li>— Coverage and content from the surrounding week</li>
+                      </ul>
+                      <Link
+                        href={talkHref}
+                        onClick={() => track("cta_click", { cta: "event_block_gov", page: `/conferences/${event.id}` })}
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black font-semibold
+                               hover:bg-[#c9a95e] transition-colors duration-300"
+                      >
+                        Ask PCG about {event.name} <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </>
+                  ) : (
+                    <>
                   <h2 className="text-xl font-semibold text-[#ae904c] mb-4">
                     {past
                       ? `Planning for the next edition of ${event.name}?`
@@ -490,7 +520,7 @@ export default function EventDetailClient({
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={talkHref}
-                      onClick={() => track("cta_click", { cta: past ? "event_block_next_edition" : "event_block_sponsor", page: `/events/${event.id}` })}
+                      onClick={() => track("cta_click", { cta: past ? "event_block_next_edition" : "event_block_sponsor", page: `/conferences/${event.id}` })}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ae904c] text-black font-semibold
                              hover:bg-[#c9a95e] transition-colors duration-300"
                     >
@@ -508,6 +538,8 @@ export default function EventDetailClient({
                       </a>
                     )}
                   </div>
+                    </>
+                  )}
                 </motion.div>
 
                 {/* PCG Coverage — articles */}
@@ -727,7 +759,7 @@ export default function EventDetailClient({
                 Discover more blockchain and technology events
               </p>
               <Link
-                href="/events"
+                href="/conferences"
                 className="inline-flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full 
                            bg-[#ae904c]/10 hover:bg-[#ae904c]/20 border border-[#ae904c]/20 
                            hover:border-[#ae904c]/40 transition-colors duration-300"

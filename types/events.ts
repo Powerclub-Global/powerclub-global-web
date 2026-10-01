@@ -22,6 +22,16 @@ export interface Speaker {
   image: string;
 }
 
+export type EventCategory = "blockchain" | "ai" | "fintech" | "technology" | "policy";
+
+export const CATEGORY_LABELS: Record<EventCategory, string> = {
+  blockchain: "Blockchain & Digital Assets",
+  ai: "AI",
+  fintech: "Fintech & Payments",
+  technology: "Technology",
+  policy: "Government & Institutional",
+};
+
 export interface Event {
   id: string;
   name: string;
@@ -37,6 +47,12 @@ export interface Event {
   schedule?: EventDay[];
   sponsors?: string[];
   tags?: string[];
+  /** Primary category: drives the filter and the grouping on /conferences. */
+  category?: EventCategory;
+  /** Other categories this event also belongs to; it shows under these filters too. */
+  alsoCategories?: EventCategory[];
+  /** How access works. Only set where it is not an ordinary ticketed conference. */
+  access?: "open" | "invitation-only" | "government-accredited";
   capacity?: number;
   registrationDeadline?: string;
   dateRange?: {
@@ -49,6 +65,7 @@ export interface Event {
   clips?: EventClip[];
   ticketUrl?: string;   // affiliate/partner ticket link (falls back to url)
   promoCode?: string;   // PCG discount code for this event
+  postponedTo?: string; // ISO date the event moved to; marks the listed dates as not held
   mediaPartner?: boolean; // true once PCG holds credentials/partnership
 }
 

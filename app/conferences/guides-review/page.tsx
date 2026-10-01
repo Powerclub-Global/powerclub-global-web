@@ -47,7 +47,7 @@ export default function GuidesReviewPage() {
               <div key={g.eventId} id={g.eventId}>
                 <p className="text-xs text-white/40 mb-2">
                   {g.status.toUpperCase()} · {ev.dates} · {ev.location} ·{" "}
-                  <Link href={`/events/${ev.id}`} className="underline hover:text-[#ae904c]">
+                  <Link href={`/conferences/${ev.id}`} className="underline hover:text-[#ae904c]">
                     event page
                   </Link>
                 </p>

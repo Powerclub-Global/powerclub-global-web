@@ -105,7 +105,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
               </Link>
             )}
             <Link
-              href={`/events/${event.id}`}
+              href={`/conferences/${event.id}`}
               className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 
                        rounded-md sm:rounded-lg border border-[#ae904c]/30 text-xs sm:text-base 
                        text-[#ae904c] w-full sm:w-auto transition-colors duration-300 
@@ -173,7 +173,7 @@ const EventsSection: React.FC = () => {
   // Filter out past events
   const currentDate = new Date();
 
-  const upcomingEvents = eventsData.events.filter((event) => {
+  const upcomingEvents = (eventsData.events as Event[]).filter((event) => {
     // Check if the event has dateRange property
     if (event.dateRange && event.dateRange.end) {
       const eventEndDate = new Date(event.dateRange.end);
@@ -265,7 +265,7 @@ const EventsSection: React.FC = () => {
             around the world
           </p>
           <Link
-            href="/events"
+            href="/conferences"
             className="inline-flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full 
            bg-[#ae904c]/10 hover:bg-[#ae904c]/20 border border-[#ae904c]/20 
            hover:border-[#ae904c]/40 transition-colors duration-300"
