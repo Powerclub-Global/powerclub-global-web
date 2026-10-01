@@ -14,15 +14,7 @@ const nextConfig: NextConfig = {
       destination: "/services",
       permanent: true,
     }));
-    // One booking page: the discovery-call questionnaire now lives on /schedule-call.
-    return [
-      ...retired,
-      {
-        source: "/discovery-call",
-        destination: "/schedule-call?topic=Conference%20sponsorship%20or%20activation",
-        permanent: true,
-      },
-    ];
+    return retired;
   },
 
   async headers() {
