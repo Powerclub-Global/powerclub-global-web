@@ -4,6 +4,7 @@ import yearCost from "./what-a-year-on-the-circuit-costs";
 import worthIt from "./which-conferences-are-worth-it-2027";
 import speakingSlot from "./how-to-get-a-founder-a-speaking-slot";
 import boothVsSide from "./booth-vs-side-event-vs-speaking";
+import singaporeSide from "./token2049-singapore-side-events-worth-your-week";
 
 /** One file per article; list them here, newest first. */
-export const insights: Insight[] = [the30Days, yearCost, worthIt, speakingSlot, boothVsSide];
+export const insights: Insight[] = [singaporeSide, the30Days, yearCost, worthIt, speakingSlot, boothVsSide];
