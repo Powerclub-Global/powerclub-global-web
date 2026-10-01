@@ -1789,7 +1789,9 @@
         "blockchain",
         "web3"
       ],
-      "mediaPartner": true
+      "mediaPartner": true,
+      "ticketUrl": "https://intelligencedisrupt.com/?code=PCG",
+      "promoCode": "PCG"
     },
     {
       "id": "mining-disrupt-2027",
@@ -1809,7 +1811,9 @@
         "bitcoin",
         "blockchain"
       ],
-      "mediaPartner": true
+      "mediaPartner": true,
+      "ticketUrl": "https://miningdisrupt.com/?code=PCG",
+      "promoCode": "PCG"
     },
     {
       "id": "agent-conference-2027",

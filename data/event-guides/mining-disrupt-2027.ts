@@ -8,7 +8,7 @@ const guide: EventGuide = {
     "Mining Disrupt is the focused Bitcoin mining expo, and it is worth it for hardware, hosting, power, cooling and financing businesses that sell to miners. Skip it if mining is not your customer, or if you want the broad investor and policy mix of the large crypto conferences.",
   costs: {
     ticket:
-      "Not published on the official site. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and all sales are final.",
+      "Not published on the official site. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and all sales are final. Use code PCG at checkout.",
     sponsorship:
       "Not published. The site says about 200 booths across tier packages; request the prospectus for pricing.",
     note: "Mining Disrupt and Intelligence Disrupt run together on March 22\u201324, 2027 at the Irving Convention Center at Las Colinas. See the Intelligence Disrupt guide for the official package prices.",

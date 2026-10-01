@@ -8,7 +8,7 @@ const guide: EventGuide = {
     "Intelligence Disrupt is a niche, deal-oriented expo at the point where Bitcoin mining and AI compute infrastructure overlap. It is worth it for power, land, cooling, GPU and hosting businesses looking for each other. Skip it if you want a general crypto audience or a policy and research conference.",
   costs: {
     ticket:
-      "Not published on the official site, which lists three access levels without prices. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and non-refundable. Ask PCG about a ticket code.",
+      "Not published on the official site, which lists three access levels without prices. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and non-refundable. Use code PCG at checkout.",
     sponsorship:
       "From the organiser's official exhibitor guide: Disruptor about $2,500, Core $12,500, Premier $25,000, Flagship $50,000, Title $100,000, plus one invitation-only Powered By tier. Packages without a booth are half price. The Mobile Data Center Showcase is $1,000 per linear foot and needs a package. Add-ons such as the pre-party ($50,000), after-party ($40,000), private dinners ($30,000) and badge and lanyard ($25,000) are each sold to one company.",
     note: "Prices are from the organiser's exhibitor guide for the March 2027 show. Confirm against the current prospectus before budgeting.",
