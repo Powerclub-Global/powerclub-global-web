@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import eventsData from "@/data/events.json";
 import type { Event } from "@/types/events";
 import EventDetailClient from "./EventDetailClient";
+import { getEventGuide } from "@/data/event-guides";
 
 interface PageProps {
   params: Promise<{ selectedEvent: string }>;
@@ -120,7 +121,14 @@ export default async function EventDetailPage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <EventDetailClient event={event ?? null} otherEvents={otherEvents} />
+      <EventDetailClient
+        event={event ?? null}
+        otherEvents={otherEvents}
+        guide={(() => {
+          const g = event ? getEventGuide(event.id) : undefined;
+          return g?.status === "published" ? g : undefined;
+        })()}
+      />
     </>
   );
 }

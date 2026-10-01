@@ -1773,16 +1773,16 @@
     {
       "id": "intelligence-disrupt-2027",
       "name": "Intelligence Disrupt 2027",
-      "dates": "May 11–13, 2027",
+      "dates": "March 22–24, 2027",
       "dateRange": {
-        "start": "2027-05-11",
-        "end": "2027-05-13"
+        "start": "2027-03-22",
+        "end": "2027-03-24"
       },
-      "location": "Dallas, USA",
+      "location": "Irving, USA",
       "url": "https://intelligencedisrupt.com/",
       "image": "/events/fetched/intelligence-disrupt-2027.jpg",
       "description": "The decentralized-AI conference: a live GPU 'Cluster Floor' expo, the Node Zero hackathon, and dedicated infrastructure, builders, and mainstage tracks.",
-      "venue": "Kay Bailey Hutchison Convention Center",
+      "venue": "Irving Convention Center at Las Colinas",
       "organizer": "Intelligence Disrupt",
       "tags": [
         "ai",
@@ -1793,16 +1793,16 @@
     {
       "id": "mining-disrupt-2027",
       "name": "Mining Disrupt 2027",
-      "dates": "May 11–13, 2027",
+      "dates": "March 22–24, 2027",
       "dateRange": {
-        "start": "2027-05-11",
-        "end": "2027-05-13"
+        "start": "2027-03-22",
+        "end": "2027-03-24"
       },
-      "location": "Dallas, USA",
+      "location": "Irving, USA",
       "url": "https://miningdisrupt.com/",
       "image": "/events/fetched/mining-disrupt-2027.jpg",
       "description": "The world's largest Bitcoin mining expo, the central hub for education, collaboration, and commerce in the global mining industry since 2019.",
-      "venue": "Dallas, TX",
+      "venue": "Irving Convention Center at Las Colinas",
       "organizer": "Mining Disrupt",
       "tags": [
         "bitcoin",

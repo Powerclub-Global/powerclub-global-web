@@ -26,7 +26,11 @@ import Navbar from "@/components/Navbar";
 import { BOOK_HREF, withContext } from "@/lib/booking";
 import { track } from "@/lib/gtag";
 
+import EventGuideBlock from "@/components/EventGuide";
+import type { EventGuide } from "@/types/eventGuides";
+
 interface EventDetailClientProps {
+  guide?: EventGuide;
   /** Resolved on the server so the page renders in HTML rather than a
    * loading skeleton — these pages are the site's main organic entry point. */
   event: Event | null;
@@ -268,6 +272,7 @@ const downloadIcs = (event: Event) => {
 export default function EventDetailClient({
   event,
   otherEvents,
+  guide,
 }: EventDetailClientProps) {
   // Doubled so the marquee can scroll continuously without a visible seam.
   const marqueeEvents = [...otherEvents, ...otherEvents];
@@ -454,6 +459,8 @@ export default function EventDetailClient({
                     {event.description}
                   </p>
                 </motion.div>
+
+                {guide && <EventGuideBlock guide={guide} eventName={event.name} />}
 
                 {/* PCG at this event */}
                 <motion.div
