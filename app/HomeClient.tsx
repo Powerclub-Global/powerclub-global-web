@@ -13,17 +13,20 @@ import EventSection from "@/components/EventSection";
 import DarkGridBackground3 from "@/components/DarkGridBackground3";
 import Link from "next/link";
 import InlineCTA from "@/components/InlineCTA";
-import ProofStrip, { type ProofCounts } from "@/components/ProofStrip";
 import { BOOK_HREF, BOOK_LABEL } from "@/lib/booking";
 import { track } from "@/lib/gtag";
 
-export default function Home({ proof }: { proof: ProofCounts }) {
+export default function Home() {
   return (
     <main className="relative">
       <Navbar />
       <DarkGridBackground>
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center min-h-screen max-w-5xl mx-auto text-center -mt-10">
+          {/* The logo marquee below is pulled up by 8rem (10rem from md) into
+              the bottom of this block. The bottom padding reserves that space
+              plus a gap, so the buttons can never run into the logos, however
+              short the screen. The block grows with its content (min-h, not h). */}
+          <div className="flex flex-col items-center justify-center min-h-screen max-w-5xl mx-auto text-center pt-28 md:pt-32 pb-44 md:pb-56">
             <img
               className="w-24 h-24 md:w-40 md:h-40 rounded-full mx-auto mb-4"
               src="/logo.webp"
@@ -81,8 +84,6 @@ export default function Home({ proof }: { proof: ProofCounts }) {
       </DarkGridBackground>
 
       <Partners />
-
-      {proof.writeUps > 0 && <ProofStrip {...proof} />}
 
       <VideoSection />
 

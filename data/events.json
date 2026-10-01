@@ -1762,7 +1762,7 @@
       },
       "location": "Doral (Miami), Florida, USA",
       "url": "https://g20.org",
-      "image": "/events/miami-bfc.png",
+      "image": "/events/fetched/g20-miami-2026.jpg",
       "description": "The 21st G20 Leaders' Summit, hosted by the United States at Trump National Doral Miami, with business and finance programming around it.",
       "venue": "Trump National Doral Miami",
       "organizer": "United States Government (G20 presidency 2026)",
@@ -1806,7 +1806,7 @@
       },
       "location": "Davos-Klosters, Switzerland",
       "url": "https://www.weforum.org/events/world-economic-forum-annual-meeting-2027/",
-      "image": "/events/switzerland.png",
+      "image": "/events/fetched/wef-davos-2027.jpg",
       "description": "The World Economic Forum's flagship annual gathering of business, government, civil society and media leaders. An independent ecosystem of AI and digital-asset side events runs alongside it on the Davos Promenade.",
       "venue": "Davos Congress Centre",
       "organizer": "World Economic Forum",
@@ -1944,7 +1944,7 @@
       },
       "location": "Washington, DC",
       "url": "https://www.dcblockchainsummit.com/",
-      "image": "/events/dc.png",
+      "image": "/events/fetched/dc-blockchain-summit-2027.jpg",
       "description": "Washington's long-running blockchain and digital-asset policy summit, bringing lawmakers, regulators and industry into the same room.",
       "venue": "Washington, DC (venue to be confirmed)",
       "organizer": "The Digital Chamber",
@@ -1955,9 +1955,7 @@
       ],
       "access": "open",
       "category": "blockchain",
-      "alsoCategories": [
-        "policy"
-      ]
+      "alsoCategories": []
     },
     {
       "id": "ethcc-10-2027",
@@ -2148,7 +2146,7 @@
       },
       "location": "New York City, USA",
       "url": "https://gadebate.un.org/en",
-      "image": "/events/ny.png",
+      "image": "/events/fetched/unga82-high-level-week-2027.jpg",
       "description": "The annual high-level week of the UN General Assembly, with a wide ring of independent side events on AI, digital assets and fintech. Dates are provisional until the UN publishes its 2027 schedule.",
       "venue": "United Nations Headquarters",
       "organizer": "United Nations",

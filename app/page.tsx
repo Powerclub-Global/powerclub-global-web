@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import HomeClient from "./HomeClient";
-import eventsData from "@/data/events.json";
-import type { Event } from "@/types/events";
-import { getPressReleases } from "@/lib/press";
 
 export const metadata: Metadata = pageMetadata({
   title: "Conference Impact & Momentum Infrastructure",
@@ -14,17 +11,6 @@ export const metadata: Metadata = pageMetadata({
     "PCG creates your conference moment — then builds the machine that captures it.",
 });
 
-export default async function Home() {
-  const events = Object.values(eventsData)[0] as Event[];
-  const today = new Date().toISOString().slice(0, 10);
-  const releases = await getPressReleases().catch(() => []);
-  return (
-    <HomeClient
-      proof={{
-        tracked: events.length,
-        upcoming: events.filter((e) => (e.dateRange?.start ?? "") >= today).length,
-        writeUps: releases.length,
-      }}
-    />
-  );
+export default function Home() {
+  return <HomeClient />;
 }
