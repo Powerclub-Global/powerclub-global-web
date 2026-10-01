@@ -79,7 +79,7 @@ export default async function EventDetailPage({ params }: PageProps) {
           ? { offers: { "@type": "Offer", url: event.url, availability: "https://schema.org/InStock" } }
           : {}),
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-        eventStatus: "https://schema.org/EventScheduled",
+        eventStatus: event.postponedTo ? "https://schema.org/EventPostponed" : "https://schema.org/EventScheduled",
       }
     : null;
 
