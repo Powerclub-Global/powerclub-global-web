@@ -10,7 +10,7 @@ const guide: EventGuide = {
     ticket:
       "Published early-bird prices: Standard $189, Business $329, VIP $999. Regular prices listed by the ticket seller are about $349, $729 and $1,999. Business and VIP include lunch and session recordings; VIP adds lounge access and the afterparty.",
     sponsorship:
-      "Partly published through resellers: a General sponsor package is quoted at roughly $190,000 for a 60 m2 stand, with smaller booths and branding packages (afterparty, VIP lounge, registration) available. No official rate card is public, so treat these as estimates.",
+      "No official rate card is published. Stands and sponsor packages (including afterparty, VIP lounge and registration branding) are sold by enquiry. PCG shares current pricing and what each package includes on a call.",
     note: "Prices come from the official site and a third-party ticket page; verify before budgeting.",
   },
   attendees:
