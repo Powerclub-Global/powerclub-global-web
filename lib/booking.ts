@@ -83,11 +83,11 @@ export function smsHref(context?: string): string {
 }
 
 /** Where "Book a Call" goes from each service page, with its topic pre-set.
- * Roadshow management has its own, conference-scoped questionnaire. */
+ * The conference questionnaire appears on /schedule-call for the sponsorship topic. */
 export function serviceBookingHref(serviceId: string): string {
   switch (serviceId) {
     case "roadshow-management":
-      return "/discovery-call";
+      return withContext(BOOK_HREF, { topic: TOPICS[0] });
     case "press-relations":
       return withContext(BOOK_HREF, { topic: TOPICS[1] });
     case "influencer-relations":

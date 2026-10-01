@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { CalendarClock, CheckCircle, Loader, Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -54,6 +53,16 @@ export default function ScheduleCallClient() {
   const [topic, setTopic] = useState<string>(TOPICS[0]);
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  // Optional conference questionnaire (formerly /discovery-call), shown for the
+  // sponsorship/activation topic. Same booking API, so nothing else changes.
+  const [q, setQ] = useState({
+    conferencesSponsoredPerYear: "",
+    hostsOwnEvents: "",
+    investingInContentForEvent: "",
+    currentCoverageProvider: "",
+    timelineUrgency: "",
+    relatedConferenceName: "",
+  });
 
   // Carry over what the visitor was looking at: /schedule-call?event=&name=&interest=&topic=
   useEffect(() => {
@@ -61,6 +70,8 @@ export default function ScheduleCallClient() {
     if (t) setTopic(t);
     const sentence = intentSentence(params.get("name"), params.get("interest"));
     if (sentence) setMessage((m) => m || sentence);
+    const conf = params.get("name");
+    if (conf) setQ((v) => ({ ...v, relatedConferenceName: v.relatedConferenceName || conf }));
   }, [params]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -94,6 +105,8 @@ export default function ScheduleCallClient() {
     return [...groups.entries()];
   }, [availability]);
 
+  const showConferenceQs = topic === TOPICS[0];
+
   const canSubmit =
     name.trim().length > 1 &&
     email.includes("@") &&
@@ -123,6 +136,16 @@ export default function ScheduleCallClient() {
             requesterPhone: phone.trim() || undefined,
             scheduledAt: selected.startAt,
             goalsForConference: notes,
+            ...(showConferenceQs
+              ? {
+                  conferencesSponsoredPerYear: q.conferencesSponsoredPerYear || undefined,
+                  hostsOwnEvents: q.hostsOwnEvents || undefined,
+                  investingInContentForEvent: q.investingInContentForEvent || undefined,
+                  currentCoverageProvider: q.currentCoverageProvider.trim() || undefined,
+                  timelineUrgency: q.timelineUrgency || undefined,
+                  relatedConferenceName: q.relatedConferenceName.trim() || undefined,
+                }
+              : {}),
             websiteUrl: honeypot || undefined,
           }),
         });
@@ -145,7 +168,9 @@ export default function ScheduleCallClient() {
             company: company.trim() || undefined,
             phone: phone.trim() || undefined,
             subject: `Call request — ${topic}`,
-            message: notes,
+            message: showConferenceQs && q.relatedConferenceName.trim()
+              ? `${notes}\n\nConference: ${q.relatedConferenceName.trim()}`
+              : notes,
             funnel: "schedule-call",
             sourcePage: "/schedule-call",
           }),
@@ -195,12 +220,9 @@ export default function ScheduleCallClient() {
                 </p>
                 <h1 className="text-4xl sm:text-5xl mb-4">Schedule a call</h1>
                 <p className="text-white/60 max-w-xl mx-auto">
-                  Thirty minutes, a Google Meet link, no back-and-forth. If
-                  you&apos;re here about a specific conference roadshow,{" "}
-                  <Link href="/discovery-call" className="text-[#ae904c] underline underline-offset-4">
-                    the discovery call
-                  </Link>{" "}
-                  asks better questions.
+                  Thirty minutes, a Google Meet link, no back-and-forth. Pick a
+                  topic and a time; if it&apos;s about a conference, a few
+                  optional questions help us prepare.
                 </p>
                 <p className="text-white/50 text-sm mt-4">
                   Prefer to talk now?{" "}
@@ -287,6 +309,65 @@ export default function ScheduleCallClient() {
                     ))}
                   </select>
                 </div>
+
+                {showConferenceQs && (
+                  <div className="rounded-lg border border-[#ae904c]/15 p-4 space-y-4">
+                    <p className="text-sm text-white/60">
+                      About your conference plans <span className="text-white/40">(all optional)</span>
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[
+                        ["conferencesSponsoredPerYear", "Conferences you sponsor or attend per year", [["1-2","1–2"],["3-5","3–5"],["6-10","6–10"],["10+","10+"]]],
+                        ["hostsOwnEvents", "Do you host your own events?", [["yes","Yes"],["no","No"],["planning_to","Planning to"]]],
+                        ["investingInContentForEvent", "Investing in event content or coverage?", [["yes_actively","Yes, actively"],["somewhat","Somewhat / ad hoc"],["not_yet","Not yet"]]],
+                        ["timelineUrgency", "Timeline", [["asap","ASAP: event is imminent"],["1-3_months","1–3 months out"],["3-6_months","3–6 months out"],["exploring","Just exploring"]]],
+                      ].map(([key, label, opts]) => (
+                        <div key={key as string}>
+                          <label htmlFor={`sc-${key}`} className="block text-xs uppercase tracking-widest text-white/60 mb-2">
+                            {label as string}
+                          </label>
+                          <select
+                            id={`sc-${key}`}
+                            value={q[key as keyof typeof q]}
+                            onChange={(e) => setQ({ ...q, [key as string]: e.target.value })}
+                            className="w-full bg-black/30 border border-[#ae904c]/25 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#ae904c]"
+                          >
+                            <option value="" className="bg-black">Select…</option>
+                            {(opts as string[][]).map(([v, l]) => (
+                              <option key={v} value={v} className="bg-black">{l}</option>
+                            ))}
+                          </select>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label htmlFor="sc-conf" className="block text-xs uppercase tracking-widest text-white/60 mb-2">
+                          Which conference?
+                        </label>
+                        <input
+                          id="sc-conf"
+                          value={q.relatedConferenceName}
+                          onChange={(e) => setQ({ ...q, relatedConferenceName: e.target.value })}
+                          className="w-full bg-black/30 border border-[#ae904c]/25 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#ae904c]"
+                          placeholder="e.g. TOKEN2049 Dubai 2027"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="sc-provider" className="block text-xs uppercase tracking-widest text-white/60 mb-2">
+                          Current coverage provider
+                        </label>
+                        <input
+                          id="sc-provider"
+                          value={q.currentCoverageProvider}
+                          onChange={(e) => setQ({ ...q, currentCoverageProvider: e.target.value })}
+                          className="w-full bg-black/30 border border-[#ae904c]/25 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#ae904c]"
+                          placeholder="In-house, an agency, none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div>
                   <label htmlFor="sc-message" className="block text-xs uppercase tracking-widest text-white/60 mb-2">

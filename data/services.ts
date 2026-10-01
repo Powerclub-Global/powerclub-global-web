@@ -13,56 +13,98 @@ export const services = [
     id: "roadshow-management",
     featured: true,
     maintitle: "Roadshow Management",
-    title: "Brand with Dynamic",
-    prefix: "Amplify Your ",
-    suffix: "RoadShow Events",
+    // Search-result title; maintitle stays short for nav and cards.
+    metaTitle: "Conference Roadshow Management for Crypto, AI and Fintech Companies",
+    title: "conference circuit",
+    prefix: "Run your ",
+    suffix: "as one programme",
     description:
-      "Turn your roadshow events into unforgettable experiences, online and on the ground",
-    longDescription: `Evolving live experiences seem to play a vital role in building brand visibility and creating customer engagements. Powerclub Global is an event agency built around the conference circuit, committed to delivering high-energy events that hold an audience's attention long after the doors close. Be it product launches, service promotion, or just getting closer to your audience, brand exposure and stardom will be brought to you through our roadshow services.`,
+      "Conference marketing for crypto, AI and fintech teams: media credentials, speaking slots, side events, content and follow-up, run as one year-long programme.",
+    longDescription: `At Powerclub Global a roadshow is not a truck tour. It is a year-long circuit of tech and crypto conferences, run as one programme instead of a string of separate event decisions. We track 87 conferences and have attended and written up 25 of them, and we use that record to decide where your company should show up, in what form, and what happens to every conversation afterwards.`,
     icon: Car,
     isMain: true,
     image: "/services/roadshow.jpg",
-    heading1: "Our Comprehensive Roadshow Services",
+    heading1: "What a roadshow means here",
     para1:
-      "A successful roadshow starts with meticulous planning. We craft a detailed event strategy tailored to your objectives and audience. We take care of all the details to allow you to concentrate on your branding elements. Our logistics capability will be excellent for a hassle-free event.",
-    para2: "",
-    heading2: "Make Your Brand Unforgettable with Creative Branding",
+      "Most companies buy conference presence one event at a time: a booth here, a sponsorship there, and the follow-up improvised on each occasion. The roadshow method treats the year as a single programme. The same capture, content and follow-up system is built once and reused at every stop, so the third event takes less effort and teaches more than the first.",
+    para2:
+      "It is also not a vehicle tour. If you want a branded trailer parked in six cities, there are good logistics firms for that. We work on a different problem: getting a crypto, AI or fintech company real return from the conferences its customers, investors and partners already attend.",
+    heading2: "How the programme runs",
     para3:
-      "Make your brand unforgettable with our creative branding and promotional services designed to capture attention. Engage your audience is at the heart of every successful roadshow. We design interactive experiences that draw crowds and foster connections.",
+      "Credentials come first. We apply for media credentials at the conferences on your circuit and, where an organiser grants them, we cover the event: recaps, interviews and clips published on our own channels. That is the coverage-for-credentials model. The credential is earned by the coverage rather than bought as a package, and whether it is granted is always the organiser's decision.",
     para4:
-      "We create an immersive experience with top-tier audio-visual production that amplifies your brand's message. Measure your road show's success with our post-event reporting and analysis services.",
+      "On top of that sit speaking slots and side events where they make sense, content captured while the event is still live, a 30-day follow-up sequence, and an end-of-programme report covering meetings booked, cost per meeting and a recommendation on whether to return. The month after the event is where most of the value is won or lost.",
+    guide: {
+      heading: "Roadshow management for crypto, AI and fintech companies",
+      sections: [
+        {
+          heading: "Who this is for",
+          paragraphs: [
+            "Companies that already know conferences matter to their market and are tired of treating each one as a fresh decision: a protocol team deciding between three events in one quarter, an AI company being pitched sponsorship packages it cannot compare, or a fintech with a budget and no way to tell which events paid back last year.",
+          ],
+        },
+        {
+          heading: "What is included",
+          items: [
+            "Circuit planning. Which of the events we track fit your market and budget, and in what format: booth, side event, speaking slot, or simply attending.",
+            "Media credentials and coverage. Applications to organisers and published coverage on our channels, building on a press archive of events we have attended and written up.",
+            "Speaking and side-event placement where the event and your story justify it.",
+            "Content capture. Clips, photography and written recaps produced while the event is still being talked about.",
+            "Follow-up. A first touch inside 48 hours that references the actual conversation, segmentation of the list, and a second touch with a different angle.",
+            "Reporting. Meetings booked, cost per meeting and pipeline against every other event on the circuit.",
+          ],
+        },
+        {
+          heading: "What we do not do",
+          paragraphs: [
+            "We do not build or tour branded vehicles, handle street permits or run multi-city truck logistics. We also do not promise credentials, speaking slots or lead numbers. Those depend on organisers and on your offer, and we will tell you plainly when an event is not worth the money.",
+          ],
+        },
+      ],
+      faqHeading: "Common questions",
+      faq: [
+        {
+          question: "What does conference sponsorship cost?",
+          answer:
+            "Estimates only, since many organisers sell through private prospectuses: booth and sponsor packages at tier-one crypto conferences commonly fall somewhere between $15,000 and $50,000, gold tiers can reach $100,000, and the top packages at the largest events go well beyond that. Our own fees depend on how many events and which formats are involved, and we quote after a call.",
+        },
+        {
+          question: "Is a roadshow the same as a truck tour?",
+          answer:
+            "No. In search results the word usually means a branded vehicle touring several cities, or an investor roadshow before a listing. Ours is a programme of conferences run across a year, with credentials, content and follow-up built around them.",
+        },
+        {
+          question: "Do you guarantee leads or meetings?",
+          answer:
+            "No. We commit to the process and to reporting the numbers honestly. Conversations at conferences typically take 60 to 180 days to turn into deals, so we judge the follow-up at 30 days and the investment at six months.",
+        },
+        {
+          question: "How many events should a company do in a year?",
+          answer:
+            "Usually a handful of well-chosen ones rather than as many as possible. Running five events as one programme is more effective than five separate projects, because the capture and follow-up are built once.",
+        },
+        {
+          question: "Can you work with events we have not chosen yet?",
+          answer:
+            "Yes. Choosing is part of the job. We track 87 conferences across crypto, AI and fintech and can tell you which ones suit your market, and which to skip.",
+        },
+      ],
+      readMoreHeading: "Further reading",
+      // Only articles that are published are linked; see the service page.
+      readMore: [
+        { slug: "the-30-days-after-the-booth", label: "The 30 days after the booth" },
+        { slug: "what-a-year-on-the-circuit-costs", label: "What a year on the conference circuit costs" },
+        { slug: "which-conferences-are-worth-it-2027", label: "Which conferences are worth it in 2027" },
+        { slug: "how-to-get-a-founder-a-speaking-slot", label: "How to get a founder a speaking slot" },
+        { slug: "booth-vs-side-event-vs-speaking", label: "Booth, side event or speaking slot" },
+      ],
+    },
     whyus:
-      "Experience event planners and logistics specialists. Road show packages to suit your brand and goals.  Concepts ranging from innovative ideas to set the audience's thinking. Complete event management, right from the conceptualization until its execution. We are a trusted name for delivering high-impact live experiences to companies.",
-    ctaheading: "Let's Take Your Brand on the Road",
+      "We run conferences as a programme, not a one-off. We have attended and written up 25 events, track 87, and publish our coverage in a public press archive, so you can see the work before you talk to us. We tell you plainly when an event is not worth the money.",
+    ctaheading: "Plan your conference year",
     ctapara:
-      "Partner with Powerclub Global to create an unforgettable roadshow experience that elevates your brand. Contact us today to explore how our roadshow organizing services can drive your business forward.",
-    faq: [
-      {
-        question: "How can social media help my roadshow?",
-        answer:
-          "We create buzz before, during, and after your event with engaging posts, live updates, and event highlights.",
-      },
-      {
-        question: "Can you promote multiple event locations?",
-        answer:
-          "Yes, we tailor content for each location and keep your audience excited as the roadshow travels.",
-      },
-      {
-        question: "Do you handle live coverage?",
-        answer:
-          "Absolutely, we can manage live streams, real-time stories, and audience interactions to boost visibility.",
-      },
-      {
-        question: "How do you attract attendees online?",
-        answer:
-          "We use targeted ads, hashtags, and influencer collaborations to reach the right people.",
-      },
-      {
-        question: "What kind of content do you create?",
-        answer:
-          "We design event countdowns, teaser videos, behind-the-scenes clips, and post-event recaps to keep your brand top of mind.",
-      },
-    ],
+      "Tell us which conferences are on your list and what you need them to deliver. We will say plainly which are worth doing, in what format, and what it involves.",
+    faq: [],
   },
   {
     id: "blockchain-consulting",

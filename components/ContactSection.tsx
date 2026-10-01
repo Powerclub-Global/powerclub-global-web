@@ -85,8 +85,8 @@ const HighlightCard: React.FC = () => (
           </h3>
         </div>
         <p className="text-white/70">
-          We typically respond within 2 hours during business hours. Schedule a
-          call or send us a message - we&apos;re here to help!
+          Text Theodore for the fastest answer, book a call, or send us a
+          message and we&apos;ll get back to you.
         </p>
         <p className="text-white/70">We&apos;d love to hear from you.</p>
         <div className="flex gap-4">

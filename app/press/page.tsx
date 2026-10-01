@@ -17,6 +17,7 @@ export const metadata: Metadata = pageMetadata({
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import InlineCTA from "@/components/InlineCTA";
 import CTASection from "@/components/CTASection";
 import NotionImage from "@/components/NotionImage";
 
@@ -127,6 +128,13 @@ export default function PressPage() {
               </p>
             </div>
           </div>
+
+          <InlineCTA
+            heading="Want coverage like this at your next conference?"
+            body="Every piece here came from an event we attended with credentials. Tell us where you're headed."
+            context={{ interest: "media" }}
+            textContext="media coverage at a conference"
+          />
 
           <div className="container mx-auto px-4">
             <Suspense

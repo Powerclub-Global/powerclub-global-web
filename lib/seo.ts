@@ -17,10 +17,19 @@ interface PageMeta {
   absoluteTitle?: boolean;
 }
 
+/** Keep descriptions inside what a results page shows (~160 chars), cut at a word. */
+export function trimDescription(text: string, max = 160): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\-–—\s]+$/, "") + "…";
+}
+
 // Next.js does not merge a page's `openGraph` with the root layout's, so every
 // page that sets its own metadata used to lose the share image. Build the full
 // block here instead.
-export function pageMetadata({ title, description, path, image, ogTitle, ogDescription, noindex, absoluteTitle }: PageMeta): Metadata {
+export function pageMetadata({ title, description: rawDescription, path, image, ogTitle, ogDescription, noindex, absoluteTitle }: PageMeta): Metadata {
+  const description = trimDescription(rawDescription);
   const images = image ? [{ url: image, alt: ogTitle ?? title }] : [OG_IMAGE];
   return {
     title: absoluteTitle ? { absolute: title } : title,

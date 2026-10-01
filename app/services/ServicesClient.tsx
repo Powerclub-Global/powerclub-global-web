@@ -252,9 +252,9 @@ export default function ServicesPage() {
               and Solutions
             </h1>
             <p className="text-white/60 max-w-2xl text-lg">
-              Comprehensive solutions focused on delivering impactful roadshows
-              and supporting services that elevate your brand and create
-              memorable experiences.
+              Conference roadshow management, event experiences, press
+              relations and influencer relations for crypto, AI and fintech
+              companies, run as one programme.
             </p>
           </div>
 

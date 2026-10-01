@@ -8,6 +8,8 @@ import { allInsightSlugs, getAuthor, getInsight, SITE } from "@/lib/insights";
 import { pageMetadata } from "@/lib/seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import React from "react";
+import InlineCTA from "@/components/InlineCTA";
 import CTASection from "@/components/CTASection";
 
 interface PageProps {
@@ -126,6 +128,16 @@ export default async function InsightPage({ params }: PageProps) {
   if (!post) notFound();
 
   const author = getAuthor(post.author);
+
+  // Put the call to action just before the h2 nearest the middle of the piece,
+  // so it lands between sections rather than inside one.
+  const mid = post.body.length / 2;
+  let midCtaIndex = -1;
+  post.body.forEach((b, i) => {
+    if (i > 0 && b.type === "h2" && (midCtaIndex < 0 || Math.abs(i - mid) < Math.abs(midCtaIndex + 1 - mid))) {
+      midCtaIndex = i - 1;
+    }
+  });
   const events = (eventsData.events as Event[]).filter((e) =>
     post.relatedEvents?.includes(e.id)
   );
@@ -191,7 +203,21 @@ export default async function InsightPage({ params }: PageProps) {
             · {post.readMinutes} min read
           </p>
 
-          <article>{post.body.map(renderBlock)}</article>
+          <article>
+            {post.body.map((b, i) => (
+              <React.Fragment key={i}>
+                {renderBlock(b, i)}
+                {i === midCtaIndex && (
+                  <InlineCTA
+                    heading="Planning your circuit for next year?"
+                    body="We'll look at your event list and tell you where we'd spend and where we wouldn't."
+                    context={{ interest: "sponsor" }}
+                    textContext="planning my conference year"
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </article>
 
           {events.length > 0 && (
             <div className="mt-14 border-t border-[#ae904c]/20 pt-8">

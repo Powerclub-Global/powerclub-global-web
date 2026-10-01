@@ -13,10 +13,11 @@ import EventSection from "@/components/EventSection";
 import DarkGridBackground3 from "@/components/DarkGridBackground3";
 import Link from "next/link";
 import InlineCTA from "@/components/InlineCTA";
+import ProofStrip, { type ProofCounts } from "@/components/ProofStrip";
 import { BOOK_HREF, BOOK_LABEL } from "@/lib/booking";
 import { track } from "@/lib/gtag";
 
-export default function Home() {
+export default function Home({ proof }: { proof: ProofCounts }) {
   return (
     <main className="relative">
       <Navbar />
@@ -80,6 +81,8 @@ export default function Home() {
       </DarkGridBackground>
 
       <Partners />
+
+      {proof.writeUps > 0 && <ProofStrip {...proof} />}
 
       <VideoSection />
 

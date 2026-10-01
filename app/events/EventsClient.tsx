@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import eventsData from "@/data/events.json";
+import InlineCTA from "@/components/InlineCTA";
 import Footer from "@/components/Footer";
 import DarkGridBackground from "@/components/DarkGridBackground3";
 import DateRangePicker from "@/components/ui/DateRangePicker";
@@ -390,6 +391,14 @@ function EventsPageContent() {
               <SmallEventCard key={event.id} event={event} />
             ))}
           </div>
+        )}
+
+        {upcomingEvents.length > 0 && (
+          <InlineCTA
+            heading="Heading to one of these?"
+            body="Tell us which conference and what you want out of it. We'll say what we'd do there, including whether it's worth going at all."
+            textContext="an upcoming conference"
+          />
         )}
 
         {/* Past Events Section Title */}

@@ -24,6 +24,7 @@ import { serviceBookingHref } from "@/lib/booking";
 import type { Metadata } from "next";
 import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/seo";
+import { getInsight } from "@/lib/insights";
 import Partners from "@/components/Carousel";
 import { cn } from "@/lib/utils";
 import FAQSection from "@/components/FAQSection";
@@ -186,7 +187,7 @@ export async function generateMetadata({
   const service = services.find((s) => s.id === serviceId);
   if (!service) return { title: "Service not found", robots: { index: false } };
   return pageMetadata({
-    title: `${service.maintitle || service.title} — Powerclub Global Services`,
+    title: `${service.metaTitle || service.maintitle || service.title} — Powerclub Global Services`,
     description: service.description,
     path: `/services/${service.id}`,
     image: service.image,
@@ -273,10 +274,13 @@ export default async function ServicePage({ params }: PageProps) {
               {service.longDescription}
             </p>
 
-            <button className="bg-[#ae904c] text-white max-w-40 px-6 py-3 rounded-lg mt-8 lg:mt-12 flex items-center gap-2">
+            <Link
+              href={serviceBookingHref(service.id)}
+              className="bg-[#ae904c] text-black font-semibold w-fit px-6 py-3 rounded-lg mt-8 lg:mt-12 flex items-center gap-2 hover:bg-[#c9a95e] transition-colors"
+            >
               <Phone className="w-4 h-4" />
-              Book a call
-            </button>
+              Book a Call
+            </Link>
           </div>
         </div>
 
@@ -403,6 +407,65 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      {service.guide && (
+        <section className="py-16 lg:py-24 px-4 md:px-8 lg:px-16 xl:px-32">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-[#ae904c] mb-10">
+              {service.guide.heading}
+            </h2>
+            {service.guide.sections.map((sec) => (
+              <div key={sec.heading} className="mb-10">
+                <h3 className="text-xl text-white mb-4">{sec.heading}</h3>
+                {sec.paragraphs?.map((para, n) => (
+                  <p key={n} className="text-white/70 text-base lg:text-lg mb-4">
+                    {para}
+                  </p>
+                ))}
+                {sec.items && (
+                  <ul className="list-disc pl-6 space-y-3 text-white/70 text-base lg:text-lg">
+                    {sec.items.map((item, n) => (
+                      <li key={n}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+            <h3 className="text-2xl text-[#ae904c] mt-14 mb-6">
+              {service.guide.faqHeading}
+            </h3>
+            {service.guide.faq.map((f) => (
+              <div key={f.question} className="mb-6">
+                <h4 className="text-lg text-white mb-2">{f.question}</h4>
+                <p className="text-white/70 text-base lg:text-lg">{f.answer}</p>
+              </div>
+            ))}
+            {(() => {
+              const links = service.guide.readMore.filter(
+                (r) => getInsight(r.slug)?.status === "published"
+              );
+              return links.length > 0 ? (
+                <>
+                  <h3 className="text-2xl text-[#ae904c] mt-14 mb-4">
+                    {service.guide.readMoreHeading}
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2 text-white/70 text-base lg:text-lg">
+                    {links.map((r) => (
+                      <li key={r.slug}>
+                        <Link
+                          href={`/insights/${r.slug}`}
+                          className="text-[#ae904c] underline underline-offset-4"
+                        >
+                          {r.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null;
+            })()}
+          </div>
+        </section>
+      )}
       {/* Workflow Section */}
       <section className="w-full flex flex-col items-center justify-between">
         <WorkflowSection />
@@ -427,7 +490,7 @@ export default async function ServicePage({ params }: PageProps) {
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#ae904c]/10">
                     <Handshake className="w-6 h-6 text-[#ae904c]" />
                   </div>
-                  <span className="text-white">3000+ brands consulted</span>
+                  <span className="text-white">25 conferences covered first-hand</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#ae904c]/10">
