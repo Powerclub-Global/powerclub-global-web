@@ -8,10 +8,10 @@ const guide: EventGuide = {
     "Intelligence Disrupt is a niche, deal-oriented expo at the point where Bitcoin mining and AI compute infrastructure overlap. It is worth it for power, land, cooling, GPU and hosting businesses looking for each other. Skip it if you want a general crypto audience or a policy and research conference.",
   costs: {
     ticket:
-      "Not published on the official site, which lists three access levels without prices. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and non-refundable.",
+      "Not published on the official site, which lists three access levels without prices. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and non-refundable. Ask PCG about a ticket code.",
     sponsorship:
-      "Not published as a rate card. The site says about 200 booths across top and standard tiers, with discounts for tickets without a booth. Treat any figure as unknown until you request the prospectus.",
-    note: "Exhibition is limited to approved exhibitors, sponsors and authorised partners.",
+      "From the organiser's official exhibitor guide: Disruptor about $2,500, Core $12,500, Premier $25,000, Flagship $50,000, Title $100,000, plus one invitation-only Powered By tier. Packages without a booth are half price. The Mobile Data Center Showcase is $1,000 per linear foot and needs a package. Add-ons such as the pre-party ($50,000), after-party ($40,000), private dinners ($30,000) and badge and lanyard ($25,000) are each sold to one company.",
+    note: "Prices are from the organiser's exhibitor guide for the March 2027 show. Confirm against the current prospectus before budgeting.",
   },
   attendees:
     "Bitcoin miners, hosting and data-centre operators, power and energy firms, hardware and GPU vendors, and AI infrastructure companies. Organiser-reported for the 2027 edition: 127+ speakers, 132+ sponsoring brands and 87 media partners. No attendee total was stated on the page.",
@@ -30,7 +30,7 @@ const guide: EventGuide = {
     "You want an established independent side-event circuit",
   ],
   pcgAngle:
-    "PCG has a commercial relationship with the organiser, and outreach is gated, so this entry is limited to facts. We track the event on the conference calendar. For clients considering it we outline booth versus sponsorship versus speaking options and plan the 30-day follow-up.",
+    "PCG is an official media and sponsorship partner for Intelligence Disrupt. We work with the organiser to place sponsors and exhibitors, and we plan and produce their on-site activations, from booth content and video to dinners and side events. If you are thinking about a package, we can walk you through the tiers, which fit your goals, and what to have in place before and after the show.",
   sources: [
     { label: "Intelligence Disrupt official site", url: "https://intelligencedisrupt.com/" },
   ],

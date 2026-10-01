@@ -28,9 +28,9 @@ export default function InsightsPage() {
             What the conference circuit actually costs — and returns
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mb-14">
-            Written from the floor. Powerclub Global has worked 87 conferences
-            and published 25 first-hand recaps; this is what we have learned
-            about spending money on them well.
+            Written from the floor. Powerclub Global tracks 87 conferences and has
+            published 25 first-hand recaps; this is what we have learned about
+            spending money on them well.
           </p>
 
           {posts.length === 0 ? (

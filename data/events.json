@@ -1788,7 +1788,8 @@
         "ai",
         "blockchain",
         "web3"
-      ]
+      ],
+      "mediaPartner": true
     },
     {
       "id": "mining-disrupt-2027",
@@ -1807,7 +1808,8 @@
       "tags": [
         "bitcoin",
         "blockchain"
-      ]
+      ],
+      "mediaPartner": true
     },
     {
       "id": "agent-conference-2027",

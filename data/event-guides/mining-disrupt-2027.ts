@@ -11,7 +11,7 @@ const guide: EventGuide = {
       "Not published on the official site. Payment is accepted in Bitcoin, USDT, card and PayPal; tickets are non-transferable and all sales are final.",
     sponsorship:
       "Not published. The site says about 200 booths across tier packages; request the prospectus for pricing.",
-    note: "Mining Disrupt and Intelligence Disrupt appear to be run together on the same dates and venue, according to both official sites.",
+    note: "Mining Disrupt and Intelligence Disrupt run together on March 22\u201324, 2027 at the Irving Convention Center at Las Colinas. See the Intelligence Disrupt guide for the official package prices.",
   },
   attendees:
     "Miners, hosting providers, hardware makers, energy and power developers, and financiers, with an AI and HPC track alongside. Organiser-reported on the 2027 page: 127 speakers and 132 sponsoring brands. No attendee total was stated.",
@@ -30,7 +30,7 @@ const guide: EventGuide = {
     "You expect a large independent side-event programme",
   ],
   pcgAngle:
-    "PCG has a commercial relationship with the organiser, and outreach is gated, so this entry sticks to facts. The 2025 edition is written up in the PCG press archive. For clients considering it we compare booth, sponsorship and speaking routes and plan the 30-day follow-up.",
+    "PCG is an official media and sponsorship partner for the Disrupt shows. We work with the organiser to place sponsors and exhibitors, and we plan and produce their on-site activations. The 2025 edition is written up in the PCG press archive. If you are weighing a booth, a sponsorship or a speaking slot, we can compare the routes and plan the follow-up.",
   sources: [
     { label: "Mining Disrupt official site", url: "https://miningdisrupt.com/" },
     { label: "PCG press archive: Mining Disrupt 2025", url: "https://powerclubglobal.com/press/mining-disrupt-conference-expo-2025-the-ultimate-bitcoin-mining-event" },
