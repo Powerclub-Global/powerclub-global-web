@@ -42,15 +42,20 @@ export interface PressRelease {
   coverImage: string;
   author: string;
   date: string;
+  updated: string;
 }
 
 function toPressRelease(dto: CmsPressReleaseDto): PressRelease {
-  // Route LinkedIn-hosted cover images through our own proxy rather than
-  // hotlinking media.licdn.com directly — more reliable than relying on the
-  // client to load a third-party CDN URL directly.
-  const coverImage = dto.cover_image_url
-    ? `/api/image-proxy?url=${encodeURIComponent(dto.cover_image_url)}`
-    : "";
+  // Covers we host ourselves (/press-covers/...) are served directly. Anything
+  // still on a third-party CDN (older pieces on media.licdn.com) goes through
+  // our proxy rather than being hotlinked from the client.
+  const raw = dto.cover_image_url || "";
+  const own = raw.replace(/^https?:\/\/(www\.)?powerclubglobal\.com/, "");
+  const coverImage = !raw
+    ? ""
+    : own.startsWith("/")
+      ? own
+      : `/api/image-proxy?url=${encodeURIComponent(raw)}`;
 
   return {
     id: dto.id,
@@ -61,6 +66,7 @@ function toPressRelease(dto: CmsPressReleaseDto): PressRelease {
     coverImage,
     author: dto.author || "",
     date: dto.published_at || dto.created_at,
+    updated: dto.updated_at,
   };
 }
 

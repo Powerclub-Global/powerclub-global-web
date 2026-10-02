@@ -16,6 +16,23 @@ export async function GET(request: Request) {
     );
   }
 
+  // Only the CDNs our content actually references. Without this the route
+  // would fetch any URL a caller supplies (an open proxy).
+  const ALLOWED_HOSTS = ["media.licdn.com", "powerclubglobal.com", "www.powerclubglobal.com"];
+  let host = "";
+  try {
+    const parsed = new URL(imageUrl);
+    host = parsed.protocol === "https:" ? parsed.hostname : "";
+  } catch {
+    host = "";
+  }
+  if (!ALLOWED_HOSTS.includes(host)) {
+    return new NextResponse(JSON.stringify({ error: "Host not allowed" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
   try {
     const response = await fetch(imageUrl, {
       headers: {

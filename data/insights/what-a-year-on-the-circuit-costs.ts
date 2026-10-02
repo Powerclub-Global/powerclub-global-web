@@ -9,10 +9,11 @@ import type { Insight } from "@/types/insights";
  */
 const article: Insight = {
   slug: "what-a-year-on-the-circuit-costs",
-  title: "What a Year on the Crypto Conference Circuit Actually Costs",
+  title: "Conference Sponsorship Cost: A Year on the Crypto Circuit",
   description:
-    "What a five-event year costs at lean, standard and flagship levels, in bands: sponsorship, side events, travel, content and the staffing nobody budgets for.",
+    "What a five-event crypto conference year costs, in bands: sponsorship tiers, booth build, side events, travel, content and the staff time nobody budgets for.",
   published: "2026-10-01",
+  updated: "2026-10-01",
   author: "Sami Satoshi",
   status: "draft",
   readMinutes: 9,
@@ -21,7 +22,7 @@ const article: Insight = {
     "token2049-singapore-2026",
     "token2049-dubai-2027",
     "consensus-miami-2027",
-    "bitcoin-2026-las-vegas",
+    "bitcoin-2027",
   ],
   relatedPress: [
     "crypto-titans-converge-at-token2049-dubai",
@@ -32,73 +33,74 @@ const article: Insight = {
   body: [
     {
       type: "p",
-      text: "Ask three people what a conference costs and you will get three different answers, because each of them is counting a different thing. The founder counts the sponsorship invoice. The finance lead counts the invoice plus flights. Nobody counts the six weeks of someone's time, the side-event deposit that was paid in cash, or the clips that were never edited.",
+      text: "Ask a founder what a conference cost and you get the sponsorship invoice. Ask the finance lead and you get the invoice plus flights. Neither figure includes the weeks of staff time, the side-event deposit or the footage that was shot and never edited, which is why most teams underestimate their conference sponsorship cost by a wide margin.",
     },
     {
       type: "p",
-      text: "This is our attempt to put the whole year on one page. A note on the numbers before we start: this is an analysis in bands, not a price list. The biggest events sell through private prospectuses with no public rate card, and we do not publish sponsorship pricing; we share it on calls. What follows is built from advertised ticket prices, general trade-show budgeting rules and our own time on the circuit, and where we are guessing we say so. We have not used any client's actual spend.",
+      text: "This piece puts a whole year on one page. It is an analysis in bands and ratios, not a price list. The largest events sell through private prospectuses, and we do not publish sponsorship or exhibition prices; we share what we know on calls. The figures below come from published ticket prices, general trade-show budgeting practice and our own estimates, and each estimate is labelled as one. No client spend is used.",
     },
-    { type: "h2", text: "The invoice is the smallest part" },
+    { type: "h2", text: "Conference sponsorship cost: the invoice is only part of it" },
     {
       type: "p",
-      text: "Outside crypto, exhibitors have a rule of thumb: the all-in cost of a show is roughly three times the booth rental. It comes from general trade-show budgeting, not from our sector, and crypto is messier. But the direction holds. When a team says “we paid for a gold package”, the honest figure is usually two to three times the invoice once the rest is counted.",
+      text: "Exhibitors outside crypto use a rule of thumb: the all-in cost of a show is roughly three times the cost of the floor space. The rule comes from general trade-show budgeting and crypto events do not follow it neatly, but it points the right way. When a team says it paid for a gold package, the full cost is usually well above the invoice once everything else is counted.",
     },
     {
       type: "p",
-      text: "What sits on top of the sponsorship fee falls into five groups: getting people there, the physical booth, side events, content, and the unglamorous overhead of running it all. We will take the fee first, then each of those.",
+      text: "One public data point supports this. A founder who [posted a full breakdown of six sponsored conferences](https://blockeden.xyz/forum/t/we-spent-180k-sponsoring-6-conferences-in-2025-and-got-3-leads-the-roi-math-behind-why-web3-sponsorship-is-broken/456) reported that the sponsorship packages came to about three-fifths of the total. The remaining two-fifths was everything that sits on top of the fee, and the sections below take those costs one at a time.",
     },
-    { type: "h2", text: "What the sponsorship fee buys" },
+    { type: "h2", text: "What a crypto conference sponsorship package includes" },
     {
       type: "p",
-      text: "The largest events do not publish prices. TOKEN2049 sells bespoke packages through a prospectus. We do not quote sponsor prices here, but the shape of the ladder is consistent across the tier-one events, and it is worth seeing in relative terms.",
+      text: "The tier names differ between organisers, but the ladder has the same shape at most tier-one events. We show it here relative to the smallest booth.",
     },
     {
       type: "table",
       caption:
-        "How the sponsorship ladder is structured at tier-one crypto conferences, in relative terms. Pricing is shared on a call, not published here.",
+        "How the sponsorship ladder is structured at tier-one crypto conferences, in relative terms. Inclusions vary by event; pricing is shared on a call, not published here.",
       head: ["Tier", "Cost relative to a small booth", "What usually comes with it"],
       rows: [
-        ["Title / headline", "Many times over; the top of the ladder", "Main-stage naming, keynote, large booth, logo everywhere"],
+        ["Title / headline", "Many times over; the top of the ladder", "Main-stage naming, keynote, large booth, logo across the venue"],
         ["Platinum", "Several times", "Speaking slot, premium booth, side-event slot, a large block of passes"],
-        ["Gold", "Roughly two to three times", "Panel or workshop slot, mid-size booth, 10 to 20 passes"],
-        ["Silver / small booth", "The baseline", "Small booth or table, logo placement, 5 to 10 passes"],
-        ["Official side event listing", "A fraction of the baseline", "A place on the official calendar, no booth"],
+        ["Gold", "Roughly two to three times", "Panel or workshop slot, mid-size booth, a block of passes"],
+        ["Silver / small booth", "The baseline", "Small booth or table, logo placement, a handful of passes"],
+        ["Official side-event listing", "A fraction of the baseline", "A place on the official calendar, no booth"],
       ],
     },
     {
       type: "p",
-      text: "There are cheaper doors in. TOKEN2049 advertises a startup stand that includes a two-day stand, tickets and a short pitch slot. Bitcoin 2026 lists a flat-rate marketplace spot with exhibitor passes. Both sit well below a standard exhibitor package. The pattern across the circuit is that the entry price is public, and everything above it is negotiated.",
+      text: "There are cheaper ways in. [TOKEN2049 Singapore](/conferences/token2049-singapore-2026) advertises a Startup Stand that bundles a two-day stand, five tickets and a ten-minute pitch on its Startup Stage, at a published price far below a standard exhibitor package. Across the circuit the entry-level option tends to be public and everything above it is negotiated.",
     },
     {
       type: "p",
-      text: "Tickets are separate, and they are not trivial for a team of four. Consensus Miami 2026 advertised a Pro pass at $799 and Platinum at $1,399. Bitcoin 2026 listed general admission at $499, Pro at $1,299 and a Whale pass at $9,999. Early-bird discounts are common, so the same pass can differ by hundreds of dollars depending on when you buy.",
+      text: "Tickets are a separate line, and for a team of four they add up. On October 1, 2026 the [TOKEN2049 Singapore FAQ](https://token2049.com/singapore/faqs) listed the final-phase standard ticket at US$699 and the Special Access Pass at US$4,999. Consensus and the Bitcoin Conference also sell tiered passes that rise by sales phase, so the same pass can cost hundreds of dollars more for a team that buys late.",
     },
-    { type: "h2", text: "Getting people there" },
+    { type: "h2", text: "Travel and hotel costs for a conference team" },
     {
       type: "p",
-      text: "Travel is the line that gets underestimated most, because it feels like a rounding error until you multiply it. Conference weeks push hotel prices up in the host city, and the best rooms near the venue go first. Our estimate for a two-person trip of five nights to Singapore, Dubai or Miami, flights included, is $6,000 to $12,000. A four-person booth team is $12,000 to $25,000. The spread is mostly the flight origin and how late you book.",
-    },
-    {
-      type: "p",
-      text: "We could not find a reliable published figure for how much hotel rates rise during TOKEN2049 week specifically, so we are not quoting one. Check live prices for your dates before you commit, and book earlier than feels necessary.",
-    },
-    { type: "h2", text: "The booth, and everything it needs" },
-    {
-      type: "p",
-      text: "A booth is more than the space. Design, shipping, setup, electrical, furniture and screens usually add a low five-figure sum even for a modest build, and a full custom booth can cost several times a modest one before staffing. Swag adds more: ordering for 60 to 70 percent of expected traffic at $15 to $40 a unit is a figure that surprises people who have not done it.",
+      text: "Travel is the most underestimated line because it looks small until it is multiplied by headcount and by events. Hotel prices rise in the host city during a conference week, and rooms near the venue sell first. Our estimate for two people spending five nights in Singapore, Dubai or Miami, flights included, is $6,000 to $12,000. For a four-person booth team it is $12,000 to $25,000. Flight origin and booking date account for most of the spread.",
     },
     {
       type: "p",
-      text: "Then there is the staffing. A booth open for two days needs a rota, which means more people than the floor plan suggests. People standing at a booth are not in meetings, so what looks like a cost saving, sending fewer people, is often a loss of the conversations you paid for.",
+      text: "We could not find a reliable published figure for how much hotel rates rise during TOKEN2049 week, so we are not quoting one. Check live prices for your dates before you commit.",
     },
-    { type: "h2", text: "Side events: where a lot of the real business happens" },
+    { type: "h2", text: "Conference booth costs beyond the floor space" },
     {
       type: "p",
-      text: "At the biggest crypto weeks, much of the useful conversation happens outside the venue. TOKEN2049 week alone runs more than a thousand side events, and our coverage of TOKEN2049 Dubai, Consensus Toronto and Bitcoin 2025 in Las Vegas has returned to the same point each time: the dinners, rooftops and workshops around the main conference are where people actually have time to talk.",
+      text: "The package buys the space. Design, shipping, setup, electrical, furniture and screens typically add a low five-figure sum for a modest build, and a custom build costs several times that. Giveaways are a further line, and teams tend to over-order them.",
+    },
+    {
+      type: "p",
+      text: "Staffing is the cost that is easiest to miss. A booth that is open for two days needs a rota, so it needs more people than the floor plan suggests. Those people are not in meetings while they stand there. Sending a smaller team looks like a saving and usually costs you the conversations the package was bought for.",
+    },
+    { type: "h2", text: "Side event costs by format" },
+    {
+      type: "p",
+      text: "At the largest crypto weeks much of the useful conversation happens outside the venue. TOKEN2049 says more than 1,000 side events take place across its Singapore week. Our write-ups of the side events around TOKEN2049 Dubai 2025, Consensus Toronto 2025 and Bitcoin 2025 in Las Vegas (linked at the end of this article) show the same thing at each: the dinners and workshops around the main conference are where people have time to talk.",
     },
     {
       type: "table",
-      caption: "Side-event costs by format, as broad bands. Our own observation plus published agency guides; venue, city and week all move these.",
+      caption:
+        "Side-event costs by format, as broad bands. Our estimates; venue, city and week all move these.",
       head: ["Format", "Typical attendance", "Cost band"],
       rows: [
         ["Builder or founder dinner", "20 to 40", "Low to mid five figures"],
@@ -109,32 +111,33 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "A dinner for thirty with the right thirty people can do more than a booth, and costs a fraction of one. The caveat is that it only works when the guest list is built deliberately. An open RSVP fills with whoever is free, which is a different crowd from whoever you wanted.",
+      text: "A dinner for thirty well-chosen guests can do more than a booth at a fraction of the cost. It only works when the guest list is built by hand. An open RSVP fills with whoever is free that evening, and they are rarely the people you wanted. We compare the formats in [booth vs side event vs speaking slot](/insights/booth-vs-side-event-vs-speaking).",
     },
-    { type: "h2", text: "Content: the line that gets cut first" },
+    { type: "h2", text: "Content costs: the line that gets cut first" },
     {
       type: "p",
-      text: "Clips, interviews, photography and a written recap run roughly $3,000 to $8,000 per event if you do the basics well, and more if you want a produced highlight film. It is the first line to be cut when the budget tightens and, in our experience, the one that most extends the life of the spend. A booth is open for two days. A clip is searchable for years. We cover the timing in The 30 Days After the Booth.",
+      text: "By our estimate, clips, interviews, photography and a written recap cost roughly $3,000 to $8,000 per event when the basics are done well, and more for a produced highlight film. It is the first line cut when a budget tightens. It is also the only part of the spend that keeps working after the event: the booth is open for two days, and a recap or a clip can be found in search for years. The timing matters, and we cover it in [the 30 days after the booth](/insights/the-30-days-after-the-booth).",
     },
-    { type: "h2", text: "What a five-event year adds up to" },
+    { type: "h2", text: "What a five-event conference budget adds up to" },
     {
       type: "p",
-      text: "Here is the year assembled from the pieces above. We have defined each posture per event, then multiplied across five events. These are our estimates and they carry wide ranges because the real number depends on city, tier and how early you commit.",
+      text: "The tables below assemble the year from those pieces. We define four postures per event, then combine them across five events. All of it is our estimate, and the bands are wide because city, tier and booking date move the real number a long way.",
     },
     {
       type: "table",
-      caption: "Per-event cost by posture, as bands (tickets, travel, activity and content included). Sponsorship pricing is shared on a call.",
+      caption:
+        "Per-event cost by posture, as bands (tickets, travel, activity and content included). Sponsorship pricing is shared on a call.",
       head: ["Posture", "What it means", "Per event"],
       rows: [
         ["Attend", "Two people, tickets, travel, meetings, no activation", "Low five figures"],
         ["Attend + side event", "As above, plus a dinner or co-hosted event and basic content", "About two to three times Attend"],
-        ["Booth", "Small booth, 3 to 4 staff, swag, content", "About three to six times Attend"],
-        ["Flagship", "Gold or above, a speaking slot, a solo side event, full content", "Mid five to low six figures and up"],
+        ["Booth", "Small booth, three or four staff, giveaways, content", "About three to six times Attend"],
+        ["Flagship", "Gold or above, a speaking slot, a solo side event, full content", "Low six figures and up"],
       ],
     },
     {
       type: "table",
-      caption: "Annual cost for five events, as bands. Excludes the fixed costs listed below.",
+      caption: "Annual cost for five events, as bands. Excludes the fixed costs described below.",
       head: ["Year", "Mix", "Estimated band"],
       rows: [
         ["Lean", "Five events at attend + side event", "High five to low six figures"],
@@ -144,35 +147,61 @@ const article: Insight = {
     },
     {
       type: "p",
-      text: "These are our estimates and the bands are wide because the real number depends on city, tier and how early you commit. They leave out the costs that are not tied to any one event. Someone has to own the programme: choosing events, building guest lists, running follow-up. Even a quarter of a senior person's time is plausibly a low five-figure sum a year, and CRM, enrichment and scheduling tools add a few thousand more. Many teams carry them without ever naming them as conference costs.",
+      text: "These bands leave out the costs that belong to no single event. Someone has to own the programme: choosing events, building guest lists, running the follow-up. A quarter of a senior person's time is plausibly a low five-figure sum a year, and CRM, enrichment and scheduling tools add a few thousand dollars more. Most teams carry these costs without ever counting them as conference spend.",
     },
     {
       type: "callout",
-      text: "A public forum post we keep coming back to describes a team spending a six-figure sum on six conferences and ending with three qualified leads. Spread across six events, that sits squarely in our lean-to-standard band. The spend was not extravagant. The problem was that it bought attendance without the machinery to turn it into meetings.",
+      text: "The six-conference breakdown mentioned above sits in our lean-to-standard band. By circuit standards the spend was ordinary, and it still ended in three qualified leads from 847 badge scans. The budget covered attendance and booths. It did not cover the work that turns a scan into a meeting.",
     },
-    { type: "h2", text: "Where the money is most often wasted" },
+    { type: "h2", text: "Where conference budgets are wasted" },
     {
       type: "ul",
       items: [
-        "Buying a booth at an event where your buyers are at the side events. If the people you want are in the venue's side programme, the booth fee is paying for a different audience.",
-        "Sending fewer people than the plan needs. A booth that is always half-staffed produces half the conversations at full price.",
-        "No content plan. The recap and clips cost a few thousand dollars and are the only part of the spend that keeps working after the event.",
-        "Treating every event the same. A lean posture at six events usually beats a flagship at one for a company that has not yet proved the channel.",
-        "No named owner for follow-up. This is the most expensive omission on the list, and it never appears on an invoice.",
+        "Buying a booth at an event where your buyers spend the week at side events. The booth fee then pays for an audience you did not want.",
+        "Sending fewer people than the plan needs. A half-staffed booth has half the conversations for the full fee.",
+        "Skipping the content plan. Recaps and clips cost a few thousand dollars and keep working after the event closes.",
+        "Buying the same package everywhere. A company that has not yet proved the channel usually learns more from a lean presence at five events than from a flagship package at one.",
+        "Leaving the follow-up without a named owner. This is the most expensive omission on the list, and it never appears on an invoice.",
       ],
     },
-    { type: "h2", text: "How to decide what your year should look like" },
+    { type: "h2", text: "How to set a conference budget for 2027" },
     {
       type: "p",
-      text: "Start from the question of who you need to meet, not which event is biggest. If the answer is a few dozen specific people, a handful of well-built dinners will do more than a booth. If you are selling to a broad market and need visibility, a booth and a speaking slot make sense, but only at the one or two events where your buyers actually are.",
+      text: "Start from who you need to meet, not from which event is biggest. If the answer is a few dozen named people, a handful of well-built dinners will do more than a booth. If you sell to a broad market and need visibility, a booth and a speaking slot make sense at the one or two events where your buyers gather. For most crypto teams the 2027 candidates are [TOKEN2049 Dubai](/conferences/token2049-dubai-2027) in April, [Consensus Miami](/conferences/consensus-miami-2027) in May and [Bitcoin 2027](/conferences/bitcoin-2027) in July.",
     },
     {
       type: "p",
-      text: "Then work backwards from the follow-up. Whatever you can staff and follow up properly is the number of events you should do. Five events done well is a better year than ten done thinly, and a good deal cheaper.",
+      text: "Then work backwards from the follow-up. The number of events you can staff and follow up properly is the number you should do. Five events done well cost less than ten done thinly and produce more.",
     },
     {
       type: "p",
-      text: "This is the reasoning behind the way we run a roadshow for clients: one programme across the year, with the guest lists, content and follow-up built once and reused at each stop, rather than five separate projects each improvised from scratch. If you want to talk through what a year would look like at your budget, you can book a call or send us a message.",
+      text: "Powerclub Global (PCG) builds its [roadshow management service](/services/roadshow-management) on that reasoning: one programme for the year, with guest lists, content and follow-up built once and reused at each stop. To see what a year would look like at your budget, including the sponsorship pricing we do not publish, [schedule a call](/schedule-call).",
+    },
+    { type: "h2", text: "Frequently asked questions" },
+    { type: "h3", text: "How much does it cost to sponsor a crypto conference?" },
+    {
+      type: "p",
+      text: "It depends on the tier and the event. As a band, a small booth at a tier-one crypto conference is a mid five-figure commitment, gold tiers cost roughly two to three times that, and headline packages cost many times more. Most organisers share exact prices only in a private prospectus.",
+    },
+    { type: "h3", text: "How much does a conference booth cost in total?" },
+    {
+      type: "p",
+      text: "Expect the full cost to be well above the booth fee. General trade-show practice budgets about three times the floor-space cost once build, shipping, travel, staff and giveaways are included. In one public breakdown of six crypto sponsorships, the packages were about three-fifths of total spend.",
+    },
+    { type: "h3", text: "How much does a side event at TOKEN2049 cost?" },
+    {
+      type: "p",
+      text: "By our estimates, a hosted dinner for 20 to 40 guests is a low to mid five-figure cost, a panel with drinks is mid five figures, and a solo party for several hundred runs from mid five into six figures. Co-hosting with other teams reduces each share.",
+    },
+    { type: "h3", text: "What is a realistic annual conference budget for a startup?" },
+    {
+      type: "p",
+      text: "A lean five-event year, with two people attending each event and hosting one small side event, falls in the high five to low six-figure band by our estimate. Adding booths at two of the five moves the year into low to mid six figures.",
+    },
+    { type: "h3", text: "Is sponsoring a crypto conference worth it?" },
+    {
+      type: "p",
+      text: "It can be when your buyers are in the room, you have meetings booked before you travel, and someone owns the follow-up afterwards. Without those three, a team is paying for attendance. Start with a ticket and a small side event before committing to a booth.",
     },
   ],
 };

@@ -6,6 +6,7 @@ import type { Event } from "@/types/events";
 import type { Block } from "@/types/insights";
 import { allInsightSlugs, getAuthor, getInsight, SITE } from "@/lib/insights";
 import { pageMetadata } from "@/lib/seo";
+import { plainText, renderInline } from "@/lib/pressBody";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React from "react";
@@ -35,25 +36,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
+const LINK_CLASS = "text-[#ae904c] underline underline-offset-4 hover:text-[#c9a95e]";
+const inline = (text: string) => renderInline(text, LINK_CLASS);
+
 function renderBlock(block: Block, i: number) {
   switch (block.type) {
     case "h2":
       return (
         <h2 key={i} className="text-2xl text-[#ae904c] mt-12 mb-4">
-          {block.text}
+          {inline(block.text)}
         </h2>
       );
     case "h3":
       return (
         <h3 key={i} className="text-lg text-white mt-8 mb-3">
-          {block.text}
+          {inline(block.text)}
         </h3>
       );
     case "ul":
       return (
         <ul key={i} className="list-disc pl-6 space-y-2 text-white/75 my-5">
           {block.items.map((item, n) => (
-            <li key={n}>{item}</li>
+            <li key={n}>{inline(item)}</li>
           ))}
         </ul>
       );
@@ -63,7 +67,7 @@ function renderBlock(block: Block, i: number) {
           key={i}
           className="border-l-2 border-[#ae904c] pl-5 my-7 text-white/80 italic"
         >
-          {block.text}
+          {inline(block.text)}
           {block.cite && (
             <cite className="block not-italic text-white/40 text-sm mt-2">
               — {block.cite}
@@ -77,7 +81,7 @@ function renderBlock(block: Block, i: number) {
           key={i}
           className="my-7 border-l-2 border-[#ae904c] bg-[#ae904c]/5 px-5 py-4 text-white/80"
         >
-          {block.text}
+          {inline(block.text)}
         </p>
       );
     case "table":
@@ -101,7 +105,7 @@ function renderBlock(block: Block, i: number) {
                 <tr key={n}>
                   {row.map((cell, m) => (
                     <td key={m} className="px-3 py-2 border-b border-[#ae904c]/10 text-white/75">
-                      {cell}
+                      {inline(cell)}
                     </td>
                   ))}
                 </tr>
@@ -116,7 +120,7 @@ function renderBlock(block: Block, i: number) {
     default:
       return (
         <p key={i} className="text-white/75 my-5 leading-relaxed">
-          {block.text}
+          {inline(block.text)}
         </p>
       );
   }
@@ -164,8 +168,39 @@ export default async function InsightPage({ params }: PageProps) {
     ...(post.coverImage ? { image: [`${SITE}${post.coverImage}`] } : {}),
   };
 
+  // Question/answer pairs under the article's FAQ heading, for FAQPage markup.
+  const faqStart = post.body.findIndex(
+    (b) => b.type === "h2" && /^(frequently asked questions|faq)/i.test(b.text)
+  );
+  const faq: { q: string; a: string }[] = [];
+  if (faqStart >= 0) {
+    for (let i = faqStart + 1; i < post.body.length; i++) {
+      const b = post.body[i];
+      if (b.type === "h2") break;
+      const next = post.body[i + 1];
+      if (b.type === "h3" && next?.type === "p") {
+        faq.push({ q: plainText(b.text), a: plainText(next.text) });
+      }
+    }
+  }
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-black text-white">
+      {post.status === "published" && faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       {post.status === "published" && (
         <script
           type="application/ld+json"

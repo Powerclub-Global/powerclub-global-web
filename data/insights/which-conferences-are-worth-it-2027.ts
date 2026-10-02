@@ -2,13 +2,14 @@ import type { Insight } from "@/types/insights";
 
 const article: Insight = {
   slug: "which-conferences-are-worth-it-2027",
-  title: "Which Conferences Are Actually Worth It in 2027",
+  title: "Which Conferences Are Worth It in 2027: Crypto, AI, Fintech",
   description:
-    "Most 'best conferences' lists describe events. This one picks by goal and company stage, and says who each event is not for. Crypto, AI and fintech, October 2026 to mid-2027.",
+    "Which conferences are worth it in 2027: TOKEN2049, Consensus, Bitcoin 2027, EthCC and more, picked by goal and company stage, with who should skip each one.",
   published: "2026-10-01",
+  updated: "2026-10-01",
   author: "Sami Satoshi",
   status: "draft",
-  readMinutes: 11,
+  readMinutes: 10,
   tags: ["conference strategy", "event calendar", "sponsorship", "2027"],
   relatedEvents: [
     "token2049-singapore-2026",
@@ -16,6 +17,8 @@ const article: Insight = {
     "consensus-miami-2027",
     "bitcoin-2027",
     "ethcc-10-2027",
+    "intelligence-disrupt-2027",
+    "mining-disrupt-2027",
     "web-summit-2026",
     "money2020-usa-2026",
     "singapore-fintech-festival-2026",
@@ -35,125 +38,127 @@ const article: Insight = {
   body: [
     {
       type: "p",
-      text: "Search for the best conferences of 2027 and you get the same thing everywhere: a list of events with a paragraph each, dates, a city, a headline attendance number. Every one of them sounds worth attending, because the list was written to describe events, not to help you decide.",
+      text: "Most lists of the best conferences for 2027 give each event a paragraph, a date and an attendance figure. Every event on them sounds worth attending, because the lists describe events and stop there. None of them tells you which one to drop.",
     },
     {
       type: "p",
-      text: "A conference is worth it only relative to a goal. The event that is perfect for a protocol closing exchange listings is a waste of money for a company trying to hire engineers, and the reverse. So we have organised this by what you are trying to get, and by how big your company is, because stage changes the answer more than most people expect. For each pick we also say who should skip it.",
+      text: "Whether a conference is worth it depends on what you want from it. An event that suits a protocol chasing exchange listings is wasted on a company trying to hire engineers. We have organised this guide by goal and then by company stage, and for each pick we say who should skip it. It covers crypto, AI and fintech events from October 2026 to July 2027.",
     },
     {
       type: "callout",
-      text: "A note on numbers. Attendance figures below are the organisers' own claims, and cost ranges are our estimates from public ticket pricing and what we see in the market. Sponsorship at most major events is sold through private prospectuses with no public rate card, so treat every cost as a ballpark and ask for the current deck before budgeting.",
+      text: "A note on numbers and bias. Attendance figures are the organisers' own claims. Sponsorship at most major events is sold by private prospectus, so we give costs only as broad bands. Powerclub Global (PCG) covers the Bitcoin Conference events as a media partner of BTC Inc, and is an official media and sponsorship partner of Mining Disrupt and Intelligence Disrupt 2027. Weigh our view of those events accordingly.",
     },
     { type: "h2", text: "Start with the goal, not the event" },
     {
       type: "p",
-      text: "Five goals cover nearly every conference decision we see: closing deals with other companies, getting a founder known, hiring, earning press, and reaching governments or institutions. Almost no event is good at all five. The big ones are good at one or two and merely large at the rest.",
+      text: "Five goals cover most conference decisions: closing deals with other companies, getting a founder known, hiring, earning press, and reaching governments or institutions. Almost no event is good at all five. The large ones do one or two well and offer only size for the rest.",
     },
-    { type: "h2", text: "If the goal is deal flow in crypto" },
+    { type: "h2", text: "Best crypto conferences for deal flow: TOKEN2049 and Consensus" },
+    { type: "h3", text: "Is TOKEN2049 worth it?" },
     {
       type: "p",
-      text: "This is the TOKEN2049 category. TOKEN2049 Singapore (October 7–8, 2026, Marina Bay Sands) is billed by the organiser as the largest crypto conference in the world, with around 25,000 attendees expected. Deals happen at the side events around it more than inside the venue, which is why the whole week matters more than the two main days. It is also the most expensive thing on the calendar to do properly.",
-    },
-    {
-      type: "p",
-      text: "TOKEN2049 Dubai was postponed from April 2026 and now runs April 21–22, 2027 at Madinat Jumeirah, with about 15,000 attendees expected from 4,000-plus companies. It is a smaller room with a more Middle East and Asia-heavy mix, and for teams whose buyers or backers sit in the Gulf it is the better value of the two. We wrote up the 2025 edition; the coverage is linked at the bottom of this piece.",
+      text: "For deal flow, yes, if you arrive with meetings booked. TOKEN2049 Singapore (October 7–8, 2026, Marina Bay Sands) is billed by its organiser as the world's largest crypto conference, with 25,000-plus attendees expected. The organiser also counts [more than 1,000 side events](https://token2049.com/singapore/faqs) across the week, and that is where most deals are discussed. Doing the week properly costs more than anything else on the crypto calendar.",
     },
     {
       type: "p",
-      text: "Consensus Miami (May 4–6, 2027, Miami Beach Convention Center) is CoinDesk's flagship, with 15,000-plus attendees expected. It skews more toward the Americas, policy and institutions than TOKEN2049 does, and it is the better pick if your counterparties are US funds, exchanges and regulators.",
+      text: "[TOKEN2049 Dubai](/conferences/token2049-dubai-2027) did not take place in 2026. It was postponed and now runs April 21–22, 2027 at Madinat Jumeirah, with about 15,000 attendees expected from 4,000-plus companies. It is the smaller of the two, with more Gulf capital in the room. For teams whose buyers or backers are in the Middle East it is the better value.",
+    },
+    { type: "h3", text: "Is Consensus Miami worth it?" },
+    {
+      type: "p",
+      text: "[Consensus Miami](/conferences/consensus-miami-2027) (May 4–6, 2027, Miami Beach Convention Center) is CoinDesk's flagship, with 15,000-plus attendees expected. Compared with TOKEN2049 it leans toward the Americas, policy and institutional finance. Choose it if your counterparties are US funds, exchanges and regulators.",
     },
     {
       type: "p",
-      text: "Who should skip these: pre-product teams and anyone without a specific list of people to meet. A TOKEN2049 week costs a team tens of thousands of dollars once flights, hotels and a side event are counted, and a team without meetings booked in advance is buying a very expensive lanyard. If you cannot name 20 people you want to meet, go to a smaller event first.",
+      text: "Who should skip these: pre-product teams, and anyone without a list of people to meet. A TOKEN2049 week costs a small team tens of thousands of dollars once flights, hotels and a side event are counted. If you cannot name 20 people you want to meet there, go to a smaller event first.",
     },
-    { type: "h2", text: "If the goal is founder visibility" },
+    { type: "h2", text: "Best conferences for founder visibility: EthCC, Bitcoin 2027, Web Summit" },
     {
       type: "p",
-      text: "Visibility is not attendance. It is being seen by the right people in a context where they remember you. At the largest events a speaking slot is the hardest thing to get and the highest-value thing to have, and the stage you are on matters less than people assume. A well-attended side-event panel can out-perform a half-empty main stage.",
-    },
-    {
-      type: "p",
-      text: "For crypto founders the strongest 2027 options are EthCC[10] (April 12–15, 2027, Cannes), Europe's largest Ethereum event and the one where the builder community actually shows up, and Bitcoin 2027 (July 15–17, 2027, Nashville), which BTC Inc bills as the world's largest Bitcoin conference. Bitcoin 2024, the last Nashville edition, was reported to have drawn roughly 35,000 people. If your project is Bitcoin-adjacent, it is the one room where being seen matters regardless of company size. Our coverage of the 2025 edition and its side events is in the press archive linked below.",
+      text: "Visibility means being seen by the right people in a setting where they remember you. Turning up does not achieve that. A speaking slot does, and it is the hardest thing to get at a large event. The size of the stage matters less than founders assume: a full side-event panel does more for a founder than a half-empty main stage. Our guide to [getting a speaking slot at a crypto conference](/insights/how-to-get-a-founder-a-speaking-slot) covers the routes.",
     },
     {
       type: "p",
-      text: "Beyond crypto, Web Summit (Lisbon, November 9–12, 2026) is the broad-audience play: a claimed 70,000-plus attendees across AI, startups and emerging tech. It is a poor fit for protocol or infrastructure companies whose buyers are specialised, because the audience is wide and shallow for them.",
+      text: "For Ethereum founders the strongest option is [EthCC](/conferences/ethcc-10-2027), whose tenth edition runs April 12–15, 2027 in Cannes. It is Europe's largest Ethereum event, with a programme chosen by committee from open applications. For anything Bitcoin-adjacent it is [Bitcoin 2027](/conferences/bitcoin-2027) (July 15–17, 2027, Nashville). BTC Inc calls it the world's largest Bitcoin conference and [reports an average of more than 20,000 attendees](https://conference.b.tc/) a year since 2022.",
     },
     {
       type: "p",
-      text: "Who should skip these: late-stage companies whose problem is not awareness. If everyone who could buy from you already knows your name, a keynote is vanity.",
-    },
-    { type: "h2", text: "If the goal is institutional or government access" },
-    {
-      type: "p",
-      text: "This is the category where the best events are not the biggest ones. Singapore FinTech Festival (November 18–20, 2026) is run with the Monetary Authority of Singapore and claims 70,000-plus decision-makers from 140-plus countries. Hong Kong FinTech Week (November 2–6, 2026) is organised with InvestHK and the HKMA. Digital Asset Summit London (November 10–11, 2026, run by Blockworks) is an institutional room of asset managers, banks and allocators. Money20/20 USA (October 18–21, 2026, Las Vegas) claims 11,000-plus senior professionals across payments, banking, crypto and AI.",
+      text: "Outside crypto, Web Summit (Lisbon, November 9–12, 2026) offers the broadest audience, with a claimed 70,000-plus attendees across AI, startups and emerging technology. It is a poor fit for protocol and infrastructure companies, whose specialised buyers are a small fraction of that crowd.",
     },
     {
       type: "p",
-      text: "Regulator-backed events are where policy conversations actually happen, and they reward companies that arrive with something regulators care about: a compliance posture, a licensing story, a bank partnership. They punish companies that arrive with a token and a pitch. Money20/20 is the same idea on the payments side, with a corporate audience that buys differently from crypto. Expect longer sales cycles and no lead-gen fireworks.",
+      text: "Who should skip these: late-stage companies that are already well known to their buyers. For them a keynote is vanity.",
+    },
+    { type: "h2", text: "Best fintech conferences for institutional and government access" },
+    {
+      type: "p",
+      text: "In this category the best events are not the biggest. Singapore FinTech Festival (November 18–20, 2026) is run with the Monetary Authority of Singapore and claims 70,000-plus participants from more than 140 countries. Hong Kong FinTech Week (November 2–6, 2026) is organised with InvestHK and the HKMA. Digital Asset Summit London (November 10–11, 2026), run by Blockworks, gathers asset managers, banks and allocators. Money20/20 USA (October 18–21, 2026, Las Vegas) claims more than 11,000 senior attendees across payments, banking, crypto and AI.",
     },
     {
       type: "p",
-      text: "For tokenisation and onchain finance specifically, Chainlink SmartCon is worth watching. Its 2026 dates have not been announced yet (the 2025 edition ran November 4–5 in New York), so do not book travel against it.",
+      text: "Regulator-backed events reward companies that bring something a regulator or a bank cares about, such as a licence, a compliance programme or a banking partner. A company that brings only a token and a pitch will get little from them. Money20/20 works the same way on the payments side, with corporate buyers and long sales cycles. Do not expect a pile of leads from any of them.",
     },
     {
       type: "p",
-      text: "Who should skip these: anything without a regulatory or enterprise angle. A meme project in a room of bankers is not a networking opportunity.",
-    },
-    { type: "h2", text: "If the goal is hiring" },
-    {
-      type: "p",
-      text: "Hiring is the goal conferences serve worst, and the one most companies quietly use them for. The two exceptions are events where engineers are the audience. EthCC is one. NVIDIA GTC (March 15–18, 2027, San Jose) is the other for AI: it is a developer conference first, and the crowd is people who build for a living. If you are hiring ML or infrastructure engineers, the GTC ecosystem is a better recruiting ground than a crypto show.",
+      text: "For tokenisation and onchain finance, Chainlink SmartCon is worth watching. Its 2026 dates had not been announced when we wrote this (the 2025 edition ran November 4–5 in New York), so do not book travel against it.",
     },
     {
       type: "p",
-      text: "Who should skip these: companies hoping to hire through a booth. A booth shows you to people who are already employed and curious. The conversations that become hires are mostly the ones at side events and dinners, not at the stand.",
+      text: "Who should skip these: any project without a regulatory or enterprise angle. A meme-coin team will find no buyers among bankers.",
     },
-    { type: "h2", text: "If the goal is press and content" },
+    { type: "h2", text: "AI conferences worth attending in 2027, and where to hire" },
     {
       type: "p",
-      text: "Coverage is the cheapest return a conference gives, and the most neglected. Press-heavy events like Consensus and Bitcoin are where a good panel clip or recap travels. Our press archive covers Consensus Toronto's DeAI side events and ETHDenver, and the pattern is consistent: the content from the side events outlived the main-stage content.",
-    },
-    {
-      type: "p",
-      text: "The honest caveat is that coverage only compounds if the content actually gets made and published in the week of the event. We wrote about that separately in The 30 Days After the Booth.",
-    },
-    { type: "h2", text: "The main event is not the event" },
-    {
-      type: "p",
-      text: "Across every crypto event above, the pattern repeats: the conference sells the badge, and the value happens in the week around it. TOKEN2049 runs a full week of side events, Consensus and Bitcoin both have dense side-event calendars, and EthCC is as much about the evenings as the venue. If you can only afford one thing, a seat at the right side event usually beats a booth on the main floor, because the people in the room chose to be there and the room is small enough to talk in.",
+      text: "Conferences serve hiring worse than any other goal, though many companies quietly use them for it. The exceptions are events where engineers are the audience. EthCC is one. NVIDIA GTC (March 15–18, 2027, San Jose) is the other: it is a developer conference first, and most of the crowd builds for a living. A company hiring machine-learning or infrastructure engineers will do better around GTC than at a crypto show.",
     },
     {
       type: "p",
-      text: "That changes how to read a ticket price. A pass to a 25,000-person event buys you entry; it does not buy you any of the conversations you came for. Those are bought separately, through invitations, hosted dinners and introductions, and most of that effort has to start weeks before you land.",
-    },
-    { type: "h2", text: "Events we would only attend with a specific reason" },
-    {
-      type: "p",
-      text: "GITEX Global (Dubai, December 7–11, 2026) claims more than 200,000 attendees and 6,800 exhibitors. It is a government-and-enterprise technology expo, excellent if you sell to Gulf governments or large corporates and of little use to a crypto-native company without that angle. CES (January 6–9, 2027) is the same story: enormous, consumer-hardware led, and only relevant if you have a product for that audience. Blockchain Life Dubai (December 1–2, 2026) claims 15,000-plus attendees and suits trading-focused and Web3 business audiences, but it is a narrower fit than TOKEN2049 for most teams.",
+      text: "For decentralised AI and compute infrastructure there is a newer option. [Intelligence Disrupt 2027](/conferences/intelligence-disrupt-2027) runs March 22–24, 2027 at the Irving Convention Center in Texas, alongside the Mining Disrupt Bitcoin mining expo, with a GPU cluster floor and a hackathon. It suits teams that sell hardware, hosting or compute to people who run it. As disclosed above, PCG is a partner of both events.",
     },
     {
       type: "p",
-      text: "None of these are bad events. They are events with a precise audience, and the mistake is attending because the attendance number is impressive. A big number describes the organiser's success, not your odds.",
+      text: "Who should skip these: companies hoping to hire through a booth. A booth attracts people who are employed and curious. The conversations that lead to hires mostly happen at side events and dinners.",
     },
-    { type: "h2", text: "When to decide" },
+    { type: "h2", text: "Best conferences for press and content" },
     {
       type: "p",
-      text: "Sponsorship decisions are usually made too late. For the autumn 2026 events the best side-event venues and speaking slots are largely spoken for, so the real planning window is April to July 2027. TOKEN2049 Dubai, Consensus Miami and Bitcoin 2027 fall within about twelve weeks of each other. Decide by the end of the year which of the three you are doing, rather than treating them as a package.",
+      text: "Coverage is the cheapest return a conference offers, and the one most often neglected. Consensus and the Bitcoin Conference both draw a large press contingent, so a strong panel clip or a useful recap has an audience ready for it. Coverage only pays off if the content is made and published during the week of the event. We explain the timing in [the 30 days after the booth](/insights/the-30-days-after-the-booth).",
     },
-    { type: "h2", text: "Picks by goal and company stage" },
+    { type: "h2", text: "At crypto conferences, the side events are the event" },
+    {
+      type: "p",
+      text: "At every crypto event above, the conference sells the badge and much of the value sits in the week around it. TOKEN2049 runs a full week of side events, Consensus and Bitcoin have dense side-event calendars, and EthCC is known as much for its evenings as for its venue. If you can afford only one thing, a seat at the right side event usually beats a booth on the main floor. The guests chose to be there, and the room is small enough to hold a conversation.",
+    },
+    {
+      type: "p",
+      text: "Read ticket prices with that in mind. A pass to a 25,000-person event buys entry and none of the conversations you came for. Those come through invitations, hosted dinners and introductions, and the work of arranging them has to start weeks before you land.",
+    },
+    { type: "h2", text: "Large expos to attend only with a specific reason" },
+    {
+      type: "p",
+      text: "GITEX Global (Dubai, December 7–11, 2026) claims more than 200,000 attendees and 6,800 exhibitors. It is a government and enterprise technology expo: valuable if you sell to Gulf governments or large corporates, and of little use to a crypto-native company. CES (January 6–9, 2027, Las Vegas) is similar. It is enormous, led by consumer hardware, and relevant only if you have a product for that audience. Blockchain Life (Dubai, December 1–2, 2026) claims 15,000-plus attendees and suits trading-focused businesses, though for most teams it is a narrower fit than TOKEN2049.",
+    },
+    {
+      type: "p",
+      text: "These are good events with precise audiences. The mistake is attending because the attendance figure is impressive. That figure tells you the organiser sold tickets. It tells you nothing about how many of your buyers are among them.",
+    },
+    { type: "h2", text: "When to decide on 2027 conference sponsorships" },
+    {
+      type: "p",
+      text: "Most teams decide too late. For the autumn 2026 events, the best side-event venues and speaking slots have largely gone. The planning window that is still open is spring and summer 2027: Intelligence Disrupt in late March, EthCC and TOKEN2049 Dubai in April, Consensus Miami in May and Bitcoin 2027 in July. Decide by the end of 2026 which of them you are doing, and do not try to do them all. Our piece on [conference sponsorship cost](/insights/what-a-year-on-the-circuit-costs) shows what each level of presence adds to the year.",
+    },
+    { type: "h2", text: "Conference picks by goal and company stage" },
     {
       type: "table",
       caption:
-        "Our recommendations, not the organisers'. Attendance is organiser-claimed; fit is our judgement. Dates from the event pages; confirm before booking.",
+        "Our recommendations, not the organisers'. Fit is our judgement. Dates are from the event pages; confirm before booking.",
       head: ["Goal", "Early stage", "Growth", "Established"],
       rows: [
         [
           "Deal flow (crypto)",
           "A smaller regional event first; side events only at TOKEN2049",
           "TOKEN2049 Dubai (Apr 2027), Consensus Miami (May 2027)",
-          "TOKEN2049 Singapore (Oct 2026) with a hosted event",
+          "TOKEN2049 Singapore with a hosted event",
         ],
         [
           "Founder visibility",
@@ -168,9 +173,9 @@ const article: Insight = {
           "Money20/20 USA, Singapore FinTech Festival",
         ],
         [
-          "Hiring",
+          "Hiring and AI infrastructure",
           "EthCC[10]",
-          "NVIDIA GTC (AI), EthCC[10]",
+          "NVIDIA GTC, Intelligence Disrupt (Mar 2027)",
           "GTC; hire through side events, not booths",
         ],
         [
@@ -181,36 +186,62 @@ const article: Insight = {
         ],
       ],
     },
-    { type: "h2", text: "What actually changes by company stage" },
+    { type: "h2", text: "How company stage changes which conferences are worth it" },
     { type: "h3", text: "Early stage: go small and go specific" },
     {
       type: "p",
-      text: "A seed-stage team should not buy a booth at a 25,000-person event. The attendance figure works against you: the room is huge and nobody is looking for you. Buy a ticket, bring a short list of named people, and spend the savings on a dinner for six of them. Regional events and side events almost always return more per dollar.",
+      text: "A seed-stage team should not buy a booth at a 25,000-person event. The floor is huge and nobody on it is looking for you. Buy a ticket, bring a short list of named people, and spend what the booth would have cost on a dinner for six of them. Regional events and side events return more per dollar at this stage.",
     },
     { type: "h3", text: "Growth stage: pick one circuit and repeat it" },
     {
       type: "p",
-      text: "The strongest results we see come from companies that choose two or three events and show up consistently, rather than six events once. Familiarity compounds. The second year at the same event is the year people already recognise your name.",
+      text: "Choose two or three events and return to them. A company that appears at the same event two years running is recognised in the second year, by organisers as well as attendees. Six different events attended once each do not build that recognition.",
     },
-    { type: "h3", text: "Established: spend on the thing only you can do" },
+    { type: "h3", text: "Established: spend on what only you can do" },
     {
       type: "p",
-      text: "Larger companies get the least from general attendance and the most from controlling the room: a hosted event, a dinner with the right 40 guests, a speaking slot they negotiated. A booth is the most expensive and least differentiated way to spend a large budget.",
+      text: "Larger companies gain least from general attendance and most from controlling a room: a hosted event, a dinner for 40 chosen guests, a speaking slot they negotiated. A booth is the least distinctive way to spend a large budget.",
     },
-    { type: "h2", text: "What to do with this list" },
+    { type: "h2", text: "How to use this list" },
     {
       type: "ul",
       items: [
-        "Pick the goal first. If you name two, you do not have a goal.",
-        "Count the named people you want to meet. Under 20, pick a smaller event.",
-        "Check the date. TOKEN2049 Dubai already moved once, and SmartCon 2026 has no dates yet. Do not buy non-refundable travel against a TBA.",
-        "Budget the week, not the ticket. Flights, hotels, side events and the follow-up cost more than the pass.",
-        "Decide who owns the follow-up before you book anything.",
+        "Pick one goal. A team with two goals for the same event usually achieves neither.",
+        "Count the named people you want to meet. If there are fewer than 20, pick a smaller event.",
+        "Check the date. TOKEN2049 Dubai has already moved once and SmartCon 2026 has no dates. Do not buy non-refundable travel for an event without confirmed dates.",
+        "Budget the week, not the ticket. Flights, hotels, side events and follow-up cost more than the pass.",
+        "Name the person who owns the follow-up before you book anything.",
       ],
     },
     {
       type: "p",
-      text: "We track 87 conferences across crypto, AI and fintech, and our press archive covers a good number of them. If you are deciding between two on this list, tell us what you are trying to get out of them and we will tell you which one we would pick.",
+      text: "PCG tracks 91 conferences across crypto, AI and fintech, and choosing between them is the first step of our [roadshow management service](/services/roadshow-management). If you are deciding between two events on this list, [schedule a call](/schedule-call), tell us what you want from them, and we will tell you which one we would pick.",
+    },
+    { type: "h2", text: "Frequently asked questions" },
+    { type: "h3", text: "Is TOKEN2049 worth it for a startup?" },
+    {
+      type: "p",
+      text: "Only with meetings booked in advance. The organiser expects 25,000-plus attendees in Singapore and counts more than 1,000 side events, so an unknown team with a booth gets lost. Buy tickets, target a few side events, and host a small dinner if the budget allows.",
+    },
+    { type: "h3", text: "TOKEN2049 or Consensus: which is better?" },
+    {
+      type: "p",
+      text: "They serve different counterparties. TOKEN2049 in Singapore and Dubai draws exchanges, trading firms and Asian and Gulf capital. Consensus Miami leans toward US institutions, policy and press. Choose by where your buyers and investors are based, and avoid doing both in your first year on the circuit.",
+    },
+    { type: "h3", text: "What is the biggest crypto conference in 2027?" },
+    {
+      type: "p",
+      text: "By organiser claims, TOKEN2049 Singapore is the largest, with 25,000-plus attendees expected at its October 2026 edition. BTC Inc reports an average of more than 20,000 attendees a year for the Bitcoin Conference, which returns to Nashville in July 2027. TOKEN2049 Dubai and Consensus Miami each expect about 15,000.",
+    },
+    { type: "h3", text: "How many conferences should a startup attend in a year?" },
+    {
+      type: "p",
+      text: "As many as it can follow up properly, which for most early teams is two or three. Each event needs meetings booked beforehand and a named person handling the month afterwards. Attending more events with less preparation raises cost faster than it raises results.",
+    },
+    { type: "h3", text: "When should you book a conference sponsorship for 2027?" },
+    {
+      type: "p",
+      text: "Six to nine months ahead for booths and speaking applications at the largest events, and two to four months ahead for side-event venues. For the April to July 2027 events, that means deciding before the end of 2026.",
     },
   ],
 };
